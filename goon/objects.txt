@@ -1,0 +1,169 @@
+name: Objects
+recipes:
+  - name: Screwdriver
+    tags: [tool]
+    info:
+      notes: One of the most, if not the most essential tool. Used in moving windows and grilles, building Computers, opening maintenance panels in electronics, fixing microwaves, modifying small devices, opening cyborg heads and more.
+
+  - name: Wirecutters
+    tags: [tool]
+    info:
+      notes: Used in wiring, hacking, deconstructing computers, etc. Live wires should always be handled with insulated gloves.
+
+  - name: Multitool
+    tags: [tool]
+    info:
+      notes: An electrician's precision tool. Known mostly for being a cornerstone of hacking, it's also essential for repairing destroyed APC units. The hard plastic casing makes it handy for pistol-whipping someone in a pinch.
+
+  - name: Wrench
+    tags: [tool]
+    info:
+      notes: Used in building computers, activating cyborgs, deconstructing walls and furniture.
+
+  - name: Wirecutters
+    tags: [tool]
+
+  - name: Crowbar
+    tags: [tool]
+    info:
+      notes: A general-purpose opener. First used by assistants to pry open firelocks and unpowered doors on the way to the escape shuttles, they are also essential for prying open or wedging shut floor tiles, window frames, wall girders, computer modules, pod casings and so on.
+
+  - name: Body Armor
+    tags: [clotes, armor]
+    info:
+      notes: Provides moderate protection to the torso. Will help you survive psychotic murderers wielding revolvers and laser guns slightly longer.
+
+  - name: Welder
+    tags: [tool]
+    info:
+      notes: A heavy engineering tool. An active welder will ignite plasma, break lightbulbs, set off fire alarms just being held in a hand near the vicinity of a sensor and do horrible things when swung at a person. Must be activated to work and the fuel tank is small, so be sure to top up often. Has nearly as many uses as screwdrivers and crowbars, but operating one will cause eye damage without proper eyewear. Can dismantle walls, fix robots, melt shards into glass, seal doors, clear the space kudzu, fight the meat kudzu, etc.
+
+  - name: Security Helmet
+    tags: [clotes, armor]
+    info:
+      notes: Provides moderate protection to the head. You can still be rendered unconscious from repeated trauma, but the helmet helps avoid the dreaded one-hit stun attack.
+
+  - name: Chainsaw
+    tags: [tool, weapon]
+
+  - name: Knife
+    tags: [tool, weapon]
+
+  - name: Cable coil
+    ingredients:
+      - Wire
+    info:
+      notes: A bunch of wire
+
+  - name: Wire
+    info:
+      notes: Spare cable, found plentifully in yellow toolkits and boxes marked "Cable Storage". Used in constructing computers, repairing damaged wiring under floors, fixing APCs, building pods, fixing cyborgs, making pretty art, and making a crap-ton of other neat stuff! Check out Guide to Wiring for details on how to put floors and wire together to make things happen.
+
+  - name: Power Cell
+    tags: []
+    info:
+      notes: Main power for Robots, backup juice for APCs before the lights go out. They're just high-capacity batteries. If depleted they may be recharged at either the Recharger in Engineering Storage or in an engine-powered APC. Every APC in the station starts with a fully charged power cell. The power monitoring computers reporting any less than 100% charge on these is usually a sign that things are quickly going to hell. 
+
+  - name: Light Tube
+    tags: []
+    info:
+      notes: In addition to windows and floor tiles, the incandescent tubes are usually the first casualties of rampant chemistry in the science wing or the cafeteria. Boxes of replacement lights are available in Tool Storage, EVA, Electronics, and the Janitor's closet. They can also be fabricated in a rainbow of colors, including blacklight.
+
+  - name: Metal Sheet
+    tags: []
+    info:
+      notes: Used for many constructions. Available in Tool Storage, the Warehouse and EVA, but the Cargo Bay can handle enormous bulk orders. Can only be assembled in stacks of up to 50 by hand. 
+
+  - name: Glass Sheet
+    tags: []
+    info:
+      notes: Used for many constructions. Available in Tool Storage, the Warehouse and EVA, but the Cargo Bay can handle enormous bulk orders. Can only be assembled in stacks of up to 50 by hand.
+
+  - name: Rods
+    tags: []
+    info:
+      notes: Used for many constructions. Available in Tool Storage, the Warehouse, and EVA.
+
+  - name: Floor Tile
+    ingredients:
+      - Metal Sheet
+    tags: [make, floor]
+    info:
+      notes: Make these in fours from sheet metal, find them in the Warehouse, scavenge the many unfinished construction sites on the station or just crowbar them right out from under people's feet. Damaged floor tiles are automatically discarded upon removal.
+
+  - name: Beaker
+    tags: [container]
+    info:
+      notes: Holds up to 50 units of chemicals. Standard equipment for chemistry, but medbay has some as well.
+
+  - name: Staple gun
+    tags: [weapon, tool]
+    info:
+      notes: Reattach limbs! Put the patient on an operating table, attach their arm to the stump by aiming at it and secure it with the staple gun, causing a minor amount of brute damage. More can be made in a robotics fabricator, just like scalpels and saws.
+
+  - name: Flashlight
+    tags: [light]
+    info:
+      notes: Illuminates dark areas. Found in Emergency Toolboxes and the Warehouse, among other places. Small enough to fit in a pocket or on your belt, but can only be turned on/off remotely (HUD icon) when worn. Having multiple light sources on your person will "stack" with one another, lighting a larger area. Don't try to think too hard about how that works.
+
+  - name: Gas Tank
+    tags: [tank]
+    info:
+      notes: These large tanks hold up to 1013 kPa of gaseous elements. By default, they contain O2 (blue), an air mixture (blue w/ white stripe), N2O (white w/ red stripe) or Plasma (special sprite). With the exception of the latter, they can be worn on the back slot. Compatible with the connection port of Air Pumps, Air Scrubbers, Tank Transfer Valves and gas canisters.
+
+  - name: Fuel Tank
+    tags: [container]
+    info:
+      notes: This small tank has been designed specifically for holding flammable compounds. As such, they contain welding fuel by default. Essential component of flamethrowers.
+
+  - name: Flash
+    tags: [weapon]
+    info:
+      notes: The flash has two uses. Using the flash on someone without adequate eye protection will stun them and obscure their screen with a white flash. Every time the flash is used in this manner it has a chance of the bulb burning out, rendering it permanently useless. The other use of a flash is to use it in your active hand. This will briefly obscure the screens of everyone nearby with a white flash but not stun them. This effect can also disable any nearby cloaking device. Flashes can be found in security lockers, dispensed from the Security Vendor, in other various spots on the station, and in great supply at Robotics.
+
+  - name: Remote Signaler
+    tags: [tool]
+    info:
+      notes: Sends out a radio signal of a given value on a set frequency, and when attached to something, will activate when it receives that signal. It in turn can be attached a few other other items, which will cause it to send out a signal when that other item activates.
+
+  - name: Proximity Sensor
+    tags: [tool]
+    info:
+      notes: When armed, it will activate whenever it detects motion adjacent to it and emits a beep.
+
+  - name: Timer
+    tags: [tool]
+    info:
+      notes: Activates once the timer hits 0.
+
+  - name: Igniter
+    tags: [tool]
+    info:
+      notes: Heats up the square it is on when activated. Can also be used to light cigarettes, but you'll never look as cool as when you're using a real lighter.
+
+  - name: ElectroPack
+    tags: []
+    info:
+      notes: Goes on to the back slot of a monkey or other victim-- cannot be removed by the wearer. The pack needs to be turned on first. It waits for a radio signal, and when received, delivers a debilitating jolt of electricity to whomever is wearing it.
+
+  - name: Biosuit
+    tags: [equip]
+    info:
+      notes: Offer some protection against diseases and viral hazards. Found in the Research Director's office, Custodial closet, and the research sector entrance vestibule.
+
+  - name: Bedsheet 
+    tags: [equip]
+    info:
+      notes: A sheet for a bed. Can be worn over your body so you can act like a ghost. Be sure to cut some eye-holes first. Comes in various colors.
+
+  - name: Insulated Gloves
+    tags: [equip]
+    info:
+      notes: Protect from electrical shocks. Highly coveted for their ability to allow door hacking. Found in Engineering and Electronics and can be ordered by the Quartermaster.
+
+  - name: Mousetrap
+    tags: []
+    info:
+      notes: Regularly used by jerks to kill the Chef's only friend. You can also hide these in containers such as backpacks or emergency boxes to make traps for unsuspecting victims! For the ultimate party gag, try to combine them with certain other items...oh, the possibilities of a single mousetrap! Make sure to arm it by clicking on it in your hand before putting it down!
+
+

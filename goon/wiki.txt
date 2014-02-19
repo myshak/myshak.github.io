@@ -1,0 +1,1317 @@
+# Wiki recipe list
+# Compiled by mysha, cogwerks, Marquesas
+#
+#INDENTATION MATTERS! Use spaces, not tabs.
+#
+# This file is in standard YAML format
+#
+#
+#name: The name of the recipe list
+#recipes:
+#  - name: Reagent name 
+#    ingredients: # List of ingredients
+#      - Carbon
+#      - Hydrogen
+#      - Fuel @chemical,burn # The Fuel reagent has to have the chemical and burn tags
+#      - !step Heat the beaker to 300 degrees # Custom step
+#    heat_to: 300 # Recipe requires heating
+#    reaction_message: Message that shows up when you create the reagent
+#    info: # information section, shows up as the Information tab
+#      depletion_rate: 0.4 # How much of the reagent depletes during one cycle
+#      penetrates_skin: No # Does the reagent penetrate skin?
+#      ignition_temp: 340 # Temperature at which the reagent ignites
+#      application_effect: TOUCH - Reagent does something when the TOUCH reaction occurs.
+#      notes: Notes about this reagent
+#      per_cycle: Information about what the reagent does per one cycle.
+#      tags: [first_tag, second_tag, third_tag] # Tags for the current reagent, can be a list of any string without spaces
+
+
+name: Wiki recipes
+recipes:
+  - name: Aluminium
+    sources:
+      - Base chemical from the dispenser.
+    tags: [base]
+
+  - name: Bromine
+    sources:
+      - Base chemical from the dispenser.
+    tags: [base]
+
+  - name: Carbon
+    sources:
+      - Base chemical from the dispenser.
+    info:
+      notes: Creates dirt on the floor when coming in contact with it.
+    tags: [base]
+
+  - name: Ethanol
+    sources:
+      - Base chemical from the dispenser.
+      - All cocktails and booze metabolize into ethanol.
+    info:
+      notes: The reagent that gets you drunk.
+    tags: [base, drunk]
+
+  - name: Hydrogen
+    sources:
+      - Base chemical from the dispenser.
+    tags: [base]
+
+  - name: Iodine
+    sources:
+      - Base chemical from the dispenser.
+    tags: [base]
+
+  - name: Iron
+    sources:
+      - Base chemical from the dispenser.
+    tags: [base]
+
+  - name: Nitrogen
+    sources:
+      - Base chemical from the dispenser.
+    tags: [base]
+
+  - name: Oxygen
+    sources:
+      - Base chemical from the dispenser.
+    tags: [base]
+
+  - name: Phosphorous
+    sources:
+      - Base chemical from the dispenser.
+    tags: [base]
+
+  - name: Silicon
+    sources:
+      - Base chemical from the dispenser.
+    tags: [base]
+
+  - name: Silver
+    sources:
+      - Base chemical from the dispenser.
+    tags: [base]
+
+  - name: Sodium
+    sources:
+      - Base chemical from the dispenser.
+    tags: [base]
+
+  - name: Sulfur
+    sources:
+      - Base chemical from the dispenser.
+    tags: [base]
+
+  - name: Ammonia
+    ingredients:
+      - Nitrogen
+      - Hydrogen
+
+  - name: Ammonia
+    ingredients: 
+      - Urine
+      - Water
+      - !step Heat
+    heat_to: High
+    
+  - name: Corn Starch
+    sources:
+      - Extracted from unmutated corn cobs.
+      
+  - name: Tomato Juice
+    sources:
+      - Extracted from unmutated tomatoes.
+      - Base drink from the soda fountain.
+
+  - name: Capsaicin
+    sources:
+      - Extracted from any chili plant.
+
+  - name: Ghost Chili Juice
+    sources:
+      - Extracted from ghostlier chili plants.
+    info:
+      notes: Ingesting too much of this has a chance to instantly burn up someone.
+
+  - name: Orange Juice
+    sources:
+      - Extracted from unmutated oranges.
+      - Base drink from the soda fountain.
+
+  - name: Lime Juice
+    sources:
+      - Extracted from unmutated limes.
+      - Base drink from the soda fountain.
+
+  - name: Lemon Juice
+    sources:
+      - Extracted from unmutated lemons.
+      - Base drink from the soda fountain.
+
+  - name: Space Fungus
+    sources:
+      - Extracted from any space fungi.
+
+  - name: Ash
+    ingredients:
+      - Oil
+      - !step Heat
+    sources:
+      - Burn something (like paper, money, anything that leaves a pile of ash after burning) and scoop it up with a beaker.
+    heat_to: High
+
+  - name: Egg
+    sources:
+      - Extracted from free range eggplants (eggs).
+
+  - name: George Melonium
+    sources:
+      - Extracted from rainbow melons.
+    info:
+      notes: Random effect on ingestion, which can be an explosion, full rejuvenation, extreme highness or a rather long stun.
+
+  - name: Space-Soybean Oil
+    sources:
+      - Extracted from soybean pods.
+
+  - name: Catonium
+    sources:
+      - Extracted from nepeta cataria plants.
+
+  - name: Potassium
+    sources:
+      - Extracted from bananas.
+      - Base chemical from the dispenser.
+
+  - name: Water
+    sources: 
+      - Extracted from all melons.
+    tags: [slippery]
+    sources:
+      - Base chemical from the dispenser.
+      - Base drink from the soda fountain.
+
+  - name: Salt
+    ingredients:
+      - Water
+      - Chlorine
+      - Sodium
+    info:
+      notes: Ordinary table salt.
+    
+  - name: Phenol
+    ingredients:
+      - Water
+      - Chlorine
+      - Oil
+    info:
+      notes: Used for certain medical recipes.
+    
+  - name: Diethylamine 
+    ingredients:
+      - Ammonia
+      - Ethanol
+      - !step Heat
+    heat_to: Unknown
+    info: 
+      notes: Used for certain medical recipes and as fertilizer.
+      
+  - name: Space Cleaner 
+    ingredients:
+      - Ammonia 
+      - Ethanol 
+      - Water
+    info:
+      notes: Cleans stuff.
+      
+  - name: Acetone 
+    ingredients:
+      - Oil
+      - Welding Fuel
+      - Oxygen
+    info:
+      notes: Common ingredient in other recipes.
+      
+  - name: Potash 
+    ingredients:
+      - Ash
+      - Water
+      - !step Heat to 310
+    heat_to: 310
+    info:
+      notes: Fertilizer.
+
+  - name: Potash 
+    ingredients:
+      - Potassium
+      - Chlorine
+      - Sulphuric acid
+    info:
+      notes: Fertilizer.
+      
+  - name: Saltpetre 
+    ingredients:
+      - Potash 
+      - Compost
+      - Urine 
+    info:
+      notes: Fertilizer.
+      
+  - name: Pepperoni 
+    ingredients:
+      - Saltpetre 
+      - Beff 
+      - Synthflesh
+    info:
+      notes: What's beff? Find out!
+      
+  - name: Stabilizing agent 
+    ingredients:
+      - Iron
+      - Oxygen
+      - Hydrogen
+    info:
+      notes: Keeps unstable chemicals stable.
+      
+  - name: Cryostylane 
+    ingredients:
+      - Water
+      - Plasma
+      - Nitrogen
+    sources:
+      - Extracted from chilly peppers.
+    tags: [temperature]
+    info:
+      notes: Forms a layer of slippery ice. 
+      
+  - name: Charcoal
+    ingredients:
+      - Ash
+      - Salt
+      - !step Heat to 310
+    heat_to: 310
+    sources:
+      - Extracted from any venne fibers.
+    tags: [medical, tox, heal, depletion]
+    info:
+      note: Good baseline thing for detoxifying someone, but won't always keep up with the hellpoisons.
+      depletion_rate: 0.4
+      per_cycle: Increases the depletion rate of all other chems by 0.5, heals 1.5 TOX damage.
+
+  - name: Saline-Glucose Solution
+    ingredients:
+      - Salt
+      - Water
+      - Sugar
+    tags: [medical, brute, burn, heal]
+    info:
+      depletion_rate: 0.4
+      per_cycle: 33% chance per cycle of healing 1 point each of BRUTE and BURN damage.
+      notes: The Shock ailment checks to see if you have any saline in you. If you do, there is a fixed chance per cycle that it'll reduce or remove the disease. This means that there's no specific amount needed to cure, but the longer it's in you, the more chances it'll have to cure the ailment.  
+      
+  - name: Styptic Powder
+    ingredients: 
+      - Aluminium 
+      - Hydrogen 
+      - Oxygen 
+      - Sulphuric Acid
+    tags: [medical, brute, heal, tox, damage]
+    info:
+      reaction_message: The solution yields an astringent powder.
+      per_cycle: 55% chance per cycle of healing 2 points of BRUTE damage.
+      depletion_rate: 2
+      application_effect: |
+                          -TOUCH: Heal 1 point of brute per unit applied. Splash, dropper.
+                          -INGEST: Do 0.5 points of tox damage per unit ingested. Don't eat it, don't inject it.
+      notes: It depletes rapidly in the blood, so most of your healing will come upfront from a topical application. 
+
+  - name: Silver Sulfadiazine
+    ingredients: 
+      - Silver
+      - Sulfur
+      - Oxygen
+      - Chlorine
+      - Ammonia
+      - Oil
+    sources:
+      - Extracted from unmutated commol roots.
+    depletion_rate: 2
+    tags: [medical, burn, heal, tox, damage]
+    info:
+      per_cycle: 55% chance per cycle of healing 2 points of BURN damage.
+      application_effect: |
+                          -TOUCH: Heal 1 point of burn per unit applied.
+                          -INGEST: Do 0.5 points of tox damage per unit ingested.
+      notes: It depletes rapidly in the blood, so most of your healing will come upfront from a topical application.
+
+  - name: Synthflesh
+    ingredients: 
+      - Blood
+      - Carbon
+      - Styptic Powder
+    tags: [medical, brute, burn, heal]
+    info:
+      depletion_rate: 0.4
+      per_cycle: Does nothing in the bloodstream currently.
+      application_effect: |
+                          -TOUCH: Heals 1.5 BRUTE and 1.5 BURN per unit applied.
+      notes: Splashing a beaker of synthflesh on someone is very, very effective. The medics will love chemistry a whole lot if you provide them with synthflesh patches or beakers.
+      
+  - name: Omnizine
+    sources: 
+      - Extracted from white cannabis leaves.
+      - Propuffs
+      - Donk Pockets
+    tags: [medical, brute, burn, oxy, tox, heal, addictive]
+    info:
+      depletion_rate: 0.3
+      overdose_threshold: 100
+      per_cycle: 65% chance to heal one each of OXY, TOX, BRUTE and BURN.
+      notes: Slightly addictive. Medbay will love the botanists if they manage to provide it. Might buff the healing rates and lower the depletion soon. 
+
+  - name: Calomel
+    ingredients: 
+      - Mercury 
+      - Chlorine
+      - !step Heat to 320
+    heat_to: 320
+    tags: [medical, depletion, tox, damage]
+    info:
+      depletion_rate: 2
+      per_cycle: Increases all depletion rates by 5. +5 TOX damage while health > 20.
+      notes: Aggressive purgative. It'll do a lot of tox damage itself but it cannot kill you, as the tox damage only applies while you are above 20 health. Use for emergencies to handle the really aggressive poisons that would definitely kill you if they remain active for long.
+      
+  - name: Potassium Iodide
+    ingredients: 
+      - Potassium
+      - Iodine
+    sources:
+      - Extracted from unmutated nureous leaves.
+    tags: [medical, rad, heal]
+    info:
+      depletion_rate: 0.4
+      per_cycle: 80% chance of removing 1 RAD. Radiation is cumulative and causes tox+burn.
+      notes: Simple, kinda weak, but can help counter radiation events and radium somewhat. 
+      
+  - name: Pentetic Acid
+    ingredients: 
+      - Welding Fuel 
+      - Chlorine
+      - Ammonia 
+      - Embalming Fluid 
+      - Sodium 
+      - Cyanide
+    tags: [medical, rad, tox, depletion, heal, brute, damage]
+    info:
+      depletion_rate: 0.4
+      per_cycle: Reduces 7 RAD, heals 3 TOX damage, increases all depletion rates by 4; 33% chance of taking 1 unit brute damage
+      notes: Complicated recipe, apex antitox/antiradiation treatment. 
+      
+  - name: Cryoxadone
+    ingredients: 
+      - Cryostylane
+      - Plasma 
+      - Acetone 
+      - Unstable Mutagen
+    tags: [medical, oxy, tox, brute, burn, heal]
+    info:
+      depletion_rate: 0.4
+      per_cycle: IF BODY TEMP IS BELOW 240, heals 10 OXY, 3 TOX, 3 BRUTE, 3 BURN
+      notes: Requires cooling the person before it kicks in, but heals incredibly well. 
+      
+  - name: Epinephrine
+    ingredients: 
+      - Phenol
+      - Hydrogen 
+      - Oxygen
+      - Chlorine
+      - Acetone
+      - Diethylamine
+    tags: [medical, stun, oxy, losebreath, tox, brute, burn, heal, heart, overdose, ko, stun, crit]
+    info:
+      depletion_rate: 0.2
+      overdose_threshold: 20
+      per_cycle: Reduces most of the knockout/stun effects. Attempts to cap OXY damage at 35 and LOSEBREATH at 3. If health is between -10 to -65, heals 1 TOX, 1 BRUTE, 1 BURN. Rolls a chance to fix heart problems.
+      notes: Can make you pretty sick in overdoses. Rapidly counters histamine / allergy reactions. Very useful for stabilizing someone who is in mid-crit damage, standard emergency shot to buy yourself some time. If things are really bad, go for atropine instead. Ephedrine is similar to epinephrine but is a bit weaker. 
+      
+  - name: Atropine
+    ingredients: 
+      - Ethanol
+      - Acetone 
+      - Diethylamine
+      - Phenol
+      - Sulphuric Acid
+    sources:
+      - Extracted from black venne fibers.
+    tags: [medical, tox, damage, brute, burn, heal, heart, oxy, losebreath, depletion, crit]
+    info:
+      depletion_rate: 0.2
+      overdose_threshold: 25
+      per_cycle: | 
+                 1 TOX damage if used over -60 health. Causes dizziness and confusion.
+                 If under -25 health, heals 3 BRUTE + 3 BURN. Rolls a chance to fix heart problems. Attempts to cap OXY damage at 65 and LOSEBREATH at 5. Increases sarin depletion by 10.
+      notes: Fairly similar to epinephrine but will rapidly push deep-crit damage levels towards shallow crit levels. Use this if you find someone who is right at the edge of death. Flushes sarin extremely rapidly. Atropine alone won't outright kill people but it's a pretty decent debilitating poison if you wanna use it that way. 
+      
+  - name: Salicylic Acid
+    ingredients: 
+      - Sodium 
+      - Phenol 
+      - Carbon 
+      - Oxygen 
+      - Sulphuric Acid
+    sources:
+      - Extracted from unmutated contusine leaves.
+    tags: [medical, brute, overdose, temperature, speed]
+    info:
+      depletion_rate: 0.1
+      overdose_threshold: 25
+      per_cycle: |
+                 If BRUTE damage is under 50, 50% chance to heal one unit.
+                 Tries to return high body temps towards normal. Fairly well counters walkspeed loss from being hurt.
+      notes: Got beat up a bit and don't want to crawl the whole way to medbay? Pop one of these. Won't help severe damage. Slow depletion rate will keep it in your blood for awhile. 
+      
+  - name: Morphine
+    soruces: 
+      - Botany and QM can both provide it.
+    tags: [medical, speed, addictive, overdose, ko, jitter]
+    info:
+      depletion_rate: 0.4
+      overdose_threshold: 20
+      per_cycle: Dramatically counters movement reduction from severe injury. Reduces jitteriness if someone is shaking like crazy from whatever. Will knock you out within 36 cycles if any remains in you.
+      notes: Used to be Sleep Toxin. Low doses are useful for the painkiller, otherwise it's mostly a grief chem. Getting people addicted to morphine is kinda funny. Could probably use some more benefits.
+      
+  - name: Salbutamol
+    ingredients: 
+      - Salicylic Acid
+      - Lithium
+      - Aluminium
+      - Bromine
+      - Ammonia
+      - !step Heat to 350
+    tags: [medical, oxy, losebreath, heal]
+    sources:
+      - Extracted from unmutated contusine leaves.
+    info:
+      depletion_rate: 0.4
+      per_cycle: Heals 6 OXY damage, reduces LOSEBREATH by 4 (which some things apply)
+      notes: Speeds up recovery from suffocation damage, but more importantly, it'll help counter suffocating/losebreath poisons and the suffocation that ramps up in critical health. Really underused emergency med, makes dealing with critical-health people a lot easier.
+      
+  - name: Perfluorodecalin
+    ingredients: 
+      - Hydrogen
+      - Fluorine 
+      - Oil 
+      - !step Heat to 320
+    heat_to: 320
+    tags: [medical, oxy, losebreath, brute, burn, heal, addictive]
+    info:
+      depletion_rate: 0.4
+      per_cycle: Heals 25 OXY damage, causes LOSEBREATH - so you can't talk, but it prevents any suffocation damage from racking up despite that. 33% chance of healing 1 BRUTE and 1 BURN.
+      notes: Fantastic for crime because it silences people. Also fantastic for pretty much negating all the accumulative damage from being in critical, will give you a really wide window of time to deal with other health problems. In theory you could stay in flatline for quite awhile with this stuff handling tissue oxygenation, but you might need Mannitol too. Can make spacewalking without internals possible. Somewhat addictive. 
+      
+  - name: Mannitol
+    ingredients: 
+      - Sugar
+      - Hydrogen 
+      - Water
+    sources:
+      - Extracted from dawning venne fibers.
+    tags: [medical, brain, heal]
+    info:
+      depletion_rate: 0.4
+      per_cycle: Heals 3 BRAIN damage.
+      notes: Use for concussions, changeling stings, bible beatings, flatline brain damage, bath salts, whatever.
+      
+  - name: Mutadone
+    ingredients: 
+      - Unstable Mutagen
+      - Acetone
+      - Bromine
+    sources:
+      - Extracted from dawning venne fibers.
+    tags: [medical, mutation, heal]
+    info:
+      depletion_rate: 0.4
+      per_cycle: Removes all genetic bioeffects.
+      notes: Did someone turn you into a gibbering chavish deaf dwarven lunatic? Take this. Might retool this a bit so it has a chance of removing an effect per cycle rather than scrubbing all of them instantly. 
+      
+  - name: Spaceacillin
+    ingredients: 
+      - Space Fungus 
+      - Ethanol
+    tags: [medical, disease, heal]
+    info:
+      depletion_rate: 0.4
+      per_cycle: Rolls a chance to cure some specific diseases. More uses planned for the future.
+      notes: You probably won't use this much unless a random disease event hits. Medbay Phase 2 update will introduce some stuff like infections and sepsis.
+      
+  - name: Diphenhydramine
+    ingredients: 
+      - Oil
+      - Carbon
+      - Bromine 
+      - Diethylamine
+      - Ethanol
+    tags: [medical, depletion, jitter, drowsiness]
+    info:
+      depletion_rate: 0.4
+      per_cycle: Causes a little bit of drowsiness, reduces jitteriness. Raises histamine and itching powder depletion rates by 3.
+      notes: Mostly used as a precursor to a couple of the illegal drugs. Might be needed for bee stings, histamine poisonings, itching powder (not enough people use itching powder!!!). More planned for it.
+      
+  - name: Haloperidol
+    ingredients: 
+      - Chlorine
+      - Fluorine
+      - Aluminium
+      - Potassium Iodide
+      - Oil
+    tags: [medical, depletion, jitter, drowsiness, brain, damage, disease]
+    info:
+      depletion_rate: 0.4
+      per_cycle: |
+                 Increases depletion rates for most stimulating/hallucinogenic drugs by 5. Reduces druggy effects and jitteriness. Causes drowsiness, 20% chance to cause 1 BRAIN damage.
+                 Cures space madness and berserker.
+      notes: Treat it like a general antipsychotic, treat/neutralize drugged up maniacs.
+      
+  - name: Antihol
+    ingredients: 
+      - Ethanol 
+      - Charcoal
+    tags: [medical, depletion, tox, heal, drunk]
+    info:
+      depletion_rate: 0.4
+      per_cycle: Raises ethanol depletion rates by 8. Can slowly heal a small bit of TOX damage.
+      notes: Sober someone up in a hurry. Nefarious people sometimes spike other poisons with ethanol or booze reagents to sabotage charcoal treatments.
+      
+  - name: Insulin
+    sources:
+      - Pro Puffs
+    tags: [medical, depletion]
+    info:
+      depletion_rate: 0.4
+      per_cycle: Raises sugar depletion rates by 5.
+      notes: Handles hyperglycemic coma, but how often is that ever needed? Needs work or removal.
+
+  - name: Oculine
+    ingredients: 
+      - Atropine 
+      - Spaceacillin
+      - Saline-Glucose Solution
+    sources:
+      - Extracted from dawning venne fibers.
+    tags: [medical, blindness, eye, heal]
+    info:
+      per_cycle: 30% chance to remove blindness, 80% chance to reduce eye damage by 1.
+      notes: Probably won't need this very often unless some jerk is using a lot of flashbangs.
+      
+  - name: Teporone
+    ingredients: 
+      - Silicon 
+      - Acetone 
+      - Plasma
+    tags: [medical, temperature]
+    info:
+      per_cycle: Attempts to return body temp to normal in ten degree increments
+      notes: Not really ever used much, but spacewalking cocktails might need it.
+      
+  - name: Chlorine
+    info:
+      depletion_rate: 0.4
+      penetrates_skin: Yes
+      per_cycle: +1 BURN
+      notes: Base element
+    sources:
+      - Base chemical from the dispenser.
+    tags: [base, burn, damage]
+      
+  - name: Fluorine
+    info:
+      depletion_rate: 0.4
+      penetrates_skin: Yes
+      per_cycle: +1 BURN, +1 TOX
+      notes: Base element
+    tags: [base, burn, tox, damage]
+    sources:
+      - Base chemical from the dispenser.
+
+  - name: Mercury
+    info:
+      depletion_rate: 0.4
+      penetrates_skin: Yes
+      per_cycle: Causes drooling and weird movement
+      notes: Base element. Does BRAIN damage.
+    tags: [base, brain, damage]
+    sources:
+      - Base chemical from the dispenser.
+      
+  - name: Lithium
+    info:
+      depletion_rate: 0.4
+      penetrates_skin: No
+      per_cycle: Drooling and weird movement
+    tags: [base, movement]
+    sources:
+      - Base chemical from the dispenser.      
+
+  - name: Sugar
+    sources:
+      - Extracted from sugarcanes.
+    tags: [base, stun, overdose, speed, paralyze]
+    info:
+      depletion_rate: 0.4
+      penetrates_skin: No
+      per_cycle: |
+                 50% chance of reducing an extra cycles worth of stun, paralysis and weaken
+                 4% chance to produce a unit of epinephrine
+      overdose_threshold: 200
+      notes: Having a bit of sugar in you gives you a noticeable stun reduction and slight speed boost. Overdose effects can put someone into a coma. Corn syrup is more likely to accomplish this. Might lower the overdose threshold.
+    sources:
+      - Base chemical from the dispenser.
+      - Base drink from the soda fountain.
+      
+  - name: Radium
+    info:
+      depletion_rate: 0.4
+      penetrates_skin: Yes
+      per_cycle: +4 RAD
+      notes: Radiation is cumulative and depletes one per cycle. As it ramps up, it starts doing BURN + TOX in increasing amounts related to the radiation total, causes random mutations (often disabilities) and triggers a bunch of other nasty radiation sickness effects. A sleepypen full of radium is pretty lethal over a few minutes.
+    sources:
+      - Base chemical from the dispenser.
+    tags: [base, rad, damage]
+
+  - name: Uranium
+    info:
+      depletion_rate: 0.4
+      penetrates_skin: No
+      per_cycle: +2 RAD
+      notes: Some vending machine junk contains this. Has a ~SECRET~ use.
+    tags: [base, rad, damage]
+      
+  - name: Polonium
+    source:
+      - Traitor poison bottles can have this. 
+    tags: [base, rad, damage]
+    info:
+      depletion_rate: 0.1
+      penetrates_skin: Yes
+      per_cycle: +8 RAD
+      notes: Lasts a long time and ramps your cumulative radiation way the hell up, very deadly. 
+          
+  - name: Itching Powder
+    ingredients: 
+      - Ammonia 
+      - Fuel 
+      - Fungus
+    tags: [toxic, brute, damage, allergy]
+    info:
+      depletion_rate: 0.3
+      penetrates_skin: Yes
+      per_cycle: |
+                 Lots of annoying random effects, chances to do brute damage from scratching. 
+                 6% chance to decay into 1-3 units of Histamine.
+      notes: Prank chem but can be debilitating as hell in large doses. A source of histamine.
+      
+  - name: Embalming Fluid
+    ingredients: 
+      - Ethanol 
+      - Oxygen
+      - Silver
+      - !step Heat to 320
+    heat_to: 320
+    tags: [toxic, allergy, tox, damage]
+    info:
+      depletion_rate: 0.4
+      penetrates_skin: Yes
+      per_cycle: +1 TOX, 10% chance to decay into 5-15 units of Histamine
+      notes: Inject into a corpse to prevent rotting. Decay into histamine makes it a really mean poison.
+      
+  - name: Histamine
+    sources:
+      - Inject Emblaming Fluid/Itching powder, extract histamine using a syringe
+    tags: [toxic, allergy, tox, damage, overdose, brute, oxy, damage]
+    info:
+      depletion_rate: 0.2
+      penetrates_skin: No
+      overdose_threshold: 20
+      per_cycle: Dose-dependent, ranges from annoying to incredibly lethal.
+      notes: |
+             Below the overdose threshold, it'll mess your vision up and make you cough and sneeze a lot and take occasional BRUTE damage. Overdose+ will cause increasingly worse and rapidly fatal effects simulating anaphylactic shock. Having 40+ units in your bloodstream can trigger +5 brute / +5 tox / +5 ox damage or more per cycle, so if you manage to hit someone with a large dose, it's very deadly.
+             Epinephrine, Methamphetamine and especially Diphenhydamine will counteract it as targeted meds.
+
+  - name: Venom
+    tags: [toxic, tox, brute, damage, allergy, gib]
+    info:
+      depletion_rate: 0.2
+      penetrates_skin: No
+      per_cycle: Scales with dose, up to +2 TOX, +2 BRUTE. 25% chance to decay into 5-10 Histamine.
+      notes: Double-whammy poison from all the histamine it builds up inside you. 40+ units have a 4% chance per cycle to gib you outright.
+      
+  - name: Toxin
+    tags: [toxic, tox, damage]
+    info:
+      depletion_rate: 0.4
+      penetrates_skin: No
+      per_cycle: +2 TOX
+      notes: The old boring generic toxin, still kicking around in a few places.
+      
+  - name: Neurotoxin
+    ingredients: 
+      - Space Drugs
+      - !step Heat
+    heat_to: High
+    sources:
+      - changeling stings
+      - some poison/drug decays
+      - a couple of medical interactions
+    tags: [toxic, tox, brain, damage, ko]
+    info:
+      depletion_rate: 1
+      penetrates_skin: No
+      per_cycle: +1 TOX, +1 BRAIN up to 60, then it slows down, confusion, knockout after 17 elapsed cycles
+      notes: Very debilitating, it's what changelings hit you with.
+      
+  - name: Atrazine
+    ingredients: 
+      - Chlorine 
+      - Hydrogen 
+      - Nitrogen
+    tags: [toxic, tox, damage]
+    info:
+      depletion_rate: 1
+      penetrates_skin: No
+      per_cycle: +2 TOX
+      notes: Botany has a bunch of it right away.
+      
+  - name: Amanitin
+    sources: 
+      - Syndicate Sauce
+      - Poison Bottles
+      - Extracted from white mushrooms (space fungus mutation).  
+    tags: [toxic, tox, damage]
+    info:
+      depletion_rate: 0.4
+      penetrates_skin: No
+      per_cycle: DELAYED, DOSE SPECIFIC
+      notes: This is a stealth poison. On the last cycle that it's in you, it hits you with a stack of tox damage based on elapsed cycles * rand(2,4). The more you use, the longer it takes before anything happens, but the harder it hits when it does. With large doses your target can consume something poisoned, walk around for a few minutes minding their own business, and then abruptly die with no real warning. Very devious to use.
+      
+  - name: Curare
+    sources:
+      - traitor poison bottles
+    tags: [toxic, tox, oxy, damage, paralyze]
+    info:
+      depletion_rate: 0.1
+      penetrates_skin: Yes
+      per_cycle: +1 TOX, +1 OXY, paralyzes after 11 cycles
+      notes: It won't knock them out but it will make them unable to move. Could be used to kidnap people or just disable them and scare the hell out of them.
+      
+  - name: Coniine
+    sources:
+      - traitor poison bottles
+    tags: [toxic, tox, losebreath, damage]
+    info:
+      depletion_rate: 0.05
+      penetrates_skin: No
+      per_cycle: +2 TOX, +5 LOSEBREATH (cumulative, causes suffocation)
+      notes: A small dose can kill in under a minute. Losebreath makes the victim unable to talk - they'll take suffocation rapid damage and be unable to say anything over the radio. Tied with Initro for deadliest poison.
+      
+  - name: Lipolicide
+    ingredients: 
+      - Mercury 
+      - Ephedrine 
+      - Diethylamine
+    sources: Weight Loss Shakes 
+    tags: [toxic, tox, damage]
+    info:
+      depletion_rate: 0.4
+      penetrates_skin: No
+      per_cycle: +1 TOX unless they keep eating food.
+      notes: Mostly just annoying, but easy to get. Might expand it.
+      
+  - name: Cyanide
+    ingredients: 
+      - Oil 
+      - Ammonia 
+      - Oxygen
+      - !step Heat to 320
+    heat_to: 320
+    sources:
+      - Extracted from black cannabis leaves.
+    tags: [toxic, tox, losebreath, stun, damage]
+    info:
+      depletion_rate: 0.1
+      penetrates_skin: Yes
+      per_cycle: +1.5 TOX, 10% chance of +1 LOSEBREATH, 8% chance of stun and extra +2 TOX
+      notes: |
+             A couple of common chem recipes can produce this if poorly mixed, and production of cyanide will dose nearby people if they aren''t wearing gas masks. Also a fairly easy poison.
+             Balanced to be mostly a slow and scary killer, but if they get to medbay, it''s not that hard to deal with. Suffocation damage can rack up faster than tox depending on how the RNG rolls.
+      reaction_message: The mixture gives off a faint scent of almonds.
+             
+  - name: Sulphuric Acid
+    ingredients: 
+      - Sulfur 
+      - Hydrogen 
+      - Oxygen
+    tags: [toxic, brute, damage, tox, burn]
+    info:
+      depletion_rate: 0.4
+      penetrates_skin: No
+      per_cycle: +1 TOX, +1 BURN
+      application_effect: |
+                     TOUCH - Splash over 25 units for a 75% chance to melt a face or headgear
+                     +15 BRUTE to the face
+      notes: Can melt items, 40% chance.
+      reaction_message: The mixture gives off a sharp acidic tang.
+
+  - name: Fluorosulphuric Acid
+    ingredients: 
+      - Sulphuric Acid 
+      - Fluorine 
+      - Hydrogen 
+      - Potassium 
+      - !step Heat to 320
+    heat_to: 320
+    tags: [toxic, tox, burn, damage, brute]
+    info:
+      depletion_rate: 0.4
+      penetrates_skin: No
+      per_cycle: +1 TOX, +1 BURN
+      application_effect: |
+                          TOUCH - Splash over 10 units for to melt a face or headgear
+                          +75 BRUTE to the face
+      notes: Can melt items, 100% chance.
+      reaction_message:  The mixture deepens to a dark blue, and slowly begins to corrode its container.
+      
+  - name: Ketamine
+    sources:
+      - sleepypens 
+      - traitor poison bottles
+      - Smoke buddy smoke
+    tags: [toxic, ko]
+    info:
+      depletion_rate: 0.8
+      penetrates_skin: Yes
+      per_cycle: KO in ten cycles
+      notes: Readjusted recently so a sleepypen dose should only last about 6-8 minutes.
+      
+  - name: Sulfonal
+    ingredients: 
+      - Acetone 
+      - Diethylamine 
+      - Sulfur
+    tags: [toxic, tox, damage, ko]
+    info:
+      depletion_rate: 0.1
+      penetrates_skin: No
+      per_cycle: +1 TOX, KO in 22 cycles
+      notes: A somewhat toxic sedative, slower than ketamine but lasts a long time and can kill.
+      
+  - name: Sodium Thiopental
+    sources:
+      - traitor bottles
+      - derelict medbot injections
+    tags: [toxic, ko]
+    info:
+      depletion_rate: 0.7
+      penetrates_skin: No
+      per_cycle: KOs in ten cycles
+      notes: Rapid sedative, a bit too similar to ketamine currently but part of a duo with Pancuronium.
+      
+  - name: Pancuronium
+    sources:
+      - traitor bottles,
+      - derelict medbot injections
+    tags: [toxic, paralyze, losebreath]
+    info:
+      depletion_rate: 0.2
+      penetrates_skin: No
+      per_cycle: 10 cycles to paralysis, 7% chance to cause 3-5 LOSEBREATH
+      notes: Similar to Curare but can kill you via suffocation.
+      
+  - name: Unstable Mutagen
+    ingredients: 
+      - Radium 
+      - Plasma 
+      - Chlorine
+    tags: [toxic, rad, mutation, damage]
+    info:
+      reaction_message: The substance turns neon green and bubbles unnervingly.
+      depletion_rate: 0.3
+      penetrates_skin: No
+      per_cycle: +2 RAD, 4% chance to trigger a bad mutation.
+      notes: Another solid easy-level poison.
+      
+  - name: Toxic Slurry
+    sources:
+      - Extracted from all slurrypods.
+    tags: [toxic, tox, stun, damage]
+    info:
+      depletion_rate: 0.4
+      penetrates_skin: No
+      per_cycle: 10% chance to do 2-4 TOX. 7% chance to cause a stunning migraine or vomiting.
+      notes: Mostly just annoying, but it can be deadly over time if the RNG cooperates.
+      
+  - name: Glowing Slurry
+    sources:
+      - Extracted from omega slurrypods in small quantities.
+    tags: [toxic, rad, damage, mutation]
+    info:
+      depletion_rate: 0.4
+      penetrates_skin: No
+      per_cycle: +2 RAD. 15% chance of bad mutation, 5% chance of good mutation.
+      notes: Scrambles your genes to hell and back.
+      
+  - name: Nicotine
+    sources:
+      - Cigs
+      - Nicotine patches
+      - Extracted from unmutated eggplants.
+    tags: [drug, stun, overdose, heal, paralyze, tox, oxy, damage, heart]
+    info:
+      depletion_rate: 0.4
+      penetrates_skin: No
+      overdose_threshold: 35
+      per_cycle: Stun reduction per cycle. Overdoses become rapidly deadly.
+      notes: Slapping a whole bunch of nicotine patches on someone can paralyze them and give them heart failure or a bunch of escalating tox and suffocation damage.
+      
+  - name: Cat drugs
+    ingredients: 
+      - Catonium
+      - Psilocybin 
+      - Ammonia 
+      - Welding Fuel
+      - !step Heat to 320
+    heat_to: 320
+    tags: [drug, hallucinate]
+    info:
+      depletion_rate: 0.4
+      penetrates_skin: No
+      per_cycle: catdrugs
+      notes: |
+             Causes you to meow, hiss, and hallucinate.
+             Gimmick drugs, good for laughs or confusing the hell out of people.
+
+  - name: Space Drugs
+    ingredients: 
+      - Mercury 
+      - Sugar 
+      - Lithium
+    tags: [drug, hallucinate]
+    info:
+      depletion_rate: 0.2
+      penetrates_skin: No
+      per_cycle: Pretty lights!
+      notes: Heat it to create neurotoxin. Otherwise it just does some weird things to your movement and makes everything flash colors like the bar's Party Button.
+      
+  - name:  Psilocybin
+    sources:
+      - Extracted from magic mushrooms (space fungus mutation).
+    tags: [drug, hallucinate]
+    info:
+      depletion_rate: 0.4
+      penetrates_skin: No
+      per_cycle: Colors + text hallucinations
+      notes: Can make you hallucinate stuff like gunshots and attack messages, might freak someone out if they don't know what's going on, could probably use a revamp.
+      
+  - name: Lysergic Acid Diethylamine
+    ingredients: 
+      - Diethylamine 
+      - Space Fungus
+    sources:
+      - Extracted from rainbow cannabis leaves.
+    tags: [drug, hallucinate]
+    info:
+      depletion_rate: 0.4
+      penetrates_skin: No
+      per_cycle: Colors + visual hallucinations
+      notes: |
+             Imaginary monsters start chasing you around. Changeling''s hallucinogen sting injects this.
+             Funny if you hit an unwary person who hasn''t experienced it before, then see them wildly firing lasers at imaginary spiders and screaming a lot.
+
+  - name: Tetrahydrocannibol
+    sources:
+      - Extracted from unmutated cannabis leaves.
+    tags: [drug, drowsiness]
+    info:
+      depletion_rate: 0.4
+      penetrates_skin: No
+      per_cycle: Giggling, stuttering, occasional drowsiness and movement confusion.
+      notes: Doesn''t really do a whole lot, but people are usually pretty happy to smoke any joints you leave laying around.
+      
+  - name: Ephedrine
+    ingredients: 
+      - Sugar 
+      - Oil 
+      - Hydrogen 
+      - Diethylamine
+    sources:
+      - Extracted from unmutated asomna barks.
+    tags: [drug, stun, speed, heal, crit]
+    info:
+      depletion_rate: 0.3
+      penetrates_skin: No
+      overdose_threshold: 35
+      per_cycle: Stun reduction per cycle, increases run speed slightly, stabilizes crit.
+      notes: Probably gonna add this to some more sodas or something. It''s pretty much just a weaker analogue of medbay''s Epinephrine, but it''s addictive and has a few more side effects.
+      
+  - name: Crank
+    ingredients: 
+      - Diphenhydramine 
+      - Ammonia 
+      - Lithium 
+      - Welding Fuel 
+      - Sulphuric Acid 
+      - !step Heat to 320
+    heat_to: 320
+    tags: [drug, overdose, stun, heal, temperature, jitter, tox, brute, brain, damage, disease, addictive]
+    info:
+      depletion_rate: 0.4
+      penetrates_skin: No
+      overdose_threshold: 20
+      per_cycle: 2x stun reduction per cycle. Warms you up, makes you jittery as hell.
+      notes: Overdose can cause random amounts of TOX damage, BRUTE damage, BRAIN damage, or give you a case of non-contagious Berserker. Very addictive, but the stun reduction effect is pretty nice for fighting.
+      
+  - name: Krokodil
+    ingredients: 
+      - Diphenhydramine 
+      - Morphine 
+      - Space Cleaner
+      - Potassium 
+      - Phosphorous 
+      - Welding Fuel 
+      - !step Heat to 320
+    heat_to: 320
+    tags: [drug, overdose, temperature, brain, tox, damage, brute, ko]
+    info:
+      depletion_rate: 0.4
+      penetrates_skin: No
+      overdose_threshold: 20
+      per_cycle: Cools you down, calms you down, occasional BRAIN and TOX damage.
+      notes: Overdose can cause random amounts of TOX damage, BRUTE damage, BRAIN damage, make you pass out, or most fun of all, make all your skin rot off. If this happens, you'll look like a half-rotten corpse but can potentially heal back from that and just wander around being terrifying.
+      
+  - name: Methamphetamine
+    ingredients: 
+      - Ephedrine 
+      - Iodine 
+      - Phosphorous 
+      - Hydrogen 
+      - !step Heat to 325
+    heat_to: 325
+    tags: [drug, stun, jitter, speed, addictive, overdose, ko, paralyze]
+    info:
+      depletion_rate: 0.4
+      penetrates_skin: No
+      overdose_threshold: 20
+      per_cycle: 3x stun reduction per cycle, makes you really jittery, dramatically increases movement speed.
+      notes: Extremely addictive and overdose can make you flail around uncontrollably and drop your stuff, but it's the best thing short of stimulants or bath salts for shrugging off stuns, KOs and paralysis. People will have a hard time containing you.
+      
+  - name: Bath Salts
+    ingredients:
+      - ????
+      - Monosodium Glutamate
+      - Saltpetre 
+      - Mercury 
+      - Space Cleaner 
+      - Mugwort 
+      - Denatured Enzyme
+      - !step Heat
+    heat_to: High
+    tags: [drug, overdose, stun, damage, brain, disease, hallucinate]
+    info:
+      depletion_rate: 0.6
+      penetrates_skin: No
+      overdose_threshold: 20
+      per_cycle: Makes you nearly impervious to stuns, but you'll be a nearly uncontrollable tramp-bearded raving lunatic.
+      notes: Overdose will likely kill you from a half dozen different types of escalating damage. Even taking too many occasional doses can kill you from brain damage. Can give you Berserker. Makes you hallucinate all sorts of horrible shit and you''ll barely be able to control your movement as you go flying into everything around you fists-first. Decays into a bunch of other drugs and poisons. Bath salts boxing is hilarious.
+
+  - name: Stimulants
+    sources:
+      - Traitor injector
+    tags: [drug, oxy, tox, brute, burn, stun, heal]
+    info:
+      per_cycle: -5 damage to OXY, TOX, BRUTE, BURN, sets all stun-related vars to zero.
+      notes: Only works while volume is greater than five units. As it wears off to under five units, it hits you with a stun and some tox + brute damage. 
+      
+  - name: Plasma
+    info:
+      depletion_rate: 0.4
+      penetrates_skin: No
+      ignition_temp: 310
+      per_cycle: +1 TOX. Makes being on fire much worse, and can burst into flame if heated.
+      notes: |
+             Splash a burning person with plasma and the cumulative BURNING var goes up +30
+             Burning decreases once per life cycle and causes steady burn damage while active. Fireball if ignited.
+    sources:
+      - Base chemical from the dispenser.
+    tags: [base, tox, damage, fire, burning, explode]
+             
+  - name: Welding Fuel
+    info:
+      depletion_rate: 0.4
+      penetrates_skin: No
+      ignition_temp: 325
+      per_cycle: Fireball if ignited. If inside a burning person, extends burning duration by +2.
+      application_effect: TOUCH - If target is already burning, extend burning duration by +30.
+      notes: Used as a stand-in for lighter hydrocarbons in a lot of the organic chem recipes.
+    sources:
+      - Welding Fuel tanks.
+    tags: [base, ignite, burning, explode]
+
+      
+  - name: Oil
+    ingredients:
+      - Carbon 
+      - Hydrogen 
+      - Welding Fuel
+    tags: [slippery, ignite]
+    info:
+      depletion_rate: 0.4
+      penetrates_skin: No
+      ignition_temp: 340
+      application_effect: TOUCH - Can lubricate cyborg joints and make them move faster.
+      notes: Burns with a small smoky fire, yielding Ash reagent. Can make floors slippery if splashed around. Used as a stand-in for Benzene, Toulene, Napthalene and a bunch of other heavier hydrocarbons for a ton of the organic chem recipes.
+      
+  - name: Napalm
+    ingredients:
+      - Sugar 
+      - Welding Fuel
+      - Ethanol
+    tags: [burning, ignite]
+    info:
+      depletion_rate: 0.4
+      penetrates_skin: No - probably should though
+      ignition_temp: 320
+      per_cycle: Fireball if ignited. If inside a burning person, extends burning duration by +10.
+      application_effect: TOUCH - If target is already burning, extend burning duration by +70.
+      notes: This is the jellied-gas sort of napalm.
+      
+  - name: Phlogiston
+    ingredients:
+      - Phosphorous 
+      - Sulphuric Acid 
+      - Plasma 
+      - Stabilizing agent
+    tags: [burn, damage, ignite]
+    info:
+      depletion_rate: 0.4
+      penetrates_skin: No
+      per_cycle: +1 BURN damage. Probably ought to add BURNING as well.
+      application_effect: TOUCH - Self-burning, ignites other stuff.
+      notes: This is what old-napalm is now.
+      
+  - name: Chlorine Trifluoride
+    ingredients:
+      - Chlorine #(1)
+      - Fluorine #(3) 
+      - !step Heat to 350
+    heat_to: 350
+    tags: [burning]
+    info:
+      depletion_rate: 0.4
+      penetrates_skin: No
+      per_cycle: +3 BURNING. Sets people on fire from the inside out.
+      application_effect: TOUCH - BURNING + 50.
+      notes: Comes into existence at 1000 degrees. Burns things that wouldn't otherwise burn. Makes an enormous mess. Reacts violently with carbon tetrachloride (firefoam)
+      
+  - name: Smoke Powder
+    ingredients:
+      - Potassium 
+      - Phosphorous 
+      - Sugar 
+      - Stabilizing agent
+    tags: [ignite]
+    info:
+      depletion_rate: 0.4
+      penetrates_skin: No
+      ignition_temp: 300
+      notes: When mixed without stabilizer, or heated to 300 with stabilizer, it'll make a big cloud of smoke carrying up to three other reagents. Essential for crime.
+      
+  - name: Flash Powder
+    ingredients:
+      - Aluminium 
+      - Potassium 
+      - Chlorine 
+      - Sulfur 
+      - Stabilizing agent
+    tags: [ignite, stun, eye, damage]
+    info:
+      depletion_rate: 0.4
+      penetrates_skin: Yes // imagine it's covering their clothes or whatever
+      ignition_temp: 300
+      notes: Stuns anyone within five tiles of the source, stun amount relative to distance. Blocked by sunglasses. Causes eye damage, can lead to blindness.
+      
+  - name: Sonic Powder
+    ingredients:
+      - Oxygen 
+      - Ethanol 
+      - Phosphorous 
+      - Stabilizing agent
+    tags: [ignite, stun, deaf, ear, damage]
+    info:
+      depletion_rate: 0.4
+      penetrates_skin: Yes // imagine it's covering their clothes or whatever
+      ignition_temp: 300
+      notes: Deafens and stuns within five tiles, blocked by earmuffs, can cause ear damage and deafness. Occasionally plays HOOT! instead of BANG!
+      
+  - name: Black Powder
+    ingredients:
+      - Saltpetre 
+      - Charcoal 
+      - Sulfur
+    tags: [ignite, explode]
+    info:
+      depletion_rate: 0.05
+      penetrates_skin: Yes // imagine it's covering their clothes or whatever
+      ignition_temp: 325
+      notes: |
+             Sparks, then blows the fuck up a second or two later. Damage scales up with reagent volume.
+             Slow depletion means you can poison someone with it and then wait for then to encounter a heat source awhile later. KABOOM!
+      
+  - name: Thermite
+    ingredients:
+      - Iron
+      - Oxygen
+      - Aluminium
+    tags: [ignite, burning]
+    info:
+      depletion_rate: 0.4
+      penetrates_skin: No
+      ignition_temp: 280
+      application_effect: TOUCH - If already burning, set BURNING to 100.
+      notes: Burns through metal walls. If some is already on fire, dumping thermite on them is very mean.
+      reaction_message:  The solution mixes into a reddish-brown powder.
+      
+  - name: Pyrosium
+    ingredients:
+      - Plasma 
+      - Radium 
+      - Phosphorous
+    tags: [heat]
+    info:
+      depletion_rate: 0.4
+      penetrates_skin: No
+      notes: |
+             Comes into existence at 0 degrees, but slowly heats other reagents up towards 1000.
+             Can make non-flammable things scaldingly hot, but so can a welder or lighter. Fun for delayed self-heating reactions. 
+
+  - name: Tea
+    sources:
+      - Base drink from the soda fountain.
+      - Coffee machines.
+
+  - name: Fluorosurfactant
+    ingredients:
+      - Fluorine
+      - Carbon
+      - Sulphuric Acid
+    info:
+      notes: Turns into foam when combined with water
+
+  - name: Silicate
+    ingredients:
+      - Silicon 
+      - Oxygen 
+      - Aluminium
+    info:
+      notes: Reinforces windows and grilles. It may be applied to windows up to four times, with each application making the window stronger than the last.
+

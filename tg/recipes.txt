@@ -1,0 +1,647 @@
+# Wiki recipe list
+# Compiled by mysha
+#
+#INDENTATION MATTERS! Use spaces, not tabs.
+#
+# This file is in standard YAML format
+#
+#
+#name: The name of the recipe list
+#recipes:
+#  - name: Reagent name 
+#    ingredients: # List of ingredients
+#      - Carbon
+#      - Hydrogen
+#      - Fuel @chemical,burn # The Fuel reagent has to have the chemical and burn tags
+#      - One of <Reagent> or <Reagent2 @tag1,tag2> # The actual reagents are in <>, with optional tags
+#      - !step Heat the beaker to 300 degrees # Custom step
+#    heat_to: 300 # Recipe requires heating
+#    reaction_message: Message that shows up when you create the reagent
+#    info: # information section, shows up as the Information tab
+#      depletion_rate: 0.4 # How much of the reagent depletes during one cycle
+#      penetrates_skin: No # Does the reagent penetrate skin?
+#      ignition_temp: 340 # Temperature at which the reagent ignites
+#      application_effect: TOUCH - Reagent does something when the TOUCH reaction occurs.
+#      notes: Notes about this reagent
+#      per_cycle: Information about what the reagent does per one cycle.
+#      tags: [first_tag, second_tag, third_tag] # Tags for the current reagent, can be a list of any string without spaces
+
+#TODO add ino description and result
+
+name: tg-staion recipes
+recipes:
+  - name: Aluminium
+    info:
+      description: A silvery white and ductile member of the boron group of chemical elements.
+    tags: [base]
+
+  - name: Carbon
+    info:
+      description: A highly stable element found in organics.
+    tags: [base]
+
+  - name: Chlorine
+    info:
+      description: A noxious gas.
+    tags: [base]
+
+  - name: Ethanol
+    info:
+      description: A well-known alcohol with a variety of applications.
+      notes: Do not drink unless seeking pure drunkatude.
+    tags: [base,drunk]
+
+  - name: Fluorine
+    info:
+      description: A highly reactive chemical element.
+    tags: [base]
+
+  - name: Gold
+    info:
+      description: A dark yellow, dense, valuable conductive metal. Often used in electronics.
+      notes: Must acquire from the mines!
+    tags: [base]
+
+  - name: Hydrogen
+    info:
+      description: A colorless, odorless, nonmetallic, tasteless, highly combustible diatomic gas.
+    tags: [base]
+
+  - name: Iron
+    info:
+      description: A metallic element, reacts with oxygen.
+      notes: Cures certain diseases. May be worthwhile to create a pill bottle of this. Also used in certain alcoholic concoctions.
+    tags: [base]
+    
+  - name: Lithium
+    info:
+      description: A soft, silver metallic element.
+    tags: [base]
+
+  - name: Mercury
+    info:
+      description: A liquid metal.
+      notes: Poisonous, do not inject or swallow.
+    tags: [base]
+
+  - name: Nitrogen
+    info:
+      description: A colorless, odorless, tasteless gas.
+    tags: [base]
+
+  - name: Oxygen
+    info:
+      description: A colorless, odorless gas.
+    tags: [base]
+
+  - name: Phosphorus
+    info:
+      description: A highly reactive element, glows on contact with oxygen.
+    tags: [base]
+
+  - name: Plasma
+    info:
+      description: Liquefied plasma.
+      notes: Highly dangerous when ingested, must acquire from the mines.
+    tags: [base]
+
+  - name: Potassium
+    info:
+      description: A soft, low-melting solid that can easily be cut with a knife. Reacts violently with water.
+      notes: Mixing with water will cause this to explode.
+    tags: [base]
+
+  - name: Radium
+    info:
+      description: Radium is an alkaline earth metal. It is extremely radioactive.
+      notes: Deals out radiation damage, and will raise the radiation level of the subject it is used on.
+    tags: [base]
+
+  - name: Silicon
+    info:
+      description: A tetravalent metalloid, silicon is less reactive than its chemical analog carbon.
+    tags: [base]
+
+  - name: Silver
+    info:
+      description: A white, valuable conductive metal. Often used in harmonic wiring.
+      notes: Must acquire from the mines!
+    tags: [base]
+
+  - name: Sodium
+    info:
+      description: A light, silver-coloured metal. So soft it can be cut with a knife and highly reactive.
+    tags: [base]
+
+  - name: Sugar
+    info:
+      description: The organic compound commonly known as table sugar and sometimes called saccharose. This white, odorless, crystalline powder has a pleasing, sweet taste.
+    tags: [base]
+
+  - name: Sulphur
+    info:
+      description: A foul smelling non-metallic crystalline element.
+    tags: [base]
+
+  - name: Sulphuric Acid
+    info:
+      description: A strong mineral acid with the molecular formula H2SO4.
+      notes: Very dangerous, do not splash on faces, eat, or inject people with this.
+    tags: [base]
+
+  - name: Uranium
+    info:
+      description: A black, incredibly dense, slightly radioactive, actinide. Often used in its depleted state in military ballistics and heavy armor.
+      notes: Must acquire from the mines, radioactive!
+    tags: [base]
+
+  - name: Water
+    info:
+      description: A ubiquitous chemical substance that is composed of hydrogen and oxygen.
+      notes: Also known as Dihydrogen Monoxide. Put out toxin fires with this.
+    tags: [base]
+
+  - name: Hyperzine
+    ingredients:
+      - Posphorous
+      - Sugar
+      - Sulphur
+    info:
+      notes: A highly effective, long lasting muscle stimulant. It allows greater freedom of movement in bulky clothing although it has the side effect of causing some twitching.
+    tags: [medical]
+
+  - name: Hyronalin
+    ingredients:
+      - Anti-Toxin
+      - Radium
+    info:
+      notes: A weak treatment for radiation damage. Considered to be useful mainly for genetic modification, where it reduces radiation levels, and thus the chance of genetic mutations.
+    tags: [medical]
+
+  - name: Imidazoline
+    ingredients:
+      - Anti-Toxin
+      - Carbon
+      - Hydrogen
+    info:
+      notes: Effective in treating eye trauma. It heals damage caused by physical or chemical trauma, though it is ineffective in treating genetic defects in the eyes (Results in 2 units instead of 3).
+      result: 2u per 1u of each ingredient
+    tags: [medical]
+
+  - name: Inaprovaline
+    ingredients:
+      - Carbon
+      - Oxygen
+      - Sugar
+    info:
+      notes: Inaprovaline is a synaptic stimulant and cardiostimulant. Commonly used to stabilize patients- it stops the rate of decline in a patient's body if it has reached 0% or lower.
+    tags: [medical]
+
+  - name: Kelotane
+    ingredients:
+      - Carbon
+      - Silicon
+    info:
+      notes: Treats burn damage effectively, preventing microbial growth and vastly speeding up healing of even full thickness burns.
+    tags: [medical]
+
+  - name: Leporazine
+    ingredients:
+      - Copper
+      - Silicon
+      - 5 units <Plasma> (catalyst)
+    info:
+      notes: This keeps a patient's body temperature stable. High doses can allow short periods of unprotected EVA.
+    tags: [medical]
+
+  - name: Lipozine
+    ingredients:
+      - Sodium Chloride
+      - Ethanol
+      - 5 units <Radium>
+    info:
+      notes: Speeds up the patient's metabolism to reduce body fat at a rapid rate.
+    tags: [medical]
+
+  - name: Ryetalyn
+    ingredients:
+      - Arithrazine
+      - Carbon
+    info:
+      notes: Repairs all genetic defects, restoring a patient to an ideal state. May be useful if genetics is unable to function properly.
+    tags: [medical]
+
+  - name: Spaceacillin
+    ingredients:
+      - Cryptobiolin
+      - Inaprovaline
+    info:
+      notes: A theta-lactam antibiotic. A common and very useful medicine, effective against many diseases likely to be encountered in space.
+    tags: [medical]
+
+  - name: Synaptizine
+    ingredients:
+      - Lithium
+      - Sugar
+      - Water
+    info:
+      notes: Used as part of a cure for GBS. It removes Mindbreaker Toxin (faster than anti-toxin) and lowers the duration of paralysis, stunned, weakened, drowsyness and hallucinations. Has a chance to deal a small amount of toxic damage.
+    tags: [medical]
+
+  - name: Tricordrazine
+    ingredients:
+      - Anti-Toxin
+      - Inaprovaline
+    info:
+      notes: A highly potent stimulant that can heal all damage types, originally derived from Cordrazine. Often used in a wide range of applications. 
+    tags: [medical]
+
+  - name: Alkysine
+    ingredients:
+      - Anti-Toxin
+      - Chlorine
+      - Nitrogen
+    info:
+      notes: Lessens the damage to neurological tissue, effective even after catastrophic injury. Used for treating brain damage.
+      result: 2u per 1u of each ingredient
+    tags: [medical]
+
+  - name: Anti-Toxin
+    ingredients:
+      - Nitrogen
+      - Potassium
+      - Silicon
+    info:
+      notes: |
+             Also known as Dylovene
+             A broad-spectrum anti-toxin, which treats toxin damage in the blood stream. It is also known as Dylovene.
+    tags: [medical]
+
+  - name: Arithrazine
+    ingredients:
+      - Hyronalin
+      - Hydrogen
+    info:
+      notes: A very unstable medication used to treat the most extreme cases of radiation poisoning. May cause some internal damage to the patient, but such damage is easily treatable.
+    tags: [medical]
+
+  - name: Bicaridine
+    ingredients:
+      - Inaprovaline
+      - Carbon
+    info:
+      notes: An analgesic which is highly effective at treating brute damage. It is useful for stabilizing people who have been severely beaten, as well as treating less life-threatening injuries.
+    tags: [medical]
+
+  - name: Cryoxadone
+    ingredients:
+      - Dexalin
+      - Oxygen
+      - Water
+    info:
+      notes: Required for the proper function of cryogenics. It heals all types of damage (including clone damage) very swiftly, but only when in a very cold environment.
+    tags: [medical]
+
+  - name: Clonexadone
+    ingredients:
+      - Cryoxadone
+      - Sodium
+      - 5 units <Plasma> (catalyst)
+    info:
+      notes: A stronger version of Cryoxadone. It heals all types of damage but as an added bonus, heals clone damage 3x faster than Cryoxadone, but only when in a very cold environment. Useful for speed cloning.
+    tags: [medical]
+
+  - name: Rezadone
+    ingredients:
+      - Cryptobiolin
+      - Carpotoxin
+      - Copper
+    info:
+      notes: A powder derived from fish toxin, this substance can effectively treat genetic damage in humanoids, though excessive consumption has side effects.
+    tags: [medical]
+
+  - name: Dermaline
+    ingredients:
+      - Kelotane
+      - Oxygen
+      - Phosphorus
+    info:
+      notes: A chemical, which is more effective at treating burns damage than kelotone. Is administered with a syringe or pill.
+    tags: [medical]
+
+  - name: Dexalin
+    ingredients:
+      - 2 part <Oxygen>
+      - 5 units <Plasma> (catalyst)
+    info:
+      notes: Used for treating oxygen deprivation. In most cases where it is likely to be needed, the strength of Dexalin Plus will probably be more useful (Results in 1 unit instead of 2).
+      result: 1u per 2u of Oxygen
+    tags: [medical]
+
+  - name: Dexalin Plus
+    ingredients:
+      - Dexalin
+      - Carbon
+      - Iron
+    info:
+      notes: Used in treatment of extreme cases of oxygen deprivation. It immediately counters all oxygen loss, which is hugely useful in many circumstances.
+    tags: [medical]
+
+  - name: Ethylredoxrazine
+    ingredients:
+      - Anti-Toxin
+      - Carbon
+      - Oxygen
+    info:
+      notes: Neutralises alcohol in the blood stream. Though it is commonly needed, it is rarely requested.
+    tags: [medical]
+
+  - name: Ammonia
+    ingredients:
+      - 3 parts <Hydrogen>
+      - 1 part <Nitrogen>
+    info:
+      notes: An effective fertilizer which is better than what is available to the botanist initially, though it isn't as powerful as Diethylamine.
+      result: 3u per 4u of ingredients
+    tags: []
+
+  - name: Chloral Hydrate
+    ingredients:
+      - 3 parts <Chlorine>
+      - 1 part <Ethanol>
+      - 1 part <Water>
+    info:
+      notes: A powerful sedative which causes death in doses around 30 units.
+      result: 1u per 5u of ingredients
+    tags: []
+
+  - name: Condensed Capsaicin
+    ingredients:
+      - 1 part <Capsaicin Oil>
+      - 5 parts <Ethanol>
+    info:
+      notes: A chemical agent used for self-defense and in police work (Results in 5 units instead of 6).
+      result: 5u per 6u of ingredients
+    tags: []
+
+  - name: Cryptobiolin
+    ingredients:
+      - Oxygen
+      - Potassium
+      - Sugar
+    info:
+      notes: Causes confusion and dizziness. This is essential to make Spaceacillin.
+    tags: []
+
+  - name: Diethylamine
+    ingredients:
+      - Ammonia
+      - Ethanol
+    info:
+      notes: A very potent fertilizer.
+    tags: []
+
+  - name: EMP
+    ingredients:
+      - Iron
+      - Uranium
+    info:
+      notes: This reacts immediately on mixing, it creates a large electromagnetic pulse which affects all electronical devices; very useful for causing chaos.
+    tags: []
+
+  - name: Explosion
+    ingredients:
+      - Potassium
+      - Water
+    info:
+      notes: This explodes immediately on mixing, which may knock you over or even kill you. Only useful in grenade production.
+    tags: []
+
+  - name: Flash Powder
+    ingredients:
+      - Aluminium
+      - Potassium
+      - Sulphur
+    info:
+      notes: Creates a flash similar to that of a flashbang immediately on mixing. Only useful in grenade production.
+    tags: []
+
+  - name: Foaming Agent
+    ingredients:
+      - Hydrogen
+      - Lithium
+    info:
+      notes: Makes foam such as that required in metal foam grenades.
+      result: 1u per 2u of ingredients
+    tags: []
+
+  - name: Foam Surfactant
+    ingredients:
+      - 2 parts <Carbon>
+      - 2 parts <Fluorine>
+      - 1 part <Sulphuric Acid>
+    info:
+      notes: Creates a large cloud of foam when mixed with an equal amount of water.
+    tags: []
+
+  - name: Glycerol
+    ingredients:
+      - 3 parts <Corn Oil>
+      - 1 part <Sulphuric Acid>
+    info:
+      notes: Requires blended corn, so thus help from the botanist. This is only useful in other reactions.
+      result: 1u per 4u of ingredients
+    tags: []
+
+  - name: Impedrezene
+    ingredients:
+      - Mercury
+      - Oxygen
+      - Sugar
+    info:
+      notes: A narcotic that impedes one's ability by slowing down the higher brain cell functions. Causes massive brain damage.
+      result: 2u per 3u of ingredients
+    tags: []
+
+  - name: Lexorin
+    ingredients:
+      - Hydrogen
+      - Nitrogen
+      - Plasma
+    info:
+      notes: Temporarily stops respiration and causes tissue damage. Large doses are fatal, and will cause people to pass out very quickly.
+    tags: []
+
+  - name: Metal Foam
+    ingredients:
+      - 3 parts <Iron> OR <Aluminium>
+      - 1 part <Foaming Agent>
+      - 1 part <Polytrinic Acid>
+    info:
+      notes: Creates lightweight metal foam walls. These can be easily torn through, but may be useful for plugging hull breaches. Can be made with either iron or aluminium.
+    tags: []
+
+  - name: Mindbreaker Toxin
+    ingredients:
+      - Anti-toxin
+      - Hydrogen
+      - Silicon
+    info:
+      notes: A potent hallucinogenic compound that is illegal under space law. Formerly known as LSD, but was renamed so people understand that it is not a "fun time".
+    tags: []
+
+  - name: Napalm
+    ingredients:
+      - Aluminium
+      - Plasma
+      - Sulphuric Acid
+    info:
+      notes: Creates a large fire immediately on mixing. Only useful for grenades.
+      result: 1u per 3u of ingredients
+    tags: []
+
+  - name: Nitroglycerin
+    ingredients:
+      - Glycerol
+      - Polytrinic Acid
+      - Sulphuric Acid
+    info:
+      notes: A heavy, colourless, oily, explosive liquid obtained by nitrating glycerol. Explodes immediately on mixing.
+      result: 2u per 3u of ingredients
+    tags: []
+
+  - name: Plant-B-Gone
+    ingredients:
+      - 1 part <Toxin>
+      - 4 parts <Water>
+    info:
+      notes: A potent herbicide which is useful to replace the limited supply the botanist starts with.
+    tags: []
+
+  - name: Plasma Solidification
+    ingredients:
+      - 20 parts <Plasma>
+      - 5 parts <Iron>
+      - 5 parts <Frost Oil>
+    info:
+      notes: Solidifies a large amount of plasma into a bar.
+    tags: []
+
+  - name: Polytrinic Acid
+    ingredients:
+      - Chlorine
+      - Potassium
+      - Sulphuric Acid
+    info:
+      notes: A highly caustic and dangerous substance. Keep away from faces and valuable equipment. Used in some other recipes.
+    tags: []
+
+  - name: Sleep Toxin
+    ingredients:
+      - 1 part <Chloral Hydrate>
+      - 4 parts <Sugar>
+    info:
+      notes: Not at potent as its preceding chemical, merely makes you narcoleptic rather than comatose.
+    tags: []
+
+  - name: Smoke
+    ingredients:
+      - Phosporous
+      - Potassium
+      - Sugar
+    info:
+      notes: This creates a large cloud of smoke that will take on the properties of everything (if anything) in the container of the reaction. Very useful if you want to make a chloral hydrate smoke grenade for riot control.
+    tags: []
+
+  - name: Sodium Chloride
+    ingredients:
+      - Chlorine
+      - Sodium
+    info:
+      notes: Commonly known as salt, Sodium Chloride is often used to season food.
+    tags: []
+
+  - name: Space Cleaner
+    ingredients:
+      - Ammonia
+      - Water
+    info:
+      notes: This is able to clean almost all surfaces of almost anything that may dirty them. The janitor is likely to appreciate refills.
+    tags: []
+
+  - name: Space Drugs
+    ingredients:
+      - Lithium
+      - Mercury
+      - Sugar
+    info:
+      notes: An illegal compound which induces a number of effects such as loss of balance and visual artefacts.
+    tags: []
+
+  - name: Space Lube
+    ingredients:
+      - Oxygen
+      - Silicon
+      - Water
+    info:
+      notes: Space Lube is a high performance lubricant intended for maintenance of extremely complex mechanical equipment.
+      result: 4u per 3u of ingredients
+    tags: []
+
+  - name: Sterilizine
+    ingredients:
+      - Anti-Toxin
+      - Chlorine
+      - Ethanol
+    info:
+      notes: Helps the patient when used during surgery, may also decontaminate objects and surfaces that bear pathogens.
+    tags: []
+
+  - name: Synthi-flesh
+    ingredients:
+      - 1 part <Clonexadone>
+      - 5 parts <Blood>
+    info:
+      notes: A tasty alternative to actual meat, allegedly used for surgery.
+    tags: []
+
+  - name: Thermite
+    ingredients:
+      - Aluminium
+      - Iron
+      - Oxygen
+    info:
+      notes: A mixture that becomes extremely hot when ignited, and which can burn straight through walls when applied and ignited.
+    tags: []
+
+  - name: Unstable Mutagen
+    ingredients:
+      - Chlorine
+      - Phosphorus
+      - Radium
+    info:
+      notes: Causes mutations when injected into living people or plants. High doses may be lethal, especially in humans. Only useful for Botany and Virology.
+    tags: []
+
+  - name: Virus Food
+    ingredients:
+      - Water
+      - Milk
+    info:
+      notes: A chemical which allows viruses and bacteria to quickly grow.
+    tags: []
+
+  - name: Zombie Powder
+    ingredients:
+      - 5 parts <Sleeping Toxin>
+      - 5 parts <CarpoToxin>
+      - 5 parts <Copper>
+    info:
+      notes: Paralyses people, and makes them appear dead to the most rudimentary of tests. Requires , CarpoToxin which must be harvested from Space Carp. 
+      result: 2u per 15u of ingredients
+    tags: []
+
+  - name: CarpoToxin
+    source: Harvested from Space Carp
+    tags: []
+    
