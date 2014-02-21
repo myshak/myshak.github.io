@@ -488,7 +488,6 @@ recipes:
       - Aluminium
       - Bromine
       - Ammonia
-      - !step Heat to 350
     tags: [medical, oxy, losebreath, heal]
     sources:
       - Extracted from unmutated contusine leaves.
