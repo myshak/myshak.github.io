@@ -934,6 +934,7 @@ recipes:
       - Chlorine
     tags: [toxic, rad, mutation, damage]
     info:
+      description: Might cause unpredictable mutations. Keep away from children.
       reaction_message: The substance turns neon green and bubbles unnervingly.
       depletion_rate: 0.3
       penetrates_skin: No

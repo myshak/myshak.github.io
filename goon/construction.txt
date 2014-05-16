@@ -1,5 +1,23 @@
 name: Construction
 recipes:
+  - name: Rigged light tube
+    ingredients:
+      - Light tube
+      - <Syringe> full of <plasma @base>
+      - !step Inject the light tube with plasma.
+    info:
+      notes: A rather uncommon and creative way to booby-trap machinery or whole rooms. It is not a bad idea to turn the power off before installing the rigged light tube.
+    tags: [make]
+
+  - name: Rigged power cell
+    ingredients:
+      - Power cell
+      - <Syringe> full of <plasma @base>
+      - !step Inject the power cell with plasma.
+    info:
+      notes: A rather uncommon and creative way to booby-trap machinery or whole rooms. It is not a bad idea to turn the power off before installing the rigged power cell.
+    tags: [make]
+
   - name: Igniter assembly
     ingredients:
       - Igniter
