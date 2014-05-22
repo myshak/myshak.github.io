@@ -14,7 +14,7 @@
 #      - Hydrogen
 #      - Fuel @chemical,burn # The Fuel reagent has to have the chemical and burn tags
 #      - !step Heat the beaker to 300 degrees # Custom step
-#    heat_to: 300 # Recipe requires heating
+#    heat_to: Heat to 300 # Recipe requires heating
 #    reaction_message: Message that shows up when you create the reagent
 #    info: # information section, shows up as the Information tab
 #      depletion_rate: 0.4 # How much of the reagent depletes during one cycle
@@ -113,7 +113,7 @@ recipes:
       - Urine
       - Water
       - !step Heat
-    heat_to: High
+    heat_to: Apply heat
     
   - name: Corn Starch
     sources:
@@ -159,7 +159,7 @@ recipes:
       - !step Heat
     sources:
       - Burn something (like paper, money, anything that leaves a pile of ash after burning) and scoop it up with a beaker.
-    heat_to: High
+    heat_to: Apply heat
 
   - name: Egg
     sources:
@@ -213,7 +213,7 @@ recipes:
       - Ammonia
       - Ethanol
       - !step Heat
-    heat_to: Unknown
+    heat_to: Apply heat
     info: 
       notes: Used for certain medical recipes and as fertilizer.
       
@@ -238,7 +238,7 @@ recipes:
       - Ash
       - Water
       - !step Heat to 310
-    heat_to: 310
+    heat_to: Heat to 310
     info:
       notes: Fertilizer.
 
@@ -290,7 +290,7 @@ recipes:
       - Ash
       - Salt
       - !step Heat to 310
-    heat_to: 310
+    heat_to: Heat to 310
     sources:
       - Extracted from any venne fibers.
     tags: [medical, tox, heal, depletion]
@@ -317,8 +317,8 @@ recipes:
       - Oxygen 
       - Sulphuric Acid
     tags: [medical, brute, heal, tox, damage]
+    reaction_message: The solution yields an astringent powder.
     info:
-      reaction_message: The solution yields an astringent powder.
       per_cycle: 55% chance per cycle of healing 2 points of BRUTE damage.
       depletion_rate: 2
       application_effect: |
@@ -375,7 +375,7 @@ recipes:
       - Mercury 
       - Chlorine
       - !step Heat to 320
-    heat_to: 320
+    heat_to: Heat to 320
     tags: [medical, depletion, tox, damage]
     info:
       depletion_rate: 2
@@ -502,7 +502,7 @@ recipes:
       - Fluorine 
       - Oil 
       - !step Heat to 320
-    heat_to: 320
+    heat_to: Heat to 320
     tags: [medical, oxy, losebreath, brute, burn, heal, addictive]
     info:
       depletion_rate: 0.4
@@ -717,7 +717,7 @@ recipes:
       - Oxygen
       - Silver
       - !step Heat to 320
-    heat_to: 320
+    heat_to: Heat to 320
     tags: [toxic, allergy, tox, damage]
     info:
       depletion_rate: 0.4
@@ -758,7 +758,7 @@ recipes:
     ingredients: 
       - Space Drugs
       - !step Heat
-    heat_to: High
+    heat_to: Apply heat
     sources:
       - changeling stings
       - some poison/drug decays
@@ -833,10 +833,11 @@ recipes:
       - Ammonia 
       - Oxygen
       - !step Heat to 320
-    heat_to: 320
+    heat_to: Heat to 320
     sources:
       - Extracted from black cannabis leaves.
     tags: [toxic, tox, losebreath, stun, damage]
+    reaction_message: The mixture gives off a faint scent of almonds.
     info:
       depletion_rate: 0.1
       penetrates_skin: Yes
@@ -844,7 +845,6 @@ recipes:
       notes: |
              A couple of common chem recipes can produce this if poorly mixed, and production of cyanide will dose nearby people if they aren''t wearing gas masks. Also a fairly easy poison.
              Balanced to be mostly a slow and scary killer, but if they get to medbay, it''s not that hard to deal with. Suffocation damage can rack up faster than tox depending on how the RNG rolls.
-      reaction_message: The mixture gives off a faint scent of almonds.
              
   - name: Sulphuric Acid
     ingredients: 
@@ -852,6 +852,7 @@ recipes:
       - Hydrogen 
       - Oxygen
     tags: [toxic, brute, damage, tox, burn]
+    reaction_message: The mixture gives off a sharp acidic tang.
     info:
       depletion_rate: 0.4
       penetrates_skin: No
@@ -860,7 +861,6 @@ recipes:
                      TOUCH - Splash over 25 units for a 75% chance to melt a face or headgear
                      +15 BRUTE to the face
       notes: Can melt items, 40% chance.
-      reaction_message: The mixture gives off a sharp acidic tang.
 
   - name: Fluorosulphuric Acid
     ingredients: 
@@ -869,8 +869,9 @@ recipes:
       - Hydrogen 
       - Potassium 
       - !step Heat to 320
-    heat_to: 320
+    heat_to: Heat to 320
     tags: [toxic, tox, burn, damage, brute]
+    reaction_message:  The mixture deepens to a dark blue, and slowly begins to corrode its container.
     info:
       depletion_rate: 0.4
       penetrates_skin: No
@@ -879,7 +880,6 @@ recipes:
                           TOUCH - Splash over 10 units for to melt a face or headgear
                           +75 BRUTE to the face
       notes: Can melt items, 100% chance.
-      reaction_message:  The mixture deepens to a dark blue, and slowly begins to corrode its container.
       
   - name: Ketamine
     sources:
@@ -933,9 +933,9 @@ recipes:
       - Plasma 
       - Chlorine
     tags: [toxic, rad, mutation, damage]
+    reaction_message: The substance turns neon green and bubbles unnervingly.
     info:
       description: Might cause unpredictable mutations. Keep away from children.
-      reaction_message: The substance turns neon green and bubbles unnervingly.
       depletion_rate: 0.3
       penetrates_skin: No
       per_cycle: +2 RAD, 4% chance to trigger a bad mutation.
@@ -981,7 +981,7 @@ recipes:
       - Ammonia 
       - Welding Fuel
       - !step Heat to 320
-    heat_to: 320
+    heat_to: Heat to 320
     tags: [drug, hallucinate]
     info:
       depletion_rate: 0.4
@@ -1062,7 +1062,7 @@ recipes:
       - Welding Fuel 
       - Sulphuric Acid 
       - !step Heat to 320
-    heat_to: 320
+    heat_to: Heat to 320
     tags: [drug, overdose, stun, heal, temperature, jitter, tox, brute, brain, damage, disease, addictive]
     info:
       depletion_rate: 0.4
@@ -1080,7 +1080,7 @@ recipes:
       - Phosphorous 
       - Welding Fuel 
       - !step Heat to 320
-    heat_to: 320
+    heat_to: Heat to 320
     tags: [drug, overdose, temperature, brain, tox, damage, brute, ko]
     info:
       depletion_rate: 0.4
@@ -1096,7 +1096,7 @@ recipes:
       - Phosphorous 
       - Hydrogen 
       - !step Heat to 325
-    heat_to: 325
+    heat_to: Heat to 325
     tags: [drug, stun, jitter, speed, addictive, overdose, ko, paralyze]
     info:
       depletion_rate: 0.4
@@ -1115,7 +1115,7 @@ recipes:
       - Mugwort 
       - Denatured Enzyme
       - !step Heat
-    heat_to: High
+    heat_to: Apply heat
     tags: [drug, overdose, stun, damage, brain, disease, hallucinate]
     info:
       depletion_rate: 0.6
@@ -1204,7 +1204,7 @@ recipes:
       - Chlorine #(1)
       - Fluorine #(3) 
       - !step Heat to 350
-    heat_to: 350
+    heat_to: Heat to 350
     tags: [burning]
     info:
       depletion_rate: 0.4
@@ -1273,13 +1273,13 @@ recipes:
       - Oxygen
       - Aluminium
     tags: [ignite, burning]
+    reaction_message:  The solution mixes into a reddish-brown powder.
     info:
       depletion_rate: 0.4
       penetrates_skin: No
       ignition_temp: 280
       application_effect: TOUCH - If already burning, set BURNING to 100.
       notes: Burns through metal walls. If some is already on fire, dumping thermite on them is very mean.
-      reaction_message:  The solution mixes into a reddish-brown powder.
       
   - name: Pyrosium
     ingredients:
