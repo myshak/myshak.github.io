@@ -1315,3 +1315,74 @@ recipes:
     info:
       notes: Reinforces windows and grilles. It may be applied to windows up to four times, with each application making the window stronger than the last.
 
+  - name: Foamed Metal
+    ingredients:
+      - Fluorosurfactant
+      - <Aluminium> OR <Iron>
+      - Sulphuric acid
+    tags: []
+    info:
+      notes: |
+             Spews out a special foam that congeals into a weak floor and wall. Happens immediately upon mixing.
+             A unique foam that can be as helpful or as harmful as you want it to be, you can either plug up holes in the station or inconvenience people with massive metal obstructions. Can be destroyed with a few whacks of a blunt object. The Miner's IndyPutt "weapon" system spits this stuff out in small amounts.
+
+  - name: Space Lube 
+    ingredients:
+      - Silicon 
+      - Oxygen
+      - Water
+    tags: [slippery]
+    info:
+      penetrates_skin: No
+      notes: Crates a very slippery surface when applied to floor tiles. Anybody falling down will take brute damage in the process.
+      
+  - name: Holy Water
+    ingredients:
+      - Wine 
+      - Mercury 
+      - Water
+    sources:
+      - Extracted from unmutated garlics.
+    info:
+      penetrates_skin: No
+      notes: Splashing at least 10 units onto a vampire burns them quite badly.
+  
+  - name: Firefighting Foam
+    ingredients:
+      - Carbon 
+      - Sulfur 
+      - Chlorine
+    info:
+      penetrates_skin: No
+      notes: Also know as carbon tetrachloride. Extinguishes fires. Explodes when mixed with ClF3.
+
+  - name: Carpet
+    ingredients:
+      - Space Fungus
+      - Blood
+    info:
+      penetrates_skin: No
+      notes: Creates a dirty carpet on the floor 
+
+  - name: Corn Syrup
+    ingredients:
+      - Corn starch 
+      - Sulphuric Acid
+      - !step Heat to 380
+    heat_to: Heat to 380
+    info:
+      depletion_rate: 0.4
+      penetrates_skin: No
+      per_cycle: Improved recovery from stuns.
+      notes: 1 unit of corn syrup decays into ~3 units of sugar, so a sufficiently high dose can be useful to cause a hyperglycaemic shock.
+
+  - name: Cola
+    ingredients:
+      - Sugar 
+      - Water
+      - Carbon
+      - Oxygen
+    info:
+      notes: It is cola 
+    sources:
+      - Base drink from the soda fountain.
