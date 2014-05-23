@@ -124,9 +124,9 @@ recipes:
       - !step Use a screwdriver on the igniter.
       - !step Combine the igniter with the health analyzer.
       - !step Secure the assembly with the screwdriver.
-      - !step Combine the assembly with the vest.
+      - !step Click on the assembly with the vest to combine them.
       - !step If you intend to use the beaker, prepare a chemical mix of your choice.
-      - !step Attach the grenade or beaker to the vest.
+      - !step To attach the grenade or beaker, click on it with the vest.
 
   - name: Pipe bomb
     info:
