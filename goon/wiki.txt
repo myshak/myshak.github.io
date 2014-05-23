@@ -152,6 +152,8 @@ recipes:
   - name: Space Fungus
     sources:
       - Extracted from any space fungi.
+    info:
+      notes: Space Fungus is acquired by scraping it off of walls with your Beaker; it mostly grows in Maintenance hallways, so you might need to request appropriate access to get at it.
 
   - name: Ash
     ingredients:
@@ -283,7 +285,12 @@ recipes:
       - Extracted from chilly peppers.
     tags: [temperature]
     info:
-      notes: Forms a layer of slippery ice. 
+      notes: |
+             Forms a layer of slippery ice when dumped on the floor.
+             Freezing is interesting. You are immune to all outside damage short of gibbing while frozen, though you will still take damage from poisons and ESPECIALLY being on fire if such things were present before you were frozen.
+             The quick-freeze is also handy for immediately activating Cryoxadone, making for a great panic button if you don't mind being pushed or pulled around for a little while.
+             Very underestimated and underused chem for being so easy to make.
+      application_effect: TOUCH - freezes the victim in a large block of ice, preventing any actions short of speaking or breaking the ice; break ice cubes by clicking the ice cube with the Harm intent repeatedly, even while frozen yourself.
       
   - name: Charcoal
     ingredients:
@@ -602,7 +609,7 @@ recipes:
     tags: [medical, blindness, eye, heal]
     info:
       per_cycle: 30% chance to remove blindness, 80% chance to reduce eye damage by 1.
-      notes: Probably won't need this very often unless some jerk is using a lot of flashbangs.
+      notes: Not typically needed unless some jerk is using a lot of flashbangs, blinding someone to the point that even the VISOR Prosthesis doesn't work (or they just really, really want to keep their current Glasses item on despite being 'blind'). It's a rare situation, but giving them Oculine might be their saving grace.
       
   - name: Teporone
     ingredients: 
@@ -1069,7 +1076,9 @@ recipes:
       penetrates_skin: No
       overdose_threshold: 20
       per_cycle: 2x stun reduction per cycle. Warms you up, makes you jittery as hell.
-      notes: Overdose can cause random amounts of TOX damage, BRUTE damage, BRAIN damage, or give you a case of non-contagious Berserker. Very addictive, but the stun reduction effect is pretty nice for fighting.
+      notes: |
+             Overdose can cause random amounts of TOX damage, BRUTE damage, BRAIN damage, or give you a case of non-contagious Berserker. Very addictive, but the stun reduction effect is pretty nice for fighting.
+             Note that everything other than the Welding Fuel needs to be heated to 320, as the Fuel has a bad habit of igniting before the reaction happens in the reagent heater. Also note that its creation comes with an explosion and is not prevented by Stabilizing Agent.
       
   - name: Krokodil
     ingredients: 
@@ -1223,8 +1232,8 @@ recipes:
     info:
       depletion_rate: 0.4
       penetrates_skin: No
-      ignition_temp: 300
-      notes: When mixed without stabilizer, or heated to 300 with stabilizer, it'll make a big cloud of smoke carrying up to three other reagents. Essential for crime.
+      ignition_temp: 370
+      notes: When mixed without stabilizer, or heated to 370 with stabilizer, it'll make a big butt of smoke. Unlike foam it can only carry three reagents from its container, in exchange for making the carried chems breathable through the air the smoke occupies, essentially giving them all "Penetrates Skin = Yes" functionality unless the victim has internals active.
       
   - name: Flash Powder
     ingredients:
@@ -1279,7 +1288,7 @@ recipes:
       penetrates_skin: No
       ignition_temp: 280
       application_effect: TOUCH - If already burning, set BURNING to 100.
-      notes: Burns through metal walls. If some is already on fire, dumping thermite on them is very mean.
+      notes: Burns through metal walls after splashing it on and heating it up. If someone is on fire, dumping thermite on them is very mean.
       
   - name: Pyrosium
     ingredients:
@@ -1291,8 +1300,8 @@ recipes:
       depletion_rate: 0.4
       penetrates_skin: No
       notes: |
-             Comes into existence at 0 degrees, but slowly heats other reagents up towards 1000.
-             Can make non-flammable things scaldingly hot, but so can a welder or lighter. Fun for delayed self-heating reactions. 
+             Comes into existence at 0 degrees, but slowly heats all other reagents and objects on its tile up towards 1000, , regardless of current surface or container.
+             Can make non-flammable things scaldingly hot, but so can a welder or lighter. Fun for delayed self-heating reactions.
 
   - name: Tea
     sources:
@@ -1305,7 +1314,9 @@ recipes:
       - Carbon
       - Sulphuric Acid
     info:
-      notes: Turns into foam when combined with water
+      notes: |
+             Turns into foam when combined with water, carrying all other reagents in the container with it. Foam spreads fairly quickly and causes people to slip if they walk on it, making it very hard to escape whatever horrible things you put in it.
+             WARNING: Most non-backbreaking methods of creating foam require you to do it by hand and thus be in the middle of the reaction, so make sure you can survive your own disaster.
 
   - name: Silicate
     ingredients:
