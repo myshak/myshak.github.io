@@ -126,7 +126,8 @@ recipes:
       - !step Secure the assembly with the screwdriver.
       - !step Click on the assembly with the vest to combine them.
       - !step If you intend to use the beaker, prepare a chemical mix of your choice.
-      - !step To attach the grenade or beaker, click on it with the vest.
+      - !step To attach the grenade, use it on the vest.
+      - !step To attach a beaker, click on it with the vest - not the other way around!
 
   - name: Pipe bomb
     info:

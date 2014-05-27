@@ -14,7 +14,7 @@
 #      - Hydrogen
 #      - Fuel @chemical,burn # The Fuel reagent has to have the chemical and burn tags
 #      - !step Heat the beaker to 300 degrees # Custom step
-#    heat_to: Heat to 300 # Recipe requires heating
+#    heat_to: Heat to 300 K# Recipe requires heating
 #    reaction_message: Message that shows up when you create the reagent
 #    info: # information section, shows up as the Information tab
 #      depletion_rate: 0.4 # How much of the reagent depletes during one cycle
@@ -107,13 +107,18 @@ recipes:
     ingredients:
       - Nitrogen
       - Hydrogen
+    info:
+      notes: More fertilizer, and an ingredient in a lot of other chems.
 
   - name: Ammonia
     ingredients: 
       - Urine
+      - !step Heat to 380 K
       - Water
-      - !step Heat
-    heat_to: Apply heat
+      - !step Apply heat
+    heat_to: Heat to 380 K
+    info:
+      notes: More fertilizer, and an ingredient in a lot of other chems.
     
   - name: Corn Starch
     sources:
@@ -158,10 +163,10 @@ recipes:
   - name: Ash
     ingredients:
       - Oil
-      - !step Heat
+      - !step Heat to 480 K
+    heat_to: Heat to 480 K
     sources:
       - Burn something (like paper, money, anything that leaves a pile of ash after burning) and scoop it up with a beaker.
-    heat_to: Apply heat
 
   - name: Egg
     sources:
@@ -214,8 +219,8 @@ recipes:
     ingredients:
       - Ammonia
       - Ethanol
-      - !step Heat
-    heat_to: Apply heat
+      - !step Heat to 380 K
+    heat_to: Heat to 380 K
     info: 
       notes: Used for certain medical recipes and as fertilizer.
       
@@ -238,9 +243,10 @@ recipes:
   - name: Potash 
     ingredients:
       - Ash
+      - !step Heat to 380 K
       - Water
-      - !step Heat to 310
-    heat_to: Heat to 310
+      - !step Apply heat
+    heat_to: Heat to 380 K
     info:
       notes: Fertilizer.
 
@@ -286,18 +292,15 @@ recipes:
     tags: [temperature]
     info:
       notes: |
-             Forms a layer of slippery ice when dumped on the floor.
-             Freezing is interesting. You are immune to all outside damage short of gibbing while frozen, though you will still take damage from poisons and ESPECIALLY being on fire if such things were present before you were frozen.
-             The quick-freeze is also handy for immediately activating Cryoxadone, making for a great panic button if you don't mind being pushed or pulled around for a little while.
-             Very underestimated and underused chem for being so easy to make.
-      application_effect: TOUCH - freezes the victim in a large block of ice, preventing any actions short of speaking or breaking the ice; break ice cubes by clicking the ice cube with the Harm intent repeatedly, even while frozen yourself.
+             Forms a layer of slippery ice when dumped on the floor and freezes anybody in a large block of ice, preventing any actions short of speaking or breaking out. While frozen, you are immune to most outside dangers, though you will still take damage from poisons and especially being on fire. As a panic option, the quick freeze is also handy for immediately activating cryoxadone.
+      application_effect: TOUCH - freezes the victim in a large block of ice. Break ice cubes by clicking the ice cube with the Harm intent repeatedly, even while frozen yourself.
       
   - name: Charcoal
     ingredients:
       - Ash
       - Salt
-      - !step Heat to 310
-    heat_to: Heat to 310
+      - !step Heat to 380 K
+    heat_to: Heat to 380 K
     sources:
       - Extracted from any venne fibers.
     tags: [medical, tox, heal, depletion]
@@ -363,12 +366,12 @@ recipes:
       per_cycle: Does nothing in the bloodstream currently.
       application_effect: |
                           -TOUCH: Heals 1.5 BRUTE and 1.5 BURN per unit applied.
-      notes: Splashing a beaker of synthflesh on someone is very, very effective. The medics will love chemistry a whole lot if you provide them with synthflesh patches or beakers.
+      notes: Splashing a beaker of synthflesh on someone is very, very effective.
       
   - name: Omnizine
     sources: 
       - Extracted from white cannabis leaves.
-      - Propuffs
+      - Pro Puffs
       - Donk Pockets
     tags: [medical, brute, burn, oxy, tox, heal, addictive]
     info:
@@ -381,8 +384,8 @@ recipes:
     ingredients: 
       - Mercury 
       - Chlorine
-      - !step Heat to 320
-    heat_to: Heat to 320
+      - !step Heat to 380 K
+    heat_to: Heat to 380 K
     tags: [medical, depletion, tox, damage]
     info:
       depletion_rate: 2
@@ -399,7 +402,7 @@ recipes:
     info:
       depletion_rate: 0.4
       per_cycle: 80% chance of removing 1 RAD. Radiation is cumulative and causes tox+burn.
-      notes: Simple, kinda weak, but can help counter radiation events and radium somewhat. 
+      notes: Simple and weak, but can help counter radiation events and radium somewhat. 
       
   - name: Pentetic Acid
     ingredients: 
@@ -413,7 +416,7 @@ recipes:
     info:
       depletion_rate: 0.4
       per_cycle: Reduces 7 RAD, heals 3 TOX damage, increases all depletion rates by 4; 33% chance of taking 1 unit brute damage
-      notes: Complicated recipe, apex antitox/antiradiation treatment. 
+      notes: Apex antitox/antiradiation treatment. 
       
   - name: Cryoxadone
     ingredients: 
@@ -486,7 +489,7 @@ recipes:
       depletion_rate: 0.4
       overdose_threshold: 20
       per_cycle: Dramatically counters movement reduction from severe injury. Reduces jitteriness if someone is shaking like crazy from whatever. Will knock you out within 36 cycles if any remains in you.
-      notes: Used to be Sleep Toxin. Low doses are useful for the painkiller, otherwise it's mostly a grief chem. Getting people addicted to morphine is kinda funny. Could probably use some more benefits.
+      notes: Used to be Sleep Toxin. Low doses are useful for the painkiller, otherwise it's mostly a grief chem.
       
   - name: Salbutamol
     ingredients: 
@@ -500,7 +503,7 @@ recipes:
       - Extracted from unmutated contusine leaves.
     info:
       depletion_rate: 0.4
-      per_cycle: Heals 6 OXY damage, reduces LOSEBREATH by 4 (which some things apply)
+      per_cycle: Heals 6 OXY damage, reduces LOSEBREATH by 4
       notes: Speeds up recovery from suffocation damage, but more importantly, it'll help counter suffocating/losebreath poisons and the suffocation that ramps up in critical health. Really underused emergency med, makes dealing with critical-health people a lot easier.
       
   - name: Perfluorodecalin
@@ -508,8 +511,8 @@ recipes:
       - Hydrogen
       - Fluorine 
       - Oil 
-      - !step Heat to 320
-    heat_to: Heat to 320
+      - !step Heat to 380 K
+    heat_to: Heat to 380 K
     tags: [medical, oxy, losebreath, brute, burn, heal, addictive]
     info:
       depletion_rate: 0.4
@@ -540,7 +543,7 @@ recipes:
     info:
       depletion_rate: 0.4
       per_cycle: Removes all genetic bioeffects.
-      notes: Did someone turn you into a gibbering chavish deaf dwarven lunatic? Take this. Might retool this a bit so it has a chance of removing an effect per cycle rather than scrubbing all of them instantly. 
+      notes: Did someone turn you into a gibbering chavish deaf dwarven lunatic? Take this.
       
   - name: Spaceacillin
     ingredients: 
@@ -549,8 +552,8 @@ recipes:
     tags: [medical, disease, heal]
     info:
       depletion_rate: 0.4
-      per_cycle: Rolls a chance to cure some specific diseases. More uses planned for the future.
-      notes: You probably won't use this much unless a random disease event hits. Medbay Phase 2 update will introduce some stuff like infections and sepsis.
+      per_cycle: Rolls a chance to cure some specific diseases.
+      notes: You probably won't use this much unless a random disease event hits.
       
   - name: Diphenhydramine
     ingredients: 
@@ -563,7 +566,7 @@ recipes:
     info:
       depletion_rate: 0.4
       per_cycle: Causes a little bit of drowsiness, reduces jitteriness. Raises histamine and itching powder depletion rates by 3.
-      notes: Mostly used as a precursor to a couple of the illegal drugs. Might be needed for bee stings, histamine poisonings, itching powder (not enough people use itching powder!!!). More planned for it.
+      notes: Mostly used as a precursor to a couple of the illegal drugs. Might be needed for bee stings, histamine poisonings, itching powder.
       
   - name: Haloperidol
     ingredients: 
@@ -593,11 +596,12 @@ recipes:
   - name: Insulin
     sources:
       - Pro Puffs
+      - Medical Dispenser
     tags: [medical, depletion]
     info:
       depletion_rate: 0.4
       per_cycle: Raises sugar depletion rates by 5.
-      notes: Handles hyperglycemic coma, but how often is that ever needed? Needs work or removal.
+      notes: Handles hyperglycemic coma.
 
   - name: Oculine
     ingredients: 
@@ -671,7 +675,7 @@ recipes:
                  50% chance of reducing an extra cycles worth of stun, paralysis and weaken
                  4% chance to produce a unit of epinephrine
       overdose_threshold: 200
-      notes: Having a bit of sugar in you gives you a noticeable stun reduction and slight speed boost. Overdose effects can put someone into a coma. Corn syrup is more likely to accomplish this. Might lower the overdose threshold.
+      notes: Having a bit of sugar in you gives you a noticeable stun reduction and slight speed boost. Overdose effects can put someone into a coma. Corn syrup is more likely to accomplish this.
     sources:
       - Base chemical from the dispenser.
       - Base drink from the soda fountain.
@@ -723,8 +727,8 @@ recipes:
       - Ethanol 
       - Oxygen
       - Silver
-      - !step Heat to 320
-    heat_to: Heat to 320
+      - !step Heat to 420 K
+    heat_to: Heat to 420 K
     tags: [toxic, allergy, tox, damage]
     info:
       depletion_rate: 0.4
@@ -764,7 +768,7 @@ recipes:
   - name: Neurotoxin
     ingredients: 
       - Space Drugs
-      - !step Heat
+      - !step Apply heat
     heat_to: Apply heat
     sources:
       - changeling stings
@@ -798,7 +802,7 @@ recipes:
     info:
       depletion_rate: 0.4
       penetrates_skin: No
-      per_cycle: DELAYED, DOSE SPECIFIC
+      per_cycle: Delayed, dose-specific
       notes: This is a stealth poison. On the last cycle that it's in you, it hits you with a stack of tox damage based on elapsed cycles * rand(2,4). The more you use, the longer it takes before anything happens, but the harder it hits when it does. With large doses your target can consume something poisoned, walk around for a few minutes minding their own business, and then abruptly die with no real warning. Very devious to use.
       
   - name: Curare
@@ -832,15 +836,15 @@ recipes:
       depletion_rate: 0.4
       penetrates_skin: No
       per_cycle: +1 TOX unless they keep eating food.
-      notes: Mostly just annoying, but easy to get. Might expand it.
+      notes: Mostly just annoying, but easy to get from weight-loss shakes.
       
   - name: Cyanide
     ingredients: 
       - Oil 
       - Ammonia 
       - Oxygen
-      - !step Heat to 320
-    heat_to: Heat to 320
+      - !step Heat to 380 K
+    heat_to: Heat to 380 K
     sources:
       - Extracted from black cannabis leaves.
     tags: [toxic, tox, losebreath, stun, damage]
@@ -875,8 +879,8 @@ recipes:
       - Fluorine 
       - Hydrogen 
       - Potassium 
-      - !step Heat to 320
-    heat_to: Heat to 320
+      - !step Heat to 380 K
+    heat_to: Heat to 380 K
     tags: [toxic, tox, burn, damage, brute]
     reaction_message:  The mixture deepens to a dark blue, and slowly begins to corrode its container.
     info:
@@ -921,7 +925,7 @@ recipes:
       depletion_rate: 0.7
       penetrates_skin: No
       per_cycle: KOs in ten cycles
-      notes: Rapid sedative, a bit too similar to ketamine currently but part of a duo with Pancuronium.
+      notes: Rapid sedative.
       
   - name: Pancuronium
     sources:
@@ -987,13 +991,13 @@ recipes:
       - Psilocybin 
       - Ammonia 
       - Welding Fuel
-      - !step Heat to 320
-    heat_to: Heat to 320
+      - !step Heat to 380 K
+    heat_to: Heat to 380 K
     tags: [drug, hallucinate]
     info:
       depletion_rate: 0.4
       penetrates_skin: No
-      per_cycle: catdrugs
+      per_cycle: Amusing text messages.
       notes: |
              Causes you to meow, hiss, and hallucinate.
              Gimmick drugs, good for laughs or confusing the hell out of people.
@@ -1018,11 +1022,11 @@ recipes:
       depletion_rate: 0.4
       penetrates_skin: No
       per_cycle: Colors + text hallucinations
-      notes: Can make you hallucinate stuff like gunshots and attack messages, might freak someone out if they don't know what's going on, could probably use a revamp.
+      notes: Can make you hallucinate stuff like gunshots and attack messages. Might freak someone out if they don't know what's going on.
       
   - name: Lysergic Acid Diethylamine
     ingredients: 
-      - Diethylamine 
+      - Diethylamine
       - Space Fungus
     sources:
       - Extracted from rainbow cannabis leaves.
@@ -1059,17 +1063,17 @@ recipes:
       penetrates_skin: No
       overdose_threshold: 35
       per_cycle: Stun reduction per cycle, increases run speed slightly, stabilizes crit.
-      notes: Probably gonna add this to some more sodas or something. It''s pretty much just a weaker analogue of medbay''s Epinephrine, but it''s addictive and has a few more side effects.
+      notes: It''s pretty much just a weaker analogue of medbay''s Epinephrine, but it''s addictive and has a few more side effects.
       
   - name: Crank
     ingredients: 
       - Diphenhydramine 
       - Ammonia 
       - Lithium 
-      - Welding Fuel 
       - Sulphuric Acid 
-      - !step Heat to 320
-    heat_to: Heat to 320
+      - !step Heat to 390 K
+      - Welding Fuel 
+    heat_to: Heat to 390 K
     tags: [drug, overdose, stun, heal, temperature, jitter, tox, brute, brain, damage, disease, addictive]
     info:
       depletion_rate: 0.4
@@ -1078,7 +1082,8 @@ recipes:
       per_cycle: 2x stun reduction per cycle. Warms you up, makes you jittery as hell.
       notes: |
              Overdose can cause random amounts of TOX damage, BRUTE damage, BRAIN damage, or give you a case of non-contagious Berserker. Very addictive, but the stun reduction effect is pretty nice for fighting.
-             Note that everything other than the Welding Fuel needs to be heated to 320, as the Fuel has a bad habit of igniting before the reaction happens in the reagent heater. Also note that its creation comes with an explosion and is not prevented by Stabilizing Agent.
+             Note that everything other than the Welding Fuel needs to be heated to 390 K, as the Welding Fuel has a bad habit of igniting before the reaction happens in the reagent heater.
+             Also note that its creation comes with an explosion and is not prevented by Stabilizing Agent.
       
   - name: Krokodil
     ingredients: 
@@ -1088,8 +1093,8 @@ recipes:
       - Potassium 
       - Phosphorous 
       - Welding Fuel 
-      - !step Heat to 320
-    heat_to: Heat to 320
+      - !step Heat to 380 K
+    heat_to: Heat to 380 K
     tags: [drug, overdose, temperature, brain, tox, damage, brute, ko]
     info:
       depletion_rate: 0.4
@@ -1104,8 +1109,8 @@ recipes:
       - Iodine 
       - Phosphorous 
       - Hydrogen 
-      - !step Heat to 325
-    heat_to: Heat to 325
+      - !step Heat to 380 K
+    heat_to: Heat to 380 K
     tags: [drug, stun, jitter, speed, addictive, overdose, ko, paralyze]
     info:
       depletion_rate: 0.4
@@ -1123,7 +1128,7 @@ recipes:
       - Space Cleaner 
       - Mugwort 
       - Denatured Enzyme
-      - !step Heat
+      - !step Apply heat
     heat_to: Apply heat
     tags: [drug, overdose, stun, damage, brain, disease, hallucinate]
     info:
@@ -1131,7 +1136,9 @@ recipes:
       penetrates_skin: No
       overdose_threshold: 20
       per_cycle: Makes you nearly impervious to stuns, but you'll be a nearly uncontrollable tramp-bearded raving lunatic.
-      notes: Overdose will likely kill you from a half dozen different types of escalating damage. Even taking too many occasional doses can kill you from brain damage. Can give you Berserker. Makes you hallucinate all sorts of horrible shit and you''ll barely be able to control your movement as you go flying into everything around you fists-first. Decays into a bunch of other drugs and poisons. Bath salts boxing is hilarious.
+      notes: |
+             Dump all the Discount Dan's flavours into a bathtub and heat it with a welder, you'll probably find it.
+             Overdose will likely kill you from a half dozen different types of escalating damage. Even taking too many occasional doses can kill you from brain damage. Can give you Berserker. Makes you hallucinate all sorts of horrible shit and you''ll barely be able to control your movement as you go flying into everything around you fists-first. Decays into a bunch of other drugs and poisons. Bath salts boxing is hilarious.
 
   - name: Stimulants
     sources:
@@ -1145,7 +1152,7 @@ recipes:
     info:
       depletion_rate: 0.4
       penetrates_skin: No
-      ignition_temp: 310
+      ignition_temp: 375 K
       per_cycle: +1 TOX. Makes being on fire much worse, and can burst into flame if heated.
       notes: |
              Splash a burning person with plasma and the cumulative BURNING var goes up +30
@@ -1158,7 +1165,7 @@ recipes:
     info:
       depletion_rate: 0.4
       penetrates_skin: No
-      ignition_temp: 325
+      ignition_temp: 480 K
       per_cycle: Fireball if ignited. If inside a burning person, extends burning duration by +2.
       application_effect: TOUCH - If target is already burning, extend burning duration by +30.
       notes: Used as a stand-in for lighter hydrocarbons in a lot of the organic chem recipes.
@@ -1176,9 +1183,11 @@ recipes:
     info:
       depletion_rate: 0.4
       penetrates_skin: No
-      ignition_temp: 340
-      application_effect: TOUCH - Can lubricate cyborg joints and make them move faster.
-      notes: Burns with a small smoky fire, yielding Ash reagent. Can make floors slippery if splashed around. Used as a stand-in for Benzene, Toulene, Napthalene and a bunch of other heavier hydrocarbons for a ton of the organic chem recipes.
+      ignition_temp: 470 K
+      application_effect: TOUCH - Can lubricate cyborg joints and temporarily make them move faster.
+      notes: |
+             Burns with a small smoky fire, yielding Ash reagent.
+             Can make floors slippery if splashed around. Used as a stand-in for Benzene, Toulene, Napthalene and a bunch of other heavier hydrocarbons for a ton of the organic chem recipes.
       
   - name: Napalm
     ingredients:
@@ -1189,7 +1198,7 @@ recipes:
     info:
       depletion_rate: 0.4
       penetrates_skin: No - probably should though
-      ignition_temp: 320
+      ignition_temp: 380 K
       per_cycle: Fireball if ignited. If inside a burning person, extends burning duration by +10.
       application_effect: TOUCH - If target is already burning, extend burning duration by +70.
       notes: This is the jellied-gas sort of napalm.
@@ -1204,23 +1213,26 @@ recipes:
     info:
       depletion_rate: 0.4
       penetrates_skin: No
-      per_cycle: +1 BURN damage. Probably ought to add BURNING as well.
+      per_cycle: +1 BURN damage.
       application_effect: TOUCH - Self-burning, ignites other stuff.
       notes: This is what old-napalm is now.
       
   - name: Chlorine Trifluoride
     ingredients:
       - Chlorine #(1)
-      - Fluorine #(3) 
-      - !step Heat to 350
-    heat_to: Heat to 350
+      - Fluorine #(3)
+      - !step Heat to 420 K
+    heat_to: Heat to 420 K
     tags: [burning]
     info:
       depletion_rate: 0.4
       penetrates_skin: No
       per_cycle: +3 BURNING. Sets people on fire from the inside out.
       application_effect: TOUCH - BURNING + 50.
-      notes: Comes into existence at 1000 degrees. Burns things that wouldn't otherwise burn. Makes an enormous mess. Reacts violently with carbon tetrachloride (firefoam)
+      notes: |
+             Comes into existence at 1000 degrees and makes a temporary 3x3 fireball when it does so, so be careful when mixing.
+             ClF3 applied to a surface burns things that wouldn't otherwise burn, sometimes through the very floors of the station and exposing it to the vacuum of space. A very popular starting deathchem.
+             Reacts violently with carbon tetrachloride (firefighting foam).
       
   - name: Smoke Powder
     ingredients:
@@ -1232,35 +1244,37 @@ recipes:
     info:
       depletion_rate: 0.4
       penetrates_skin: No
-      ignition_temp: 370
-      notes: When mixed without stabilizer, or heated to 370 with stabilizer, it'll make a big butt of smoke. Unlike foam it can only carry three reagents from its container, in exchange for making the carried chems breathable through the air the smoke occupies, essentially giving them all "Penetrates Skin = Yes" functionality unless the victim has internals active.
+      ignition_temp: 375 K
+      notes: When mixed without stabilizer, or heated to 375 K with stabilizer, it'll make a large amount of smoke. Unlike foam, it can only carry three reagents from its container, in exchange for making the carried chems breathable through the air the smoke occupies, essentially giving them all "Penetrates Skin = Yes" functionality unless the victim has internals active.
       
   - name: Flash Powder
     ingredients:
-      - Aluminium 
-      - Potassium 
-      - Chlorine 
-      - Sulfur 
+      - Aluminium
+      - Potassium
+      - Chlorine
+      - Sulfur
       - Stabilizing agent
     tags: [ignite, stun, eye, damage]
     info:
       depletion_rate: 0.4
-      penetrates_skin: Yes // imagine it's covering their clothes or whatever
-      ignition_temp: 300
+      penetrates_skin: Yes
+      ignition_temp: 380 K
       notes: Stuns anyone within five tiles of the source, stun amount relative to distance. Blocked by sunglasses. Causes eye damage, can lead to blindness.
       
   - name: Sonic Powder
     ingredients:
-      - Oxygen 
-      - Ethanol 
-      - Phosphorous 
+      - Oxygen
+      - Ethanol
+      - Phosphorous
       - Stabilizing agent
     tags: [ignite, stun, deaf, ear, damage]
     info:
       depletion_rate: 0.4
-      penetrates_skin: Yes // imagine it's covering their clothes or whatever
-      ignition_temp: 300
-      notes: Deafens and stuns within five tiles, blocked by earmuffs, can cause ear damage and deafness. Occasionally plays HOOT! instead of BANG!
+      penetrates_skin: Yes
+      ignition_temp: 380 K
+      notes: |
+             Also known as Hootingium.
+             Deafens and stuns within five tiles, blocked by earmuffs. Can cause ear damage and deafness. Occasionally plays HOOT! instead of BANG!
       
   - name: Black Powder
     ingredients:
@@ -1271,10 +1285,10 @@ recipes:
     info:
       depletion_rate: 0.05
       penetrates_skin: Yes // imagine it's covering their clothes or whatever
-      ignition_temp: 325
+      ignition_temp: 480 K
       notes: |
              Sparks, then blows the fuck up a second or two later. Damage scales up with reagent volume.
-             Slow depletion means you can poison someone with it and then wait for then to encounter a heat source awhile later. KABOOM!
+             Slow depletion means you can poison someone with it and then wait for then to encounter a heat source awhile later.
       
   - name: Thermite
     ingredients:
@@ -1286,7 +1300,7 @@ recipes:
     info:
       depletion_rate: 0.4
       penetrates_skin: No
-      ignition_temp: 280
+      ignition_temp: 325 K
       application_effect: TOUCH - If already burning, set BURNING to 100.
       notes: Burns through metal walls after splashing it on and heating it up. If someone is on fire, dumping thermite on them is very mean.
       
@@ -1300,7 +1314,7 @@ recipes:
       depletion_rate: 0.4
       penetrates_skin: No
       notes: |
-             Comes into existence at 0 degrees, but slowly heats all other reagents and objects on its tile up towards 1000, , regardless of current surface or container.
+             Comes into existence at 0 degrees, but slowly heats all other reagents and objects on its tile up towards 1000 K, regardless of current surface or container.
              Can make non-flammable things scaldingly hot, but so can a welder or lighter. Fun for delayed self-heating reactions.
 
   - name: Tea
@@ -1313,6 +1327,7 @@ recipes:
       - Fluorine
       - Carbon
       - Sulphuric Acid
+      - !step Activate with Water
     info:
       notes: |
              Turns into foam when combined with water, carrying all other reagents in the container with it. Foam spreads fairly quickly and causes people to slip if they walk on it, making it very hard to escape whatever horrible things you put in it.
@@ -1334,8 +1349,8 @@ recipes:
     tags: []
     info:
       notes: |
-             Spews out a special foam that congeals into a weak floor and wall. Happens immediately upon mixing.
-             A unique foam that can be as helpful or as harmful as you want it to be, you can either plug up holes in the station or inconvenience people with massive metal obstructions. Can be destroyed with a few whacks of a blunt object. The Miner's IndyPutt "weapon" system spits this stuff out in small amounts.
+             Reacts immediately upon mixing. After a short delay, the foam will turn into weak metal walls, which can be destroyed with a few whacks of a blunt object.
+             A silly chem that can be as helpful or as harmful as you want it to be. You can either plug up holes in the station or inconvenience people with obstructions.
 
   - name: Space Lube 
     ingredients:
@@ -1356,7 +1371,7 @@ recipes:
       - Extracted from unmutated garlics.
     info:
       penetrates_skin: No
-      notes: Splashing at least 10 units onto a vampire burns them quite badly.
+      application_effect: TOUCH - Splashing at least 10 units onto a vampire burns them quite badly.
   
   - name: Firefighting Foam
     ingredients:
@@ -1365,7 +1380,7 @@ recipes:
       - Chlorine
     info:
       penetrates_skin: No
-      notes: Also know as carbon tetrachloride. Extinguishes fires. Explodes when mixed with ClF3.
+      notes: Also know as carbon tetrachloride. Extinguishes fires. Explodes when mixed with chlorine trifluoride.
 
   - name: Carpet
     ingredients:
@@ -1379,8 +1394,8 @@ recipes:
     ingredients:
       - Corn starch 
       - Sulphuric Acid
-      - !step Heat to 380
-    heat_to: Heat to 380
+      - !step Heat to 380 K
+    heat_to: Heat to 380 K
     info:
       depletion_rate: 0.4
       penetrates_skin: No
