@@ -1,5 +1,5 @@
 # Wiki recipe list
-# Compiled by mysha, cogwerks, Marquesas
+# Compiled by mysha, cogwerks, Marquesas, Convair880
 #
 #INDENTATION MATTERS! Use spaces, not tabs.
 #
