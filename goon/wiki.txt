@@ -184,6 +184,13 @@ recipes:
     sources:
       - Extracted from soybean pods.
 
+  - name: Partially Hydrogenated Space-Soybean Oil
+    ingredients:
+      - Space-Soybean Oil
+      - Hydrogen
+      - !step Heat to 515 K
+    heat_to: Heat to 515 K
+
   - name: Catonium
     sources:
       - Extracted from nepeta cataria plants.
@@ -1437,3 +1444,8 @@ recipes:
       notes: It is cola 
     sources:
       - Base drink from the soda fountain.
+
+  - name: Cholesterol
+    sources:
+      - Meatloaf
+      - The MONSTER
