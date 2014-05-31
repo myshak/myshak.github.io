@@ -20,18 +20,15 @@ recipes:
     info:
       notes: Used in building computers, activating cyborgs, deconstructing walls and furniture.
 
-  - name: Wirecutters
-    tags: [tool]
-
   - name: Crowbar
     tags: [tool]
     info:
       notes: A general-purpose opener. First used by assistants to pry open firelocks and unpowered doors on the way to the escape shuttles, they are also essential for prying open or wedging shut floor tiles, window frames, wall girders, computer modules, pod casings and so on.
 
   - name: Body Armor
-    tags: [clotes, armor]
+    tags: [clotes, armor, equip]
     info:
-      notes: Provides moderate protection to the torso. Will help you survive psychotic murderers wielding revolvers and laser guns slightly longer.
+      notes: Provides moderate protection to the torso. Will help you survive psychotic murderers wielding revolvers and energy weapons slightly longer, and prevent bleeding from pipe bomb shrapnels.
 
   - name: Welder
     tags: [tool]
@@ -39,14 +36,13 @@ recipes:
       notes: A heavy engineering tool. An active welder will ignite plasma, break lightbulbs, set off fire alarms just being held in a hand near the vicinity of a sensor and do horrible things when swung at a person. Must be activated to work and the fuel tank is small, so be sure to top up often. Has nearly as many uses as screwdrivers and crowbars, but operating one will cause eye damage without proper eyewear. Can dismantle walls, fix robots, melt shards into glass, seal doors, clear the space kudzu, fight the meat kudzu, etc.
 
   - name: Security Helmet
-    tags: [clotes, armor]
+    tags: [clotes, armor, equip]
     info:
-      notes: Provides moderate protection to the head. You can still be rendered unconscious from repeated trauma, but the helmet helps avoid the dreaded one-hit stun attack.
+      notes: Provides moderate protection to the head, though you can still be rendered unconscious from repeated trauma.
 
   - name: Chainsaw
-    tags: [tool, weapon]
-
-  - name: Knife
+    info:
+      notes: An electric chainsaw to keep weeds in check. Passable emergency weapon, but not very durable.
     tags: [tool, weapon]
 
   - name: Cable coil
@@ -99,17 +95,17 @@ recipes:
   - name: Staple gun
     tags: [weapon, tool]
     info:
-      notes: Reattach limbs! Put the patient on an operating table, attach their arm to the stump by aiming at it and secure it with the staple gun, causing a minor amount of brute damage. More can be made in a robotics fabricator, just like scalpels and saws.
+      notes: Used to reattach limbs.
 
   - name: Flashlight
     tags: [light]
     info:
-      notes: Illuminates dark areas. Found in Emergency Toolboxes and the Warehouse, among other places. Small enough to fit in a pocket or on your belt, but can only be turned on/off remotely (HUD icon) when worn. Having multiple light sources on your person will "stack" with one another, lighting a larger area. Don't try to think too hard about how that works.
+      notes: Illuminates dark areas. Found in emergency toolboxes and the warehouse, among other places. Small enough to fit in a pocket or on your belt. Multiple light sources on your person will stack, lighting a larger area with greater luminosity.
 
   - name: Gas Tank
     tags: [tank]
     info:
-      notes: These large tanks hold up to 1013 kPa of gaseous elements. By default, they contain O2 (blue), an air mixture (blue w/ white stripe), N2O (white w/ red stripe) or Plasma (special sprite). With the exception of the latter, they can be worn on the back slot. Compatible with the connection port of Air Pumps, Air Scrubbers, Tank Transfer Valves and gas canisters.
+      notes: These large tanks hold up to 1013 kPa of gaseous elements. By default, they contain an air mixture (white), O2 (blue w/ white stripe), N2O (white w/ red stripe) or plasma (special sprite). With the exception of the latter, they can be worn on the back slot. Compatible with the connector port of air pumps, air scrubbers, tank transfer valves and gas canisters.
 
   - name: Fuel Tank
     tags: [container]
@@ -119,7 +115,7 @@ recipes:
   - name: Flash
     tags: [weapon]
     info:
-      notes: The flash has two uses. Using the flash on someone without adequate eye protection will stun them and obscure their screen with a white flash. Every time the flash is used in this manner it has a chance of the bulb burning out, rendering it permanently useless. The other use of a flash is to use it in your active hand. This will briefly obscure the screens of everyone nearby with a white flash but not stun them. This effect can also disable any nearby cloaking device. Flashes can be found in security lockers, dispensed from the Security Vendor, in other various spots on the station, and in great supply at Robotics.
+      notes: The flash has two applications. Using the flash on someone without adequate eye protection will stun them and obscure their screen with a white flash. The other use is area flash, activated by clicking on the weapon when it's in your active hand. This will briefly obscure the screen of everyone nearby with a white overlay but not stun them. Every time the flash is used, the bulb has a chance of burning out, rendering it permanently useless. They can be found in security lockers, dispensed from the vending machines and are in great supply in robotics. 
 
   - name: Remote Signaler
     tags: [tool]
@@ -147,23 +143,26 @@ recipes:
       notes: Goes on to the back slot of a monkey or other victim-- cannot be removed by the wearer. The pack needs to be turned on first. It waits for a radio signal, and when received, delivers a debilitating jolt of electricity to whomever is wearing it.
 
   - name: Biosuit
-    tags: [equip]
+    tags: [equip, clotes]
     info:
       notes: Offer some protection against diseases and viral hazards. Found in the Research Director's office, Custodial closet, and the research sector entrance vestibule.
 
   - name: Bedsheet 
-    tags: [equip]
+    tags: [equip, clotes]
     info:
       notes: A sheet for a bed. Can be worn over your body so you can act like a ghost. Be sure to cut some eye-holes first. Comes in various colors.
 
   - name: Insulated Gloves
-    tags: [equip]
+    tags: [equip, clotes]
     info:
       notes: Protect from electrical shocks. Highly coveted for their ability to allow door hacking. Found in Engineering and Electronics and can be ordered by the Quartermaster.
 
   - name: Mousetrap
     tags: []
     info:
-      notes: Regularly used by jerks to kill the Chef's only friend. You can also hide these in containers such as backpacks or emergency boxes to make traps for unsuspecting victims! For the ultimate party gag, try to combine them with certain other items...oh, the possibilities of a single mousetrap! Make sure to arm it by clicking on it in your hand before putting it down!
+      notes: Sometimes used by jerks to kill the chef's only friend. You can also hide these in containers such as backpacks or emergency boxes to make traps for unsuspecting victims! For the ultimate party gag, try to combine them with certain other items...oh, the possibilities of a single mousetrap! Make sure to arm it by clicking on it in your hand before putting it down!
 
-
+  - name: Fire extinguisher
+    tags: [weapon]
+    info:
+      notes: Useful for firefighting, as an impromptu jetpack and the weapon of choice for seasoned greyshirts. Just remember to disable the safety first and that against any fire which is still being fueled, you won't make much progress. Once emptied, you don't necessarily have to refill it with regular foam either... 

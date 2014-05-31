@@ -495,6 +495,7 @@ recipes:
       notes: If the microwave is just dirty, use a spray bottle of space cleaner. A completely broken unit has to be fixed with some tools.
     tags: [fix]
     ingredients:
+      - Microwave @kitchen
       - Screwdriver @tool
       - Wrench
       - !step Use the screwdriver on the microwave.
@@ -617,7 +618,7 @@ recipes:
       - !step Combine the the staple gun with the frame.
 
   - name: Armored Biosuit
-    tags: [make, equip]
+    tags: [make, equip, clothes]
     ingredients:
       - Body armor
       - Biosuit
