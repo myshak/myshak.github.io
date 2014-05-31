@@ -377,14 +377,17 @@ recipes:
       - Sugar
       - Milk
       - Bourbon
+    tags: [drink]
 
   - name: Bloody Scary
     ingredients:
       - Vodka
       - Changeling Blood
+    tags: [drink]
 
   - name: Daiquiri
     ingredients:
       - Lime
       - Sugar
       - Rum
+    tags: [drink]

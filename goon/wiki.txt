@@ -1396,8 +1396,8 @@ recipes:
       
   - name: Holy Water
     ingredients:
-      - Wine 
-      - Mercury 
+      - Wine
+      - Mercury
       - Water
     sources:
       - Extracted from unmutated garlics.
@@ -1440,6 +1440,7 @@ recipes:
       - Water
       - Carbon
       - Oxygen
+    tags: [drink]
     info:
       notes: It is cola 
     sources:
