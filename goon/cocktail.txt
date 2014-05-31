@@ -371,3 +371,14 @@ recipes:
     sources:
       - Vendor
 
+  - name: Irish Coffee
+    ingredients:
+      - Coffee
+      - Sugar
+      - Milk
+      - Bourbon
+
+  - name: Bloody Scary
+    ingredients:
+      - Vodka
+      - Changeling Blood
