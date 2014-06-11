@@ -253,6 +253,15 @@ recipes:
       
   - name: Potash 
     ingredients:
+      - Potassium
+      - Chlorine
+      - Sulphuric acid
+    reaction_message: A white crystalline residue forms as the water boils off.
+    info:
+      notes: Fertilizer.
+      
+  - name: Potash 
+    ingredients:
       - Ash
       - !step Heat to 380 K
       - Water
@@ -262,14 +271,6 @@ recipes:
     info:
       notes: Fertilizer.
 
-  - name: Potash 
-    ingredients:
-      - Potassium
-      - Chlorine
-      - Sulphuric acid
-    info:
-      notes: Fertilizer.
-      
   - name: Saltpetre 
     ingredients:
       - Potash 
