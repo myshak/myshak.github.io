@@ -427,21 +427,23 @@ recipes:
     info:
       notes: You may also create cheese smoke with the bar's chemistry equipment.
 
+# Currently broken.
+#
   - name: Chocolate bar
-    ingredients:
-      - Happy Elf Hot Chocolate
-      - Fire extinguisher
-      - !step Pour it into a fire extinguisher. Required minimum is 10 units.
-      - !step Use the HUD icon to spray chocolate all around you.
+#    ingredients:
+#      - Happy Elf Hot Chocolate
+#      - Fire extinguisher
+#      - !step Pour it into a fire extinguisher. Required minimum is 10 units.
+#      - !step Use the HUD icon to spray chocolate all around you.
     tags: [food]
-    info:
-      notes: You may also create chocolate smoke with the bar's chemistry equipment.
+#    info:
+#      notes: You may also create chocolate smoke with the bar's chemistry equipment.
 
   - name: Chocolate chips
     ingredients:
-      - Chocolate bar
+      - Candy
       - Food processor
-      - !step Add the bar to the processor.
+      - !step Add the candy to the processor.
     tags: [food, condiment]
     info:
       notes: Condiment - can be applied to any food, making it heal more.
@@ -1847,9 +1849,9 @@ recipes:
   - name: Cake (Chocolate)
     ingredients:
       - Batter (Cake)
-      - Chocolate bar
+      - Candy
       - Oven
-      - !step Put the cake batter and chocolate bar in the oven.
+      - !step Put the cake batter and candy in the oven.
       - !step Cook for 7 seconds, high.
     heat_to: 7 seconds, high
     tags: [food]
