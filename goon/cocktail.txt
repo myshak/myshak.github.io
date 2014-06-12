@@ -117,6 +117,15 @@ recipes:
     info:
       notes: Metabolizes into __ units of ethanol per unit.
 
+  - name: Gin Fizz
+    ingredients:
+      - Gin
+      - Water
+      - Lemon juice
+    tags: [drink]
+    info:
+      notes: Metabolizes into __ units of ethanol per unit.
+
   - name: Vanilla
     sources:
       - Base drink from the soda fountain.
