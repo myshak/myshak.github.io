@@ -416,7 +416,7 @@ recipes:
       - Extracted from unmutated nureous leaves.
     tags: [medical, rad, heal]
     info:
-      depletion_rate: 0.4
+      depletion_rate: 0.3
       per_cycle: 80% chance of removing 1 RAD. Radiation is cumulative and causes tox+burn.
       notes: Simple and weak, but can help counter radiation events and radium somewhat. 
       
@@ -1292,11 +1292,11 @@ recipes:
   - name: Sonic Powder
     ingredients:
       - Oxygen
-      - Ethanol
+      - Cola
       - Phosphorous
       - Stabilizing agent
     tags: [ignite, stun, deaf, ear, damage]
-    reaction_message: The mixture begins to bubble slighly!
+    reaction_message: The mixture begins to bubble slighly! / The mixture begins to bubble furiously!
     info:
       depletion_rate: 0.4
       penetrates_skin: Yes
@@ -1451,3 +1451,92 @@ recipes:
     sources:
       - Meatloaf
       - The MONSTER
+
+  - name: Simethicone
+    ingredients: 
+      - Silicon 
+      - Chlorine 
+      - Hydrogen 
+      - Oxygen
+    info:
+      notes: Prevents use of the *fart emote.
+
+  - name: Hairgrownium
+    ingredients:
+      - Carpet 
+      - Synthflesh 
+      - Ephedrine
+    tags: [hair]
+    info:
+      depletion_rate: 0.4
+      notes: Will eventually cause the users to grow a full set of hair.
+
+  - name: Strange Reagent
+    ingredients:
+      - Holy Water 
+      - Unstable Mutagen 
+      - Omnizine
+    info:
+      notes: Used to revive the dead. If the cadaver has too much BRUTE/BURN damage the SR will gib it, if it has too much BRAIN it will immediately drop dead again.
+
+  - name: Capulettium
+    ingredients:
+      - Neurotoxin 
+      - Chlorine 
+      - Hydrogen
+    info:
+      depletion_rate: 0.4
+      notes: Makes alive things appear dead.  KOs in roughly 25 cycles.
+
+  - name: Capulettium plus
+    ingredients:
+      - Capulettium
+      - Ephedrine 
+      - Methamphetamine
+    tags: [paralysis]
+    info:
+      depletion_rate: 0.4
+      notes: Paralyzes, prevents talking and the use of emotes instantly. Also makes a mob appear dead if they are resting.
+
+  - name: Sorium
+    ingredients:
+      - Mercury
+      - Carbon
+      - Nitrogen
+      - Oxygen
+      - Stabilizing Agent
+    heat_to: 480 K
+    info:
+      notes: |
+             Sends everything flying.
+             Mixes/activates when ingredients are heated without Stabilizing Agent.
+
+  - name: Liquid dark-matter
+    ingredients:
+      - Plasma
+      - Radium
+      - Carbon
+      - Stabilizing agent
+    info:
+      notes: |
+             It sucks things in. More than Sorium blows things away.
+             Heat it up to activate.
+
+  - name: Stable Mutagen
+    ingredients:
+      - Acetone 
+      - Unstable Mutagen
+      - Bromine
+      - Lithium
+    info:
+      depletion_rate: 0.4
+      notes: If used in conjunction with blood, then injected, it will result in the person taking on the appearance and DNA of the blood's owner.
+
+  - name: Life
+    ingredients:
+      - Synthflesh
+      - Blood
+      - Strange Reagent
+    heat_to: Apply heat  
+    info:
+      notes: Creates a random NPC immediately upon synthesis. Which NPC depends on how many units of each ingredient are present.

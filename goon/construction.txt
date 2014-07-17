@@ -53,7 +53,7 @@ recipes:
       - !step Combine the igniter assembly with the beaker.
       - !step Secure the beaker assembly with the screwdriver.
     info:
-      notes: These assemblies are quite popular to release chemical foam or smoke from a safe distance - for the user at least. Deadly in the hands of a skilled chemist. To detach the beaker, place the whole thing on the floor and use the context menu by right-clicking on it.
+      notes: These assemblies are quite popular to release chemical smoke from a safe distance - for the user at least. Deadly in the hands of a skilled chemist. To detach the beaker, place the whole thing on the floor and use the context menu by right-clicking on it.
     tags: [make]
 
   - name: Manufacturer (Fix)
@@ -151,7 +151,7 @@ recipes:
 
   - name: Single tank bomb
     info:
-      notes: Also known as plasma tank assemblies. Less powerful than transfer valve bombs, but they still fit in backpacks. You''ll have to discover suitable gas mixtures yourself.
+      notes: Also known as plasma tank assemblies. Less powerful than transfer valve bombs, but they still fit in backpacks. You'll have to discover suitable gas mixtures yourself.
     tags: [bomb, make, weapon]
     ingredients:
       - Gas tank
@@ -641,3 +641,28 @@ recipes:
     info:
       notes: Made from adding rods to glass or made straight in a fabricator.
 
+  - name: Canister bomb
+    info:
+      notes: Massive bombs. As usual, the gas mixture is not revealed, only the assembly process. Detonators may be disassembled if necessary. A screwdriver is required to unscrew and a crowbar is required to pry out the plasma tank, and everything else can be cut apart with the wirecutters.
+    tags: [bomb, make, weapon]
+    ingredients:
+      - <Gas canister> full of an explosive gas mixture.
+      - Plasma <Gas tank> filled to at least 700 kPa of pure plasma.
+      - Timer
+      - Igniter
+      - Wire
+      - Screwdriver
+      - Multitool
+      - <Atmospheric analyzer> (optional)
+      - <Remote Signaler> (optional)
+      - <Crowbar> (optional)
+      - <Wirecutters> (optional)
+      - !step Use the screwdriver to unsecure the igniter.
+      - !step Add the multitool to the igniter.
+      - !step Add the plasma tank to the assembly.
+      - !step Secure the assembly with a screwdriver.
+      - !step Use the cable coil on the assembly.
+      - !step Add the timer to the assembly.
+      - !step Optionally, add the analyzer to your assembly.
+      - !step Optionally, add a remote signalling device to your assembly.
+      - !step Use the assembly on the canister.

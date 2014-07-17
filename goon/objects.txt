@@ -165,4 +165,15 @@ recipes:
   - name: Fire extinguisher
     tags: [weapon]
     info:
-      notes: Useful for firefighting, as an impromptu jetpack and the weapon of choice for seasoned greyshirts. Just remember to disable the safety first and that against any fire which is still being fueled, you won't make much progress. Once emptied, you don't necessarily have to refill it with regular foam either... 
+      notes: Useful for firefighting, as an impromptu jetpack and the weapon of choice for seasoned greyshirts. Just remember to disable the safety first and that against any fire which is still being fueled, you won't make much progress. Once emptied, you don't necessarily have to refill it with regular foam either...
+
+  - name: Gas canister
+    tags: [tank]
+    info:
+       notes: Large storage containers of gas. Smaller tanks can be attached to them, to either draw or put in their contents. They can also be fixed to appropriate connector ports with a wrench.
+
+  - name: Atmospheric analyzer
+    tags: [tool]
+    info:
+      notes: Instant atmospheric analysis. When used, lists the temperature, pressure and the proportions of gases either in the open air or inside pipes and canisters. Abundantly available in blue toolboxes, but every PDA has this feature built-in.
+
