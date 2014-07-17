@@ -1539,4 +1539,4 @@ recipes:
       - Strange Reagent
     heat_to: Apply heat  
     info:
-      notes: Creates a random NPC immediately upon synthesis. Which NPC depends on how many units of each ingredient are present.
+      notes: Creates a random NPC immediately upon synthesis.
