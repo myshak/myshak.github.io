@@ -643,7 +643,10 @@ recipes:
 
   - name: Canister bomb
     info:
-      notes: Massive bombs. As usual, the gas mixture is not revealed, only the assembly process. Detonators may be disassembled if necessary. A screwdriver is required to unscrew and a crowbar is required to pry out the plasma tank, and everything else can be cut apart with the wirecutters.
+      notes: |
+             Massive bombs. As usual, the gas mixture is not revealed, only the assembly process. The detonator assembly may have up to 3 attachment class items. Each attachment adds an additional wire to the assembly, each having a unique effect. You may have more than one of any type of attachment. 
+             
+             Detonators may be disassembled if necessary. A screwdriver is required to unscrew and a crowbar is required to pry out the plasma tank, and everything else can be cut apart with the wirecutters. Attachments may be removed from the assembly with a screwdriver.
     tags: [bomb, make, weapon]
     ingredients:
       - <Gas canister> full of an explosive gas mixture.
@@ -653,16 +656,22 @@ recipes:
       - Wire
       - Screwdriver
       - Multitool
-      - <Atmospheric analyzer> (optional)
+      - <Station bounced radio> (optional) - Creates a command report upon priming.
       - <Remote Signaler> (optional)
       - <Crowbar> (optional)
       - <Wirecutters> (optional)
+      - <Atmospheric analyzer> (att. class item) - Detonates the bomb if gas is leaking from the canister.
+      - <Power Cell> (att. class item) - Adds an additional detonation wire.
+      - <Flash> (att. class item) - Occasionally flashes nearby people.
+      - <Bike horn> (att. class item)
       - !step Use the screwdriver to unsecure the igniter.
       - !step Add the multitool to the igniter.
       - !step Add the plasma tank to the assembly.
       - !step Secure the assembly with a screwdriver.
       - !step Use the cable coil on the assembly.
       - !step Add the timer to the assembly.
-      - !step Optionally, add the analyzer to your assembly.
+      - !step Optionally, add the station bounced radio to your assembly.
       - !step Optionally, add a remote signalling device to your assembly.
+      - !step Optionally, add up to three attachment class items to your assembly.
       - !step Use the assembly on the canister.
+

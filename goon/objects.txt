@@ -177,3 +177,13 @@ recipes:
     info:
       notes: Instant atmospheric analysis. When used, lists the temperature, pressure and the proportions of gases either in the open air or inside pipes and canisters. Abundantly available in blue toolboxes, but every PDA has this feature built-in.
 
+  - name: Bike horn
+    tags: []
+    info:
+     notes: Honk honk!
+
+  - name: Station bounced radio
+    tags: []
+    info:
+     notes: Essentially a handheld transceiver. Less versatile than a regular headset, but it can be clipped to your belt. Found in every emergency toolbox. Cyborgs use these to talk over the radio.
+
