@@ -26,7 +26,7 @@ recipes:
       notes: A general-purpose opener. First used by assistants to pry open firelocks and unpowered doors on the way to the escape shuttles, they are also essential for prying open or wedging shut floor tiles, window frames, wall girders, computer modules, pod casings and so on.
 
   - name: Body Armor
-    tags: [clotes, armor, equip]
+    tags: [clothes, armor, equip]
     info:
       notes: Provides moderate protection to the torso. Will help you survive psychotic murderers wielding revolvers and energy weapons slightly longer, and prevent bleeding from pipe bomb shrapnels.
 
@@ -36,7 +36,7 @@ recipes:
       notes: A heavy engineering tool. An active welder will ignite plasma, break lightbulbs, set off fire alarms just being held in a hand near the vicinity of a sensor and do horrible things when swung at a person. Must be activated to work and the fuel tank is small, so be sure to top up often. Has nearly as many uses as screwdrivers and crowbars, but operating one will cause eye damage without proper eyewear. Can dismantle walls, fix robots, melt shards into glass, seal doors, clear the space kudzu, fight the meat kudzu, etc.
 
   - name: Security Helmet
-    tags: [clotes, armor, equip]
+    tags: [clothes, armor, equip]
     info:
       notes: Provides moderate protection to the head, though you can still be rendered unconscious from repeated trauma.
 
@@ -79,13 +79,6 @@ recipes:
     tags: []
     info:
       notes: Used for many constructions. Available in Tool Storage, the Warehouse, and EVA.
-
-  - name: Floor Tile
-    ingredients:
-      - Metal Sheet
-    tags: [make, floor]
-    info:
-      notes: Make these in fours from sheet metal, find them in the Warehouse, scavenge the many unfinished construction sites on the station or just crowbar them right out from under people's feet. Damaged floor tiles are automatically discarded upon removal.
 
   - name: Beaker
     tags: [container]
@@ -143,17 +136,17 @@ recipes:
       notes: Goes on to the back slot of a monkey or other victim-- cannot be removed by the wearer. The pack needs to be turned on first. It waits for a radio signal, and when received, delivers a debilitating jolt of electricity to whomever is wearing it.
 
   - name: Biosuit
-    tags: [equip, clotes]
+    tags: [equip, clothes]
     info:
       notes: Offer some protection against diseases and viral hazards. Found in the Research Director's office, Custodial closet, and the research sector entrance vestibule.
 
   - name: Bedsheet 
-    tags: [equip, clotes]
+    tags: [equip, clothes]
     info:
       notes: A sheet for a bed. Can be worn over your body so you can act like a ghost. Be sure to cut some eye-holes first. Comes in various colors.
 
   - name: Insulated Gloves
-    tags: [equip, clotes]
+    tags: [equip, clothes]
     info:
       notes: Protect from electrical shocks. Highly coveted for their ability to allow door hacking. Found in Engineering and Electronics and can be ordered by the Quartermaster.
 
@@ -187,3 +180,7 @@ recipes:
     info:
      notes: Essentially a handheld transceiver. Less versatile than a regular headset, but it can be clipped to your belt. Found in every emergency toolbox. Cyborgs use these to talk over the radio.
 
+  - name: Paper
+    tags: [equip, clothes]
+    info:
+     notes: Use a pen on it to write stuff, examine it to read. Click on a noticeboard to pin it there. Place on head slot to wear it as a hat. You can also hold paper up to a camera to discreetly send messages to the AI.

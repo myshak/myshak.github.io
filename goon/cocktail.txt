@@ -356,3 +356,10 @@ recipes:
       - !step Stuff the corn in the still.
     tags: [drink]
 	
+  - name: Egg nog
+    ingredients:
+      - Egg
+      - Milk
+      - Sugar
+    tags: [drink]
+   
