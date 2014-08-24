@@ -1,14 +1,12 @@
-# List of all public food and cocktail recipes for mysha's recipe manager.
+# List of all public food recipes for mysha's recipe manager.
 # Adapted from: "Foods and Drinks" on the Goonstation Wiki (maintained by Convair880/Pistoleer)
 # Compiled by: Convair880/Pistoleer 
 # 
 # Structure:
 # - Kitchen machinery
 # - Miscellaneous food-related items 
-# - Vending machine and dispenser drinks
 # - Vending machine snacks
 # - Hydroponics produce and other basic ingredients
-# - Simple recipes (cocktails)
 # - Simple recipes (ingredient processing)
 # - Microwave recipes
 # - Main course recipes (oven etc.)
@@ -17,7 +15,6 @@
 # [kitchen] Kitchen machinery or tool.
 # [produce] Hydroponics produce.
 # [food] It's a food item.
-# [drink] It's a drink.
 # [condiment] It's a condiment which can be applied to any food item.
 # [dynamic] A dynamic food recipe, e.g. x cakes or x sandwiches.
 
@@ -48,9 +45,6 @@ recipes:
     tags: [kitchen]
 
   - name: Meat spike
-    tags: [kitchen]
-
-  - name: Still
     tags: [kitchen]
 
   - name: Sink
@@ -97,7 +91,7 @@ recipes:
     tags: []
 
   - name: Butt
-    tags: [clotes, equip]
+    tags: [clothes, equip]
 
 # Vending machine snacks
 
@@ -306,8 +300,22 @@ recipes:
     info:
       notes: Whoever eats food laced with this will feel no effects for a few minutes...then suddenly drop dead.
 
-# Simple recipes (ingredient processing)
+  - name: ?????
+    sources:
+      - Kitchen
+    tags: [food]
+    info:
+      notes: The result of a bad recipe, probably shouldn't eat this...
 
+  - name: Smoldering mess
+    sources:
+      - Kitchen
+    tags: [food]
+    info:
+      notes: The result of overcooking or -frying something.
+
+# Simple recipes (ingredient processing)
+	
   - name: Popcorn
     ingredients:
       - Corn
@@ -756,6 +764,13 @@ recipes:
       - Loaf of bread (any type)
       - Knife
       - !step Cut the loaf with the knife.
+    tags: [food]
+
+  - name: Apple on a stick
+    ingredients:
+      - Apple
+      - Rods
+      - !step Combine the rod with the apple.
     tags: [food]
 
 # Microwave recipes
@@ -1250,6 +1265,91 @@ recipes:
     heat_to: 2 seconds, high
     tags: [food]
 
+  - name: Whoopie pie
+    ingredients:
+      - 2x <Cookie (Chocolate)>
+      - Candy
+      - Cream
+      - Oven
+      - !step Put the two chocolate cookies, candy bar and cream in the oven.
+      - !step Cook for 2 seconds, high.
+    heat_to: 2 seconds, high
+    tags: [food]
+    info:
+      notes: Requires chocolate-chip cookies specifically.
+
+  - name: Moon pie (Sugar)
+    ingredients:
+      - 2x <Cookie (Sugar)>
+      - Sugar
+      - Oatmeal
+      - Cream
+      - Oven
+      - !step Put the two sugar cookies, bag of sugar, oatmeal and cream in the oven.
+      - !step Cook for 2 seconds, high.
+    heat_to: 2 seconds, high
+    tags: [food]
+
+  - name: Moon pie (Oatmeal)
+    ingredients:
+      - 2x <Cookie (Oatmeal)>
+      - Sugar
+      - Oatmeal
+      - Cream
+      - Oven
+      - !step Put the two oatmeal cookies, bag of sugar, oatmeal and cream in the oven.
+      - !step Cook for 2 seconds, high.
+    heat_to: 2 seconds, high
+    tags: [food]
+
+  - name: Moon pie (Chocolate)
+    ingredients:
+      - 2x <Cookie (Chocolate)>
+      - Sugar
+      - Oatmeal
+      - Cream
+      - Oven
+      - !step Put the two chocolate cookies, bag of sugar, oatmeal and cream in the oven.
+      - !step Cook for 2 seconds, high.
+    heat_to: 2 seconds, high
+    tags: [food]
+
+  - name: Moon pie (Iron)
+    ingredients:
+      - 2x <Cookie (Iron)>
+      - Sugar
+      - Oatmeal
+      - Cream
+      - Oven
+      - !step Put the two iron cookies, bag of sugar, oatmeal and cream in the oven.
+      - !step Cook for 2 seconds, high.
+    heat_to: 2 seconds, high
+    tags: [food]
+
+  - name: Moon pie (Bacon)
+    ingredients:
+      - 2x <Cookie (Bacon)>
+      - Sugar
+      - Oatmeal
+      - Cream
+      - Oven
+      - !step Put the two bacon cookies, bag of sugar, oatmeal and cream in the oven.
+      - !step Cook for 2 seconds, high.
+    heat_to: 2 seconds, high
+    tags: [food]
+
+  - name: Moon pie (Spookie)
+    ingredients:
+      - 2x <Cookie (Spookie)>
+      - Sugar
+      - Oatmeal
+      - Cream
+      - Oven
+      - !step Put the two spookie cookies, bag of sugar, oatmeal and cream in the oven.
+      - !step Cook for 2 seconds, high.
+    heat_to: 2 seconds, high
+    tags: [food]
+
   - name: Nougat bar
     ingredients:
       - Honey
@@ -1373,6 +1473,15 @@ recipes:
       - !step Cook for 6 seconds, high.
       - !step Requires spoon.
     heat_to: 6 seconds, high
+    tags: [food]
+
+  - name: Gruel
+    ingredients:
+      - 3x <?????>
+      - Mixer
+      - Spoon
+      - !step Put the three failed dishes in the mixer.
+      - !step Requires spoon.
     tags: [food]
 
   - name: Chili (Con queso)

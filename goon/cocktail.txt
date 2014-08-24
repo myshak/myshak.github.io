@@ -1,6 +1,26 @@
-name: Drinks
+# List of all public cocktail recipes for mysha's recipe manager.
+# Adapted from: "Foods and Drinks" on the Goonstation Wiki (maintained by Convair880/Pistoleer)
+# Compiled by: Convair880/Pistoleer 
+# 
+# Structure:
+# - Kitchen machinery
+# - Vending machine and dispenser drinks
+# - Ingredient processing
+# - Cocktails
+#
+# Special tags:
+# [drink] It's a drink.
+
+name: Drinks and cocktails
 recipes:
+
+# Kitchen machinery
+
+  - name: Still
+    tags: [kitchen]
+
 # Vending machine and dispenser drinks
+
   - name: Bo Jack Daniel's
     tags: [drink]
     sources:
@@ -59,7 +79,7 @@ recipes:
       notes: Contains antihol.
 
   - name: Coffee
-    tags: [drink]
+    tags: [drink, jitter, addictive, stamina]
     sources:
       - Vendor
 
@@ -69,7 +89,7 @@ recipes:
       - Vendor
 
   - name: Chicken Soup
-    tags: [drink]
+    tags: [drink, disease]
     sources:
       - Vendor
     info:
@@ -80,12 +100,13 @@ recipes:
     sources:
       - Vendor
     info:
-      notes: May or may not get rid of excess body fat. Use at your own risk!
+      notes: Contains lipolicide.
 
   - name: Tea
     tags: [drink]
     sources:
       - Vendor
+      - Base drink from the soda fountain.
 
   - name: Vermouth
     sources:
@@ -98,6 +119,12 @@ recipes:
     tags: [drink]
 
   - name: Rum
+    sources:
+      - Base booze from the alcohol dispenser.
+      - Bar
+    tags: [drink]
+
+  - name: Gin
     sources:
       - Base booze from the alcohol dispenser.
     tags: [drink]
@@ -122,7 +149,102 @@ recipes:
       - Base drink from the soda fountain.
     tags: [drink]
 
-# Simple recipes (cocktails)
+  - name: Tomato Juice
+    sources:
+      - Base drink from the soda fountain.
+    tags: [drink]
+
+  - name: Orange Juice
+    sources:
+      - Base drink from the soda fountain.
+      - Use an orange on a drinking glass.
+    tags: [drink]
+
+  - name: Lime Juice
+    sources:
+      - Base drink from the soda fountain.
+      - Use a lime on a drinking glass.
+    tags: [drink]
+
+  - name: Lemon Juice
+    sources:
+      - Base drink from the soda fountain.
+      - Use a lemon on a drinking glass.
+    tags: [drink]
+
+# Ingredient processing
+
+  - name: Beer
+    ingredients:
+      - Wheat
+      - Still
+      - !step Stuff the wheat in the still.
+    tags: [drink]
+    sources:
+      - Base drink from the alcohol dispenser.
+      - Bar
+
+  - name: Cider
+    ingredients:
+      - Apple
+      - Still
+      - !step Stuff the apple in the still.
+    tags: [drink]
+    sources:
+      - Base drink from the alcohol dispenser.
+      - Bar
+
+  - name: Mead
+    ingredients:
+      - Honey
+      - Still
+      - !step Stuff the honey in the still.
+    tags: [drink]
+    sources:
+      - Bar
+
+  - name: Wine
+    ingredients:
+      - Grape
+      - Still
+      - !step Stuff the grapes in the still.
+    tags: [drink]
+    sources:
+      - Base drink from the alcohol dispenser.
+      - Bar
+
+  - name: Vodka
+    ingredients:
+      - Potato
+      - Still
+      - !step Stuff the potato in the still.
+    tags: [drink]
+    sources:
+      - Base drink from the alcohol dispenser.
+      - Bar
+
+  - name: Bourbon
+    ingredients:
+      - Corn
+      - Still
+      - !step Stuff the corn in the still.
+    tags: [drink]
+    sources:
+      - Base drink from the alcohol dispenser.
+
+# Cocktails
+
+  - name: Cola
+    ingredients:
+      - Sugar 
+      - Water
+      - Carbon
+      - Oxygen
+    tags: [drink]
+    info:
+      notes: It is cola.
+    sources:
+      - Base drink from the soda fountain.
 
   - name: Cosmopolitan
     ingredients:
@@ -137,7 +259,7 @@ recipes:
       - Lime Juice
     tags: [drink]
            
-  - name: Screwdriver
+  - name: Screwdriver (Drink)
     ingredients:
       - Vodka
       - Orange Juice
@@ -314,52 +436,11 @@ recipes:
       - Rum
     tags: [drink]
 
-  - name: Beer
-    ingredients:
-      - Wheat
-      - Still
-      - !step Stuff the wheat in the still.
-    tags: [drink]
-
-  - name: Cider
-    ingredients:
-      - Apple
-      - Still
-      - !step Stuff the apple in the still.
-    tags: [drink]
-
-  - name: Mead
-    ingredients:
-      - Honey
-      - Still
-      - !step Stuff the honey in the still.
-    tags: [drink]
-
-  - name: Wine
-    ingredients:
-      - Grape
-      - Still
-      - !step Stuff the grapes in the still.
-    tags: [drink]
-
-  - name: Vodka
-    ingredients:
-      - Potato
-      - Still
-      - !step Stuff the potato in the still.
-    tags: [drink]
-
-  - name: Bourbon
-    ingredients:
-      - Corn
-      - Still
-      - !step Stuff the corn in the still.
-    tags: [drink]
-	
   - name: Egg nog
     ingredients:
       - Egg
       - Milk
       - Sugar
     tags: [drink]
-   
+    sources:
+      - Bar
