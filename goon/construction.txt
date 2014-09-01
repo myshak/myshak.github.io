@@ -160,6 +160,7 @@ recipes:
       - <Flash> (att. class item) - Occasionally flashes nearby people.
       - <Paper> (att. class item) - Adds a note to the canister bomb interface.
       - <Bike horn> (att. class item)
+      - <Vuvuzela> (att. class item)
       - !step Use the screwdriver to unsecure the igniter.
       - !step Add the multitool to the igniter.
       - !step Add the plasma tank to the assembly.
@@ -269,7 +270,7 @@ recipes:
   - name: Jack-o'-lantern
     info:
       notes: Click the jack-o'-lantern to light it
-    tags: [make]
+    tags: [make, light]
     ingredients:
       - Pumpkin
       - <Chainsaw> OR <Knife>
@@ -296,7 +297,7 @@ recipes:
   - name: Rocket shoes
     info:
       notes: It will run out of gas after two uses. Do not expect much in the way of steering.
-    tags: [make, equip, clothes]
+    tags: [make, equip, clothes, speed]
     ingredients:
       - Emergency oxygen tank
       - Any pair of normal shoes
@@ -328,7 +329,7 @@ recipes:
   - name: Light fixtures
     info:
       notes: These fixtures, installed by Nanotrasen or otherwise, are controlled by the local APC. Light tubes can be obtained from boxes or a General Manufacturer.
-    tags: [make]
+    tags: [make, light]
     ingredients:
       - Wall
       - 2x <Metal Sheet>

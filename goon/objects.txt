@@ -61,7 +61,7 @@ recipes:
       notes: Main power for Robots, backup juice for APCs before the lights go out. They're just high-capacity batteries. If depleted they may be recharged at either the Recharger in Engineering Storage or in an engine-powered APC. Every APC in the station starts with a fully charged power cell. The power monitoring computers reporting any less than 100% charge on these is usually a sign that things are quickly going to hell. 
 
   - name: Light Tube
-    tags: []
+    tags: [light]
     info:
       notes: In addition to windows and floor tiles, the incandescent tubes are usually the first casualties of rampant chemistry in the science wing or the cafeteria. Boxes of replacement lights are available in Tool Storage, EVA, Electronics, and the Janitor's closet. They can also be fabricated in a rainbow of colors, including blacklight.
 
@@ -184,3 +184,6 @@ recipes:
     tags: [equip, clothes]
     info:
      notes: Use a pen on it to write stuff, examine it to read. Click on a noticeboard to pin it there. Place on head slot to wear it as a hat. You can also hold paper up to a camera to discreetly send messages to the AI.
+
+  - name: Vuvuzela
+    tags: []

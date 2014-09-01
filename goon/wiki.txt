@@ -108,8 +108,11 @@ recipes:
       - Base chemical from the dispenser.
       - All cocktails and booze metabolize into ethanol.
     info:
-      notes: The reagent that gets you drunk.
-    tags: [base, drunk]
+      depletion_rate: 0.4
+      penetrates_skin: No
+      per_cycle: 100+ units - Random chance to cause +1 or +2 TOX. Slurred speech, blurred vision and other effects.
+      notes: Every single brand of alcohol decays into this. The more potent the alcohol, the more ethanol it builds up in you. Higher amounts of ethanol have more severe consequences. Addictive.
+    tags: [base, drunk, addictive, movement, damage, tox]
 
   - name: Hydrogen
     sources:
@@ -173,7 +176,7 @@ recipes:
     sources:
       - Extracted from bananas.
       - Base chemical from the dispenser.
-    tags: [explode]
+    tags: [base, explode]
     info:
      notes: Explodes when mixed with water. Most people won't bat an eye when they see plain old water though, so it makes for an interesting stealth explosive.
 

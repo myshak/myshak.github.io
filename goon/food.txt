@@ -88,10 +88,13 @@ recipes:
       notes: A standard cyborg head.
 
   - name: Brain
-    tags: []
+    tags: [produce]
+
+  - name: Heart
+    tags: [produce]
 
   - name: Butt
-    tags: [clothes, equip]
+    tags: [produce, clothes, equip]
 
 # Vending machine snacks
 
@@ -850,6 +853,16 @@ recipes:
     tags: [food]
     info:
       notes: Recipe is limited to the standard cyborg head.
+
+  - name: Burger (Heart)
+    ingredients:
+      - Flour
+      - Heart
+      - Microwave
+      - !step Put the flour and the heart in the microwave.
+    tags: [food]
+    info:
+      notes: Works with human, monkey or synthetic hearts.
 
   - name: Meatball
     ingredients:
@@ -1688,6 +1701,18 @@ recipes:
       - !step Cook for 6 seconds, high.
     heat_to: 6 seconds, high
     tags: [food]
+
+  - name: Burger (Heart)
+    ingredients:
+      - Dough
+      - Heart
+      - Oven
+      - !step Load the dough and heart in the oven.
+      - !step Cook for 6 seconds, high.
+    heat_to: 6 seconds, high
+    tags: [food]
+    info:
+      notes: Works with human, monkey or synthetic hearts.
 
   - name: Toast (Plain)
     ingredients:
