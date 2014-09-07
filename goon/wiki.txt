@@ -65,6 +65,7 @@
 #name: The name of the recipe list
 #recipes:
 #  - name: Reagent name 
+#    unsorted: true # The recipe ingredients won't be sorted according to their complexity, just displayed as ordered in the ingredient list.
 #    ingredients: # List of ingredients
 #      - Carbon
 #      - Hydrogen
@@ -256,6 +257,7 @@ recipes:
       notes: More fertilizer, and an ingredient in a lot of other chems.
 
   - name: Ammonia
+    unsorted: true
     ingredients: 
       - Urine
       - !step Heat to 380 K
@@ -327,6 +329,7 @@ recipes:
       notes: Fertilizer.
       
   - name: Potash 
+    unsorted: true
     ingredients:
       - Ash
       - !step Heat to 380 K
@@ -1130,6 +1133,7 @@ recipes:
       notes: This is the jellied-gas sort of napalm.
       
   - name: Phlogiston
+    unsorted: true
     ingredients:
       - Phosphorous 
       - Sulphuric Acid 
@@ -1162,6 +1166,7 @@ recipes:
              Reacts violently with carbon tetrachloride (firefighting foam).
       
   - name: Smoke Powder
+    unsorted: true
     ingredients:
       - Potassium 
       - Phosphorous 
@@ -1177,6 +1182,7 @@ recipes:
              Wearing active internals or a Gas Mask will prevent you from inhaling chemical smoke. Even if an acid is employed in the smoke to destroy the active internals or Gas Mask, the victim still won't suck anything from that specific smoke.
       
   - name: Flash Powder
+    unsorted: true
     ingredients:
       - Aluminium
       - Potassium
@@ -1192,6 +1198,7 @@ recipes:
       notes: Stuns anyone within five tiles of the source, stun amount relative to distance. Blocked by sunglasses. Causes eye damage, can lead to blindness.
       
   - name: Sonic Powder (Hootingium)
+    unsorted: true
     ingredients:
       - Oxygen
       - Cola
@@ -1251,7 +1258,18 @@ recipes:
              
              Do NOT use pyrosium in foam or smoke. While you might like the idea of self-heating hellfoams, the multitude of heat interval checks from pyrosium foam/smoke lags the server to hell.
 
+  - name: Argine
+    heat_to: Cool to low temperature.
+    sources:
+      - Magical beans
+    tags: [explode, ignite]
+    info:
+      note: Explodes at low temperatures, for instance when mixed with cryostylane. When used in a mob, body temperature alone isn't a reliable way to set argine off.
+      depletion_rate: 0.4
+      ignition_temp: 270 K
+
   - name: Sorium
+    unsorted: true
     ingredients:
       - Mercury
       - Carbon
@@ -1268,6 +1286,7 @@ recipes:
              When Sorium is mixed without stabilizer, or stabilized and then heated a fair bit, it explodes into a shockwave and blasts everything away that isn't bolted down. The shockwave is explosive in typing and thus does minor BRUTE damage, and anything that hits you when blown away will also do some BRUTE.
 
   - name: Liquid dark-matter
+    unsorted: true
     ingredients:
       - Plasma
       - Radium
@@ -1385,6 +1404,7 @@ recipes:
       notes: Similar to ephedrine in regards to stun reduction and stamina benefits, but with less severe overdose effects.
       
   - name: Crank
+    unsorted: true
     ingredients: 
       - Diphenhydramine 
       - Ammonia 
@@ -1489,9 +1509,21 @@ recipes:
       - Radium 
       - Plasma 
       - Chlorine
-      - <Epinephrine> + <Neurotoxin> (alternative)
     tags: [rad, mutation, damage]
     reaction_message: The substance turns neon green and bubbles unnervingly.
+    info:
+      description: Might cause unpredictable mutations. Keep away from children.
+      depletion_rate: 0.3
+      penetrates_skin: No
+      per_cycle: +2 RAD, 4% chance to trigger a bad mutation.
+      notes: Another solid, easy-level poison, though it's usually used as a precursor to other chems.
+
+  - name: Unstable Mutagen
+    ingredients: 
+      - Epinephrine
+      - Neurotoxin
+    tags: [rad, mutation, damage]
+    reaction_message: An unpleasant, shifting green mass of liquid forms from the reaction.
     info:
       description: Might cause unpredictable mutations. Keep away from children.
       depletion_rate: 0.3
@@ -1512,6 +1544,7 @@ recipes:
       notes: If used in conjunction with blood, then injected, it will result in the person taking on the appearance and DNA of the blood's owner.
 
   - name: Fluorosurfactant
+    unsorted: true
     ingredients:
       - Fluorine
       - Carbon
@@ -1602,10 +1635,11 @@ recipes:
       notes: Crates a very slippery surface when applied to floor tiles, causing people to slip and fall regardless of running or walking. Anybody falling down will take brute damage in the process.
 
   - name: Foamed Metal
+    unsorted: true
     ingredients:
       - Fluorosurfactant
-      - <Aluminium> OR <Iron>
       - Sulphuric acid
+      - <Aluminium> OR <Iron>
     reaction_message: The metal begins to foam up! / The metal begins to foam up, becoming rigid and tough!
     info:
      penetrates_skin: No
@@ -1774,3 +1808,8 @@ recipes:
   - name: Vomit
     sources:
       - Get the flu or witness someone scooping up green vomit.
+
+  - name: Paper (Reagent)
+    sources:
+      - Use a sheet of paper on a beaker.
+

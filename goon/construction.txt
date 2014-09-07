@@ -5,6 +5,7 @@
 # Structure:
 # - Bombs
 # - Weapons
+# - Robots
 # - Misc assemblies
 # - Basic construction
 # - Advanced construction
@@ -18,6 +19,7 @@
 # [wall] It's a wall.
 # [window] It's a window.
 # [computer] It's a computer.
+# [robot] It's a robot.
 # [door] It's a door.
 # [fix] It's a How2Fix guide.
 # [hack] A hacking guide.
@@ -31,7 +33,7 @@ recipes:
   - name: Rigged light tube
     ingredients:
       - Light tube
-      - <Syringe> full of <plasma @base>
+      - <Syringe> full of <Plasma>
       - !step Inject the light tube with plasma.
     info:
       notes: A rather uncommon and creative way to booby-trap machinery or whole rooms. It is not a bad idea to turn the power off before installing the rigged light tube.
@@ -40,13 +42,14 @@ recipes:
   - name: Rigged power cell
     ingredients:
       - Power cell
-      - <Syringe> full of <plasma @base>
+      - <Syringe> full of <Plasma>
       - !step Inject the power cell with plasma.
     info:
       notes: A rather uncommon and creative way to booby-trap machinery or whole rooms. It is not a bad idea to turn the power off before installing the rigged power cell.
     tags: [make, bomb]
 
   - name: Suicide bomb vest
+    unsorted: true
     info:
       notes: |
              Despite the name, no bombs are actually involved (anymore). The payload will be triggered upon death of whoever is wearing the vest.
@@ -54,10 +57,11 @@ recipes:
     tags: [bomb, make, armor, equip, clothes]
     ingredients:
       - Body Armor
-      - Health Analyzer
+      - Health analyzer
       - Igniter
-      - <Beaker @container> OR <Grenade>
-      - Screwdriver @tool
+      - <Beaker> OR <Grenade> (Only chem grenades, i.e. everything that looks like a flashbang, are compatible.)
+      - Screwdriver
+      - <Wrench> (optional)
       - !step Use a screwdriver on the igniter.
       - !step Combine the igniter with the health analyzer.
       - !step Secure the assembly with the screwdriver.
@@ -67,8 +71,9 @@ recipes:
       - !step To attach a beaker, click on it with the vest - not the other way around!
 
   - name: Pipe bomb
+    unsorted: true
     info:
-      notes: Not to be confused with the Syndicate Pipe Bomb traitors can order.
+      notes: Not to be confused with the version traitors can order. Black powder, plasmastone or erebite can be used in place of welding fuel if available.
     tags: [bomb, make]
     ingredients:
       - 3x <Metal Sheet>
@@ -77,7 +82,7 @@ recipes:
       - Timer
       - Welding Fuel
       - Welder
-      - Screwdriver @tool
+      - Screwdriver
       - !step Turn the 3 <Metal sheet>s into a pipe frame.
       - !step Use the welder on the frame.
       - !step Fill the frame with welding fuel from the beaker/glass/container.
@@ -89,7 +94,7 @@ recipes:
   - name: Mousetrap bomb
     ingredients:
       - Mousetrap
-      - <Grenade> OR <Pipe bomb>
+      - <Pipe bomb> OR <Grenade> (Only chem grenades, i.e. everything that looks like a flashbang, are compatible.)
       - !step Attach the pipe bomb or grenade to the mousetrap.
       - !step Arm the mousetrap by clicking on it before use.
     info:
@@ -107,6 +112,7 @@ recipes:
     tags: [bomb, make]
 
   - name: Single tank bomb
+    unsorted: true
     info:
       notes: Also known as plasma tank assemblies. Less powerful than transfer valve bombs, but they still fit in backpacks. You'll have to discover suitable gas mixtures yourself.
     tags: [bomb, make]
@@ -114,7 +120,7 @@ recipes:
       - Gas tank
       - Igniter
       - <Timer> OR <Proximity Sensor> OR <Remote Signaler>
-      - Screwdriver @tool
+      - Screwdriver
       - Welder
       - !step Fill the plasma tank with a gas mixture of your choice.
       - !step Use a screwdriver on the igniter.
@@ -124,8 +130,9 @@ recipes:
       - !step Weld a hole in the tank.
 
   - name: Transfer valve bomb
+    unsorted: true
     info:
-      notes: Big bombs for a big bang. Again, this guide won''t tell you how to create the perfect explosive mix, so feel free to sign up as a scientist and mess around with the equipment in the plasma research laboratory. You should also use the mainframe and VR goggles to run simulations instead of testing your bombs on the station.
+      notes: Big bombs for a big bang. Again, this guide won't tell you how to create the perfect explosive mix, so feel free to sign up as a scientist and mess around with the equipment in the plasma research laboratory. You should also use the mainframe and VR goggles to run simulations instead of testing your bombs on the station.
     tags: [bomb, make]
     ingredients:
       - <Gas Tank> of heated gas
@@ -137,6 +144,7 @@ recipes:
       - !step Attach the timer, proximity sensor or remote signaller to the transfer valve.
 
   - name: Canister bomb
+    unsorted: true
     info:
       notes: |
              Massive bombs. As usual, the gas mixture is not revealed, only the assembly process. The detonator assembly may have up to 3 attachment class items. Each attachment adds an additional wire to the assembly, each having a unique effect. You may have more than one of any type of attachment. 
@@ -178,7 +186,7 @@ recipes:
     ingredients:
       - Flash
       - Screwdriver
-      - Charged <power cell>
+      - Charged <Power Cell>
       - !step Open the flash's battery compartment with the screwdriver.
       - !step Attach the power cell to the flash.
     info:
@@ -210,6 +218,7 @@ recipes:
       - !step Combine the the staple gun with the frame.
 
   - name: Flamethrower
+    unsorted: true
     info:
       notes: Welding fuel is a solid choice. You can also fill the tank with other reagents, so there is plenty of room for experimentation.
     tags: [make, weapon]
@@ -219,7 +228,7 @@ recipes:
       - Igniter
       - <Gas Tank> OR <Oxygen Tank>
       - Fuel Tank
-      - Screwdriver @tool
+      - Screwdriver
       - !step Use the screwdriver on the welder.
       - !step Attach the rod to the welder.
       - !step Combine the igniter with the welder/rod assembly.
@@ -227,13 +236,162 @@ recipes:
       - !step Attach the air mix or oxygen tank to the assembly.
       - !step Add the fuel tank to the assembly.
 
+# Robots
+
+  - name: Medbot
+    unsorted: true
+    tags: [make, robot, heal]
+    ingredients:
+      - Empty <Medkit> (any colour)
+      - Proximity Sensor
+      - <Cyborg arm (Standard)> (left or right)
+      - Health analyzer
+      - <Pen> (optional)
+      - !step Use the cyborg arm on the empty medkit.
+      - !step Use the health analyzer on the resulting assembly.
+      - !step Optionally, you may use a pen to rename the finished robot.
+      - !step Use the proximity sensor to finish the robot. 
+    info:
+      notes: Medbots will detect nearby people and inject them with helpful drugs to slowly bring them back to health. They are a supplement to medical doctors, not a replacement. Medbots may also be produced outright at a robotics fabricator or ordered from the cargo bay.
+
+  - name: Floorbot
+    unsorted: true
+    tags: [make, robot, floor]
+    ingredients:
+      - Empty <Toolbox (Mechanical)>
+      - Proximity Sensor
+      - <Cyborg arm (Standard)> (left or right)
+      - Floor tile
+      - !step Use the floor tile on the empty toolbox.
+      - !step Use the proximity sensor to finish the robot. 
+      - !step Use the cyborg arm on the resulting assembly.
+    info:
+      notes: |
+              Floorbots will detect nearby areas of space and tirelessly use their very finite supply of floor tiles to turn it into walkable floors. Floorbots may also be produced outright at a robotics fabricator (where they will spawn with 10 tiles) or ordered from the cargo bay.
+             
+              If you use more than 10 floor tiles, the finished floorbot will have however many you put in. If you use less than 10, the floorbot will have 10. Therefore, it is most efficient to use 1-2 in creation and load the rest after the floorbot is done.
+
+  - name: Firebot 
+    unsorted: true
+    tags: [make, robot, burning]
+    ingredients:
+      - Empty <Toolbox (Emergency)>
+      - Proximity Sensor
+      - <Cyborg arm (Standard)> (left or right)
+      - Fire extinguisher
+      - <Pen> (optional)
+      - !step Use the cyborg arm on the toolbox.
+      - !step Use the fire extinguisher on the resulting assembly.
+      - !step Optionally, you may use a pen to rename the finished robot.
+      - !step Use the proximity sensor to finish the robot. 
+    info:
+      notes: Firebots will detect nearby fires, whether on tiles or on people, and put them out. Firebots may also be produced outright at a robotics fabricator or ordered from the cargo bay.
+
+  - name: Cleanbot
+    unsorted: true
+    tags: [make, robot]
+    ingredients:
+      - Bucket
+      - Proximity Sensor
+      - <Cyborg arm (Standard)> (left or right)
+      - !step Use the sensor on the bucket.
+      - !step Use the cyborg arm on the resulting assembly. 
+    info:
+      notes: Cleanbots will clean the floor around them automatically. Cleanbots may also be produced outright at a robotics fabricator or ordered from the cargo bay.
+
+  - name: Securitron 
+    unsorted: true
+    tags: [make, robot, stun]
+    ingredients:
+      - Remote Signaler
+      - Security Helmet
+      - Proximity Sensor
+      - <Cyborg arm (Standard)> (left or right)
+      - Stun baton
+      - Screwdriver
+      - Welder
+      - <Pen> (optional)
+      - !step Use the screwdriver on the remote signaler.
+      - !step Use the signaler on the helmet.
+      - !step Weld them together with the welding tool.
+      - !step Add the proximity sensor to the assembly.
+      - !step Attach the cyborg arm to the assembly.
+      - !step Optionally, you may use a pen to rename the finished robot.
+      - !step Add the stun baton.
+    info:
+      notes: Securitrons network into the station's security computer, identify criminals, and arrest them. Securitrons may also be produced outright at a robotics fabricator or ordered from the cargo bay.
+
+  - name: Guardbuddy
+    unsorted: true
+    tags: [make, robot, stun]
+    ingredients:
+      - Guardbuddy frame
+      - Guardbuddy mainboard
+      - <Guardbuddy tool module> (any)
+      - Charged <Power Cell>
+      - <Cyborg arm (Standard)> (left or right)
+      - <Pen> (optional)
+      - !step Insert the power cell into the frame.
+      - !step Insert the tool module.
+      - !step Optionally, you may use a pen on the mainboard to rename the finished robot.
+      - !step Insert the mainboard.
+      - !step Add the robot arm.
+    info:
+      notes: Utilizes the DWAINE terminals to conduct operations. To properly use them, one must manually enter commands via the DWAINE terminals in the research sector.
+
+  - name: Buttbot
+    tags: [make, robot]
+    ingredients:
+      - Butt
+      - <Cyborg arm (Standard)> (left or right)
+      - !step Attach the cyborg arm to the butt.
+    info:
+      notes: Buttbots...should be seen instead of explained.
+
+  - name: Amusing duck
+    tags: [make, robot]
+    ingredients:
+      - Bike horn
+      - <Cyborg arm (Standard)> (left or right)
+      - !step Combine the bike horn with the robot arm.
+    info:
+      notes: Amusing ducks will slowly move around at random, quacking and emitting a playful jingle. They will occasionally lay eggs (similar, but not identical to Easter eggs), which in turn may contain fun items.
+
+  - name: Skullbot
+    tags: [make, robot]
+    ingredients:
+      - Skull
+      - <Cyborg leg (Standard)> (left or right)
+      - !step Attach the cyborg leg to the skull.
+    info:
+      notes: Spooky skeleton puns.
+
+  - name: Mulebot (hack)
+    unsorted: true
+    tags: [hack, robot]
+    ingredients:
+      - Screwdriver
+      - Multitool
+      - Wirecutters
+      - !step Unlock the MULE's interface (QM access or EMAG required).
+      - !step Click 'Toggle Power' to switch off the MULE.
+      - !step Use the screwdriver to open the maintenance panel.
+      - !step Click on the MULE with an empty hand to access the hacking GUI.
+      - !step Pulse the wires with the multitool to figure out what they do.
+      - !step Cut the appropiate cables with the wirecutters.
+      - !step Close the maintenance panel with the screwdriver.
+      - !step Click 'Toggle Power' to switch on the MULE.
+      - !step Lock the MULE's interface with your ID card or EMAG.
+    info:
+      notes: The wires are randomized for every bot. For more information, see the <a href="http://wiki.ss13.co/Robots#MULEbot">Goonstation wiki</a>.
+
 # Misc assemblies
 
   - name: Igniter assembly
     ingredients:
       - Igniter
       - <Timer> OR <Proximity sensor> OR <Remote signaller>
-      - Screwdriver @tool
+      - Screwdriver
       - !step Use the screwdriver on the igniter.
       - !step If you intend to employ a signaller, use the screwdriver on it as well.
       - !step Combine the igniter with the timer, proximity sensor or signaller.
@@ -246,7 +404,7 @@ recipes:
     ingredients:
       - Remote signaller
       - <Proximity sensor> OR <Timer>
-      - Screwdriver @tool
+      - Screwdriver
       - !step Use the screwdriver on the signaller.
       - !step Attach the signaller to the proximity sensor or timer.
       - !step Secure the assembly with the screwdriver.
@@ -258,7 +416,7 @@ recipes:
     ingredients:
       - Beaker
       - Igniter assembly
-      - Screwdriver @tool
+      - Screwdriver
       - !step If the assembly has been secured beforehand, undo that with the screwdriver.
       - !step Prepare a chemical mix of your choice.
       - !step Combine the igniter assembly with the beaker.
@@ -339,6 +497,7 @@ recipes:
       - !step Insert the light tube.
 
   - name: Space pod
+    unsorted: true
     info: 
       notes: |
              Be advised since it is a 64x64 sprite you have to stand on the South West corner of the pod sprite in order to construct it.
@@ -525,6 +684,7 @@ recipes:
 # Advanced construction
 
   - name: Computer, normal
+    unsorted: true
     info:
       notes: Useful for computers which are built from one board only.
     tags: [make, computer]
@@ -533,7 +693,7 @@ recipes:
       - 2x <Glass Sheet>
       - 5x <Wire>
       - Wrench
-      - Screwdriver @tool
+      - Screwdriver
       - 1x Circuit board
       - !step Have the metal in hand, click on it, choose 'Console frame'
       - !step Wrench
@@ -544,6 +704,7 @@ recipes:
       - !step Screwdriver
 
   - name: Computer, terminal
+    unsorted: true
     info:
       notes: Useful for DOS run computers, built from components.
     tags: [make, computer]
@@ -552,7 +713,7 @@ recipes:
       - 2x <Glass Sheet>
       - 5x <Wire>
       - Wrench
-      - Screwdriver @tool
+      - Screwdriver
       - <ID scanner module> (+ up to 2 more modules)
       - Storage drive
       - Computer mainboard
@@ -567,6 +728,7 @@ recipes:
       - !step Screwdriver
       
   - name: Computer, heavy
+    unsorted: true
     info:
       notes: Useful for DOS run computers, built from components.
     tags: [make, computer]
@@ -575,7 +737,7 @@ recipes:
       - 2x <Glass Sheet>
       - 5x <Wire>
       - Wrench
-      - Screwdriver @tool
+      - Screwdriver
       - <ID scanner module> (+ up to 2 more modules)
       - Storage drive
       - Computer mainboard
@@ -623,15 +785,15 @@ recipes:
       notes: If the microwave is just dirty, use a spray bottle of space cleaner. A completely broken unit has to be fixed with some tools.
     tags: [fix]
     ingredients:
-      - Microwave @kitchen
-      - Screwdriver @tool
+      - Microwave
+      - Screwdriver
       - Wrench
       - !step Use the screwdriver on the microwave.
       - !step Finish the job with a wrench.	
 
   - name: Manufacturer (fix)
     ingredients:
-      - Screwdriver @tool
+      - Screwdriver
       - <Welder> OR <Cable coil>
       - !step Open the maintenance panel with the screwdriver.
       - !step Depending on the severity of the damage, use the welder (light) or cable coil (heavy).
@@ -643,7 +805,7 @@ recipes:
       notes: This is for APCs that have been completely broken (They have a damaged sprite and the area is left unpowered), not APCs that have had their wires shorted.
     tags: [fix]
     ingredients:
-      - Screwdriver @tool
+      - Screwdriver
       - Wrench
       - Multitool
       - 4x <Wire>
@@ -669,11 +831,12 @@ recipes:
     tags: [disassemble]
 
   - name: Computer, normal (disassembly)
+    unsorted: true
     info:
       notes: Not all computers can be dismantled.
     tags: [disassemble, computer]
     ingredients:
-      - Screwdriver @tool
+      - Screwdriver
       - Crowbar
       - Wirecutters
       - Wrench
@@ -687,9 +850,10 @@ recipes:
       - !step Welder 
 
   - name: Computer, ThinkDOS (disassembly)
+    unsorted: true
     tags: [disassemble, computer]
     ingredients:
-      - Screwdriver @tool
+      - Screwdriver
       - Crowbar
       - Wirecutters
       - Wrench
@@ -709,7 +873,7 @@ recipes:
       notes: There are four wires. Two short out the APC when cut, one cuts AI control when cut, and one does nothing when cut, but unlocks the APC when pulsed with a multitool.  There's a chance you'll get shocked when cutting wires, so either have insulated gloves or do it in an isolated area where no-one will find you.  South maintenance is a good choice.
     tags: [hack]
     ingredients:
-      - Screwdriver @tool
+      - Screwdriver
       - Wirecutters
       - Multitool
       - !step Screwdriver
@@ -717,11 +881,12 @@ recipes:
       - !step Get wirecutters out of your toolbox/backpack/pockets and use them on the APC with the windows still open
 
   - name: Airlock (hack)
+    unsorted: true
     info:
       notes: Door wiring is randomized per game, but all doors have the same wires. Using a multitool to pulse wires will only work if the door has power. Cutting wires can rid the door of some features (AI Control for instance) until the said wire is mended.
     tags: [hack, door]
     ingredients:
-      - Screwdriver @tool
+      - Screwdriver
       - Multitool
       - Wirecutters
       - Crowbar
@@ -738,17 +903,18 @@ recipes:
     tags: [disassemble, wall]
     ingredients:
       - Welder
-      - Screwdriver @tool
+      - Screwdriver
       - Wrench
       - !step Use the welder on the wall
       - !step Screwdriver on 'Wall' to dislodge girders OR
       - !step Wrench to dismantle girders
 
   - name: Wall, reinforced (disassembly)
+    unsorted: true
     tags: [disassemble, wall]
     ingredients:
       - Wirecutter
-      - Screwdriver @tool
+      - Screwdriver
       - Welder
       - Wrench
       - Crowbar
@@ -770,3 +936,4 @@ recipes:
       - Wrench
       - !step Screwdriver
       - !step Wrench
+

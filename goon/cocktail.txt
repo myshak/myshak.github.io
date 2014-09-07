@@ -232,6 +232,10 @@ recipes:
     sources:
       - Base drink from the alcohol dispenser.
 
+  - name: Bread (Reagent)
+    sources:
+      - Use a loaf or slice of bread (any type) on a beaker.
+
 # Cocktails
 
   - name: Cola
@@ -444,3 +448,12 @@ recipes:
     tags: [drink]
     sources:
       - Bar
+
+  - name: Squeeze
+    ingredients:
+      - Welding Fuel
+      - Bread (Reagent)
+    tags: [drink, stun, disease]
+    info:
+      notes: Stuns and infects the consumer with food poisoning.
+

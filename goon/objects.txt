@@ -156,7 +156,7 @@ recipes:
       notes: Sometimes used by jerks to kill the chef's only friend. You can also hide these in containers such as backpacks or emergency boxes to make traps for unsuspecting victims! For the ultimate party gag, try to combine them with certain other items...oh, the possibilities of a single mousetrap! Make sure to arm it by clicking on it in your hand before putting it down!
 
   - name: Fire extinguisher
-    tags: [weapon]
+    tags: [container]
     info:
       notes: Useful for firefighting, as an impromptu jetpack and the weapon of choice for seasoned greyshirts. Just remember to disable the safety first and that against any fire which is still being fueled, you won't make much progress. Once emptied, you don't necessarily have to refill it with regular foam either...
 
@@ -187,3 +187,34 @@ recipes:
 
   - name: Vuvuzela
     tags: []
+
+  - name: Health analyzer
+    tags: [tool]
+    info:
+      notes: Scan humans or monkeys to get a report of their health, damage taken, any viruses, and other ailments. The medical PDA provides the same functionality, along with the ability to switch to reagent scanner mode to see what chemicals are inside things.
+
+  - name: Pen
+    tags: []
+    info:
+      notes: Used for writing on paper. Variants include the sleepy pen traitor item and I-pen to leave infrared messages that can only be read with the help of optical meson scanners. 
+
+  - name: Stun baton
+    tags: [weapon]
+    info:
+      notes: A melee weapon which delivers an incapacitating shock to the target, knocking them to the ground. It has an On/Off function, and is on by default. Attempting to use it with the 'harm' intent will instead stun YOU, leaving you at the mercy of whoever you were pursuing. A switched-off baton is completely inert unless you use the harm intent, which results in a good old beating. Stun batons hold ten charges and are available in security lockers.
+
+  - name: Cyborg head (Standard)
+    tags: []
+    info:
+      notes: Available from robotics manufacturers.
+
+  - name: Cyborg arm (Standard)
+    tags: []
+    info:
+      notes: Available from robotics manufacturers.
+
+  - name: Cyborg leg (Standard)
+    tags: []
+    info:
+      notes: Available from robotics manufacturers.
+
