@@ -246,6 +246,15 @@ recipes:
       - Base chemical from the dispenser.
     tags: [base, rad, damage]
 
+  - name: Helium
+    sources:
+      - Helium tanks.
+    tags: [base]
+    info:
+     depletion_rate: 0.4
+     penetrates_skin: No
+     notes: Harmless. Does what you'd expect when inhaled (or injected).
+
 # Basic compounds 
 
   - name: Ammonia
@@ -705,6 +714,7 @@ recipes:
       - Oxygen
     tags: [medical]
     info:
+      depletion_rate: 0.4
       notes: Prevents use of the *fart emote.
 
   - name: Strange Reagent
@@ -728,6 +738,7 @@ recipes:
     tags: [medical, blindness, eye, heal]
     info:
       per_cycle: 30% chance to remove blindness, 80% chance to reduce eye damage by 1.
+      depletion_rate: 0.4
       notes: Not typically needed unless some jerk is using a lot of flashbangs. It's a rare situation, but giving them oculine might be their saving grace.
       
   - name: Teporone
@@ -738,6 +749,7 @@ recipes:
     tags: [medical, temperature, addictive]
     info:
       per_cycle: Attempts to return body temp to normal in ten degree increments
+      depletion_rate: 0.4
       notes: Not really ever used much, but spacewalking cocktails might need it. Addictive.
 
   - name: Lexorin
@@ -1009,6 +1021,7 @@ recipes:
       - Roburger.
     tags: [disease]
     info:
+      penetrates_skin: No
       depletion_rate: 0.4
       notes: Infects the victim with robotics transformation. The transformation is obvious and a slow process. Rather tricky poison to use effectively, but an easy option to borg yourself. 
 
@@ -1018,6 +1031,7 @@ recipes:
       - Brain burgers.
     tags: [disease]
     info:
+      penetrates_skin: No
       depletion_rate: 0.4
       notes: Infects the victim with kuru. Kuru is incurable and will paralyze somebody within seconds of injection. Death will follow within a couple of minutes.
 
@@ -1026,6 +1040,7 @@ recipes:
       - Poison bottles.
     tags: [disease]
     info:
+      penetrates_skin: No
       depletion_rate: 0.4
       notes: Infects the victim with a non-contagious version of GBS. Another evil disease reagent. Unless countered quickly with cryoxadone, death without any chance of revival is inevitable. 
 
@@ -1034,6 +1049,7 @@ recipes:
       - Poison bottles.
     tags: [disease]
     info:
+      penetrates_skin: No
       depletion_rate: 0.4
       notes: Infects the victim with parasites. Each successful infection rips the host apart and spawns a couple of baby ice spiders, which are extremely aggressive and will attack nearby humans and monkeys. By doing so, they in turn mature and become even more dangerous. This chain reaction can be devastating and quite often depopulates whole stations.
 
@@ -1264,6 +1280,7 @@ recipes:
       - Magical beans
     tags: [explode, ignite]
     info:
+      penetrates_skin: No
       note: Explodes at low temperatures, for instance when mixed with cryostylane. When used in a mob, body temperature alone isn't a reliable way to set argine off.
       depletion_rate: 0.4
       ignition_temp: 270 K
@@ -1276,10 +1293,10 @@ recipes:
       - Nitrogen
       - Oxygen
       - Stabilizing Agent
-    heat_to: 480 K
     tags: [explode, ignite]
     info:
       depletion_rate: 0.4
+      ignition_temp: 480 K
       penetrates_skin: No
       notes: |
              Sends everything flying from the detonation point.
@@ -1295,6 +1312,7 @@ recipes:
     tags: [explode, ignite]
     info:
       depletion_rate: 0.4
+      ignition_temp: 480 K
       penetrates_skin: No
       notes: |
              Sucks everything into the detonation point.
@@ -1362,6 +1380,7 @@ recipes:
     reaction_message: The mixture ferments into a filthy morass.
     tags: [drug, damage, tox]
     info:
+      penetrates_skin: No
       depletion_rate: 0.4
       per_cycle: Random chance to deal +1 TOX per cycle. Causes dizziness.
       notes: Low-quality sewage drugs. Mostly harmless, but the constant screen-shaking is irritating and makes it hard to click on objects.
@@ -1489,6 +1508,7 @@ recipes:
       - Insulin
     tags: [drug, damage, losebreath, oxy, tox, stamina, overdose, stun]
     info:
+      penetrates_skin: No
       depletion_rate: 0.4
       per_cycle: +1 TOX per cycle, random chance to cause stuns along with LOSEBREATH and a large amount of OXY damage.
       notes: While aranesp grants a significant total stamina and regeneration buff, it's also a danger to the user. There is no overdose threshold per se, however doses of 10+ units can be lethal due to escalating OXY and TOX damage.  
@@ -1563,6 +1583,7 @@ recipes:
       - Oxygen 
       - Aluminium
     info:
+      depletion_rate: 0.4
       penetrates_skin: No
       notes: Reinforces windows and grilles. It may be applied to windows up to four times, with each application making the window stronger than the last.
 
@@ -1599,6 +1620,7 @@ recipes:
       - Space Fungus
       - Blood
     info:
+      depletion_rate: 0.4
       penetrates_skin: No
       notes: Creates a dirty carpet on the floor.
 
@@ -1609,6 +1631,7 @@ recipes:
       - Chlorine
     tags: [burning]
     info:
+      depletion_rate: 0.4
       penetrates_skin: No
       notes: Extinguishes fires. Reacts violently with chlorine trifluoride.
 
@@ -1621,6 +1644,7 @@ recipes:
       - Extracted from unmutated garlics.
     tags: [damage, burn]
     info:
+      depletion_rate: 0.4
       penetrates_skin: No
       application_effect: Splashing holy water onto a vampire or injecting them with it burns them quite badly.
 
@@ -1631,6 +1655,7 @@ recipes:
       - Water
     tags: [slippery]
     info:
+      depletion_rate: 0.4
       penetrates_skin: No
       notes: Crates a very slippery surface when applied to floor tiles, causing people to slip and fall regardless of running or walking. Anybody falling down will take brute damage in the process.
 
@@ -1642,7 +1667,6 @@ recipes:
       - <Aluminium> OR <Iron>
     reaction_message: The metal begins to foam up! / The metal begins to foam up, becoming rigid and tough!
     info:
-     penetrates_skin: No
      notes: |
             Reacts immediately upon mixing. After a short delay, the foam will turn into weak metal walls (and floors, if there isn't one on the tile), which can be destroyed with a few whacks of a blunt object.
             A silly chem that can be as helpful or as harmful as you want it to be, you can either plug up holes in the station or inconvenience people with huge metal obstructions. Unlike other foams, this one can't be slipped on (since it doesn't use water).
@@ -1663,6 +1687,7 @@ recipes:
       - Hairgrownium
     tags: [hair]
     info:
+      penetrates_skin: Yes
       depletion_rate: 0.4
       notes: Grows tremendous hair. And a fake moustache.
 
@@ -1705,12 +1730,13 @@ recipes:
 
   - name: Ants
     sources: 
-      - Animated sprite that appears around food. Use a beaker on them.
+      - Animated sprite that appears on floor tiles that foodstuffs have been left on. Use a beaker on them.
     tags: [brute, damage]
     info:
+      penetrates_skin: No
       depletion_rate: 0.4
       per_cycle: +2 BRUTE per cycle.
-      notes: A mostly harmless and annoying variant of itching powder.
+      notes: A mostly harmless prank chem that causes everyone to scream on TOUCH or INGEST. In the blood stream, the victim takes BRUTE damage every cycle, so it can be slow and lethal if you have the patience to collect enough ants.
 
   - name: Corn Starch
     sources:
@@ -1777,6 +1803,7 @@ recipes:
       - Extracted from THE MONSTER and many other meat dishes.
     tags: [damage, tox, stun, overdose, stamina]
     info:
+      penetrates_skin: No
       depletion_rate: 0.4
       overdose_threshold: 25
       per_cycle: | 
@@ -1789,6 +1816,7 @@ recipes:
       - Extracted from everything that contains bacon.
     tags: [damage, overdose]
     info:
+      penetrates_skin: No
       depletion_rate: 0.2
       overdose_threshold: 125
       per_cycle: OVERDOSE - An 8% chance of metabolizing to 10 cyanide, 15 radium and 2 cholesterol for every 0.2 units above 125.
@@ -1812,4 +1840,5 @@ recipes:
   - name: Paper (Reagent)
     sources:
       - Use a sheet of paper on a beaker.
-
+    info:
+      penetrates_skin: No

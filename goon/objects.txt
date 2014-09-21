@@ -203,18 +203,3 @@ recipes:
     info:
       notes: A melee weapon which delivers an incapacitating shock to the target, knocking them to the ground. It has an On/Off function, and is on by default. Attempting to use it with the 'harm' intent will instead stun YOU, leaving you at the mercy of whoever you were pursuing. A switched-off baton is completely inert unless you use the harm intent, which results in a good old beating. Stun batons hold ten charges and are available in security lockers.
 
-  - name: Cyborg head (Standard)
-    tags: []
-    info:
-      notes: Available from robotics manufacturers.
-
-  - name: Cyborg arm (Standard)
-    tags: []
-    info:
-      notes: Available from robotics manufacturers.
-
-  - name: Cyborg leg (Standard)
-    tags: []
-    info:
-      notes: Available from robotics manufacturers.
-

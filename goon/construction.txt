@@ -5,6 +5,7 @@
 # Structure:
 # - Bombs
 # - Weapons
+# - Cyborgs
 # - Robots
 # - Misc assemblies
 # - Basic construction
@@ -19,7 +20,7 @@
 # [wall] It's a wall.
 # [window] It's a window.
 # [computer] It's a computer.
-# [robot] It's a robot.
+# [robot] It's a robot or cyborg.
 # [door] It's a door.
 # [fix] It's a How2Fix guide.
 # [hack] A hacking guide.
@@ -236,7 +237,211 @@ recipes:
       - !step Attach the air mix or oxygen tank to the assembly.
       - !step Add the fuel tank to the assembly.
 
+# Cyborgs
+
+  - name: Cyborg frame
+    tags: []
+    info:
+      notes: Available from robotics manufacturers. Traitors can order Syndicate frames with hacked laws.
+
+  - name: Cyborg head (Light)
+    tags: []
+    info:
+      notes: Available from robotics manufacturers. Cannot be reinforced.
+
+  - name: Cyborg head (Standard)
+    tags: []
+    info:
+      notes: Available from robotics manufacturers.
+
+  - name: Cyborg chest (Light)
+    tags: []
+    info:
+      notes: Available from robotics manufacturers. Cannot be reinforced.
+
+  - name: Cyborg chest (Standard)
+    tags: []
+    info:
+      notes: Available from robotics manufacturers. Cannot be reinforced.
+
+  - name: Cyborg arm (Light)
+    tags: []
+    info:
+      notes: Available from robotics manufacturers. Cannot be reinforced.
+
+  - name: Cyborg arm (Standard)
+    tags: []
+    info:
+      notes: Available from robotics manufacturers.
+
+  - name: Cyborg leg (Light)
+    tags: []
+    info:
+      notes: Available from robotics manufacturers. Cannot be reinforced.
+
+  - name: Cyborg leg (Standard)
+    tags: []
+    info:
+      notes: Available from robotics manufacturers. Cannot be reinforced.
+
+  - name: Cyborg treads
+    tags: []
+    info:
+      notes: Available from robotics manufacturers, which provide treads in pairs (left and right). Cannot be reinforced.
+
+  - name: Cyborg head (Sturdy)
+    tags: [make, robot]
+    ingredients:
+      - Cyborg head (Standard)
+      - <Metal Sheet> (Steel)
+      - !step Use two metal sheets on the cyborg head.
+    info:
+      notes: At the moment, steel is the only suitable material.
+
+  - name: Cyborg head (Heavy)
+    tags: [make, robot]
+    ingredients:
+      - Cyborg head (Sturdy)
+      - <Metal Sheet, reinforced> (Steel)
+      - !step Use two reinforced metal sheets on the cyborg head.
+    info:
+      notes: At the moment, steel is the only suitable material.
+
+  - name: Cyborg arm (Sturdy)
+    tags: [make, robot]
+    ingredients:
+      - Cyborg arm (Standard)
+      - <Metal Sheet> (Steel)
+      - !step Use two metal sheets on the cyborg arm.
+    info:
+      notes: At the moment, steel is the only suitable material.
+
+  - name: Cyborg arm (Heavy)
+    tags: [make, robot]
+    ingredients:
+      - Cyborg arm (Sturdy)
+      - <Metal Sheet, reinforced> (Steel)
+      - !step Use two reinforced metal sheets on the cyborg arm.
+    info:
+      notes: At the moment, steel is the only suitable material.
+
+  - name: Cyborg
+    unsorted: true
+    tags: [make, robot]
+    ingredients:
+      - Cyborg frame
+      - Cyborg head (any type)
+      - Cyborg chest (any type)
+      - Cyborg arm, left and right (any type)
+      - <Cyborg treads> OR Cyborg leg, left and right (any type)
+      - Charged <Power Cell>
+      - Brain
+      - Wire
+      - Wrench
+      - !step Insert the power cell into the cyborg chest.
+      - !step Use the cable coil on the cyborg chest.
+      - !step Attach the cyborg chest to the frame.
+      - !step Attach the arms and legs (or treads) to the frame.
+      - !step Insert the brain into the cyborg head.
+      - !step Attach the cyborg head to the frame.
+      - !step Optionally, the wrench can be used to partially disassemble frames. See notes.
+      - !step To activate the cyborg, click on the finished frame with the wrench.
+    info:
+      notes: |
+             Cyborg parts are classified as light, standard, sturdy or heavy. Durability increases with heavier parts, but mobility decreases. Overweight cyborgs will also use slightly more power.
+             For the most part, the game will prevent you from inserting unsuitable (job-banned etc.) brains automatically.
+             
+             Remove limbs: use the wrench on the frame, then select the appropriate cyborg part.
+             Remove brain: detach the cyborg head first, then click on it with the wrench.
+
+  - name: Cyborg, brain replacement (fix)
+    unsorted: true
+    tags: [fix, robot]
+    ingredients:
+      - Cyborg
+      - Brain
+      - ID card with robotics access
+      - Screwdriver
+      - !step Unlock the cyborg's interface with the ID card.
+      - !step Open its head compartment with the screwdriver.
+      - !step Click on the cyborg with an empty hand to remove the brain.
+      - !step Insert the replacement brain.
+      - !step Close the head compartment with the screwdriver.
+      - !step Lock the cyborg's interface with the ID card.
+    info:
+      notes: For the most part, the game will prevent you from inserting unsuitable (job-banned etc.) brains automatically.
+
+  - name: Cyborg, limb replacement (fix)
+    unsorted: true
+    tags: [fix, robot]
+    ingredients:
+      - Cyborg
+      - Cyborg arm, left and right (any type)
+      - <Cyborg treads> OR Cyborg leg, left and right (any type)
+      - ID card with robotics access
+      - Crowbar
+      - Screwdriver
+      - Wrench
+      - !step Unlock the cyborg's interface with the ID card.
+      - !step Open its cover with the crowbar.
+      - !step Expose the wires with the screwdriver.
+      - !step Optionally, use the wrench and select the appropriate cyborg part to remove.
+      - !step Attach the missing arms or legs to the cyborg.
+      - !step Secure the wiring with the screwdriver.
+      - !step Close the cover with the crowbar.
+      - !step Lock the cyborg's interface with the ID card.
+    info:
+      notes: |
+             Cyborg parts are classified as light, standard, sturdy or heavy. Durability increases with heavier parts, but mobility decreases. Overweight cyborgs will also use slightly more power.
+
+  - name: Cyborg, brute damage (fix)
+    tags: [fix, robot]
+    ingredients:
+      - Cyborg
+      - Welder
+      - !step Use the welder on the cyborg; several times if necessary.
+    info:
+      notes: The 'Repair Structural Damage' function of docking stations does the same.
+
+  - name: Cyborg, burn damage (fix)
+    tags: [fix, robot]
+    ingredients:
+      - Cyborg
+      - ID card with robotics access
+      - Wire
+      - Crowbar
+      - Screwdriver
+      - !step Unlock the cyborg's interface with the ID card.
+      - !step Open its cover with the crowbar.
+      - !step Expose the wires with the screwdriver.
+      - !step Use the cable coil on the cyborg to repair its wiring.
+      - !step Secure the wiring with the screwdriver.
+      - !step Close the cover with the crowbar.
+      - !step Lock the cyborg's interface with the ID card.
+    info:
+      notes: The 'Repair Burn Damage' function of docking stations does the same.
+
 # Robots
+
+  - name: AI shell
+    unsorted: true
+    tags: [make, robot]
+    ingredients:
+      - AI shell frame
+      - AI shell power cell
+      - AI interface board
+      - Metal Sheet
+      - Wire
+      - Station bounced radio
+      - Wrench
+      - !step Add some metal to the shell frame.
+      - !step Insert wires.
+      - !step Insert the shell power cell. Regular cells are not compatible.
+      - !step Install the interface board.
+      - !step Use the radio on the shell frame.
+      - !step Activate the robot with the wrench.
+    info:
+      notes: These are simple robots used by the AI for reconnaissance or interacting directly with certain pieces of machinery, e.g. pods or manufacturers.
 
   - name: Medbot
     unsorted: true
@@ -473,27 +678,35 @@ recipes:
   - name: Electric chair
     info:
       notes: |
-             Default Frequency/Code is: 144.9 / 2. To change this you must click on electropack while you're holding it, and modify it from the pop-up interface. Electric chairs are remotely activated, but must be toggled on before usage (right click, and select "toggle power"). Also, the room must have power for the chair to work.
+             To change the default frequency/code, you must click on the electropack while you're holding it, and modify it from the pop-up interface. Electric chairs can be remotely activated, but must be toggled on before usage (right click, and select "controls"). Also, the room must have power for the chair to work.
+             
+             To disassemble the chair, use a wrench.
     tags: [make]
     ingredients:
-      - Electropack
+      - ElectroPack
       - Security Helmet
       - 1x <Metal Sheet>
-      - !step Click metal while you''re holding it
-      - !step Choose "chair"
-      - !step Use helmet on electropack to make shock_kit
-      - !step Use shock_kit on chair to make electrified chair
+      - <Remote Signaler> (optional)
+      - <Wrench> (optional)
+      - !step Click on the metal while you're holding it.
+      - !step Build a chair.
+      - !step Optionally, change the electropack's default frequency and code.
+      - !step Use the helmet on the electropack.
+      - !step Attach the helmet/electropack assembly to the chair.
 
   - name: Light fixtures
     info:
-      notes: These fixtures, installed by Nanotrasen or otherwise, are controlled by the local APC. Light tubes can be obtained from boxes or a General Manufacturer.
+      notes: |
+             These fixtures, installed by Nanotrasen or otherwise, are controlled by the local APC. Light tubes may be obtained from boxes or a general manufacturer.
+             
+             Custom light fixtures cannot be attached to reinforced walls.
     tags: [make, light]
     ingredients:
-      - Wall
+      - Wall, regular
       - 2x <Metal Sheet>
       - Light tube
       - !step Turn the metal sheets into one set of light fixture parts.
-      - !step Attach the parts to a wall.
+      - !step Attach the parts to a regular wall.
       - !step Insert the light tube.
 
   - name: Space pod
@@ -936,4 +1149,3 @@ recipes:
       - Wrench
       - !step Screwdriver
       - !step Wrench
-

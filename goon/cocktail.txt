@@ -33,6 +33,18 @@ recipes:
     info:
       notes: A favourite of captains everywhere.
 
+  - name: Hobo Wine
+    tags: [drink]
+    info:
+      notes: Contains wine plus a number of random chemicals.
+
+  - name: Beer (Fancy)
+    tags: [drink]
+    sources:
+      - Bar
+    info:
+      notes: Contains beer plus a number of random chemicals.
+
   - name: Robust-Eez
     tags: [drink]
     sources:
@@ -174,6 +186,15 @@ recipes:
 
 # Ingredient processing
 
+  - name: Fruit wedge
+    ingredients:
+      - <Orange> OR <Lime> OR <Lemon>
+      - Knife
+      - !step Cut the orange, lime or lemon into smaller pieces with the knife.
+    tags: [food]
+    sources:
+      - Bar
+
   - name: Beer
     ingredients:
       - Wheat
@@ -235,8 +256,19 @@ recipes:
   - name: Bread (Reagent)
     sources:
       - Use a loaf or slice of bread (any type) on a beaker.
+    info:
+      penetrates_skin: No
 
 # Cocktails
+
+  - name: Fancy cocktail
+    ingredients:
+      - Drinking glass (any type)
+      - <Fruit wedge> or any other cocktail accessory
+      - !step Use the fruit wedge/umbrella/etc. on the drinking glass.
+    tags: [drink]
+    info:
+      notes: Cocktail accessories are available in the bar.
 
   - name: Cola
     ingredients:
@@ -456,4 +488,3 @@ recipes:
     tags: [drink, stun, disease]
     info:
       notes: Stuns and infects the consumer with food poisoning.
-

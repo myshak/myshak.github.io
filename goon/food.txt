@@ -91,6 +91,16 @@ recipes:
   - name: Butt
     tags: [produce, clothes, equip]
 
+  - name: Shaker (Salt)
+    info:
+      notes: Add salt for the perfect flavour. 
+    tags: [kitchen, condiment, container]
+
+  - name: Shaker (Pepper)
+    info:
+      notes: Add pepper for the perfect flavour. 
+    tags: [kitchen, condiment, container]
+
 # Vending machine snacks
 
   - name: Chips
@@ -2001,4 +2011,3 @@ recipes:
       - Knife
       - !step Cut the cake into slices with the knife.
     tags: [food]
-
