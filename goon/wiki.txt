@@ -166,12 +166,11 @@ recipes:
     tags: [base]
 
   - name: Water
-    sources: 
-      - Extracted from all melons.
     tags: [base, slippery, burning]
     sources:
       - Base chemical from the dispenser.
       - Base drink from the soda fountain.
+      - Extracted from all melons.
 
   - name: Potassium
     sources:
@@ -210,6 +209,7 @@ recipes:
     tags: [base, brain, damage]
     sources:
       - Base chemical from the dispenser.
+      - Extracted from omega cannabis leaves.
       
   - name: Lithium
     info:
@@ -218,11 +218,10 @@ recipes:
       per_cycle: Drooling and weird movement.
     tags: [base, movement]
     sources:
-      - Base chemical from the dispenser.      
+      - Base chemical from the dispenser.  
+      - Extracted from omega cannabis leaves.	  
 
   - name: Sugar
-    sources:
-      - Extracted from sugarcanes.
     tags: [base, stun, overdose, speed, ko, stamina, jitter]
     info:
       depletion_rate: 0.4
@@ -235,6 +234,7 @@ recipes:
     sources:
       - Base chemical from the dispenser.
       - Base drink from the soda fountain.
+      - Extracted from sugarcanes.
       
   - name: Radium
     info:
@@ -427,7 +427,7 @@ recipes:
       - Ammonia
       - Oil
     sources:
-      - Extracted from unmutated commol roots.
+      - Extracted from all commol roots.
     depletion_rate: 2
     tags: [medical, burn, heal, tox, damage]
     info:
@@ -453,8 +453,9 @@ recipes:
   - name: Omnizine
     sources: 
       - Extracted from white cannabis leaves.
+      - Extracted from glowing fruits.
       - Pro Puffs.
-      - Warm donk Pockets.
+      - Warm donk pockets.
     tags: [medical, brute, burn, oxy, tox, heal, addictive, overdose]
     info:
       depletion_rate: 0.2
@@ -480,7 +481,7 @@ recipes:
       - Potassium
       - Iodine
     sources:
-      - Extracted from unmutated nureous leaves.
+      - Extracted from all nureous leaves.
     tags: [medical, rad, heal]
     info:
       depletion_rate: 0.4
@@ -521,7 +522,7 @@ recipes:
       - Diethylamine
     reaction_message: The solution fizzes and gives off toxic fumes.
     sources:
-      - Extracted from unmutated asomna barks.
+      - Extracted from all asomna barks and omega cannabis leaves.
       - Grones soda.
     tags: [medical, stun, speed, heal, crit, stamina, addictive, overdose, heart]
     info:
@@ -554,7 +555,7 @@ recipes:
       - Phenol
       - Sulphuric Acid
     sources:
-      - Extracted from black venne fibers.
+      - Extracted from black venne fibers and omega cannabis leaves.
     tags: [medical, tox, damage, brute, burn, heal, heart, oxy, losebreath, depletion, crit, movement, overdose]
     info:
       depletion_rate: 0.2
@@ -572,7 +573,7 @@ recipes:
       - Oxygen 
       - Sulphuric Acid
     sources:
-      - Extracted from unmutated contusine leaves.
+      - Extracted from all contusine leaves.
     tags: [medical, brute, overdose, temperature, speed]
     info:
       depletion_rate: 0.1
@@ -601,7 +602,7 @@ recipes:
       - Ammonia
     tags: [medical, oxy, losebreath, heal]
     sources:
-      - Extracted from unmutated contusine leaves.
+      - Extracted from shivering contusine leaves.
     info:
       depletion_rate: 0.2
       per_cycle: Heals 6 OXY damage, reduces LOSEBREATH by 4
@@ -672,6 +673,8 @@ recipes:
       notes: Mostly used as a precursor to a couple of the illegal drugs. Might be needed for bee stings, histamine poisonings, itching powder.
       
   - name: Haloperidol
+    sources:
+      - Extracted from omega cannabis leaves.
     ingredients: 
       - Chlorine
       - Fluorine
@@ -771,6 +774,8 @@ recipes:
       notes: Another legacy spacewalking chem. Prevents OXY damage (but not LOSEBREATH) at the expense of occasional brain damage. Addictive.
 
   - name: Hairgrownium
+    sources:
+      - Extracted from fuzzy nureous and omega cannabis leaves. 
     ingredients:
       - Carpet 
       - Synthflesh 
@@ -793,6 +798,8 @@ recipes:
       notes: Lasts a long time and ramps your cumulative radiation way the hell up, very deadly. 
           
   - name: Itching Powder
+    sources:
+      - Extracted from omega cannabis leaves.
     ingredients: 
       - Ammonia 
       - Fuel 
@@ -823,7 +830,8 @@ recipes:
       
   - name: Histamine
     sources:
-      - Inject Emblaming Fluid/Itching powder, extract histamine using a syringe
+      - Inject emblaming fluid/itching powder, extract histamine using a syringe.
+      - Extracted from omega cannabis leaves.
     tags: [allergy, tox, damage, overdose, brute, oxy, damage]
     info:
       depletion_rate: 0.2
@@ -917,7 +925,8 @@ recipes:
       
   - name: Curare
     sources:
-      - traitor poison bottles
+      - Poison bottles.
+      - Extracted from quivering contusine leaves.
     tags: [tox, oxy, damage, paralyze]
     info:
       depletion_rate: 0.1
@@ -1150,6 +1159,8 @@ recipes:
       
   - name: Phlogiston
     unsorted: true
+    sources:
+      - Extracted from burning commol roots.
     ingredients:
       - Phosphorous 
       - Sulphuric Acid 
@@ -1334,6 +1345,8 @@ recipes:
       notes: Slapping a whole bunch of nicotine patches on someone can paralyze them and give them heart failure or a bunch of escalating tox and suffocation damage. Addictive.
       
   - name: Cat drugs
+    sources:
+      - Extracted from omega cannabis leaves.
     ingredients: 
       - Catonium
       - Psilocybin 
@@ -1352,6 +1365,8 @@ recipes:
              Gimmick drugs, good for laughs or confusing the hell out of people.
 
   - name: Space Drugs
+    sources:
+      - Extracted from omega cannabis leaves.
     ingredients: 
       - Mercury 
       - Sugar 
@@ -1366,6 +1381,7 @@ recipes:
   - name: Psilocybin
     sources:
       - Extracted from magic mushrooms (space fungus mutation).
+      - Extracted from omega cannabis leaves.
     tags: [drug, hallucinate]
     info:
       depletion_rate: 0.4
@@ -1390,7 +1406,7 @@ recipes:
       - Diethylamine
       - Space Fungus
     sources:
-      - Extracted from rainbow cannabis leaves.
+      - Extracted from rainbow and omega cannabis leaves.
     tags: [drug, hallucinate]
     info:
       depletion_rate: 0.4
@@ -1400,9 +1416,9 @@ recipes:
              Imaginary monsters start chasing you around. Changeling's hallucinogen sting injects this.
              Funny if you hit an unwary person who hasn't experienced it before, then see them wildly firing lasers at imaginary spiders and screaming a lot.
 
-  - name: Tetrahydrocannibol (THC)
+  - name: Tetrahydrocannabinol (THC)
     sources:
-      - Extracted from unmutated cannabis leaves.
+      - Extracted from all cannabis leaves.
     tags: [drug, drowsiness, movement]
     info:
       depletion_rate: 0.4
@@ -1424,6 +1440,8 @@ recipes:
       
   - name: Crank
     unsorted: true
+    sources:
+      - Extracted from omega cannabis leaves.
     ingredients: 
       - Diphenhydramine 
       - Ammonia 
@@ -1445,6 +1463,8 @@ recipes:
              Mixing crank comes with an explosion, which cannot be prevented by stabilizing agent.
       
   - name: Krokodil
+    sources:
+      - Extracted from omega cannabis leaves.
     ingredients: 
       - Diphenhydramine 
       - Morphine 
@@ -1464,6 +1484,8 @@ recipes:
       notes: Overdose can cause random amounts of TOX damage, BRUTE damage, BRAIN damage, make you pass out, or most fun of all, make all your skin rot off. If this happens, you'll look like a half-rotten corpse but can potentially heal back from that and just wander around being terrifying. Addictive.
       
   - name: Methamphetamine
+    sources:
+      - Extracted from robust asomna barks and omega cannabis leaves.
     ingredients: 
       - Ephedrine 
       - Iodine 
@@ -1481,6 +1503,8 @@ recipes:
       notes: Extremely addictive and overdose can make you flail around uncontrollably and drop your stuff, but it's the best thing short of stimulants or bath salts for shrugging off stuns, KOs and paralysis. People will have a hard time containing you.
       
   - name: Bath Salts
+    sources:
+      - Extracted from omega cannabis leaves.
     ingredients:
       - ????
       - Monosodium Glutamate
@@ -1712,7 +1736,7 @@ recipes:
       
   - name: Glowing Slurry
     sources:
-      - Extracted from omega slurrypods in small quantities.
+      - Extracted from omega slurrypods.
     tags: [rad, damage, mutation]
     info:
       depletion_rate: 0.4
@@ -1744,7 +1768,7 @@ recipes:
 
   - name: Capsaicin
     sources:
-      - Extracted from any chili plant.
+      - Extracted from any chili and omega cannabis leaves.
     tags: [stun, movement]
     info:
       depletion_rate: 0.4
@@ -1754,7 +1778,7 @@ recipes:
 
   - name: Ghost Chili Juice
     sources:
-      - Extracted from ghostlier chili plants.
+      - Extracted from ghostlier chili.
     tags: [stun, gib, damage, burn]
     info:
       depletion_rate: 0.4
@@ -1842,3 +1866,12 @@ recipes:
       - Use a sheet of paper on a beaker.
     info:
       penetrates_skin: No
+
+  - name: Blood
+    sources:
+      - Draw blood from somebody with a syringe.
+
+  - name: Blood (Changeling)
+    sources:
+      - Draw blood from a changeling with a syringe.
+      - Extracted from blood oranges.

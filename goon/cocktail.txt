@@ -141,6 +141,12 @@ recipes:
       - Base booze from the alcohol dispenser.
     tags: [drink]
 
+  - name: Tequila
+    sources:
+      - Base booze from the alcohol dispenser.
+      - Bar
+    tags: [drink]
+
   - name: Tonic Water
     sources:
       - Base drink from the alcohol dispenser.
@@ -164,24 +170,41 @@ recipes:
   - name: Tomato Juice
     sources:
       - Base drink from the soda fountain.
+      - Extracted from unmutated tomatoes.
+    tags: [drink]
+
+  - name: Pineapple Juice
+    sources:
+      - Base drink from the soda fountain.
+    tags: [drink]
+
+  - name: Milk (Coconut)
+    sources:
+      - Base drink from the soda fountain.
     tags: [drink]
 
   - name: Orange Juice
     sources:
       - Base drink from the soda fountain.
       - Use an orange on a drinking glass.
+      - Extracted from unmutated oranges.
     tags: [drink]
 
   - name: Lime Juice
     sources:
       - Base drink from the soda fountain.
       - Use a lime on a drinking glass.
+      - Extracted from unmutated limes.
     tags: [drink]
 
   - name: Lemon Juice
     sources:
       - Base drink from the soda fountain.
       - Use a lemon on a drinking glass.
+      - Extracted from unmutated lemons.
+    tags: [drink]
+
+  - name: Pickle Juice
     tags: [drink]
 
 # Ingredient processing
@@ -333,7 +356,7 @@ recipes:
       - Sugar
     tags: [drink]
 
-  - name: Sweet Tea
+  - name: Tea (Sweet)
     ingredients:
       - Tea
       - Sugar
@@ -379,6 +402,8 @@ recipes:
     tags: [drink]
 
   - name: Suicider
+    sources:
+      - Extracted from omega cannabis leaves.
     ingredients:
       - Vodka
       - Cider
@@ -438,6 +463,8 @@ recipes:
       - Gin and Tonic
       - Methamphetamine
     tags: [drink]
+    info:
+      notes: Decays into meth as well as ethanol.
 
   - name: Gimlet
     ingredients:
@@ -462,7 +489,7 @@ recipes:
   - name: Bloody Scary
     ingredients:
       - Vodka
-      - Changeling Blood
+      - Blood (Changeling)
     tags: [drink]
 
   - name: Daiquiri
@@ -488,3 +515,127 @@ recipes:
     tags: [drink, stun, disease]
     info:
       notes: Stuns and infects the consumer with food poisoning.
+
+  - name: Old Fashioned 
+    ingredients:
+      - Bourbon
+      - Bitters
+      - Sugar
+      - Water
+    tags: [drink]
+
+  - name: Jean Harlow
+    ingredients:
+      - Rum
+      - Vermouth
+    tags: [drink]
+
+  - name: Gin and Chronic
+    ingredients:
+      - Gin and Tonic
+      - Tetrahydrocannabinol (THC)
+    tags: [drink]
+    info:
+      notes: Decays into THC as well as ethanol.
+
+  - name: Tequini
+    ingredients:
+      - Tequila
+      - Vermouth
+    tags: [drink]
+
+  - name: Brave Bull
+    ingredients:
+      - Tequila
+      - Coffee
+    tags: [drink]
+
+  - name: Prairie Fire
+    ingredients:
+      - Tequila
+      - Capsaicin
+    tags: [drink]
+    info:
+      notes: Decays into capsaicin as well as ethanol.
+
+  - name: Tea (Honey)
+    ingredients:
+      - Tea
+      - Honey
+    tags: [drink]
+
+  - name: Gin Fizz
+    ingredients:
+      - Gin
+      - Lemon Juice
+      - Water
+    tags: [drink]
+
+  - name: Planter's Punch
+    ingredients:
+      - Rum
+      - Lemonade
+    tags: [drink]
+
+  - name: Mai Tai
+    ingredients:
+      - Rum
+      - Lime Juice
+      - Orange Juice
+    tags: [drink]
+
+  - name: Margarita
+    ingredients:
+      - Tequila
+      - Orange Juice
+      - Lime Juice
+    tags: [drink]
+
+  - name: Long Island Iced Tea
+    ingredients:
+      - Tequila
+      - Screwdriver (Drink)
+      - Rum
+      - Gin
+      - Lemon Juice
+      - Cola
+    tags: [drink]
+
+  - name: Long Beach Iced Tea
+    ingredients:
+      - Tequila
+      - Sex on the Beach
+      - Rum
+      - Gin
+      - Lemon Juice
+    tags: [drink]
+
+  - name: Hunchback
+    ingredients:
+      - Bourbon
+      - Cola
+      - Tomato Juice
+    tags: [drink, depletion, damage, tox, disease]
+    info:
+      depletion_rate: 0.4
+      penetrates_skin: No
+      per_cycle: Increases all depletion rates by 8. +2 TOX damage while health > 0.
+      notes: |
+             Flushes other chemicals more rapidly than calomel, but does so at significant risk to the consumer. 
+             Aside from constant and violent vomiting, the health cap and depletion rate are significantly lower. Hunchback may also induce food poisoning.
+
+  - name: Piña Colada
+    ingredients:
+      - Rum
+      - Milk (Coconut)
+      - Pineapple Juice
+    tags: [drink]
+
+  - name: Ecto Cooler
+    ingredients:
+      - Orange Juice
+      - Ectoplasm
+      - Uranium
+    tags: [drink]
+    info:
+      notes: Decays into VHFCS and has a chance to produce ectomarrow as well, which allows you to see ghosts.

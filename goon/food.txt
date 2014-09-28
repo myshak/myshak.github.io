@@ -83,10 +83,19 @@ recipes:
     tags: [kitchen, tool, weapon]
 
   - name: Brain
+    tags: []
+
+  - name: Brain (Synth)
     tags: [produce]
 
   - name: Heart
+    tags: []
+
+  - name: Heart (Synth)
     tags: [produce]
+
+  - name: Heart (Cyber)
+    tags: []
 
   - name: Butt
     tags: [produce, clothes, equip]
@@ -311,6 +320,7 @@ recipes:
   - name: ?????
     sources:
       - Kitchen
+      - Extracted from purple goop.
     tags: [food, stun, disease]
     info:
       notes: Stuns and infects the consumer with food poisoning.
@@ -429,6 +439,8 @@ recipes:
 
   - name: Ectoplasm
     unsorted: true
+    sources:
+      - Extracted from omega cannabis leaves.
     ingredients:
       - Spooky Dan's
       - Fire extinguisher
@@ -870,7 +882,7 @@ recipes:
       - !step Put the flour and the heart in the microwave.
     tags: [food]
     info:
-      notes: Works with human, monkey or synthetic hearts.
+      notes: Works with human and monkey hearts. Synthetic or cyberhearts are not compatible.
 
   - name: Meatball
     ingredients:
@@ -991,7 +1003,7 @@ recipes:
 
   - name: Brain (Mashed)
     ingredients:
-      - Brain
+      - <Brain> OR <Brain (Synth)>
       - Mixer
       - Fork
       - !step Add the brain to the mixer. 
@@ -1641,7 +1653,7 @@ recipes:
   - name: Burger (Brain)
     ingredients:
       - Dough
-      - Brain
+      - <Brain> OR <Brain (Synth)>
       - Oven
       - !step Load the dough and brain in the oven.
       - !step Cook for 6 seconds, high.
@@ -1713,14 +1725,14 @@ recipes:
   - name: Burger (Heart)
     ingredients:
       - Dough
-      - Heart
+      - <Heart> OR <Heart (Synth)> OR <Heart (Cyber)>
       - Oven
       - !step Load the dough and heart in the oven.
       - !step Cook for 6 seconds, high.
     heat_to: 6 seconds, high
     tags: [food]
     info:
-      notes: Works with human, monkey or synthetic hearts.
+      notes: Works with human, monkey or synthetic hearts. Cyberhearts are also compatible.
 
   - name: Toast (Plain)
     ingredients:
@@ -1972,7 +1984,7 @@ recipes:
   - name: Cake (Brain)
     ingredients:
       - Batter (Cake)
-      - Brain
+      - <Brain> OR <Brain (Synth)>
       - Oven
       - !step Put the cake batter and brain in the oven.
       - !step Cook for 7 seconds, high.
