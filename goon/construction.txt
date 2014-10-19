@@ -208,7 +208,7 @@ recipes:
 
   - name: Zip gun
     info:
-      notes: You can use different types of ammunition, of which .38 Special is easiest to obtain from a hacked general manufacturer. The zip gun holds two rounds at a time.
+      notes: You can use different types of ammunition. The zip gun holds two rounds at a time.
     tags: [make, weapon]
     ingredients:
       - 3x <Metal sheet>
@@ -647,6 +647,15 @@ recipes:
       - Bedsheet
       - <Scissors> OR <Wirecutters>
       - !step Use scissors or wirecutters on bedsheet
+
+  - name: Skull mask
+    tags: [make, equip, clothes]
+    ingredients:
+      - Skull
+      - Circular saw
+      - !step Hollow out the skull with the circular saw.
+    info:
+      notes: Custom masks are named after the former owner of the skull. 
 
   - name: Armored biosuit
     tags: [make, armor, equip, clothes]

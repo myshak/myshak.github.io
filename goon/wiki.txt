@@ -357,14 +357,6 @@ recipes:
     info:
       notes: Fertilizer.
       
-  - name: Pepperoni 
-    ingredients:
-      - Saltpetre 
-      - Beff 
-      - Synthflesh
-    info:
-      notes: What's beff? Find out!
-      
   - name: Stabilizing agent 
     ingredients:
       - Iron
@@ -420,12 +412,11 @@ recipes:
 
   - name: Silver Sulfadiazine
     ingredients: 
+      - Ammonia
       - Silver
       - Sulfur
       - Oxygen
       - Chlorine
-      - Ammonia
-      - Oil
     sources:
       - Extracted from all commol roots.
     depletion_rate: 2
@@ -729,7 +720,11 @@ recipes:
     info:
       depletion_rate: 0.2
       per_cycle: Does BRUTE and TOX damage at random intervals.
-      notes: A miracle medical chem, this little beauty can bring a player back to life! ...Well, if you're careful that is. If the cadaver has too much BRUTE/BURN damage then they will gib. If the individual has too much BRAIN damage they will immediately drop dead again. Rotten corpses will always gib.
+      notes: |
+             A miracle medical chem, this little beauty can bring a player back to life! ...Well, if you're careful that is. If the cadaver is rotted or has too much BRUTE/BURN damage, SR will gib them on use, and a corpse with too much BRAIN damage will immediately drop dead again.
+             It can also be used to resurrect critters if you're a traitor and you feeling turning monsters loose on the station.
+             
+             Note - While SR can revive players, it does not reduce any of their damage values, so actual doctoring is still necessary after they come back to life. 
 
   - name: Oculine
     ingredients: 
@@ -1174,7 +1169,7 @@ recipes:
       application_effect: TOUCH - Self-burning, ignites other stuff.
       notes: This is what old-napalm is now.
       
-  - name: Chlorine Trifluoride
+  - name: Chlorine Trifluoride (CLF3)
     ingredients:
       - Chlorine #(1)
       - Fluorine #(3)
@@ -1656,6 +1651,7 @@ recipes:
     tags: [burning]
     info:
       depletion_rate: 0.4
+      application_effect: TOUCH - Reduces the BURNING var when splashed on people who are on fire.
       penetrates_skin: No
       notes: Extinguishes fires. Reacts violently with chlorine trifluoride.
 
@@ -1719,8 +1715,112 @@ recipes:
     ingredients:
       - Space-Soybean Oil
       - Hydrogen
-      - !step Heat to 515 K
-    heat_to: Heat to 515 K
+      - !step Heat to 530 K.
+    heat_to: Heat to 530 K
+    reaction_message: The mixture emits a burnt, oily smell.
+    info:
+      description: An oil derived from extra-terrestrial soybeans, with additional hydrogen atoms added to convert it into a saturated form.
+      penetrates_skin: No
+      depletion_rate: 0.2
+      per_cycle: Chance to decay into cholesterol or porktonium.
+      notes: 50 unit decay into ca. 70 units of porktonium, a reagent with crippling overdose effects. Potentially, this soybean oil could be used as a delayed stealth poison, if the RNG cooperates.
+
+  - name: Meat slurry
+    ingredients:
+      - Corn starch
+      - Blood
+    reaction_message: The mixture congeals into a bloody mass.
+    info:
+      description: A paste comprised of highly-processed organic material. Uncomfortably similar to deviled ham spread.
+      penetrates_skin: No
+      depletion_rate: 0.4
+      per_cycle: Chance to decay into cholesterol.
+
+  - name: Beff
+    ingredients:
+      - Meat slurry
+      - Plasma
+      - Partially Hydrogenated Space-Soybean Oil
+    reaction_message: The mixture solidifies, taking a crystalline appearance.
+    info:
+      description: An advanced blend of mechanically-recovered meat and textured synthesized protein product notable for its unusual crystalline grain when sliced.
+      penetrates_skin: No
+      depletion_rate: 0.4
+      per_cycle: Chance to decay into cholesterol, porktonium, partially hydrogenated space-soybean oil or synthetic flesh.
+
+  - name: Pepperoni 
+    ingredients:
+      - Saltpetre 
+      - Beff 
+      - Synthflesh
+    reaction_message: The beff and the synthflesh combine to form a smoky red log.
+    tags: [damage, brute]
+    info:
+      description: An Italian-American variety of salami usually made from beef and pork.
+      application_effect: TOUCH - Funny text messages, chance to cause +1 BRUTE.
+      penetrates_skin: No
+      depletion_rate: 0.4
+
+  - name: Fliptonium
+    ingredients:
+      - Gin and Sonic
+      - Liquid dark-matter
+      - Chocolate
+      - Ephedrine
+    reaction_message: The mixture swirls around excitedly!
+    tags: [damage, tox, stun, movement, overdose, stamina, addictive]
+    info:
+      note: Spins your mob constantly. Addictive.
+      depletion_rate: 0.2
+      penetrates_skin: No
+      overdose_threshold: 15
+      per_cycle: |
+                  Slight stun reduction and stamina regeneration buff.
+                  OVERDOSE - Random chance to cause stun, confused movement or +1 TOX.
+
+  - name: Fartonium
+    ingredients:
+      - Refried beans
+      - Egg
+      - ?????
+      - Cheese (Substitute)
+    reaction_message: The substance makes a little 'toot' noise and starts to smell pretty bad.
+    tags: [damage, brute]
+    info:
+      note: Non-stop farty party. No negative side-effects, unless simethicone is also in the bloodstream, in which case you'll get funny text messages and may take +1 BRUTE per cycle.
+      depletion_rate: 0.4
+      penetrates_skin: No
+      per_cycle: Forces your mob to fart constantly.
+
+  - name: Colorful Reagent
+    unsorted: true
+    ingredients:
+      - Plasma
+      - Radium
+      - Space Drugs
+      - Cryoxadone
+      - Triple Citrus
+      - Stabilizing agent
+    reaction_message: The substance flashes multiple colors and emits the smell of a pocket protector.
+    tags: []
+    info:
+      notes: Paints almost everything it touches with a random colour. Foaming or smoking this can be fun.
+      depletion_rate: 0.4
+      penetrates_skin: No
+
+  - name: Glitter
+    ingredients:
+      - Silver
+      - Itching Powder
+      - Colorful Reagent
+      - Paper (Reagent)
+    reaction_message: The mixture becomes far more fabulous!
+    tags: [damage, brute, allergy]
+    info:
+      note: Makes your mob glitter. Occasional BRUTE damage from scratching, similar to itching powder.
+      depletion_rate: 0.1
+      penetrates_skin: Yes
+      per_cycle: 10% chance to cause +1 BRUTE, 5% to do +2 BRUTE. 1% chance to decay into 1 unit of histamine.
 
 # Miscellaneous reagents
 
@@ -1769,8 +1869,9 @@ recipes:
   - name: Capsaicin
     sources:
       - Extracted from any chili and omega cannabis leaves.
-    tags: [stun, movement]
+    tags: [stun, movement, addictive]
     info:
+      penetrates_skin: No
       depletion_rate: 0.4
       per_cycle: Random chance to cough and drop items hold in either hand, or a short stun. Causes stammered speech.
       application_effect: TOUCH - Temporary eye problems, confused movement. Blocked by masks.

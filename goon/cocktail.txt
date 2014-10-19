@@ -152,6 +152,14 @@ recipes:
       - Base drink from the alcohol dispenser.
     tags: [drink]
 
+  - name: Champagne
+    sources:
+      - Base booze from the alcohol dispenser.
+      - Bar
+    tags: [drink]
+    info:
+      notes: Hit pods, segways or other vehicles with the 'harm' intent to rename them.
+
   - name: Vanilla
     sources:
       - Base drink from the soda fountain.
@@ -638,4 +646,10 @@ recipes:
       - Uranium
     tags: [drink]
     info:
-      notes: Decays into VHFCS and has a chance to produce ectomarrow as well, which allows you to see ghosts.
+      notes: Decays into VHFCS and has a chance to produce strange green goop as well, which allows you to see ghosts.
+
+  - name: Chocolate milk
+    ingredients:
+      - Chocolate
+      - Milk
+    tags: [drink]
