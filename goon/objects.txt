@@ -3,27 +3,27 @@ recipes:
   - name: Screwdriver
     tags: [tool]
     info:
-      notes: One of the most, if not the most essential tool. Used in moving windows and grilles, building Computers, opening maintenance panels in electronics, fixing microwaves, modifying small devices, opening cyborg heads and more.
+      notes: One of the most, if not the most essential tool. Used in moving windows and grilles, building computers, opening maintenance panels in electronics, fixing microwaves, modifying small devices, opening cyborg heads and more. 
 
   - name: Wirecutters
     tags: [tool]
     info:
-      notes: Used in wiring, hacking, deconstructing computers, etc. Live wires should always be handled with insulated gloves.
+      notes: Used in wiring, hacking, deconstructing computers, etc. Live wires should always be handled with insulated gloves. 
 
   - name: Multitool
     tags: [tool]
     info:
-      notes: An electrician's precision tool. Known mostly for being a cornerstone of hacking, it's also essential for repairing destroyed APC units. The hard plastic casing makes it handy for pistol-whipping someone in a pinch.
+      notes: An electrician's precision tool. Known mostly for being a cornerstone of hacking, it's also essential for finishing APC repairs.
 
   - name: Wrench
     tags: [tool]
     info:
-      notes: Used in building computers, activating cyborgs, deconstructing walls and furniture.
+      notes: Used in building computers, activating cyborgs, deconstructing walls and furniture etc. 
 
   - name: Crowbar
     tags: [tool]
     info:
-      notes: A general-purpose opener. First used by assistants to pry open firelocks and unpowered doors on the way to the escape shuttles, they are also essential for prying open or wedging shut floor tiles, window frames, wall girders, computer modules, pod casings and so on.
+      notes: A general-purpose opener. Used to pry open firelocks and unpowered doors, prying up or out floor tiles, window frames, wall girders, computer modules and so on. 
 
   - name: Body Armor
     tags: [clothes, armor, equip]
@@ -33,7 +33,7 @@ recipes:
   - name: Welder
     tags: [tool]
     info:
-      notes: A heavy engineering tool. An active welder will ignite plasma, break lightbulbs, set off fire alarms just being held in a hand near the vicinity of a sensor and do horrible things when swung at a person. Must be activated to work and the fuel tank is small, so be sure to top up often. Has nearly as many uses as screwdrivers and crowbars, but operating one will cause eye damage without proper eyewear. Can dismantle walls, fix robots, melt shards into glass, seal doors, clear the space kudzu, fight the meat kudzu, etc.
+      notes: A heavy engineering tool. An active welder will ignite plasma, break light bulbs, set off nearby fire alarms and do horrible things when swung at a person. Must be activated to work and has a limited supply of fuel. Has nearly as many uses as screwdrivers and crowbars, but operating one will cause eye damage without proper protection. 
 
   - name: Security Helmet
     tags: [clothes, armor, equip]
@@ -45,50 +45,44 @@ recipes:
       notes: An electric chainsaw to keep weeds in check. Passable emergency weapon, but not very durable.
     tags: [tool, weapon]
 
-  - name: Cable coil
-    ingredients:
-      - Wire
-    info:
-      notes: A bunch of wire
-
   - name: Wire
     info:
-      notes: Spare cable, found plentifully in yellow toolkits and boxes marked "Cable Storage". Used in constructing computers, repairing damaged wiring under floors, fixing APCs, building pods, fixing cyborgs, making pretty art, and making a crap-ton of other neat stuff! Check out Guide to Wiring for details on how to put floors and wire together to make things happen.
+      notes: Spare cable, found plentifully in yellow toolkits and boxes marked "Cable Storage". Used in constructing computers, repairing damaged wiring under floors and much more.
 
   - name: Power Cell
     tags: []
     info:
-      notes: Main power for Robots, backup juice for APCs before the lights go out. They're just high-capacity batteries. If depleted they may be recharged at either the Recharger in Engineering Storage or in an engine-powered APC. Every APC in the station starts with a fully charged power cell. The power monitoring computers reporting any less than 100% charge on these is usually a sign that things are quickly going to hell. 
+      notes: Main power for cyborgs and backup juice for APCs before the lights go out. Several types of these high-capacity batteries can be found on the station, differing in maximum capacity or other properties. If depleted, they may be recharged manually. 
 
   - name: Light Tube
     tags: [light]
     info:
-      notes: In addition to windows and floor tiles, the incandescent tubes are usually the first casualties of rampant chemistry in the science wing or the cafeteria. Boxes of replacement lights are available in Tool Storage, EVA, Electronics, and the Janitor's closet. They can also be fabricated in a rainbow of colors, including blacklight.
+      notes: In addition to windows and floor tiles, the incandescent tubes are usually the first casualties of rampant chemistry in the science wing or the cafeteria. Boxes of replacement lights are available in e.g. tool storage and the janitor's closet. They can also be fabricated in a rainbow of colors, including black light. 
 
   - name: Metal Sheet
     tags: []
     info:
-      notes: Used for many constructions. Available in Tool Storage, the Warehouse and EVA, but the Cargo Bay can handle enormous bulk orders. Can only be assembled in stacks of up to 50 by hand. 
+      notes: Used for many construction projects. Available in numerous places, and the cargo bay can handle enormous bulk orders. Can only be assembled in stacks of up to 50 by hand.  
 
   - name: Glass Sheet
     tags: []
     info:
-      notes: Used for many constructions. Available in Tool Storage, the Warehouse and EVA, but the Cargo Bay can handle enormous bulk orders. Can only be assembled in stacks of up to 50 by hand.
+      notes: Used for many construction projects. Available in numerous places, and the cargo bay can handle enormous bulk orders. Can only be assembled in stacks of up to 50 by hand.
 
   - name: Rods
     tags: []
     info:
-      notes: Used for many constructions. Available in Tool Storage, the Warehouse, and EVA.
+      notes: Used for many constructions projects. Made from regular metal, and available in e.g. tool storage and the engineering warehouse.
 
   - name: Beaker
     tags: [container]
     info:
-      notes: Holds up to 50 units of chemicals. Standard equipment for chemistry, but medbay has some as well.
+      notes: Holds up to 50 units of chemicals. Standard equipment for chemistry, but medbay has some as well. You generally can't examine the exact contents without spectroscopic goggles, a PDA reagent scanner or by using certain machinery.
 
   - name: Staple gun
     tags: [weapon, tool]
     info:
-      notes: Used to reattach limbs.
+      notes: Used to reattach limbs. As with the other surgery tools, staplers are available from robotics manufacturers.
 
   - name: Flashlight
     tags: [light]
@@ -113,12 +107,12 @@ recipes:
   - name: Remote Signaler
     tags: [tool]
     info:
-      notes: Sends out a radio signal of a given value on a set frequency, and when attached to something, will activate when it receives that signal. It in turn can be attached a few other other items, which will cause it to send out a signal when that other item activates.
+      notes: Sends out a radio signal of a given code on a set frequency, and when attached to something, will activate when it receives that signal.
 
   - name: Proximity Sensor
     tags: [tool]
     info:
-      notes: When armed, it will activate whenever it detects motion adjacent to it and emits a beep.
+      notes: When armed, it will activate whenever it detects motion adjacent to it. 
 
   - name: Timer
     tags: [tool]
@@ -128,17 +122,17 @@ recipes:
   - name: Igniter
     tags: [tool]
     info:
-      notes: Heats up the square it is on when activated. Can also be used to light cigarettes, but you'll never look as cool as when you're using a real lighter.
+      notes: If used as an attachment, igniters heat the beaker or other assembly when activated. Can also be used to light cigarettes, or manually heat reagent containers.
 
   - name: ElectroPack
     tags: []
     info:
-      notes: Goes on to the back slot of a monkey or other victim-- cannot be removed by the wearer. The pack needs to be turned on first. It waits for a radio signal, and when received, delivers a debilitating jolt of electricity to whomever is wearing it.
+      notes: Goes on the back slot of a monkey or other victim; it cannot be removed by the wearer. Set a remote signaler and the pack to the same frequency and code, then turn it on. When a signal is received, the pack delivers a debilitating jolt of electricity to whomever is wearing it.
 
   - name: Biosuit
     tags: [equip, clothes]
     info:
-      notes: Offer some protection against diseases and viral hazards. Found in the Research Director's office, Custodial closet, and the research sector entrance vestibule.
+      notes: Provides good protection against diseases and viral hazards.
 
   - name: Bedsheet 
     tags: [equip, clothes]
@@ -148,7 +142,7 @@ recipes:
   - name: Insulated Gloves
     tags: [equip, clothes]
     info:
-      notes: Protect from electrical shocks. Highly coveted for their ability to allow door hacking. Found in Engineering and Electronics and can be ordered by the Quartermaster.
+      notes: For handling live wires. Highly coveted for their ability to allow door hacking. Found in engineering and electronics, and can be ordered by the quartermaster.
 
   - name: Mousetrap
     tags: []
@@ -168,7 +162,7 @@ recipes:
   - name: Atmospheric analyzer
     tags: [tool]
     info:
-      notes: Instant atmospheric analysis. When used, lists the temperature, pressure and the proportions of gases either in the open air or inside pipes and canisters. Abundantly available in blue toolboxes, but every PDA has this feature built-in.
+      notes: Instant atmospheric analysis. Lists the temperature, pressure and the proportions of gases either in the open air or inside pipes and canisters. Abundantly available in blue toolboxes, but every PDA has this feature built-in.
 
   - name: Bike horn
     tags: []
@@ -191,12 +185,12 @@ recipes:
   - name: Health analyzer
     tags: [tool]
     info:
-      notes: Scan humans or monkeys to get a report of their health, damage taken, any viruses, and other ailments. The medical PDA provides the same functionality, along with the ability to switch to reagent scanner mode to see what chemicals are inside things.
+      notes: Scan humans or monkeys to get a report of their health, damage taken, any viruses and other ailments. Regular analyzers can be upgraded with a reagent scanner, which can be toggled on/off and only works on mobs. The medical PDA provides the same functionality with two separate programs, though its reagent scanner is more flexible and doesn't have the same restrictions.
 
   - name: Pen
     tags: []
     info:
-      notes: Used for writing on paper. Variants include the sleepy pen traitor item and I-pen to leave infrared messages that can only be read with the help of optical meson scanners. 
+      notes: Used for writing on said paper, or leaving graffiti on the floor and walls. Variants include the sleepy pen traitor item and I-pen to leave infrared messages that can only be read with the help of optical meson scanners.
 
   - name: Stun baton
     tags: [weapon]

@@ -1042,7 +1042,7 @@ recipes:
   - name: Gibbis
     sources:
       - Poison bottles.
-    tags: [disease]
+    tags: [disease, gib]
     info:
       penetrates_skin: No
       depletion_rate: 0.4
@@ -1051,11 +1051,38 @@ recipes:
   - name: Spider eggs
     sources:
       - Poison bottles.
-    tags: [disease]
+    tags: [disease, gib]
     info:
       penetrates_skin: No
       depletion_rate: 0.4
       notes: Infects the victim with parasites. Each successful infection rips the host apart and spawns a couple of baby ice spiders, which are extremely aggressive and will attack nearby humans and monkeys. By doing so, they in turn mature and become even more dangerous. This chain reaction can be devastating and quite often depopulates whole stations.
+
+  - name: Pure bacon grease
+    sources:
+      - Poison bottles.
+    tags: [disease, heart]
+    info:
+      penetrates_skin: No
+      depletion_rate: 0.4
+      notes: Induces an instant cardiac failure, which can be a very serious condition without easy access to epinephrine or another stimulant.
+
+  - name: Initropidril (Concentrated)
+    sources:
+      - Poison bottles.
+    tags: [disease, heart]
+    info:
+      penetrates_skin: No
+      depletion_rate: 0.4
+      notes: Causes an instant cardiac arrest. Even more lethal than plain initropidril, since it doesn't involve the RNG.
+
+  - name: Space heartworms
+    sources:
+      - Poison bottles.
+    tags: [disease, heart]
+    info:
+      penetrates_skin: No
+      depletion_rate: 0.4
+      notes: Strange worms that eat your heart. In more technical terms, this disease reagent causes cardiac abscondment, which is generally lethal without an immediate heart transplant.
 
 # Acids
 

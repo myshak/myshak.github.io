@@ -662,9 +662,18 @@ recipes:
     ingredients:
       - Body armor
       - Biosuit
-      - !step Use the body armor on the biosuit
+      - !step Attach the body armor to the biosuit.
     info:
       notes: A biosuit with a piece of body armor attached.
+
+  - name: Armored paramedic suit
+    tags: [make, armor, equip, clothes]
+    ingredients:
+      - Body armor
+      - Paramedic suit
+      - !step Attach the body armor to the paramedic suit.
+    info:
+      notes: A paramedic suit with a piece of body armor attached.
 
   - name: Rocket shoes
     info:
@@ -722,34 +731,71 @@ recipes:
     unsorted: true
     info: 
       notes: |
-             Be advised since it is a 64x64 sprite you have to stand on the South West corner of the pod sprite in order to construct it.
+             Be advised that you have to stand adjacent to the south west corner of the pod in order to construct it, since it is a 64x64 sprite. Use a bottle of champagne on the finished pod to give it a unique name.
              
-             Tag it with a labeler to give it a unique name. To add extras, use a crowbar on the South West corner of the pod and add any system. To replace an existing system (like the engine), click the pod with an empty hand while the maintenance panel is open to bring up an interface for adding and removing installed systems. You can't replace a pod's armor once it is already built. You can also change the gas mix used for the engine and the gas mix used for the pod's life support system, though this doesn't have much of a use yet other then to suffocate the people in the pod with plasma.
+             To add extras, use a crowbar on the south west corner of the pod and add any system. To replace an existing system (like the engine), click the pod with an empty hand while the maintenance panel is open to bring up an interface for adding and removing installed systems. 
+             
+             You can also change the gas mix used for the engine and the gas mix used for the pod's life support system, though this doesn't have much of a use other then to suffocate the people in the pod with plasma. 			
     tags: [make]
     ingredients:
       - Pod frame kit
-      - Pod Circuitry
-      - Pod Control Interface
-      - Engine Manifold
-      - Armor (such as <Light Pod Armor> or <Heavy Pod Armor>)
+      - Pod circuitry
+      - Pod control interface
+      - Engine manifold
+      - Pod armor
+      - Paint job kit (optional)
       - Wires
-      - Metal
-      - 5x <Reinforced Glass>
+      - 5x <Metal Sheet>
+      - 5x <Glass Sheet, reinforced>
       - Wrench
       - Welder
-      - !step Get the Pod Frame Kit. 
-      - !step Deploy the box and you should have a jumble of metal.
-      - !step Wrench the mass of metal. It should look less like a pile of junk.
-      - !step Wrench again. This time it should look like a functional but unsecured frame of a space pod.
-      - !step Weld.
-      - !step Insert Wires
-      - !step Place Pod Circuitry inside.
-      - !step Add Metal
-      - !step Place Engine Manifold.
-      - !step Put Armor on the pod frame.
-      - !step Weld.
-      - !step Place Pod Control Interface
-      - !step Place 5 sheets of Reinforced Glass
+      - !step Deploy the frame kit by clicking on the box.
+      - !step Wrench the jumble of metal. It should look less like a pile of junk.
+      - !step Wrench again. It should look like a functional but unsecured frame of a space pod.
+      - !step Use the welder.
+      - !step Insert wires.
+      - !step Place the circuitry inside the frame.
+      - !step Add metal to the frame.
+      - !step Install the engine manifold.
+      - !step Put armor on the pod frame.
+      - !step Use the welder.
+      - !step Install the control interface.
+      - !step Add the reinforced glass sheets.
+      - !step Optionally, use the paint job kit on the finished pod.
+
+  - name: MiniPutt
+    unsorted: true
+    info: 
+      notes: |
+             Use a bottle of champagne on the finished MiniPutt to give it a unique name.
+             
+             MiniPutts use the same armour plating as the larger pods, but cannot be upgraded in any way. However, they have a small cargo hold and a specific weapons array installed by default.
+    tags: [make]
+    ingredients:
+      - MiniPutt frame kit
+      - MiniPutt circuitry
+      - MiniPutt control interface
+      - MiniPutt Engine manifold
+      - Pod armor
+      - Paint job kit (optional)
+      - Wires
+      - 3x <Metal Sheet>
+      - 3x <Glass Sheet, reinforced>
+      - Wrench
+      - Welder
+      - !step Deploy the frame kit by clicking on the box.
+      - !step Wrench the jumble of metal. It should look less like a pile of junk.
+      - !step Wrench again. It should look like a functional but unsecured frame of a MiniPutt.
+      - !step Use the welder.
+      - !step Insert wires.
+      - !step Place the circuitry inside the frame.
+      - !step Add metal to the frame.
+      - !step Install the engine manifold.
+      - !step Put armor on the MiniPutt frame.
+      - !step Use the welder.
+      - !step Install the control interface.
+      - !step Add the reinforced glass sheets.
+      - !step Optionally, use the paint job kit on the finished MiniPutt.
 
 # Basic construction
 
@@ -778,7 +824,7 @@ recipes:
       - Metal Sheet
     tags: [make, floor]
     info:
-      notes: Make these in fours from sheet metal, find them in the Warehouse, scavenge the many unfinished construction sites on the station or just crowbar them right out from under people's feet. Damaged floor tiles are automatically discarded upon removal.
+      notes: Make these from regular metal or just crowbar them right out from under people's feet. Damaged floor tiles are automatically discarded upon removal.
 
   - name: Floors
     info:
@@ -800,7 +846,7 @@ recipes:
       - !step Combine the rods with the metal sheets.
     tags: [make]
     info:
-      notes: More robust-looking when assembled into walls. Make them yourself or have a fabricator build them straight from raw ore.
+      notes: Stronger metal. Make them yourself by combining regular metal sheets and rods or have a fabricator build them straight from processed ore.
 
   - name: Wall, regular
     tags: [make, wall]
@@ -855,7 +901,7 @@ recipes:
       - Rods
     tags: [make]
     info:
-      notes: Made from adding rods to glass or made straight in a fabricator.
+      notes: Made by adding rods to glass or by using a general manufacturer.
 
   - name: Window, regular (one direction)
     info:
@@ -1016,7 +1062,7 @@ recipes:
   - name: Manufacturer (fix)
     ingredients:
       - Screwdriver
-      - <Welder> OR <Cable coil>
+      - <Welder> OR <Wire>
       - !step Open the maintenance panel with the screwdriver.
       - !step Depending on the severity of the damage, use the welder (light) or cable coil (heavy).
       - !step Use the screwdriver again to close the panel.

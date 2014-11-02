@@ -411,7 +411,7 @@ recipes:
       - Fire extinguisher
       - !step Pour both into a fire extinguisher. Required minimum is 10 units.
       - !step Use the HUD icon to spray cheese all around you.
-    tags: [food]
+    tags: [food, addictive]
     reaction_message: The disgusting mixture sloughs together horribly, emitting a foul stench.
     info:
       notes: You may also create cheese smoke with the bar's chemistry equipment.
