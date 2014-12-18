@@ -395,13 +395,6 @@ recipes:
       - Coffee
     tags: [drink]
 
-  - name: White Russian
-    ingredients:
-      - Vodka
-      - Coffee
-      - Milk
-    tags: [drink]
-
   - name: Sex on the Beach
     ingredients:
       - Vodka
@@ -514,7 +507,19 @@ recipes:
       - Sugar
     tags: [drink]
     sources:
-      - Bar
+      - Bar, Kitchen
+
+  - name: Egg nog
+    ingredients:
+      - 3x <Egg>
+      - Milk
+      - Oven
+      - !step Put the three eggs and bottle of milk in the oven.
+      - !step Cook for 5 seconds, low.
+    heat_to: 5 seconds, low
+    tags: [drink]
+    sources:
+      - Bar, Kitchen
 
   - name: Squeeze
     ingredients:
@@ -652,4 +657,48 @@ recipes:
     ingredients:
       - Chocolate
       - Milk
+    tags: [drink]
+
+  - name: Black Russian
+    ingredients:
+      - Vodka
+      - Coffee
+    tags: [drink]
+
+  - name: White Russian
+    unsorted: true
+    ingredients:
+      - Vodka
+      - Milk
+      - Coffee
+    tags: [drink]
+
+  - name: Mimosa
+    ingredients:
+      - Champagne
+      - Orange Juice
+    tags: [drink]
+
+  - name: French 75
+    unsorted: true
+    ingredients:
+      - Gin
+      - Champagne
+      - Lemon Juice
+      - Sugar
+    tags: [drink]
+
+  - name: Negroni
+    unsorted: true
+    ingredients:
+      - Gin
+      - Bitters
+      - Vermouth
+    tags: [drink]
+
+  - name: Necroni
+    unsorted: true
+    ingredients:
+      - Negroni
+      - Ectoplasm
     tags: [drink]

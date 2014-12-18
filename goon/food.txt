@@ -110,6 +110,16 @@ recipes:
       notes: Add pepper for the perfect flavour. 
     tags: [kitchen, condiment, container]
 
+  - name: Bottle (Mustard)
+    info:
+      notes: Add mustard for the perfect flavour. 
+    tags: [kitchen, condiment, container]
+
+  - name: Bottle (Ketchup)
+    info:
+      notes: Add ketchup for the perfect flavour. 
+    tags: [kitchen, condiment, container]
+
 # Vending machine snacks
 
   - name: Chips
@@ -154,6 +164,8 @@ recipes:
       notes: Wheat mutation.
 
   - name: Apple
+    sources:
+      - Kitchen
     tags: [food, produce]
 
   - name: Honey
@@ -165,9 +177,13 @@ recipes:
     tags: [food, produce]
 
   - name: Potato
+    sources:
+      - Kitchen
     tags: [food, produce]
 
   - name: Corn
+    sources:
+      - Kitchen
     tags: [food, produce]
 
   - name: Meat (Synth)
@@ -183,6 +199,8 @@ recipes:
     tags: [food, produce]
 
   - name: Tomato
+    sources:
+      - Kitchen
     tags: [food, produce]
 
   - name: Chili
@@ -199,6 +217,8 @@ recipes:
       notes: Chili mutation.
 
   - name: Lettuce
+    sources:
+      - Kitchen
     tags: [food, produce]
 
   - name: Onion
@@ -242,6 +262,9 @@ recipes:
 
   - name: Slurrypod
     tags: [food, produce]
+
+  - name: Bean pod
+    tags: [food]
 
   - name: Rice
     sources:
@@ -416,17 +439,15 @@ recipes:
     info:
       notes: You may also create cheese smoke with the bar's chemistry equipment.
 
-# Currently broken.
-#
   - name: Chocolate bar
-#    ingredients:
-#      - Happy Elf Hot Chocolate
-#      - Fire extinguisher
-#      - !step Pour it into a fire extinguisher. Required minimum is 10 units.
-#      - !step Use the HUD icon to spray chocolate all around you.
+    ingredients:
+      - Happy Elf Hot Chocolate
+      - Fire extinguisher
+      - !step Pour it into a fire extinguisher. Required minimum is 10 units.
+      - !step Use the HUD icon to spray chocolate all around you.
     tags: [food]
-#    info:
-#      notes: You may also create chocolate smoke with the bar's chemistry equipment.
+    info:
+      notes: You may also create chocolate smoke with the bar's chemistry equipment.
 
   - name: Chocolate chips
     ingredients:
@@ -530,7 +551,7 @@ recipes:
       - !step Add the butt to the processor.
     tags: [food]
 
-  - name: Sauce (Tomato)
+  - name: Sauce (Ketchup)
     ingredients:
       - Tomato
       - Food processor
@@ -691,11 +712,11 @@ recipes:
   - name: Pizza base
     ingredients:
       - Dough
-      - Sauce (Tomato)
+      - Sauce (Ketchup)
       - Cheese
       - Rolling pin
       - !step Roll the dough out with the rolling pin.
-      - !step Add tomato sauce to the unfinished base.
+      - !step Add ketchup to the unfinished base.
       - !step Add cheese to the pizza base.
     tags: [food]
 
@@ -706,7 +727,7 @@ recipes:
       - !step Cut the pizza base base into smaller pieces.
     tags: [food]
     info:
-      notes: This only works when you're using a plain base without tomato sauce or cheese.
+      notes: This only works when you're using a plain base without ketchup or cheese.
 
   - name: Bread
     ingredients:
@@ -781,6 +802,39 @@ recipes:
       - !step Cook for 6 seconds, low.
     heat_to: 6 seconds, low
     tags: [food]
+
+  - name: Bread (Honey-wheat)
+    ingredients:
+      - Dough
+      - Honey
+      - Oven
+      - !step Put the dough and honey in the oven.
+      - !step Cook for 1 seconds, low.
+    heat_to: 1 seconds, low
+    tags: [food]
+
+  - name: Bread (Honey cornbread)
+    ingredients:
+      - Dough
+      - Corn
+      - Honey
+      - Oven
+      - !step Put the dough, corn cob and honey in the oven.
+      - !step Cook for 6 seconds, low.
+    heat_to: 6 seconds, low
+    tags: [food]
+
+  - name: Bread (Brain)
+    ingredients:
+      - Loaf of bread (any type)
+      - <Brain> (any type)
+      - Oven
+      - !step Put the bread and brain in the oven.
+      - !step Cook for 6 seconds, low.
+    heat_to: 6 seconds, low
+    tags: [food]
+    info:
+      notes: Works with any combination of bread and brain.
 
   - name: Bread slice
     ingredients:
@@ -884,6 +938,16 @@ recipes:
     info:
       notes: Works with human and monkey hearts. Synthetic or cyberhearts are not compatible.
 
+  - name: Burger (Butt)
+    ingredients:
+      - Flour
+      - <Butt> (human/monkey only)
+      - Microwave
+      - !step Put the flour and the butt in the microwave.
+    tags: [food]
+    info:
+      notes: Doesn't work with synthbutts.
+
   - name: Meatball
     ingredients:
       - Meat (Human)
@@ -901,6 +965,8 @@ recipes:
       - Microwave
       - !step Put the flour and meatball in the microwave.
     tags: [food]
+    info:
+      notes: Will stay warm for about seven minutes.
 
   - name: Donk pocket (Warm)
     ingredients:
@@ -910,6 +976,13 @@ recipes:
     tags: [food]
     info:
       notes: Once heated, they will stay warm for about seven minutes.
+
+  - name: Popcorn
+    ingredients:
+      - Corn
+      - Microwave
+      - !step Put the corn cob in the microwave.
+    tags: [food]
 
 # Main course recipes (oven etc.)
 
@@ -1175,10 +1248,10 @@ recipes:
   - name: Spaghetti (Sauce)
     ingredients:
       - Spaghetti
-      - Sauce (Tomato)
+      - Sauce (Ketchup)
       - Oven
       - Fork
-      - !step Put the spaghetti and tomato sauce in the oven.
+      - !step Put the spaghetti and ketchup in the oven.
       - !step Cook for 8 seconds, high.
       - !step Requires fork.
     heat_to: 8 seconds, high
@@ -1298,6 +1371,17 @@ recipes:
     heat_to: 2 seconds, high
     tags: [food]
 
+  - name: Cookie (Jaffa)
+    ingredients:
+      - Dough (Cookie)
+      - Candy
+      - Orange
+      - Oven
+      - !step Put the cookie dough, candy and orange in the oven.
+      - !step Cook for 2 seconds, high.
+    heat_to: 2 seconds, high
+    tags: [food]
+
   - name: Whoopie pie
     ingredients:
       - 2x <Cookie (Chocolate)>
@@ -1379,6 +1463,16 @@ recipes:
       - Cream
       - Oven
       - !step Put the two spookie cookies, bag of sugar, oatmeal and cream in the oven.
+      - !step Cook for 2 seconds, high.
+    heat_to: 2 seconds, high
+    tags: [food]
+
+  - name: Moon pie (Jaffa)
+    ingredients:
+      - 2x <Cookie (Jaffa)>
+      - Cream
+      - Oven
+      - !step Put the two jaffa cookies and cream in the oven.
       - !step Cook for 2 seconds, high.
     heat_to: 2 seconds, high
     tags: [food]
@@ -2022,4 +2116,14 @@ recipes:
       - Cake (Everything)
       - Knife
       - !step Cut the cake into slices with the knife.
+    tags: [food]
+
+  - name: Candy apple
+    ingredients:
+      - Apple on a stick
+      - Sugar
+      - Oven
+      - !step Put the apple on a stick and bag of sugar in the oven.
+      - !step Cook for 5 seconds, low.
+    heat_to: 5 seconds, low
     tags: [food]

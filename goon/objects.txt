@@ -124,7 +124,7 @@ recipes:
     info:
       notes: If used as an attachment, igniters heat the beaker or other assembly when activated. Can also be used to light cigarettes, or manually heat reagent containers.
 
-  - name: ElectroPack
+  - name: Electropack
     tags: []
     info:
       notes: Goes on the back slot of a monkey or other victim; it cannot be removed by the wearer. Set a remote signaler and the pack to the same frequency and code, then turn it on. When a signal is received, the pack delivers a debilitating jolt of electricity to whomever is wearing it.

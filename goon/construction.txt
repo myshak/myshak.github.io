@@ -53,7 +53,7 @@ recipes:
     unsorted: true
     info:
       notes: |
-             Despite the name, no bombs are actually involved (anymore). The payload will be triggered upon death of whoever is wearing the vest.
+             Despite the name, no bombs are actually involved (anymore). The payload will be triggered upon death of whoever is wearing the vest, heating the mixture inside the beaker by 30 K when so equipped.
              You can detach whatever you put on the vest with a wrench.
     tags: [bomb, make, armor, equip, clothes]
     ingredients:
@@ -562,6 +562,15 @@ recipes:
     info:
       notes: Amusing ducks will slowly move around at random, quacking and emitting a playful jingle. They will occasionally lay eggs (similar, but not identical to Easter eggs), which in turn may contain fun items.
 
+  - name: Chefbot
+    tags: [make, robot]
+    ingredients:
+      - Dramatic bike horn
+      - <Cyborg arm (Standard)> (left or right)
+      - !step Combine the dramatic bike horn with the robot arm.
+    info:
+      notes: The impartial judge of fine cuisine.
+
   - name: Skullbot
     tags: [make, robot]
     ingredients:
@@ -627,7 +636,7 @@ recipes:
       - !step Combine the igniter assembly with the beaker.
       - !step Secure the beaker assembly with the screwdriver.
     info:
-      notes: These assemblies are quite popular to release chemical smoke from a safe distance - for the user at least. Deadly in the hands of a skilled chemist. To detach the beaker, place the whole thing on the floor and use the context menu by right-clicking on it.
+      notes: These assemblies are quite popular to release chemical smoke from a safe distance - for the user at least. Deadly in the hands of a skilled chemist. When triggered, the igniter will heat the mixture by 30 K. To detach the beaker, place the whole thing on the floor and use the context menu by right-clicking on it.
     tags: [make]
 
   - name: Jack-o'-lantern
@@ -646,7 +655,14 @@ recipes:
     ingredients:
       - Bedsheet
       - <Scissors> OR <Wirecutters>
-      - !step Use scissors or wirecutters on bedsheet
+      - !step Cut eye holes with the scissors or wirecutters.
+
+  - name: Cape
+    tags: [make, equip, clothes]
+    ingredients:
+      - Bedsheet
+      - Wires
+      - !step Use the cable coil on the bedsheet.
 
   - name: Skull mask
     tags: [make, equip, clothes]
@@ -656,6 +672,19 @@ recipes:
       - !step Hollow out the skull with the circular saw.
     info:
       notes: Custom masks are named after the former owner of the skull. 
+
+  - name: Paper mask
+    tags: [make, equip, clothes]
+    ingredients:
+      - Paper
+      - Wire
+      - <Scissors> OR <Wirecutters>
+      - <Pen> (optional)
+      - !step Cut the paper with the scissors or wirecutters.
+      - !step Use the cable coil on the unfinished mask.
+      - !step Optionally, colour the mask with the pen.
+    info:
+      notes: Standard pens contain black ink, and you can also use a red or blue marker.
 
   - name: Armored biosuit
     tags: [make, armor, equip, clothes]
@@ -701,7 +730,7 @@ recipes:
              To disassemble the chair, use a wrench.
     tags: [make]
     ingredients:
-      - ElectroPack
+      - Electropack
       - Security Helmet
       - 1x <Metal Sheet>
       - <Remote Signaler> (optional)
@@ -769,7 +798,7 @@ recipes:
       notes: |
              Use a bottle of champagne on the finished MiniPutt to give it a unique name.
              
-             MiniPutts use the same armour plating as the larger pods, but cannot be upgraded in any way. However, they have a small cargo hold and a specific weapons array installed by default.
+             MiniPutts use the same armour plating as the larger pods, and can be upgraded with the same components.
     tags: [make]
     ingredients:
       - MiniPutt frame kit
@@ -951,73 +980,79 @@ recipes:
 
 # Advanced construction
 
-  - name: Computer, normal
+  - name: Computer, console
     unsorted: true
     info:
-      notes: Useful for computers which are built from one board only.
+      notes: Intended for computers built from a single circuit board. Console frames don't accept mainboards and peripheral cards.
     tags: [make, computer]
     ingredients:
       - 5x <Metal Sheet>
       - 2x <Glass Sheet>
-      - 5x <Wire>
+      - Wire
       - Wrench
       - Screwdriver
       - 1x Circuit board
-      - !step Have the metal in hand, click on it, choose 'Console frame'
-      - !step Wrench
-      - !step Insert circuit board
-      - !step Screwdriver
-      - !step Wires
-      - !step Glass
-      - !step Screwdriver
+      - !step Click on the metal and choose 'Console frame'.
+      - !step Wrench the frame into place.
+      - !step Insert the circuit board.
+      - !step Use the screwdriver.
+      - !step Add wires.
+      - !step Use the glass on the frame.
+      - !step Connect the monitor with the screwdriver.
 
   - name: Computer, terminal
     unsorted: true
     info:
-      notes: Useful for DOS run computers, built from components.
+      notes: |
+             Useful for computers built from components and peripherals. Wired computers (as in part of a network) will need to be positioned over a data terminal (deployable with the help of a mechanic), which in turn has to be connected to the power grid.
+             
+             An ID scanner module is pretty much mandatory.
     tags: [make, computer]
     ingredients:
-      - 5x <Metal Sheet>
-      - 2x <Glass Sheet>
-      - 5x <Wire>
+      - 3x <Metal Sheet>
+      - 1x <Glass Sheet>
+      - Wire
       - Wrench
       - Screwdriver
-      - <ID scanner module> (+ up to 2 more modules)
+      - <Peripheral card> (up to 2)
       - Storage drive
       - Computer mainboard
-      - !step Have the metal in hand, click on it, choose 'Computer terminal frame'
-      - !step Wrench
-      - !step Insert Computer mainboard
-      - !step Screwdriver
-      - !step Insert all modules (up to 3)
-      - !step Wires
-      - !step Insert Storage drive
-      - !step Glass Sheet
-      - !step Screwdriver
+      - !step Click on the metal and choose choose 'Computer terminal frame'.
+      - !step Wrench the frame into place.
+      - !step Insert the computer mainboard.
+      - !step Use the screwdriver.
+      - !step Insert the peripheral cards (up to 2).
+      - !step Add wires.
+      - !step Insert the storage drive.
+      - !step Use the glass on the frame.
+      - !step Connect the monitor with the screwdriver.
       
   - name: Computer, heavy
     unsorted: true
     info:
-      notes: Useful for DOS run computers, built from components.
+      notes: |
+             Useful for computers built from components and peripherals. Wired computers (as in part of a network) will need to be positioned over a data terminal (deployable with the help of a mechanic), which in turn has to be connected to the power grid.
+             
+             An ID scanner module is pretty much mandatory.
     tags: [make, computer]
     ingredients:
       - 5x <Metal Sheet>
       - 2x <Glass Sheet>
-      - 5x <Wire>
+      - Wire
       - Wrench
       - Screwdriver
-      - <ID scanner module> (+ up to 2 more modules)
+      - <Peripheral card> (up to 3)
       - Storage drive
       - Computer mainboard
-      - !step Have the metal in hand, click on it, choose 'Computer frame'
-      - !step Wrench
-      - !step Insert Computer mainboard
-      - !step Screwdriver
-      - !step Insert all modules (up to 3)
-      - !step Wires
-      - !step Insert Storage drive
-      - !step Glass Sheet
-      - !step Screwdriver
+      - !step Click on the metal and choose choose 'Computer frame'.
+      - !step Wrench the frame into place.
+      - !step Insert the computer mainboard.
+      - !step Use the screwdriver.
+      - !step Insert the peripheral cards (up to 3).
+      - !step Add wires.
+      - !step Insert the storage drive.
+      - !step Use the glass on the frame.
+      - !step Connect the monitor with the screwdriver.
 
   - name: Disposal pipes
     info:
@@ -1098,7 +1133,7 @@ recipes:
       notes: Keep in mind that completely dismantled fabricators can't be replaced without the help of electronics!
     tags: [disassemble]
 
-  - name: Computer, normal (disassembly)
+  - name: Computer, console (disassembly)
     unsorted: true
     info:
       notes: Not all computers can be dismantled.
@@ -1117,7 +1152,7 @@ recipes:
       - !step Wrench
       - !step Welder 
 
-  - name: Computer, ThinkDOS (disassembly)
+  - name: Computer, terminal/heavy (disassembly)
     unsorted: true
     tags: [disassemble, computer]
     ingredients:
