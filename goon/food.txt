@@ -346,7 +346,9 @@ recipes:
       - Extracted from purple goop.
     tags: [food, stun, disease]
     info:
-      notes: Stuns and infects the consumer with food poisoning.
+      penetrates_skin: No
+      depletion_rate: 0.4
+      application_effect: INGEST - Stuns and infects the consumer with food poisoning.
 
   - name: Smoldering mess
     sources:
@@ -435,7 +437,7 @@ recipes:
       - !step Pour both into a fire extinguisher. Required minimum is 10 units.
       - !step Use the HUD icon to spray cheese all around you.
     tags: [food, addictive]
-    reaction_message: The disgusting mixture sloughs together horribly, emitting a foul stench.
+    reaction_message: The disgusting mixture sloughs together horribly, emitting a foul stench. / A horrible smell assaults your nose! What in space is it?
     info:
       notes: You may also create cheese smoke with the bar's chemistry equipment.
 

@@ -221,7 +221,7 @@ recipes:
   - name: Flamethrower
     unsorted: true
     info:
-      notes: Welding fuel is a solid choice. You can also fill the tank with other reagents, so there is plenty of room for experimentation.
+      notes: Welding fuel is the default fuel mixture, but currently broken - use phlogiston instead. You can also fill the tank with other reagents, so there is plenty of room for experimentation.
     tags: [make, weapon]
     ingredients:
       - Welder

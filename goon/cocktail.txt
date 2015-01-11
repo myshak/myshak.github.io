@@ -288,7 +288,9 @@ recipes:
     sources:
       - Use a loaf or slice of bread (any type) on a beaker.
     info:
+      depletion_rate: 0.4
       penetrates_skin: No
+      notes: Will make bread slices if splashed on the floor.
 
 # Cocktails
 
@@ -307,6 +309,7 @@ recipes:
       - Water
       - Carbon
       - Oxygen
+    reaction_message: The mixture begins to fizz.
     tags: [drink]
     info:
       notes: It is cola.
@@ -314,28 +317,33 @@ recipes:
       - Base drink from the soda fountain.
 
   - name: Cosmopolitan
+    unsorted: true
     ingredients:
-      - Vodka 
       - Cranberry Juice
       - Lime Juice
+      - Vodka
+    reaction_message: The drink turns a bright pink.
     tags: [drink]
      
   - name: Vodka Gimlet
     ingredients:
       - Vodka
       - Lime Juice
+    reaction_message: The drink comes together and swiftly infuriates cocktail nerds.
     tags: [drink]
            
   - name: Screwdriver (Drink)
     ingredients:
       - Vodka
       - Orange Juice
+    reaction_message: The vodka and orange juice mix together nicely.
     tags: [drink]
     
   - name: Bloody Mary
     ingredients:
       - Vodka
       - Tomato Juice
+    reaction_message: The vodka and tomato juice mix together nicely.
     tags: [drink]
            
   - name: Manhattan
@@ -343,12 +351,14 @@ recipes:
       - Bourbon
       - Vermouth
       - Bitters
+    reaction_message: The unmistakable smell of a power lunch wafts from the container.
     tags: [drink]
 
   - name: Gin and Tonic
     ingredients:
       - Gin
       - Tonic Water
+    reaction_message: The tonic water and gin mix together perfectly.
     tags: [drink]
 
   - name: Triple Citrus
@@ -356,50 +366,59 @@ recipes:
       - Lemon juice
       - Lime juice 
       - Orange juice 
+    reaction_message: The citrus juices begin to blend together.
     tags: [drink]
 
   - name: Lemonade
     ingredients:
       - Lemon juice
       - Sugar
+    reaction_message: The sugar dissolves into the lemon juice.
     tags: [drink]
 
   - name: Tea (Sweet)
     ingredients:
       - Tea
       - Sugar
+    reaction_message: The tea sweetens. Visually. Somehow.
     tags: [drink]
 
   - name: Half and Half
+    unsorted: true
     ingredients:
-      - Tea
       - Lemonade
+      - Tea
+    reaction_message: The tea and lemonade combine without much fuss.
     tags: [drink]
 
   - name: Vodka Martini
     ingredients:
       - Vodka
       - Vermouth
+    reaction_message: James Bond would be ashamed.
     tags: [drink]
 
   - name: Vodka Tonic
     ingredients:
       - Vodka
       - Tonic water
+    reaction_message: The tonic water and vodka mix together perfectly.
     tags: [drink]
 
   - name: Mind Eraser
     ingredients:
-      - Vodka
-      - Tonic water
+      - Vodka Tonic
       - Coffee
+    reaction_message: The coffee, tonic, and vodka separate into dangerously drinkable layers.
     tags: [drink]
 
   - name: Sex on the Beach
+    unsorted: true
     ingredients:
-      - Vodka
       - Cranberry juice
       - Orange juice
+      - Vodka
+    reaction_message: You die a little inside after making that.
     tags: [drink]
 
   - name: Suicider
@@ -410,6 +429,7 @@ recipes:
       - Cider
       - Epinephrine
       - Welding fuel
+    reaction_message: The drinks and chemicals mix together, emitting a potent smell.
     tags: [drink]
 
   - name: Port
@@ -418,6 +438,7 @@ recipes:
       - Wine
       - Sugar
       - Iron
+    reaction_message: The liquid darkens and emits a strong smell of alcohol.
     tags: [drink]
     info:
       notes: Has a chance to teleport you at random.
@@ -426,24 +447,28 @@ recipes:
     ingredients:
       - Beer
       - Milk
+    reaction_message: The mixture turns an offensive brown colour and begins fizzing.
     tags: [drink]
 
-  - name: Beepskybrau
+  - name: Beepskybräu
     ingredients:
       - Beer
       - Nanomachines
+    reaction_message: The beer is filled briefly by thousands of brilliant, tiny electrical arcs before growing calm and dark.
     tags: [drink]
 
   - name: BOOrbon
     ingredients:
       - Bourbon
       - Ectoplasm
+    reaction_message: The bourbon and ectoplasm mix together, forming a HORRIFYING BLEND.
     tags: [drink]
 
   - name: Whiskey Sour
     ingredients:
       - Bourbon
       - Lemonade
+    reaction_message: The alcohol burn sneakily disguises itself in the sweet and sour mix.
     tags: [drink]
 
   - name: Space-Cuba Libre
@@ -451,18 +476,21 @@ recipes:
       - Rum
       - Lime juice
       - Cola
+    reaction_message: You shed a single patriotic tear as the drink comes together.
     tags: [drink]
 
   - name: Pink Gin and Tonic
     ingredients:
       - Gin and Tonic
       - Bitters
+    reaction_message: The gin and tonic gets even more bitter. Way to go!
     tags: [drink]
 
   - name: Gin and Sonic
     ingredients:
       - Gin and Tonic
       - Methamphetamine
+    reaction_message: The drink turns electric blue and starts quivering violently.
     tags: [drink]
     info:
       notes: Decays into meth as well as ethanol.
@@ -471,12 +499,14 @@ recipes:
     ingredients:
       - Gin
       - Lime juice
+    reaction_message: The gin attempts to hide its pine cone flavor in the lime juice.
     tags: [drink]
 
   - name: Martini
     ingredients:
       - Gin
       - Vermouth
+    reaction_message: James Bond would be proud.
     tags: [drink]
 
   - name: Irish Coffee
@@ -485,19 +515,22 @@ recipes:
       - Sugar
       - Milk
       - Bourbon
+    reaction_message: The drink turns a rich brown and smells like a hangover.
     tags: [drink]
 
   - name: Bloody Scary
     ingredients:
       - Vodka
       - Blood (Changeling)
+    reaction_message: The blood feverishly tries to escape the burn of the vodka, but eventually succumbs.
     tags: [drink]
 
   - name: Daiquiri
     ingredients:
-      - Lime
+      - Lime Juice
       - Sugar
       - Rum
+    reaction_message: The rum pairs nicely with the sugar and lime.
     tags: [drink]
 
   - name: Egg nog
@@ -505,6 +538,7 @@ recipes:
       - Egg
       - Milk
       - Sugar
+    reaction_message: The eggs nog together. Pretend that "nog" is a verb.
     tags: [drink]
     sources:
       - Bar, Kitchen
@@ -525,6 +559,7 @@ recipes:
     ingredients:
       - Welding Fuel
       - Bread (Reagent)
+    reaction_message: The fuel is filtered through the bread and makes something vaguely consumable.
     tags: [drink, stun, disease]
     info:
       notes: Stuns and infects the consumer with food poisoning.
@@ -535,18 +570,21 @@ recipes:
       - Bitters
       - Sugar
       - Water
+    reaction_message: The cocktail gets back to basics.
     tags: [drink]
 
   - name: Jean Harlow
     ingredients:
       - Rum
       - Vermouth
+    reaction_message: The ghosts of starlets past waft by.
     tags: [drink]
 
   - name: Gin and Chronic
     ingredients:
       - Gin and Tonic
       - Tetrahydrocannabinol (THC)
+    reaction_message: Dude. Dude. You're, like, a genius.
     tags: [drink]
     info:
       notes: Decays into THC as well as ethanol.
@@ -555,18 +593,21 @@ recipes:
     ingredients:
       - Tequila
       - Vermouth
+    reaction_message: James Bond would be deeply confused.
     tags: [drink]
 
   - name: Brave Bull
     ingredients:
       - Tequila
       - Coffee
+    reaction_message: The coffee and tequila mix together. Liqueur? Who needs it?
     tags: [drink]
 
   - name: Prairie Fire
     ingredients:
       - Tequila
       - Capsaicin
+    reaction_message: The hot sauce and tequila mix to create a frat boy's worst nightmare.
     tags: [drink]
     info:
       notes: Decays into capsaicin as well as ethanol.
@@ -575,6 +616,7 @@ recipes:
     ingredients:
       - Tea
       - Honey
+    reaction_message: The tea somehow smells even nicer than before.
     tags: [drink]
 
   - name: Gin Fizz
@@ -582,12 +624,14 @@ recipes:
       - Gin
       - Lemon Juice
       - Water
+    reaction_message: The mixed drink starts fizzing on its own. Somehow.
     tags: [drink]
 
   - name: Planter's Punch
     ingredients:
       - Rum
       - Lemonade
+    reaction_message: A nicely Jamaican smell wafts out of the container.
     tags: [drink]
 
   - name: Mai Tai
@@ -595,6 +639,7 @@ recipes:
       - Rum
       - Lime Juice
       - Orange Juice
+    reaction_message: A little pink umbrella magically appears in the drink.
     tags: [drink]
 
   - name: Margarita
@@ -602,6 +647,7 @@ recipes:
       - Tequila
       - Orange Juice
       - Lime Juice
+    reaction_message: The tequila and citrus pair together like old, alcoholic friends.
     tags: [drink]
 
   - name: Long Island Iced Tea
@@ -612,6 +658,7 @@ recipes:
       - Gin
       - Lemon Juice
       - Cola
+    reaction_message: The frightening amount of liquor in the container balances out with the cola and sours.
     tags: [drink]
 
   - name: Long Beach Iced Tea
@@ -621,6 +668,7 @@ recipes:
       - Rum
       - Gin
       - Lemon Juice
+    reaction_message: The frightening amount of liquor in the container balances out with the cranberry juice and sours.
     tags: [drink]
 
   - name: Hunchback
@@ -628,6 +676,7 @@ recipes:
       - Bourbon
       - Cola
       - Tomato Juice
+    reaction_message: The chunks of tomato paste hang in the bourbon and cola as an emulsion. It looks as horrible as that sounds.
     tags: [drink, depletion, damage, tox, disease]
     info:
       depletion_rate: 0.4
@@ -642,6 +691,7 @@ recipes:
       - Rum
       - Milk (Coconut)
       - Pineapple Juice
+    reaction_message: The drink gives off the smell of a rainy beach.
     tags: [drink]
 
   - name: Ecto Cooler
@@ -649,6 +699,7 @@ recipes:
       - Orange Juice
       - Ectoplasm
       - Uranium
+    reaction_message: The orange juice turns an unsettlingly vibrant shade of green.
     tags: [drink]
     info:
       notes: Decays into VHFCS and has a chance to produce strange green goop as well, which allows you to see ghosts.
@@ -657,35 +708,36 @@ recipes:
     ingredients:
       - Chocolate
       - Milk
+    reaction_message: The mixture turns a nice brown color.
     tags: [drink]
 
   - name: Black Russian
     ingredients:
       - Vodka
       - Coffee
+    reaction_message: The drink turns a deep brown as the coffee settles in.
     tags: [drink]
 
   - name: White Russian
-    unsorted: true
     ingredients:
-      - Vodka
+      - Black Russian
       - Milk
-      - Coffee
+    reaction_message: The drink abides.
     tags: [drink]
 
   - name: Mimosa
     ingredients:
       - Champagne
       - Orange Juice
+    reaction_message: The drink fizzes as the pulp settles to the top.
     tags: [drink]
 
   - name: French 75
-    unsorted: true
     ingredients:
       - Gin
       - Champagne
-      - Lemon Juice
-      - Sugar
+      - Lemonade
+    reaction_message: The drink fizzes and turns a dark gold.
     tags: [drink]
 
   - name: Negroni
@@ -694,11 +746,12 @@ recipes:
       - Gin
       - Bitters
       - Vermouth
+    reaction_message: The drink turns a deep red and gives off a hit of sweetness.
     tags: [drink]
 
   - name: Necroni
-    unsorted: true
     ingredients:
       - Negroni
       - Ectoplasm
+    reaction_message: The drink gives off a haunting stench! What did you make?
     tags: [drink]
