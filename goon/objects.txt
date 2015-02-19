@@ -134,6 +134,16 @@ recipes:
     info:
       notes: Provides good protection against diseases and viral hazards.
 
+  - name: Paramedic suit
+    tags: [equip, clothes]
+    info:
+      notes: An insulated suit which offers moderate thermal and biological protection. It may be helpful to reach patients trapped in bombed-out parts of the station.
+
+  - name: Firesuit
+    tags: [equip, clothes]
+    info:
+      notes: Protects the wearer from extreme heat/cold and from catching fire. The suit can deteriorate from prolonged exposure to extreme conditions, so don't go wading into that scorching plasma fire. The suit is also not effective against hard vacuum and will slow down your running speed when you're wearing it. Available in engineering storage.
+
   - name: Bedsheet 
     tags: [equip, clothes]
     info:

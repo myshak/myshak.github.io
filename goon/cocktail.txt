@@ -195,7 +195,7 @@ recipes:
     sources:
       - Base drink from the soda fountain.
       - Use an orange on a drinking glass.
-      - Extracted from unmutated oranges.
+      - Extracted from all oranges.
     tags: [drink]
 
   - name: Lime Juice
@@ -317,11 +317,9 @@ recipes:
       - Base drink from the soda fountain.
 
   - name: Cosmopolitan
-    unsorted: true
     ingredients:
+      - Vodka Gimlet
       - Cranberry Juice
-      - Lime Juice
-      - Vodka
     reaction_message: The drink turns a bright pink.
     tags: [drink]
      
@@ -384,10 +382,9 @@ recipes:
     tags: [drink]
 
   - name: Half and Half
-    unsorted: true
     ingredients:
-      - Lemonade
-      - Tea
+      - Tea (Sweet)
+      - Lemon Juice
     reaction_message: The tea and lemonade combine without much fuss.
     tags: [drink]
 
@@ -413,11 +410,9 @@ recipes:
     tags: [drink]
 
   - name: Sex on the Beach
-    unsorted: true
     ingredients:
+      - Screwdriver (Drink)
       - Cranberry juice
-      - Orange juice
-      - Vodka
     reaction_message: You die a little inside after making that.
     tags: [drink]
 
@@ -668,7 +663,7 @@ recipes:
       - Rum
       - Gin
       - Lemon Juice
-    reaction_message: The frightening amount of liquor in the container balances out with the cranberry juice and sours.
+    reaction_message: The frightening amount of liquor in the container balances out with the lemon juice and sours.
     tags: [drink]
 
   - name: Hunchback
@@ -741,11 +736,9 @@ recipes:
     tags: [drink]
 
   - name: Negroni
-    unsorted: true
     ingredients:
-      - Gin
+      - Martini
       - Bitters
-      - Vermouth
     reaction_message: The drink turns a deep red and gives off a hit of sweetness.
     tags: [drink]
 

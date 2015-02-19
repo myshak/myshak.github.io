@@ -852,6 +852,15 @@ recipes:
       - !step Combine the rod with the apple.
     tags: [food]
 
+  - name: Synthorange
+    ingredients:
+      - Orange
+      - Meat (Synth)
+      - !step Combine the synthmeat with the orange.
+    tags: [food]
+    info:
+      notes: Heals twice the amount of regular oranges.
+
 # Microwave recipes
 
   - name: Donut
@@ -1023,14 +1032,16 @@ recipes:
       - !step Requires fork.
     tags: [food]
 
-  - name: Rangoon
+  - name: Rangoon / Eggroll
     ingredients:
       - Wonton wrapper
       - Any food item
       - Deep fryer
       - !step Combine the wrapper with a food item of your choice.
-      - !step Put the rangoon into the deep fryer.
+      - !step Put the rangoon or eggroll into the deep fryer.
     tags: [food, dynamic]
+    info:
+      notes: Tiny objects make a rangoon, normal-sized items an eggroll.
 
   - name: Onion ring (Fried)
     ingredients:
@@ -1094,6 +1105,8 @@ recipes:
       - !step Add the mushroom and bottle of milk to the mixer.
       - !step Requires spoon.
     tags: [food]
+    info:
+      notes: Can be eaten alone (requires spoon) or used as a dip for tortilla chips.
 
   - name: Hotdog
     ingredients:
@@ -1259,6 +1272,15 @@ recipes:
     heat_to: 8 seconds, high
     tags: [food]
 
+  - name: Spaghetti (Sauce)
+    ingredients:
+      - Spaghetti
+      - Sauce (Ketchup)
+      - Fork
+      - !step Add sauce to the spaghetti.
+      - !step Requires fork.
+    tags: [food]
+
   - name: Spaghetti (Meatball)
     ingredients:
       - Spaghetti
@@ -1281,6 +1303,15 @@ recipes:
       - !step Cook for 8 seconds, high.
       - !step Requires fork.
     heat_to: 8 seconds, high
+    tags: [food]
+
+  - name: Spaghetti (Arrabiata)
+    ingredients:
+      - Spaghetti (Sauce)
+      - Sauce (Hot)
+      - Fork
+      - !step Add hot sauce to the spaghetti.
+      - !step Requires fork.
     tags: [food]
 
   - name: Meatball (Swedish)
@@ -1479,6 +1510,13 @@ recipes:
     heat_to: 2 seconds, high
     tags: [food]
 
+  - name: Cookie (Frosting)
+    ingredients:
+      - Cookie OR Moon pie (any type)
+      - Cream
+      - !step Use cream to add frosting to the cookie or moon pie.
+    tags: [food]
+
   - name: Nougat bar
     ingredients:
       - Honey
@@ -1487,6 +1525,13 @@ recipes:
       - !step Put the honey and bag of sugar in the oven.
       - !step Cook for 5 seconds, low
     heat_to: 5 seconds, low
+    tags: [food]
+
+  - name: Hetz' Cup
+    ingredients:
+      - Peanut butter
+      - Nougat bar
+      - !step Combine the peanut butter with the nougat bar.
     tags: [food]
 
   - name: Granola bar
@@ -1581,6 +1626,8 @@ recipes:
       - !step Requires spoon.
     heat_to: 7 seconds, high
     tags: [food]
+    info:
+      notes: Can be eaten alone (requires spoon) or used as a dip for tortilla chips.
 
   - name: Salad
     ingredients:
@@ -1603,6 +1650,8 @@ recipes:
       - !step Requires spoon.
     heat_to: 6 seconds, high
     tags: [food]
+    info:
+      notes: Can be eaten alone (requires spoon) or used as a dip for tortilla chips.
 
   - name: Gruel
     ingredients:
@@ -1612,6 +1661,8 @@ recipes:
       - !step Put the three failed dishes in the mixer.
       - !step Requires spoon.
     tags: [food]
+    info:
+      notes: Can be eaten alone (requires spoon) or used as a dip for tortilla chips.
 
   - name: Chili (Con queso)
     ingredients:

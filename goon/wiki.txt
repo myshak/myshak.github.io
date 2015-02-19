@@ -275,6 +275,14 @@ recipes:
     info:
      notes: Basic ingredient in a couple of recipes.
 
+  - name: Ash
+    ingredients:
+      - Oil
+      - !step Heat to 474 K.
+    heat_to: Heat to 474 K.
+    info:
+     notes: Basic ingredient in a couple of recipes. You'll get 5 units of ash per 10 units of oil.
+
   - name: Salt
     ingredients:
       - Water
@@ -429,14 +437,15 @@ recipes:
     sources: 
       - Extracted from white cannabis leaves.
       - Extracted from glowing fruits.
-      - Pro Puffs.
+      - Omnizine-laced Pro Puffs.
       - Warm donk pockets.
+      - Spaghetti arrabbiata.
     tags: [medical, brute, burn, oxy, tox, heal, addictive, overdose, bleeding]
     info:
       depletion_rate: 0.2
       overdose_threshold: 30
       per_cycle: 65% chance to heal one each of OXY, TOX, BRUTE and BURN. Chance to reduce BLEEDING by 1.
-      notes: Slightly addictive. Omnizine-laced Pro Puffs and warm donk pockets deliver a small dose of omnizine when used. Less ideal than botany, but it could save you in a pinch.
+      notes: Slightly addictive. Omnizine-laced Pro Puffs and the two dishes deliver a small dose of omnizine when used. Less ideal than botany, but it could save you in a pinch.
 
   - name: Calomel
     ingredients: 
@@ -890,10 +899,9 @@ recipes:
       
   - name: Atrazine (Weedkiller)
     ingredients: 
-      - Chlorine 
-      - Hydrogen 
-      - Nitrogen
-    reaction_message: The mixture bubbles, emitting an acrid reek.
+      - Ammonia
+      - Chlorine
+    reaction_message: The mixture bubbles, emitting an acrid reek. / The mixture gives off a harsh odor.
     tags: [tox, damage]
     info:
       depletion_rate: 0.4
@@ -1158,9 +1166,9 @@ recipes:
       depletion_rate: 0.1
       penetrates_skin: Yes
       per_cycle: |
-                 Does +1 TOX, +1 BRAIN, and +1 BURN per cycle, ramps up to +3 TOX, +3 BRAIN, +1 BURN and +5 LOSEBREATH after thirty cycles.
+                 Does +1 TOX, +1 BRAIN, and +1 BURN per cycle. Causes +5 LOSEBREATH after fifty cycles.
                  Causes stuns, shaking, vomiting, screaming, and seizures.
-      notes: Takes thirty cycles to reach full effect, bombards the victim with a lot of scary messages. Can be neutralized with atropine, or handled with wide-spectrum meds.
+      notes: Bombards the victim with a lot of scary messages. Can kill surprisingly quickly if left unchecked. Can be neutralized with atropine, or handled with wide-spectrum meds.
 
   - name: Aconitum
     tags: [tox, losebreath, stun, damage]
@@ -1245,20 +1253,18 @@ recipes:
       per_cycle: +2 RAD, 4% chance to trigger a bad mutation.
       notes: Another solid, easy-level poison, though it's usually used as a precursor to other chems.
 
-#  Currently broken.
-#
-#  - name: Unstable Mutagen
-#    ingredients: 
-#      - Epinephrine
-#      - Neurotoxin
-#    tags: [rad, mutation, damage]
-#    reaction_message: An unpleasant, shifting green mass of liquid forms from the reaction.
-#    info:
-#      description: Might cause unpredictable mutations. Keep away from children.
-#      depletion_rate: 0.3
-#      penetrates_skin: No
-#      per_cycle: +2 RAD, 4% chance to trigger a bad mutation.
-#      notes: Another solid, easy-level poison, though it's usually used as a precursor to other chems.
+  - name: Unstable Mutagen
+    ingredients: 
+      - Epinephrine
+      - Neurotoxin
+    tags: [rad, mutation, damage]
+    reaction_message: An unpleasant, shifting green mass of liquid forms from the reaction.
+    info:
+      description: Might cause unpredictable mutations. Keep away from children.
+      depletion_rate: 0.3
+      penetrates_skin: No
+      per_cycle: +2 RAD, 4% chance to trigger a bad mutation.
+      notes: Another solid, easy-level poison, though it's usually used as a precursor to other chems.
 
   - name: Stable Mutagen
     unsorted: true
@@ -1278,6 +1284,7 @@ recipes:
   - name: Capsaicin
     sources:
       - Extracted from any chili and omega cannabis leaves.
+      - Spaghetti arrabbiata.
     tags: [stun, movement, addictive]
     info:
       penetrates_skin: No
@@ -1434,9 +1441,9 @@ recipes:
     info:
       depletion_rate: 0.4
       penetrates_skin: No
-      per_cycle: +1 BURN damage.
-#      application_effect: TOUCH - Self-burning, ignites other stuff.
-      notes: Injecting it will spike the victim's temperature to damage-worthy levels, so don't be deceived by that meager +1!
+      per_cycle: +1 BURN, +1 BURNING and sets you alight. Scales with the BURNING var - the longer you are on fire, the more BURN damage you will take per cycle (up to +4).
+      application_effect: TOUCH and INGEST - Self-burning, sets you alight.
+      notes: Don't be deceived by that meager +1, having phlogiston in the bloodstream can be very dangerous without a fire extinguisher or firebot. Even then, they can't prevent you from spontaneously igniting every cycle.
       
   - name: Chlorine Trifluoride (CLF3)
     ingredients:
@@ -1447,10 +1454,10 @@ recipes:
     reaction_message: The mixture gives off significant heat.
     tags: [burning]
     info:
-      depletion_rate: 0.4
+      depletion_rate: 4
       penetrates_skin: No
-      per_cycle: +3 BURNING. Sets people on fire from the inside out.
-      application_effect: TOUCH - BURNING + 50.
+      per_cycle: If already on fire, +5 BURN and +4 BURNING. Scales with the BURNING var - the longer you are on fire, the more BURN damage you will take per cycle (up to +7).
+      application_effect: TOUCH and INGEST - Sets you alight, +50 BURNING.
       notes: |
              Makes a temporary 3x3 fireball when it comes into existence, so be careful when mixing.
              ClF3 applied to a surface burns things that wouldn't otherwise burn, sometimes through the very floors of the station and exposing it to the vacuum of space. A very popular starting deathchem.
@@ -1471,6 +1478,9 @@ recipes:
       ignition_temp: 374 K
       notes: |
              When mixed without stabilizer, or heated with stabilizer, it'll spew out a large cloud of smoke instantaneously. It then takes up to three other chems (the ones with the most units present) from its container with it, inflicting their TOUCH reactions and making them breathable through the air (read: gives them "Penetrates Skin = Yes" functionality) for whatever is hit by the smoke. Very handy for delivering chemicals that otherwise need to be injected to work.
+             
+             The maximum size of the smoke scales with the amount of powder, for example 5 units for 3x3 and 10 units for 5x5.
+             
              Wearing active internals or a gas mask will prevent you from inhaling chemical smoke. Even if an acid is employed in the smoke to destroy the active internals or gas mask, the victim still won't suck in anything from that specific cloud of smoke.
 
   - name: Fluorosurfactant
@@ -1746,6 +1756,7 @@ recipes:
     sources:
       - Syndicate donk pockets.
       - Spaghetti with meatballs.
+      - Spaghetti arrabbiata.
     tags: [drug, stun, stamina, overdose]
     info:
       depletion_rate: 0.4
@@ -2084,12 +2095,12 @@ recipes:
       - Colorful Reagent
       - Chicken Soup
       - Strange Reagent
-    reaction_message: The substance turns an airy sky-blue.
+      - Blood
+      - !step Heat to 374 K.
+    heat_to: Heat to 374 K.
+    reaction_message: The substance turns an airy sky-blue and foams up into a new shape.
     info:
-      penetrates_skin: No
-      depletion_rate: 0.4
-      application_effect: TOUCH - Creates a parrot when splashed onto somebody or something.
-      notes: Makes parrots. Squawk!
+      notes: Makes a parrot upon reaction, similar to life. Squawk!
 
 # Miscellaneous reagents
 

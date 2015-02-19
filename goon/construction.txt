@@ -74,14 +74,17 @@ recipes:
   - name: Pipe bomb
     unsorted: true
     info:
-      notes: Not to be confused with the version traitors can order. Black powder, plasmastone or erebite can be used in place of welding fuel if available.
+      notes: |
+             Not to be confused with the version traitors can order. Other materials can be used in place of welding fuel if available. Ordered by explosive power - phlogiston, CLF3, black powder or NI3. 
+             
+             Plasmastone and erebite work differently in that they are crafted from custom metal sheets, then combined with one of the listed reagents.
     tags: [bomb, make]
     ingredients:
       - 3x <Metal Sheet>
       - Wire
       - Igniter
       - Timer
-      - Welding Fuel
+      - <Welding Fuel> (20 units)
       - Welder
       - Screwdriver
       - !step Turn the 3 <Metal sheet>s into a pipe frame.
@@ -221,7 +224,7 @@ recipes:
   - name: Flamethrower
     unsorted: true
     info:
-      notes: Welding fuel is the default fuel mixture, but currently broken - use phlogiston instead. You can also fill the tank with other reagents, so there is plenty of room for experimentation.
+      notes: Welding fuel is a solid choice. You can also fill the tank with other reagents, so there is plenty of room for experimentation.
     tags: [make, weapon]
     ingredients:
       - Welder
@@ -686,6 +689,13 @@ recipes:
     info:
       notes: Standard pens contain black ink, and you can also use a red or blue marker.
 
+  - name: Bucket helmet
+    tags: [make, equip, clothes]
+    ingredients:
+      - Bucket
+      - Wirecutters
+      - !step Cut eye holes with the wirecutters.
+
   - name: Armored biosuit
     tags: [make, armor, equip, clothes]
     ingredients:
@@ -703,6 +713,15 @@ recipes:
       - !step Attach the body armor to the paramedic suit.
     info:
       notes: A paramedic suit with a piece of body armor attached.
+
+  - name: Armored firesuit
+    tags: [make, armor, equip, clothes]
+    ingredients:
+      - Body armor
+      - Firesuit
+      - !step Attach the body armor to the firesuit.
+    info:
+      notes: A firesuit with a piece of body armor attached.
 
   - name: Rocket shoes
     info:
@@ -741,7 +760,7 @@ recipes:
       - !step Use the helmet on the electropack.
       - !step Attach the helmet/electropack assembly to the chair.
 
-  - name: Light fixtures
+  - name: Light fixture
     info:
       notes: |
              These fixtures, installed by Nanotrasen or otherwise, are controlled by the local APC. Light tubes may be obtained from boxes or a general manufacturer.
@@ -1119,6 +1138,16 @@ recipes:
       - !step Finally, use the screwdriver on it again.
 
 # Deconstructions
+
+  - name: Light fixture (disassembly)
+    ingredients:
+      - Light fixture
+      - Screwdriver
+      - ID card with engineering access
+      - !step Unlock the local APC and turn off the lighting circuit.
+      - !step Remove the light tube or bulb.
+      - !step Use the screwdriver on the light fixture to disassemble it.
+    tags: [disassemble, light]
 
   - name: Manufacturer (break)
     ingredients:
