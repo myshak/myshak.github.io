@@ -114,12 +114,6 @@ recipes:
     info:
       notes: Contains lipolicide.
 
-  - name: Tea
-    tags: [drink]
-    sources:
-      - Vendor
-      - Base drink from the soda fountain.
-
   - name: Vermouth
     sources:
       - Base booze from the alcohol dispenser.
@@ -128,12 +122,6 @@ recipes:
   - name: Bitters
     sources:
       - Base booze from the alcohol dispenser.
-    tags: [drink]
-
-  - name: Rum
-    sources:
-      - Base booze from the alcohol dispenser.
-      - Bar
     tags: [drink]
 
   - name: Gin
@@ -228,13 +216,22 @@ recipes:
 
   - name: Beer
     ingredients:
-      - Wheat
+      - <Wheat> OR <Wheat (Steel)>
       - Still
       - !step Stuff the wheat in the still.
     tags: [drink]
     sources:
       - Base drink from the alcohol dispenser.
       - Bar
+    info:
+      notes: Steel wheat also produces iron.
+
+  - name: Beepskybräu
+    ingredients:
+      - Roburger
+      - Still
+      - !step Stuff the roburger in the still.
+    tags: [drink]
 
   - name: Cider
     ingredients:
@@ -257,13 +254,15 @@ recipes:
 
   - name: Wine
     ingredients:
-      - Grape
+      - <Grape> (any type)
       - Still
       - !step Stuff the grapes in the still.
     tags: [drink]
     sources:
       - Base drink from the alcohol dispenser.
       - Bar
+    info:
+      notes: Green grapes make white wine.
 
   - name: Vodka
     ingredients:
@@ -283,6 +282,26 @@ recipes:
     tags: [drink]
     sources:
       - Base drink from the alcohol dispenser.
+
+  - name: Rum
+    ingredients:
+      - <Sugarcane> OR <Sugar>
+      - Still
+      - !step Stuff the sugar or sugarcane in the still.
+    sources:
+      - Base booze from the alcohol dispenser.
+      - Bar
+    tags: [drink]
+
+  - name: Tea
+    ingredients:
+      - Asomna
+      - Still
+      - !step Stuff the asomna bark in the still.
+    tags: [drink]
+    sources:
+      - Vendor
+      - Base drink from the soda fountain.
 
   - name: Bread (Reagent)
     sources:
@@ -418,7 +437,7 @@ recipes:
 
   - name: Suicider
     sources:
-      - Extracted from omega cannabis leaves.
+      - Extracted or distilled from omega cannabis leaves.
     ingredients:
       - Vodka
       - Cider

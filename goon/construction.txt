@@ -31,6 +31,15 @@ recipes:
 
 # Bombs
 
+  - name: Butt bomb
+    ingredients:
+      - <Butt> (any type)
+      - Timer
+      - !step Add the timer to the butt.
+    info:
+      notes: Harmless prank. Works like a grenade.
+    tags: [make, bomb]
+
   - name: Rigged light tube
     ingredients:
       - Light tube
@@ -99,20 +108,44 @@ recipes:
     ingredients:
       - Mousetrap
       - <Pipe bomb> OR <Grenade> (Only chem grenades, i.e. everything that looks like a flashbang, are compatible.)
+      - <Wrench> (optional)
       - !step Attach the pipe bomb or grenade to the mousetrap.
       - !step Arm the mousetrap by clicking on it before use.
     info:
-      notes: Compatible with pipe bombs (regular, Syndicate) and most grenades. They can be used as makeshift mines or to booby-trap backpacks and other containers.
+      notes: |
+             Compatible with pipe bombs (regular, Syndicate) and most grenades. They can be used as makeshift mines or to booby-trap backpacks and other containers.
+             
+             Can be taken apart with a wrench if required.
     tags: [bomb, make]
 
   - name: Mousetrap car
     ingredients:
       - 3x <Metal Sheet>
       - <Mousetrap bomb> (grenade only)
+      - <Wrench> (optional)
       - !step Turn the metal sheets into a pipe frame.
       - !step Combine the mousetrap bomb with the pipe frame.
     info:
-      notes: A mousetrap bomb on wheels. Once set in motion, the cart will scoot off in whichever direction you're facing and detonate the grenade upon impact with a large object or unfortunate bystander.
+      notes: |
+             A mousetrap bomb on wheels. Once set in motion, the cart will scoot off in whichever direction you're facing and detonate the grenade upon impact with a large object or unfortunate bystander.
+             
+             Can be taken apart with a wrench if required.
+    tags: [bomb, make]
+
+  - name: Mousetrap pie launcher
+    ingredients:
+      - Mousetrap
+      - Left or right arm (any type)
+      - Pie (any type)
+      - <Wrench> (optional)
+      - !step Attach the arm to the mousetrap.
+      - !step Add the pie.
+      - !step Don't forget to arm the mousetrap by clicking on it before use.
+    info:
+      notes: |
+             For the seasoned prankster. Go on...open it!
+             
+             Can be taken apart with a wrench if required.
     tags: [bomb, make]
 
   - name: Single tank bomb
@@ -202,12 +235,11 @@ recipes:
       notes: Your intent must be set to Harm in order for the gloves to work. They only hold one charge at a time.
     tags: [make, weapon, equip, clothes]
     ingredients:
-      - Insulated Gloves
+      - <Insulated Gloves> OR <Power Gloves>
       - Charged <Power Cell>
       - Wire
       - !step Add some wiring to the gloves.
-      - !step Hold the gloves in your active hand.
-      - !step Click with the gloves on the charged power cell.
+      - !step Use the power cell on the gloves to charge them.
 
   - name: Zip gun
     info:
@@ -239,6 +271,15 @@ recipes:
       - !step Secure the assembly with the screwdriver.
       - !step Attach the air mix or oxygen tank to the assembly.
       - !step Add the fuel tank to the assembly.
+
+  - name: Poisoned surgery tool
+    ingredients:
+      - <Scalpel> OR <Circular saw>
+      - Filled <Beaker>
+      - !step Dip the scalpel or saw in the beaker.
+    info:
+      notes: Scalpels and saws can be dipped in a poison or other reagent for fun and wacky effects upon stabbing.
+    tags: [make, weapon]
 
 # Cyborgs
 
@@ -445,6 +486,15 @@ recipes:
       - !step Activate the robot with the wrench.
     info:
       notes: These are simple robots used by the AI for reconnaissance or interacting directly with certain pieces of machinery, e.g. pods or manufacturers.
+
+  - name: AI shell, brute damage (fix)
+    tags: [fix, robot]
+    ingredients:
+      - AI shell
+      - Welder
+      - !step Use the welder on the shell; several times if necessary.
+    info:
+      notes: Burn damage currently cannot be repaired.
 
   - name: Medbot
     unsorted: true
@@ -675,6 +725,13 @@ recipes:
       - !step Hollow out the skull with the circular saw.
     info:
       notes: Custom masks are named after the former owner of the skull. 
+
+  - name: Skull chalice
+    tags: [make, container]
+    ingredients:
+      - Skull
+      - Rods
+      - !step Use the rod on the skull.
 
   - name: Paper mask
     tags: [make, equip, clothes]

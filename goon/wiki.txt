@@ -205,13 +205,13 @@ recipes:
   - name: Mercury
     info:
       depletion_rate: 0.2
-      penetrates_skin: Yes
+      penetrates_skin: Yes (0.2 per 1 unit splashed)
       per_cycle: Causes drooling.
       notes: Base element. Does BRAIN damage.
     tags: [base, brain, damage]
     sources:
       - Base chemical from the dispenser.
-      - Extracted from omega cannabis leaves.
+      - Extracted or distilled from omega cannabis leaves.
       
   - name: Lithium
     info:
@@ -221,7 +221,7 @@ recipes:
     tags: [base, movement]
     sources:
       - Base chemical from the dispenser.  
-      - Extracted from omega cannabis leaves.	  
+      - Extracted or distilled from omega cannabis leaves.	  
 
   - name: Sugar
     tags: [base, stun, overdose, speed, ko, stamina, jitter]
@@ -241,8 +241,8 @@ recipes:
   - name: Radium
     info:
       depletion_rate: 0.3
-      penetrates_skin: Yes
-      per_cycle: +4 RAD
+      penetrates_skin: Yes (0.5 per 1 unit splashed)
+      per_cycle: +4 RAD (capped at 8 Gy)
       notes: Radiation is cumulative and depletes one per cycle. As it ramps up, it starts doing BURN + TOX in increasing amounts related to the radiation total, causes random mutations (often disabilities) and triggers a bunch of other nasty radiation sickness effects. A sleepypen full of radium is pretty lethal over a few minutes.
     sources:
       - Base chemical from the dispenser.
@@ -379,10 +379,10 @@ recipes:
       - Water
       - Sugar
     reaction_message: The solution begins to bubble.
-    tags: [medical, brute, burn, heal, crit]
+    tags: [medical, brute, burn, heal, crit, bleeding]
     info:
-      depletion_rate: 0.4
-      per_cycle: 33% chance per cycle of healing 1 point each of BRUTE and BURN damage.
+      depletion_rate: 0.15
+      per_cycle: 33% chance of healing 2 points of BRUTE and BURN, 33% chance of regenerating 1 unit of blood.
       notes: The shock ailment checks to see if you have any saline in you. If you do, there is a fixed chance per cycle that it'll reduce or remove the disease. This means that there's no specific amount needed to cure, but the longer it's in you, the more chances it'll have to cure the ailment.  
       
   - name: Styptic Powder
@@ -435,7 +435,7 @@ recipes:
       
   - name: Omnizine
     sources: 
-      - Extracted from white cannabis leaves.
+      - Extracted or distilled from white cannabis leaves.
       - Extracted from glowing fruits.
       - Omnizine-laced Pro Puffs.
       - Warm donk pockets.
@@ -547,7 +547,8 @@ recipes:
       - Sulphuric Acid
     reaction_message: A horrid smell like something died drifts from the mixture.
     sources:
-      - Extracted from black venne fibers and omega cannabis leaves.
+      - Extracted from black venne fibers. 
+      - Extracted or distilled from omega cannabis leaves.
     tags: [medical, tox, damage, brute, burn, heal, heart, oxy, losebreath, depletion, crit, movement, overdose]
     info:
       depletion_rate: 0.2
@@ -671,7 +672,7 @@ recipes:
       
   - name: Haloperidol
     sources:
-      - Extracted from omega cannabis leaves.
+      - Extracted or distilled from omega cannabis leaves.
     ingredients: 
       - Chlorine
       - Fluorine
@@ -782,7 +783,8 @@ recipes:
 
   - name: Hairgrownium
     sources:
-      - Extracted from fuzzy nureous and omega cannabis leaves. 
+      - Extracted from fuzzy nureous. 
+      - Extracted or distilled from omega cannabis leaves. 
     ingredients:
       - Carpet 
       - Synthflesh 
@@ -819,7 +821,7 @@ recipes:
           
   - name: Itching Powder
     sources:
-      - Extracted from omega cannabis leaves.
+      - Extracted or distilled from omega cannabis leaves.
     ingredients: 
       - Ammonia 
       - Welding Fuel 
@@ -852,7 +854,7 @@ recipes:
   - name: Histamine
     sources:
       - Inject emblaming fluid/itching powder, extract histamine using a syringe.
-      - Extracted from omega cannabis leaves.
+      - Extracted or distilled from omega cannabis leaves.
     tags: [allergy, tox, damage, overdose, brute, oxy, damage]
     info:
       depletion_rate: 0.2
@@ -894,13 +896,17 @@ recipes:
     info:
       depletion_rate: 1
       penetrates_skin: No
-      per_cycle: +1 TOX, +1 BRAIN up to 60, then it slows down, confusion, knockout after 17 elapsed cycles.
-      notes: One of the most debilitating chems in the game due to applying brain damage, confusion and constant knockouts all at once. Someone given a large dose will be lucky to be able to do anything.
+      per_cycle: 1 TOX per cycle. Also deals +1 BRAIN, per cycle, up to 60 before it slows down. Also causes dizziness and confusion. When injected it will not start metabolizing right away. On its 5th cycle it will start metabolizing, then knock that person out 12 cycles later.
+      notes: |
+             One of the most debilitating chems in the game due to applying brain damage, confusion and constant knockouts all at once.
+             			 
+             Someone given a large dose will be lucky to be able to do anything. It's delayed effects make it one of the quickest and stealthiest knockout chems around.
       
   - name: Atrazine (Weedkiller)
     ingredients: 
-      - Ammonia
       - Chlorine
+      - Hydrogen
+      - Nitrogen
     reaction_message: The mixture bubbles, emitting an acrid reek. / The mixture gives off a harsh odor.
     tags: [tox, damage]
     info:
@@ -991,7 +997,7 @@ recipes:
     heat_to: Heat to 374 K.
     sources:
       - Poison bottles.
-      - Extracted from black cannabis leaves.
+      - Extracted or distilled from black cannabis leaves.
     tags: [tox, losebreath, stun, damage]
     reaction_message: The mixture gives off a faint scent of almonds.
     info:
@@ -1166,8 +1172,8 @@ recipes:
       depletion_rate: 0.1
       penetrates_skin: Yes
       per_cycle: |
-                 Does +1 TOX, +1 BRAIN, and +1 BURN per cycle. Causes +5 LOSEBREATH after fifty cycles.
-                 Causes stuns, shaking, vomiting, screaming, and seizures.
+                 Does +1 TOX, +1 BRAIN, and +1 BURN per cycle. Additionally causes +5 LOSEBREATH, +2 brain (total, not additional) and ongoing paralysis after 60 cycles.
+                 Randomly causes stuns, shaking, vomiting, screaming, and seizures.
       notes: Bombards the victim with a lot of scary messages. Can kill surprisingly quickly if left unchecked. Can be neutralized with atropine, or handled with wide-spectrum meds.
 
   - name: Aconitum
@@ -1283,7 +1289,8 @@ recipes:
 
   - name: Capsaicin
     sources:
-      - Extracted from any chili and omega cannabis leaves.
+      - Extracted from any chili. 
+      - Extracted or distilled from omega cannabis leaves.
       - Spaghetti arrabbiata.
     tags: [stun, movement, addictive]
     info:
@@ -1664,7 +1671,7 @@ recipes:
       
   - name: Cat drugs
     sources:
-      - Extracted from omega cannabis leaves.
+      - Extracted or distilled from omega cannabis leaves.
     ingredients: 
       - Catonium
       - Psilocybin 
@@ -1680,9 +1687,23 @@ recipes:
       per_cycle: Causes you to meow, hiss, and hallucinate. Amusing text messages.
       notes: Gimmick drug, good for laughs or confusing the hell out of people.
 
+  - name: Cat drugs
+    sources:
+      - Extracted or distilled from omega cannabis leaves.
+    ingredients: 
+      - Catnip
+      - Still
+      - !step Stuff the catnip in the still.
+    tags: [drug, hallucinate]
+    info:
+      depletion_rate: 0.4
+      penetrates_skin: No
+      per_cycle: Causes you to meow, hiss, and hallucinate. Amusing text messages.
+      notes: Gimmick drug, good for laughs or confusing the hell out of people.
+
   - name: Space Drugs
     sources:
-      - Extracted from omega cannabis leaves.
+      - Extracted or distilled from omega cannabis leaves.
     ingredients: 
       - Mercury 
       - Sugar 
@@ -1708,7 +1729,7 @@ recipes:
   - name: Psilocybin
     sources:
       - Extracted from magic mushrooms (space fungus mutation).
-      - Extracted from omega cannabis leaves.
+      - Extracted or distilled from omega cannabis leaves.
     tags: [drug, hallucinate]
     info:
       depletion_rate: 0.4
@@ -1734,7 +1755,7 @@ recipes:
       - Space Fungus
     reaction_message: The mixture turns a rather unassuming color and settles.
     sources:
-      - Extracted from rainbow and omega cannabis leaves.
+      - Extracted or distilled from rainbow and omega cannabis leaves.
     tags: [drug, hallucinate]
     info:
       depletion_rate: 0.4
@@ -1744,7 +1765,7 @@ recipes:
 
   - name: Tetrahydrocannabinol (THC)
     sources:
-      - Extracted from all cannabis leaves.
+      - Extracted or distilled from all cannabis leaves.
     tags: [drug, drowsiness, movement]
     info:
       depletion_rate: 0.4
@@ -1768,7 +1789,7 @@ recipes:
   - name: Crank
     unsorted: true
     sources:
-      - Extracted from omega cannabis leaves.
+      - Extracted or distilled from omega cannabis leaves.
     ingredients: 
       - Diphenhydramine (Antihistamine)
       - Ammonia 
@@ -1790,7 +1811,7 @@ recipes:
       
   - name: Krokodil
     sources:
-      - Extracted from omega cannabis leaves.
+      - Extracted or distilled from omega cannabis leaves.
     ingredients: 
       - Diphenhydramine (Antihistamine) 
       - Morphine 
@@ -1811,7 +1832,8 @@ recipes:
       
   - name: Methamphetamine
     sources:
-      - Extracted from robust asomna barks and omega cannabis leaves.
+      - Extracted from robust asomna barks. 
+      - Extracted or distilled from omega cannabis leaves.
     ingredients: 
       - Ephedrine 
       - Iodine 
@@ -1830,7 +1852,7 @@ recipes:
       
   - name: Bath Salts
     sources:
-      - Extracted from omega cannabis leaves.
+      - Extracted or distilled from omega cannabis leaves.
     ingredients:
       - ????
       - Monosodium Glutamate
