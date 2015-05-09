@@ -69,7 +69,7 @@ recipes:
       - Body Armor
       - Health analyzer
       - Igniter
-      - <Beaker> OR <Grenade> (Only chem grenades, i.e. everything that looks like a flashbang, are compatible.)
+      - <Beaker> OR <Chemical grenade> (Any type. Everything that looks like a flashbang is compatible.)
       - Screwdriver
       - <Wrench> (optional)
       - !step Use a screwdriver on the igniter.
@@ -107,7 +107,7 @@ recipes:
   - name: Mousetrap bomb
     ingredients:
       - Mousetrap
-      - <Pipe bomb> OR <Grenade> (Only chem grenades, i.e. everything that looks like a flashbang, are compatible.)
+      - <Pipe bomb> OR <Chemical grenade> (Any type. Everything that looks like a flashbang is compatible.)
       - <Wrench> (optional)
       - !step Attach the pipe bomb or grenade to the mousetrap.
       - !step Arm the mousetrap by clicking on it before use.
@@ -173,7 +173,7 @@ recipes:
     tags: [bomb, make]
     ingredients:
       - <Gas Tank> of heated gas
-      - A <Gas Tank> filled with an explosive mixture
+      - <Gas Tank> of a reactive gas
       - Tank Transfer Valve
       - <Timer> OR <Proximity Sensor> OR <Remote Signaler>
       - !step Connect the first tank to the transfer valve.
@@ -243,7 +243,7 @@ recipes:
 
   - name: Zip gun
     info:
-      notes: You can use different types of ammunition. The zip gun holds two rounds at a time.
+      notes: You can use different types of ammunition, of which .38 Special is easiest to obtain from a hacked general manufacturer. The zip gun holds two rounds at a time.
     tags: [make, weapon]
     ingredients:
       - 3x <Metal sheet>
@@ -692,6 +692,28 @@ recipes:
       notes: These assemblies are quite popular to release chemical smoke from a safe distance - for the user at least. Deadly in the hands of a skilled chemist. When triggered, the igniter will heat the mixture by 30 K. To detach the beaker, place the whole thing on the floor and use the context menu by right-clicking on it.
     tags: [make]
 
+  - name: Chemical grenade
+    ingredients:
+      - Grenade starter kit
+      - <Beaker> (up to two)
+      - Screwdriver
+      - !step Add the fuse to the grenade casing.
+      - !step Prepare a chemical mix of your choice.
+      - !step Add the beaker(s) to the unsecured grenade.
+      - !step Secure it with the screwdriver.
+    info:
+      notes: The starter kit generally can't be acquired without a traitor scientist's PDA. You can't retrieve the beakers after securing the grenade, so make sure your chemical mix works beforehand!
+    tags: [make]
+
+  - name: Chemical grenade assembly
+    ingredients:
+      - <Chemical grenade> (Any type. Everything that looks like a flashbang is compatible.)
+      - Igniter assembly
+      - !step Combine the igniter assembly with the chem grenade.
+    info:
+      notes: Combines the advantages of chem grenades (two beakers) with the versatility of beaker assemblies.
+    tags: [make]
+
   - name: Jack-o'-lantern
     info:
       notes: Click the jack-o'-lantern to light it
@@ -791,12 +813,12 @@ recipes:
 
   - name: Shackles
     info:
-      notes: Will force the wearer to move at walking speed.
+      notes: Forces the wearer to move at walking speed. Shackles can be taken apart by holding them in an active hand and clicking on them.
     tags: [make, equip, clothes]
     ingredients:
-      - Handcuffs
       - Orange shoes
-      - !step Use handcuffs on orange shoes
+      - Handcuffs
+      - !step Use the handcuffs on the orange shoes.
 
   - name: Electric chair
     info:

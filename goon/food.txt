@@ -269,6 +269,9 @@ recipes:
   - name: Slurrypod
     tags: [food, produce]
 
+  - name: Strawberry
+    tags: [food, produce]
+
   - name: Bean pod
     tags: [food]
 
@@ -348,13 +351,13 @@ recipes:
 
   - name: ?????
     sources:
-      - Kitchen
+      - Kitchen (failed dishes).
       - Extracted from purple goop.
     tags: [food, stun, disease]
     info:
       penetrates_skin: No
       depletion_rate: 0.4
-      application_effect: INGEST - Stuns and infects the consumer with food poisoning.
+      application_effect: INGEST - Food poisoning, stuns the consumer briefly.
 
   - name: Smoldering mess
     sources:
@@ -2048,6 +2051,18 @@ recipes:
       - Oven
       - Spoon
       - !step Put the sweet dough and lime in the oven.
+      - !step Cook for 2 seconds, high.
+      - !step Requires spoon.
+    heat_to: 2 seconds, high
+    tags: [food]
+
+  - name: Pie (Strawberry)
+    ingredients:
+      - Dough (Sweet)
+      - 2x <Strawberry>
+      - Oven
+      - Spoon
+      - !step Put the sweet dough and two strawberries in the oven.
       - !step Cook for 2 seconds, high.
       - !step Requires spoon.
     heat_to: 2 seconds, high
