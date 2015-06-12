@@ -178,6 +178,26 @@ recipes:
       - Base chemical from the dispenser.
     tags: [base]
 
+  - name: Chromium
+    sources:
+      - Base chemical from the dispenser.
+    tags: [base]
+
+  - name: Copper
+    sources:
+      - Base chemical from the dispenser.
+    tags: [base]
+
+  - name: Nickel
+    sources:
+      - Base chemical from the dispenser.
+    tags: [base]
+
+  - name: Platinum
+    sources:
+      - Base chemical from the dispenser.
+    tags: [base]
+
   - name: Water
     tags: [base, slippery, burning, explode, plant]
     info:
@@ -204,6 +224,15 @@ recipes:
     tags: [base, explode, plant]
     info:
       Per plant cycle: 40% chance of +1 GROWTH, +1 HEALTH
+      notes: |
+             Explodes when mixed with water (1x1, low severity). Does not scale with volume.
+             Most people won't bat an eye when they see plain old water, though, so it makes for an interesting stealth explosive.
+
+  - name: Barium
+    sources:
+      - Base chemical from the dispenser.
+    tags: [base, explode]
+    info:
       notes: |
              Explodes when mixed with water (1x1, low severity). Does not scale with volume.
              Most people won't bat an eye when they see plain old water, though, so it makes for an interesting stealth explosive.
@@ -287,6 +316,16 @@ recipes:
      penetrates_skin: No
      notes: Harmless. Does what you'd expect.
 
+  - name: Magnesium
+    tags: [base, ignite]
+    info:
+      depletion_rate: 0.4
+      penetrates_skin: No
+      application_effect: 10+ UNITS = Creates piles of magnesium when applied to floor tiles.
+      notes: Piles ignite when exposed to a temperature higher than 747 K, but the fire isn't hot enough to set alight non-flammable materials or burn through the floor. They do however also ignite nearby piles, so you could make a line of magnesium and use it as a fuse for other pyrotechnic reagents.
+    sources:
+      - Base chemical from the dispenser.
+
 # Basic compounds 
 
   - name: Ammonia
@@ -363,9 +402,12 @@ recipes:
     info:
       depletion_rate: 0.4
       penetrates_skin: No
+      per_cycle: OVERDOSE - 70% chance of +1 BRAIN, 8% of +1/+2 TOX.
       application_effect: 10+ UNITS = Creates a salt pile when applied to floor tiles.
-      notes: Useful as a weapon against wraiths.
+      overdose_threshold: 100
+      notes: Useful as a weapon against wraiths and as an easy poison.
     reaction_message: The solution crystallizes with a brief flare of light.
+    tags: [overdose, damage, brain, tox]
     
   - name: Phenol
     ingredients:
@@ -522,8 +564,8 @@ recipes:
     tags: [medical, brute, heal, tox, damage, bleeding]
     reaction_message: The solution yields an astringent powder.
     info:
-      per_cycle: -8 BRUTE
-      depletion_rate: 2
+      per_cycle: -2 BRUTE
+      depletion_rate: 3
       penetrates_skin: No
       application_effect: |
                           TOUCH - Heals 1 BRUTE per unit applied. Can reduce BLEEDING by up to 5.
@@ -543,9 +585,9 @@ recipes:
       - Extracted from all commol roots.
     tags: [medical, burn, heal, tox, damage]
     info:
-      depletion_rate: 2
+      depletion_rate: 3
       penetrates_skin: No
-      per_cycle: -8 BURN
+      per_cycle: -2 BURN
       application_effect: |
                           TOUCH - Heals 1 BURN per unit applied.
                           
@@ -763,6 +805,18 @@ recipes:
                  
                  OVERDOSE - 8% chance of +1/+2 TOX.
       notes: Low doses are useful for the painkiller, but high doses can knock someone out for a while.
+
+  - name: Ether
+    ingredients: 
+      - Hydrochloric Acid
+      - Ethanol
+      - Oxygen
+    reaction_message: The mixture yields a pungent odor, which makes you tired.
+    tags: [medical, addictive, overdose, ko, jitter, stamina, damage, tox]
+    info:
+      depletion_rate: 0.4
+      penetrates_skin: No
+      notes: Behaves almost exactly the same as morphine, minus the speed bonus.
       
   - name: Salbutamol
     ingredients: 
@@ -1300,6 +1354,23 @@ recipes:
              The other reason to run from the derelict medibots, as this will be injected along with the sodium thiopental, which will eventually kill you while you can't even scream for help. 
              A very nasty disabling poison for traitors to make use of, basically a much meaner curare.
 
+  - name: Acetaldehyde
+    ingredients: 
+      - Chromium
+      - Oxygen
+      - Copper
+      - Ethanol
+      - !step Heat to 549 K.
+    heat_to: Heat to 549 K.
+    reaction_message: It smells like a bad hangover in here.
+    tags: [burn, damage, plant]
+    info:
+      depletion_rate: 0.4
+      penetrates_skin: Yes
+      per_cycle: +1 BURN
+      Per plant cycle: +4 POISON
+      notes: Basic poison.
+
   - name: Nanomachines
     sources:
       - Poison bottles.
@@ -1647,6 +1718,18 @@ recipes:
       Per plant cycle: +5 ACID, -3 GROWTH
       notes: A precursor to many other chems.
 
+  - name: Hydrochloric Acid
+    ingredients: 
+      - Chlorine
+      - Hydrogen 
+      - Water
+    tags: [brute, damage, tox, burn, plant]
+    reaction_message: The mixture gives off a sharp acidic tang.
+    info:
+      depletion_rate: 0.4
+      penetrates_skin: No
+      notes: Behaves exactly the same as sulphuric acid.
+
   - name: Fluorosulphuric Acid
     ingredients: 
       - Sulphuric Acid 
@@ -1663,7 +1746,7 @@ recipes:
       per_cycle: +1 TOX, +1 BURN.
       application_effect: |
                           TOUCH - Up to +20 BRUTE, 100% chance of melting items
-                          10+ UNITS = melts headgear, otherwise +75 BRUTE and disfigures the victim's face
+                          9+ UNITS = melts headgear, otherwise +75 BRUTE and disfigures the victim's face
                           
                           INGEST - 5+ UNITS = Scales with dose, up to +75 BRUTE
       Per plant cycle: +10 ACID, -5 GROWTH
@@ -1797,7 +1880,7 @@ recipes:
       penetrates_skin: No
       per_cycle: If already on fire = +5 BURNING.
       application_effect: |
-                          Sets objects and turfs alight, even stuff that otherwise wouldn't burn.
+                          Sets objects and turfs alight, even stuff that otherwise wouldn't burn. Can burn through floor tiles all well.
                           
                           TOUCH / INGEST - Sets you alight, +50 BURNING.                       
                           INGEST - Scales with volume, up to +90 BURN.
@@ -1910,7 +1993,7 @@ recipes:
       depletion_rate: 0.4
       penetrates_skin: No
       ignition_temp: 374 K (floor/wall only)
-      Ignition effect: Burns through metal floors and walls.
+      Ignition effect: 100% chance of burning through walls. Can burn through floor tiles all well (not guaranteed).
       application_effect: TOUCH - If already on fire = +100 BURNING
       notes: You'll generally be using an igniter or other heat source, and may have to heat the wall 5-10 times to ignite the thermite.
       
@@ -2007,6 +2090,17 @@ recipes:
       notes: |
              Dumping too many basic chems into a container might accidentally cause this unstable and highly explosive reaction. 
              The explosion from this can destroy objects like the chem dispenser you make it from. The explosion is not prevented by stabilizing agent.
+
+  - name: Magnesium Explosion
+    tags: [explode]
+    ingredients:
+      - Magnesium
+      - Copper
+      - Oxygen
+    info:
+      ignition_temp: Instant
+      Ignition effect: Small explosion (1x1, low severity). Does not scale with volume.
+      notes: The explosion is not prevented by stabilizing agent.
 
 # Drugs
 
@@ -2567,7 +2661,7 @@ recipes:
              Not implicitly a deadly disease, this instead gives you a bee pet! Bees are quite protective of their owners and will come to the rescue when they're under attack if you show them some TLC. It can take either a moment or a while for the bee to emerge depending on the RNG.
       penetrates_skin: No
       depletion_rate: 0.4
-      Units to infect (adjusted): 0.4
+      Units to infect (adjusted): 0.8
 
   - name: Space-Soybean Oil
     sources:

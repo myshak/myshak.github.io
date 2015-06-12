@@ -102,7 +102,11 @@ recipes:
   - name: Flash
     tags: [weapon]
     info:
-      notes: The flash has two applications. Using the flash on someone without adequate eye protection will stun them and obscure their screen with a white flash. The other use is area flash, activated by clicking on the weapon when it's in your active hand. This will briefly obscure the screen of everyone nearby with a white overlay but not stun them. Every time the flash is used, the bulb has a chance of burning out, rendering it permanently useless. They can be found in security lockers, dispensed from the vending machines and are in great supply in robotics. 
+      notes: |
+             The flash has two applications. Using the flash on someone without adequate eye protection will stun them and obscure their screen with a white flash.
+             The other use is area flash, activated by clicking on the weapon when it's in your active hand. This will briefly obscure the screen of everyone nearby with a white overlay but not stun them. Area flashes also have a chance of disrupting active cloaking devices as well as holographic disguisers in a 3x3 radius.
+             
+             Every time the flash is used, the bulb has a chance of burning out, rendering it permanently useless. They can be found in security lockers, dispensed from the vending machines and are in great supply in robotics. 
 
   - name: Remote Signaler
     tags: [tool]
@@ -205,5 +209,9 @@ recipes:
   - name: Stun baton
     tags: [weapon]
     info:
-      notes: A melee weapon which delivers an incapacitating shock to the target, knocking them to the ground. It has an On/Off function, and is on by default. Attempting to use it with the 'harm' intent will instead stun YOU, leaving you at the mercy of whoever you were pursuing. A switched-off baton is completely inert unless you use the harm intent, which results in a good old beating. Stun batons hold ten charges and are available in security lockers.
+      notes: |
+             A melee weapon which delivers an incapacitating shock to the target, knocking them to the ground. It is also effective against cyborgs.
+             The stun baton has an On/Off function, and is on by default. Attempting to use it with the harm intent will instead stun YOU, leaving you at the mercy of whoever you were pursuing. A switched-off baton is completely inert unless you use the harm intent, which results in a good old beating.
+             
+             They hold ten charges (examine the baton to see the number of charges left) and are available in security lockers.
 

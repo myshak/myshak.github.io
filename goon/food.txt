@@ -1959,6 +1959,19 @@ recipes:
     info:
       notes: Works with every kind of bread.
 
+  - name: Sandwich (Peanut and honey)
+    ingredients:
+      - 2x <Bread slice> (any type)
+      - Peanut butter
+      - Honey
+      - Oven
+      - !step Put the two bread slices, peanut butter and honey in the oven.
+      - !step Cook for 6 seconds, low.
+    heat_to: 6 seconds, low
+    tags: [food]
+    info:
+      notes: Works with every kind of bread.
+
   - name: Sandwich (Everything)
     ingredients:
       - 2x <Bread slice> (any type)
@@ -1970,6 +1983,20 @@ recipes:
     tags: [food, dynamic]
     info:
       notes: Try various fillings to create the ultimate sandwich! You can even mix two different types of bread for the slices.
+
+  - name: Meatball sub
+    ingredients:
+      - Loaf of bread (any type)
+      - Meatball
+      - Cheese
+      - Sauce (Ketchup)
+      - Oven
+      - !step Put the loaf of bread and other listed ingredients in the oven.
+      - !step Cook for 6 seconds, low.
+    heat_to: 6 seconds, low
+    tags: [food]
+    info:
+      notes: Works with any type of bread loaf.
 
   - name: Pie (Cream)
     ingredients:

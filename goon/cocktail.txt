@@ -112,7 +112,7 @@ recipes:
     info:
       depletion_rate: 0.2
       penetrates_skin: No
-      per_cycle: 10% chance of curing either the cold, the flu or food poisoning
+      per_cycle: 10% chance each the cold, the flu and food poisoning
       notes: Safe remedy for minor diseases. 
     tags: [drink, medical, heal, disease]
 
@@ -788,3 +788,15 @@ recipes:
       - Ectoplasm
     reaction_message: The drink gives off a haunting stench! What did you make?
     tags: [drink]
+
+  - name: Dragon's Breath
+    tags: [drink, stun, burning, gib, damage]
+    info:
+      depletion_rate: 0.4
+      penetrates_skin: No
+      per_cycle: |
+                 50% chance of stunning briefly, 8% chances of various funny text messages.
+                 
+                 Severe effects scale with volume = [2% * volume] chance of +99 BURNING if victim is already on fire, [1% * volume] chance of burning them up completely (fire-gibbed)
+      application_effect: INGEST - If already on fire = 20% chance of +30 BURNING
+      notes: Neutralized by milk. Higher doses can be extremely lethal, ideal for use in a sleepy pen.

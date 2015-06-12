@@ -224,10 +224,13 @@ recipes:
       - Flash
       - Screwdriver
       - Charged <Power Cell>
+      - <Wrench> (optional)
       - !step Open the flash's battery compartment with the screwdriver.
       - !step Attach the power cell to the flash.
     info:
-      notes: In addition to stunning people like any other flash, this overcharged version also sets them on fire. Unlike a regular flash, it will only work once.
+      notes: |
+             In addition to stunning people like any other flash, this overcharged version also sets them on fire. Unlike a regular flash, it will only work once.
+             If required, the assembly can be taken apart by using a screwdriver followed by a wrench.
     tags: [make, weapon]
 
   - name: Stun gloves
@@ -493,8 +496,13 @@ recipes:
       - AI shell
       - Welder
       - !step Use the welder on the shell; several times if necessary.
-    info:
-      notes: Burn damage currently cannot be repaired.
+
+  - name: AI shell, burn damage (fix)
+    tags: [fix, robot]
+    ingredients:
+      - AI shell
+      - Wire
+      - !step Use the cable coil on the shell; several times if necessary.
 
   - name: Medbot
     unsorted: true
@@ -670,13 +678,13 @@ recipes:
   - name: Signaller assembly
     ingredients:
       - Remote signaller
-      - <Proximity sensor> OR <Timer>
+      - <Proximity sensor> OR <Timer> OR <Bike horn>
       - Screwdriver
-      - !step Use the screwdriver on the signaller.
-      - !step Attach the signaller to the proximity sensor or timer.
-      - !step Secure the assembly with the screwdriver.
+      - !step Use the screwdriver on the signaller (not required for horn assembly).
+      - !step Attach the signaller to the proximity sensor, timer or bike horn.
+      - !step Secure the assembly with the screwdriver (not required for horn assembly).
     info:
-      notes: A standalone, proximity- or timer-activated radio. Doesn't work as an attachment, but can come in handy to remotely trigger bombs or door bolts.
+      notes: A standalone, proximity- or timer-activated radio. Doesn't work as an attachment, but can come in handy to remotely trigger bombs or door bolts. The bike horn assembly is only useful for noise pollution, though.
     tags: [make]
   
   - name: Beaker assembly
@@ -823,7 +831,8 @@ recipes:
   - name: Electric chair
     info:
       notes: |
-             To change the default frequency/code, you must click on the electropack while you're holding it, and modify it from the pop-up interface. Electric chairs can be remotely activated, but must be toggled on before usage (right click, and select "controls"). Also, the room must have power for the chair to work.
+             To change the default frequency/code, you must click on the electropack while you're holding it, and modify it from the pop-up interface. Electric chairs can be remotely activated, but must be toggled on before usage (right click, and select "controls").
+             Said power can come from two sources: the local APC (capped at ~80 BURN) or a direct, wired connection to the power grid (scales with the engine's output, and can even vaporize somebody).
              
              To disassemble the chair, use a wrench.
     tags: [make]
@@ -831,28 +840,27 @@ recipes:
       - Electropack
       - Security Helmet
       - 1x <Metal Sheet>
+      - <Wire> (optional)
       - <Remote Signaler> (optional)
       - <Wrench> (optional)
+      - !step Optionally, lay wires using the cable coil to create a direct connection to the power grid.
       - !step Click on the metal while you're holding it.
-      - !step Build a chair.
+      - !step Build a chair. Optionally, place it on the same tile as the prepared wiring.
       - !step Optionally, change the electropack's default frequency and code.
       - !step Use the helmet on the electropack.
       - !step Attach the helmet/electropack assembly to the chair.
 
   - name: Light fixture
     info:
-      notes: |
-             These fixtures, installed by Nanotrasen or otherwise, are controlled by the local APC. Light tubes may be obtained from boxes or a general manufacturer.
-             
-             Custom light fixtures cannot be attached to reinforced walls.
+      notes: These fixtures, installed by Nanotrasen or otherwise, are controlled by the local APC. Light tubes and bulbs may be obtained from boxes (ask the janitor) or a general manufacturer.
     tags: [make, light]
     ingredients:
-      - Wall, regular
+      - <Wall, regular> OR <Wall, reinforced>
       - 2x <Metal Sheet>
-      - Light tube
+      - <Light tube> or <Light bulb>
       - !step Turn the metal sheets into one set of light fixture parts.
-      - !step Attach the parts to a regular wall.
-      - !step Insert the light tube.
+      - !step Attach the parts to a wall.
+      - !step Insert the light tube or bulb, depending on the type of fixture.
 
   - name: Space pod
     unsorted: true
