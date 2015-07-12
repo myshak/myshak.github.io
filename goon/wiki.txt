@@ -671,11 +671,11 @@ recipes:
       - Sodium 
       - Cyanide
     reaction_message: The substance becomes very still, emitting a curious haze.
-    tags: [medical, rad, tox, depletion, heal, brute, damage]
+    tags: [medical, rad, tox, depletion, heal, brute, burn, damage]
     info:
       depletion_rate: 0.4
       penetrates_skin: No
-      per_cycle: -7 RAD, increases all depletion rates by 4. 75% chance of -4 TOX, 33% of +1 BRUTE.
+      per_cycle: -7 RAD, increases all depletion rates by 4. 75% chance of -4 TOX, 33% of +1 BRUTE and +1 BURN.
       notes: Apex anti-tox/anti-rad treatment.
       
   - name: Cryoxadone
@@ -1703,18 +1703,17 @@ recipes:
       - Sulfur 
       - Hydrogen 
       - Oxygen
-    tags: [brute, damage, tox, burn, plant]
+    tags: [brute, damage, burn, plant]
     reaction_message: The mixture gives off a sharp acidic tang.
     info:
       depletion_rate: 0.4
       penetrates_skin: No
-      per_cycle: +1 TOX, +1 BURN.
+      per_cycle: +1 BURN
       application_effect: |
-                          TOUCH - 40% chance of melting items
-                          10+ UNITS = Does 15 BRUTE damage
-                          25+ UNITS = 75% chance of +20 BRUTE and disfiguring the victim's face (blocked by headgear)
+                          TOUCH - Does +10 BURN and +5 BRUTE, 40% chance of melting items.
+                          25+ UNITS = 75% chance of disfiguring the victim's face (blocked by headgear)
                           
-                          INGEST - 10+ UNITS = Scales with dose, up to +20 BRUTE
+                          INGEST - 10+ UNITS = Scales with dose, up to +20 BURN
       Per plant cycle: +5 ACID, -3 GROWTH
       notes: A precursor to many other chems.
 
@@ -1723,7 +1722,7 @@ recipes:
       - Chlorine
       - Hydrogen 
       - Water
-    tags: [brute, damage, tox, burn, plant]
+    tags: [brute, damage, burn, plant]
     reaction_message: The mixture gives off a sharp acidic tang.
     info:
       depletion_rate: 0.4
@@ -1738,17 +1737,17 @@ recipes:
       - Potassium 
       - !step Heat to 374 K.
     heat_to: Heat to 374 K.
-    tags: [tox, burn, damage, brute, plant]
+    tags: [tox, burn, damage, plant]
     reaction_message:  The mixture deepens to a dark blue, and slowly begins to corrode its container.
     info:
       depletion_rate: 0.4
       penetrates_skin: No
       per_cycle: +1 TOX, +1 BURN.
       application_effect: |
-                          TOUCH - Up to +20 BRUTE, 100% chance of melting items
-                          9+ UNITS = melts headgear, otherwise +75 BRUTE and disfigures the victim's face
+                          TOUCH - Up to +20 BURN, 100% chance of melting items
+                          9+ UNITS = melts headgear, otherwise +75 BURN and disfigures the victim's face
                           
-                          INGEST - 5+ UNITS = Scales with dose, up to +75 BRUTE
+                          INGEST - 5+ UNITS = Scales with dose, up to +75 BURN
       Per plant cycle: +10 ACID, -5 GROWTH
 
 # Pyrotechnic chems 
@@ -2386,8 +2385,8 @@ recipes:
     info:
       depletion_rate: 0.4
       penetrates_skin: No
-      application_effect: Reinforces windows up to a maximum durability of 1200. Every application makes the window twice as strong.
-      notes: A standard reinforced window has about 60 durability. 
+      application_effect: Reinforces windows up to a maximum durability of 500. Every application makes the window twice as strong.
+      notes: A standard reinforced window has about 80 durability. 
 
   - name: Corn Syrup
     ingredients:

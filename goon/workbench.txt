@@ -224,6 +224,13 @@ recipes:
       notes: Useless without a bow.
     tags: [make, workbench, weapon]
 
+  - name: Poisoned arrow
+    ingredients:
+      - Arrow
+      - Filled <Beaker>
+      - !step Dip the arrow in the beaker.
+    tags: [make, workbench, weapon]
+
   - name: Spear
     unsorted: true
     ingredients:

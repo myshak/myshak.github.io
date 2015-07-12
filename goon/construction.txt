@@ -244,6 +244,28 @@ recipes:
       - !step Add some wiring to the gloves.
       - !step Use the power cell on the gloves to charge them.
 
+  - name: Antique laser gun (fix)
+    info:
+      notes: Starts off as a deactivated display model in the captain's quarters. Replacement parts of average quality will make a reskinned laser gun, while above-average and top-notch parts can increase the weapon's energy output or add a burst-fire mode respectively.
+    tags: [fix, weapon]
+    ingredients:
+      - Antique laser gun
+      - Charged <Power Cell, small>
+      - Coil (Small)
+      - Lens
+      - Wire
+      - Screwdriver
+      - Multitool
+      - Soldering iron
+      - !step Open the maintenance panel with the screwdriver.
+      - !step Add wiring.
+      - !step Install the small coil.
+      - !step Solder the coil into place.
+      - !step Install the lens.
+      - !step Use the multitool.
+      - !step Install the power cell.
+      - !step Close the maintenance panel with the screwdriver.
+
   - name: Zip gun
     info:
       notes: You can use different types of ammunition, of which .38 Special is easiest to obtain from a hacked general manufacturer. The zip gun holds two rounds at a time.
@@ -382,21 +404,22 @@ recipes:
       - Cyborg arm, left and right (any type)
       - <Cyborg treads> OR Cyborg leg, left and right (any type)
       - Charged <Power Cell>
-      - Brain
+      - <Brain> OR <AI interface board>
       - Wire
       - Wrench
       - !step Insert the power cell into the cyborg chest.
       - !step Use the cable coil on the cyborg chest.
       - !step Attach the cyborg chest to the frame.
       - !step Attach the arms and legs (or treads) to the frame.
-      - !step Insert the brain into the cyborg head.
+      - !step Insert the brain or interface board into the cyborg head.
       - !step Attach the cyborg head to the frame.
       - !step Optionally, the wrench can be used to partially disassemble frames. See notes.
       - !step To activate the cyborg, click on the finished frame with the wrench.
     info:
       notes: |
              Cyborg parts are classified as light, standard, sturdy or heavy. Durability increases with heavier parts, but mobility decreases. Overweight cyborgs will also use slightly more power.
-             For the most part, the game will prevent you from inserting unsuitable (job-banned etc.) brains automatically.
+             
+             For the most part, the game will prevent you from inserting unsuitable (job-banned etc.) brains automatically. If you use an AI interface board instead of a brain, the AI will be able to assume control of the cyborg body at will.
              
              Remove limbs: use the wrench on the frame, then select the appropriate cyborg part.
              Remove brain: detach the cyborg head first, then click on it with the wrench.
@@ -475,7 +498,7 @@ recipes:
     tags: [make, robot]
     ingredients:
       - AI shell frame
-      - AI shell power cell
+      - Charged <Power Cell>
       - AI interface board
       - Metal Sheet
       - Wire
@@ -483,12 +506,12 @@ recipes:
       - Wrench
       - !step Add some metal to the shell frame.
       - !step Insert wires.
-      - !step Insert the shell power cell. Regular cells are not compatible.
+      - !step Insert the shell power cell.
       - !step Install the interface board.
       - !step Use the radio on the shell frame.
       - !step Activate the robot with the wrench.
     info:
-      notes: These are simple robots used by the AI for reconnaissance or interacting directly with certain pieces of machinery, e.g. pods or manufacturers.
+      notes: These are simple robots used by the AI for reconnaissance or interacting directly with certain pieces of machinery, e.g. pods or manufacturers. Cyborg bodies can also be remote-controlled by the AI when equipped with an interface board instead of human brain.
 
   - name: AI shell, brute damage (fix)
     tags: [fix, robot]
