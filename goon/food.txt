@@ -936,7 +936,7 @@ recipes:
       - !step Put the flour and the brain in the microwave.
     tags: [food]
     info:
-      notes: Only a human or monkey brain will work, not synthbrains!
+      notes: Only a human or monkey brain will work, not synthbrains! Infects whoever eats it with kuru.
 
   - name: Burger (Roburger)
     ingredients:
@@ -946,7 +946,7 @@ recipes:
       - !step Put the flour and the cyborg head in the microwave.
     tags: [food]
     info:
-      notes: Recipe is limited to the standard cyborg head.
+      notes: Recipe is limited to the standard cyborg head. Infects whoever eats it with robotic transformation.
 
   - name: Burger (Heart)
     ingredients:
@@ -1813,6 +1813,8 @@ recipes:
       - !step Cook for 6 seconds, high.
     heat_to: 6 seconds, high
     tags: [food]
+    info:
+      notes: Infects whoever eats it with kuru. 
 
   - name: Burger (Butt)
     ingredients:
@@ -1834,7 +1836,7 @@ recipes:
     heat_to: 6 seconds, high
     tags: [food]
     info:
-      notes: A light cyborg head will also work.
+      notes: A light cyborg head will also work. Infects whoever eats it with robotic transformation.
 
   - name: Burger (Mystery)
     ingredients:

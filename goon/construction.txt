@@ -62,23 +62,23 @@ recipes:
     unsorted: true
     info:
       notes: |
-             Despite the name, no bombs are actually involved (anymore). The payload will be triggered upon death of whoever is wearing the vest, heating the mixture inside the beaker by 30 K when so equipped.
-             You can detach whatever you put on the vest with a wrench.
+             The payload will be triggered upon death of whoever is wearing the vest, heating the mixture inside the beaker by 30 K when so equipped.
+             
+             If required, the payload can be removed and the entire suit taken apart with a wrench.
     tags: [bomb, make, armor, equip, clothes]
     ingredients:
       - Body Armor
       - Health analyzer
       - Igniter
-      - <Beaker> OR <Chemical grenade> (Any type. Everything that looks like a flashbang is compatible.)
+      - <Beaker> OR <Grenade> (any) OR <Pipe bomb> (any)
       - Screwdriver
       - <Wrench> (optional)
       - !step Use a screwdriver on the igniter.
       - !step Combine the igniter with the health analyzer.
       - !step Secure the assembly with the screwdriver.
-      - !step Click on the assembly with the vest to combine them.
+      - !step Combine the assembly with the vest.
       - !step If you intend to use the beaker, prepare a chemical mix of your choice.
-      - !step To attach the grenade, use it on the vest.
-      - !step To attach a beaker, click on it with the vest - not the other way around!
+      - !step Attach the payload to the vest.
 
   - name: Pipe bomb
     unsorted: true
@@ -107,13 +107,13 @@ recipes:
   - name: Mousetrap bomb
     ingredients:
       - Mousetrap
-      - <Pipe bomb> OR <Chemical grenade> (Any type. Everything that looks like a flashbang is compatible.)
+      - <Pipe bomb> (any) OR <Grenade> (any)
       - <Wrench> (optional)
       - !step Attach the pipe bomb or grenade to the mousetrap.
       - !step Arm the mousetrap by clicking on it before use.
     info:
       notes: |
-             Compatible with pipe bombs (regular, Syndicate) and most grenades. They can be used as makeshift mines or to booby-trap backpacks and other containers.
+             Compatible with pipe bombs (regular, Syndicate) and grenades. They can be used as makeshift mines or to booby-trap backpacks and other containers.
              
              Can be taken apart with a wrench if required.
     tags: [bomb, make]
@@ -121,7 +121,7 @@ recipes:
   - name: Mousetrap car
     ingredients:
       - 3x <Metal Sheet>
-      - <Mousetrap bomb> (grenade only)
+      - <Mousetrap bomb> (grenade or pipe bomb only)
       - <Wrench> (optional)
       - !step Turn the metal sheets into a pipe frame.
       - !step Combine the mousetrap bomb with the pipe frame.
@@ -178,6 +178,20 @@ recipes:
       - <Timer> OR <Proximity Sensor> OR <Remote Signaler>
       - !step Connect the first tank to the transfer valve.
       - !step Do the same with the other tank.
+      - !step Attach the timer, proximity sensor or remote signaller to the transfer valve.
+
+  - name: Transfer valve butt
+    unsorted: true
+    info:
+      notes: A mostly harmless gimmick bomb. Keep the pressure in the other tank high for a truly horrific blast.
+    tags: [bomb, make]
+    ingredients:
+      - <Gas Tank> of heated gas
+      - <Butt> (any type)
+      - Tank Transfer Valve
+      - <Timer> OR <Proximity Sensor> OR <Remote Signaler>
+      - !step Connect the first tank to the transfer valve.
+      - !step Do the same with the butt.
       - !step Attach the timer, proximity sensor or remote signaller to the transfer valve.
 
   - name: Canister bomb

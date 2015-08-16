@@ -1698,6 +1698,24 @@ recipes:
 
 # Acids
 
+  - name: Acetic Acid
+    ingredients: 
+      - <Acetaldehyde> (1)
+      - <Oxygen> (1)
+      - <Nitrogen> (4)
+    tags: [brute, burn, damage, plant]
+    reaction_message: It smells like vinegar and a bad hangover in here.
+    info:
+      depletion_rate: 0.4
+      penetrates_skin: No
+      application_effect: |
+                          TOUCH - Does +5 BRUTE.
+                          50+ UNITS = 75% chance of +15 BURN, +5 BRUTE and disfiguring the victim's face.
+                          
+                          INGEST - 25+ UNITS = +2 BRUTE
+      Per plant cycle: +1 ACID
+      notes: It's basically raw vinegar. Behaves like a much weaker sulfuric acid.
+
   - name: Sulphuric Acid
     ingredients: 
       - Sulfur 
@@ -1818,6 +1836,16 @@ recipes:
       application_effect: TOUCH - If already on fire = +70 BURNING
       Per plant cycle: +1 POISON
       notes: Mostly harmless until a heat source is encountered.
+
+  - name: Kerosene
+    reaction_message: This pungent odor could probably melt steel.
+    tags: [ignite]
+    info:
+      depletion_rate: 0.4
+      penetrates_skin: No
+      ignition_temp: 874 K
+      Ignition effect: Small to large fireball, scales with volume (up to 8x8).
+      notes: Has a secret, unlisted property.
       
   - name: Phlogiston
     unsorted: true
@@ -1921,7 +1949,9 @@ recipes:
       depletion_rate: 0.4
       penetrates_skin: No
       ignition_temp: Mix with water
-      Ignition effect: Turns into foam when combined with water, causes people to slip on it if they're running. The amount of foam made (up to 7x7) depends on how much fluorosurfactant and water are used.
+      Ignition effect: |
+                       Turns into foam when combined with water, causes people to slip on it if they're running.
+                       The amount of foam made (up to 7x7) depends on how much fluorosurfactant and water are used, but every tile is capped at 3 units (per reagent carried with the foam, not in total).
       notes: |
              Unlike smoke powder, foam isn't limited to three chems and inflicts TOUCH reactions from everything it takes with it, though they won't penetrate skin unless they're supposed to.
              

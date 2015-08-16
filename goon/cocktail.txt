@@ -136,6 +136,7 @@ recipes:
   - name: Gin
     sources:
       - Base booze from the alcohol dispenser.
+      - Bar
     tags: [drink]
 
   - name: Tequila
@@ -791,12 +792,26 @@ recipes:
 
   - name: Dragon's Breath
     tags: [drink, stun, burning, gib, damage]
+    reaction_message: A tiny mushroom cloud erupts from the container. That's not worrying at all!
     info:
       depletion_rate: 0.4
       penetrates_skin: No
       per_cycle: |
-                 50% chance of stunning briefly, 8% chances of various funny text messages.
+                 Decays into 20 units of ethanol. 50% chance of stunning briefly, 8% chances of various funny text messages.
                  
                  Severe effects scale with volume = [2% * volume] chance of +99 BURNING if victim is already on fire, [1% * volume] chance of burning them up completely (fire-gibbed)
       application_effect: INGEST - If already on fire = 20% chance of +30 BURNING
       notes: Neutralized by milk. Higher doses can be extremely lethal, ideal for use in a sleepy pen.
+
+  - name: Grog
+    tags: [drink, damage, tox, hair, brute]
+    reaction_message: The substance mixes together, emitting a rank piratey odor and seemingly dissolving some of the container...
+    info:
+      depletion_rate: 0.4
+      penetrates_skin: No
+      per_cycle: Decays into 20 units of ethanol. 15% chance of +1 TOX.
+      application_effect: |
+                          Makes you a pirate captain complete with dreadlocks, full beard, eyepatch and matching name.
+                          
+                          TOUCH - 75% chance of +25 BRUTE and disfiguring the victim's face, 25% of +5 BRUTE. 20% chance of melting items.
+      notes: More of a gimmick chem than legitimately destructive.
