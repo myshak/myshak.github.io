@@ -851,8 +851,8 @@ recipes:
       penetrates_skin: No
       Addiction probability (INGEST): 20% 
       per_cycle: |
-                 -25 OXY, increases LOSEBREATH to and caps it at 5. You can't talk, but it prevents any suffocation damage from racking up despite that.
-                 33% chance of -1 BRUTE, -1 BURN.
+                 -25 OXY, 33% chance of -1 BRUTE and -1 BURN. Increases LOSEBREATH to and caps it at 6.
+                 You can't talk, but it prevents any suffocation damage from racking up despite that.
       notes: |
              Fantastic for criminal activity because it silences people. Also fantastic for pretty much negating all the accumulative damage from being in critical, will give you a really wide window of time to deal with other health problems.
              In theory, you could stay in flatline for quite awhile with this stuff handling tissue oxygenation, but you might need mannitol too. Can make spacewalking without internals possible. 
@@ -1211,8 +1211,8 @@ recipes:
     info:
       depletion_rate: 0.4
       penetrates_skin: No
-      per_cycle: Causes blurred vision and drowsiness. Knocks the victim out and makes them appear dead on 11th cycle.
-      notes: This essentially lets you play possum. Know someone is hunting you? Inject yourself with this just before they find you, and they'll mistake you for dead!
+      per_cycle: Causes blurred vision and drowsiness. Knocks the victim out and makes them appear dead on 11th cycle, up to a maximum duration of 2 min (not cumulative).
+      notes: A niche or gimmick reagent at best, but it might scare somebody if they don't know what's going on.
 
   - name: Capulettium plus
     ingredients:
@@ -1224,8 +1224,10 @@ recipes:
     info:
       depletion_rate: 0.4
       penetrates_skin: No
-      per_cycle: Instant and ongoing silence until chemical fully depletes, also prevents the use of all emotes. Makes the victim appear dead if they're resting.
-      notes: Telepathy or machine talk can get around the vocal paralysis.
+      per_cycle: Instant and ongoing vocal paralysis until chemical fully depletes, also prevents the use of all emotes. Makes the victim appear dead if they're laying down or sleeping.
+      notes: |
+             This essentially lets you play possum. You're unable to speak (excluding telepathy or machine talk), but you can make yourself appear dead in a pinch.
+             Know someone is hunting you? Inject yourself with this just before they find you, lay down and they'll mistake you for a corpse! You retain full consciousness and control of your body, so you can back up and ambush them when they least suspect it.
 
   - name: Amanitin
     sources: 
@@ -2651,6 +2653,15 @@ recipes:
     reaction_message: The substance turns an airy sky-blue and foams up into a new shape.
     info:
       notes: Makes a parrot upon synthesis, similar to life. Squawk!
+
+  - name: Reversium
+    reaction_message: .ylegnarts dnuora lriws ot snigeb erutxim ehT
+    info:
+      notes: Harmless fun. The duration can't be extended by having excess reversium in your bloodstream, so you only need to consume a tiny quantity every three minutes. 
+      depletion_rate: 0.4
+      penetrates_skin: No
+      application_effect: TOUCH and INGEST - See per life cyle.
+      per_cycle: Grants the 'reversed speech' mutation for 3 min (not cumulative), making you say everything backwards.
 
 # Miscellaneous reagents
 

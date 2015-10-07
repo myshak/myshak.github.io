@@ -899,6 +899,17 @@ recipes:
       - !step Attach the parts to a wall.
       - !step Insert the light tube or bulb, depending on the type of fixture.
 
+  - name: Heads on a spike
+    info:
+      notes: Heads can be removed by clicking on the spike with an empty hand.
+    tags: [make]
+    ingredients:
+      - Rods
+      - <Severed head> (up to 3)
+      - <Welder> (optional)
+      - !step Impale the head(s) on the rod.
+      - !step Optionally, secure the spike by welding it to the ground.
+
   - name: Space pod
     unsorted: true
     info: 
