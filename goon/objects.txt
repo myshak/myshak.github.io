@@ -106,7 +106,7 @@ recipes:
              The flash has two applications. Using the flash on someone without adequate eye protection will stun them and obscure their screen with a white flash.
              The other use is area flash, activated by clicking on the weapon when it's in your active hand. This will briefly obscure the screen of everyone nearby with a white overlay but not stun them. Area flashes also have a chance of disrupting active cloaking devices as well as holographic disguisers in a 3x3 radius.
              
-             Every time the flash is used, the bulb has a chance of burning out, rendering it permanently useless. They can be found in security lockers, dispensed from the vending machines and are in great supply in robotics. 
+             Every time the flash is used, the bulb has a chance of burning out, rendering it permanently useless. They can be found in security lockers, dispensed from the vending machines and manufactured in robotics. 
 
   - name: Remote Signaler
     tags: [tool]

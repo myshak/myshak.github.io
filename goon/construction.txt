@@ -313,11 +313,11 @@ recipes:
 
   - name: Poisoned surgery tool
     ingredients:
-      - <Scalpel> OR <Circular saw>
+      - <Scalpel> OR <Circular saw> OR <Enucleation Spoon>
       - Filled <Beaker>
-      - !step Dip the scalpel or saw in the beaker.
+      - !step Dip the scalpel, saw or spoon in the beaker.
     info:
-      notes: Scalpels and saws can be dipped in a poison or other reagent for fun and wacky effects upon stabbing.
+      notes: Certain surgery tools can be dipped in a poison or other reagent for fun and wacky effects upon stabbing. 
     tags: [make, weapon]
 
 # Cyborgs
@@ -782,7 +782,22 @@ recipes:
     ingredients:
       - Bedsheet
       - Wires
+      - <Scissors> OR <Wirecutters> (optional)
       - !step Use the cable coil on the bedsheet.
+    info:
+      notes: If required, the cable holding the cape together can be cut apart with wirecutters or scissors.
+
+  - name: Bandage
+    tags: [make, heal, bleeding, medical]
+    ingredients:
+      - <Bedsheet> OR <Cape>
+      - <Scissors> OR <Wirecutters>
+      - !step Cut the bedsheet or cape apart with the wirecutters.
+    info:
+      notes: |
+             You get three bandages for every bedsheet.
+             
+             Reduces the amount of bleeding, hence repeated application might be necessary to bandage a wound completely. Bandages alone aren't sufficient for mending surgical incisions, however. Bandages can be removed with wirecutters or scissors if the patient doesn't like the cosmetic overlay on their mob.
 
   - name: Skull mask
     tags: [make, equip, clothes]
@@ -849,12 +864,12 @@ recipes:
 
   - name: Rocket shoes
     info:
-      notes: It will run out of gas after two uses. Do not expect much in the way of steering.
+      notes: How many uses you get out of these depend on the type of tank = 2 (emergency O2), 4 (large air or O2) or 6 (jetpack). Do not expect much in the way of steering either way. Rocket shoes are technically disposable, but you can build another pair by taping a replacement gas tank to it. 
     tags: [make, equip, clothes, speed]
     ingredients:
-      - Emergency oxygen tank
-      - Any pair of normal shoes
-      - !step Use emergency oxygen tank on shoes
+      - <Jetpack> OR <Gas Tank> OR <Emergency oxygen tank>
+      - Shoes (any type)
+      - !step Use the gas tank on the shoes.
 
   - name: Shackles
     info:

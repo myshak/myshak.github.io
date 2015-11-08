@@ -815,3 +815,14 @@ recipes:
                           
                           TOUCH - 75% chance of +25 BRUTE and disfiguring the victim's face, 25% of +5 BRUTE. 20% chance of melting items.
       notes: More of a gimmick chem than legitimately destructive.
+
+  - name: Mugwort
+    tags: [drink, medical, heal, losebreath, oxy, tox, brute, burn]
+    sources:
+      - Wizard shuttle.
+    info:
+      depletion_rate: 0.4
+      penetrates_skin: No
+      application_effect: |
+                          INGEST - If target is wizard = 85% chance of -1 LOSEBREATH. 45% chances for each of -1 OXY, -1 TOX, -6 BRUTE and -6 BURN
+      notes: Can patch up minor injuries of magic users. 

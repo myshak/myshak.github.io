@@ -217,6 +217,18 @@ recipes:
       - Base drink from the soda fountain.
       - Extracted from all melons.
 
+  - name: Ice
+    ingredients:
+      - Water
+      - !step Cool to 273 K.
+    heat_to: Cool to 273 K.
+    tags: [base]
+    info:
+      penetrates_skin: No
+      depletion_rate: 0.4
+      application_effect: 5+ UNITS = Creates a solid, non-slippery chunk of ice when applied to floor tiles.
+      notes: The frozen state of water. The reagent turns to water when exposed to a temperature higher than 0° C.
+
   - name: Potassium
     sources:
       - Extracted from bananas.
