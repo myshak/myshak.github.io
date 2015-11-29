@@ -712,7 +712,7 @@ recipes:
       penetrates_skin: No
       per_cycle: |
                  Increases all depletion rates by 8. 10% chance of contracting food poisoning.
-                 If more than +10 health = +2 TOX
+                 If above +10 health = +2 TOX
       notes: Flushes other chemicals more rapidly than calomel, but does so at significant risk to the consumer. Aside from constant and violent vomiting, the health cap and depletion rate are significantly lower.
 
   - name: Piña Colada

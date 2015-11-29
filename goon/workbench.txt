@@ -178,7 +178,7 @@ recipes:
       - Workbench
       - !step Select the appropiate recipe and add the material piece to the workbench.
     info:
-      notes: Specific properties depend on the type of material used. Usually interchangeable with regular power cells in energy guns.
+      notes: Specific properties depend on the type of material used, but it should also be conductive in any case (i.e. a custom alloy will be required). Usually interchangeable with regular power cells in energy guns and stun batons.
     tags: [make, workbench]
 
   - name: Power Cell (Dynamic)
@@ -246,8 +246,13 @@ recipes:
       - Energy gun (any type)
       - Power Cell, small
       - !step Select the appropiate recipe and add the listed components to the workbench.
-    info:
-      notes: Rechargers do not recharge self-charging cells (separate or in a gun), and certain guns cannot be recharged regardless of cell type.
+    tags: [workbench, weapon]
+
+  - name: Stun baton cell swap
+    ingredients:
+      - Stun Baton
+      - Power Cell, small
+      - !step Select the appropiate recipe and add the listed components to the workbench.
     tags: [workbench, weapon]
 
 # Armor

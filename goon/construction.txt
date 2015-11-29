@@ -770,6 +770,15 @@ recipes:
       - !step Use the chainsaw or knife on the pumpkin to carve it
       - !step Use the flashlight on the carved pumpkin
 
+  - name: Cardboard box disguise
+    tags: [make, equip, clothes]
+    ingredients:
+      - Cardboard box
+      - <Fake moustache> (optional)
+      - <Scissors> OR <Wirecutters>
+      - !step Cut eye holes with the scissors or wirecutters.
+      - !step Optionally, attach the moustache to the cardboard box.
+
   - name: Ghost disguise
     tags: [make, equip, clothes]
     ingredients:
@@ -790,12 +799,12 @@ recipes:
   - name: Bandage
     tags: [make, heal, bleeding, medical]
     ingredients:
-      - <Bedsheet> OR <Cape>
+      - <Bedsheet> OR <Cape> OR <Towel>
       - <Scissors> OR <Wirecutters>
-      - !step Cut the bedsheet or cape apart with the wirecutters.
+      - !step Cut the base material apart with the wirecutters or scissors.
     info:
       notes: |
-             You get three bandages for every bedsheet.
+             You get three bandages for every piece of fabric.
              
              Reduces the amount of bleeding, hence repeated application might be necessary to bandage a wound completely. Bandages alone aren't sufficient for mending surgical incisions, however. Bandages can be removed with wirecutters or scissors if the patient doesn't like the cosmetic overlay on their mob.
 

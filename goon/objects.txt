@@ -28,7 +28,7 @@ recipes:
   - name: Body Armor
     tags: [clothes, armor, equip]
     info:
-      notes: Provides moderate protection to the torso. Will help you survive psychotic murderers wielding revolvers and energy weapons slightly longer, and prevent bleeding from pipe bomb shrapnels.
+      notes: Provides moderate protection to the torso. Will help you survive psychotic murderers wielding blunt objects, revolvers and energy weapons slightly longer, and prevent bleeding from pipe bomb shrapnels.
 
   - name: Welder
     tags: [tool]
@@ -77,7 +77,7 @@ recipes:
   - name: Beaker
     tags: [container]
     info:
-      notes: Holds up to 50 units of chemicals. Standard equipment for chemistry, but medbay has some as well. You generally can't examine the exact contents without spectroscopic goggles, a PDA reagent scanner or by using certain machinery.
+      notes: Holds up to 50 units of chemicals, though larger beakers (100 units) also exist. Standard equipment for chemistry, but medbay has some as well. You generally can't examine the exact contents without spectroscopic goggles, a PDA reagent scanner or by using certain machinery.
 
   - name: Staple gun
     tags: [weapon, tool]
@@ -189,9 +189,9 @@ recipes:
      notes: Essentially a handheld transceiver. Less versatile than a regular headset, but it can be clipped to your belt. Found in every emergency toolbox. Cyborgs use these to talk over the radio.
 
   - name: Paper
-    tags: [equip, clothes]
+    tags: []
     info:
-     notes: Use a pen on it to write stuff, examine it to read. Click on a noticeboard to pin it there. Place on head slot to wear it as a hat. You can also hold paper up to a camera to discreetly send messages to the AI.
+     notes: Use a pen on it to write stuff, examine it to read. Click on a noticeboard to pin it there. You can also hold paper up to a camera to discreetly send messages to the AI.
 
   - name: Vuvuzela
     tags: []
@@ -211,7 +211,7 @@ recipes:
     info:
       notes: |
              A melee weapon which delivers an incapacitating shock to the target, knocking them to the ground. It is also effective against cyborgs.
-             The stun baton has an On/Off function, and is on by default. Attempting to use it with the harm intent will instead stun YOU, leaving you at the mercy of whoever you were pursuing. A switched-off baton is completely inert unless you use the harm intent, which results in a good old beating.
+             The stun baton has an On/Off function, and is on by default. Attempting to use it with the harm intent when the battery hasn't been drained yet will instead stun YOU, leaving you at the mercy of whoever you were pursuing. A switched-off baton is completely inert unless you use the harm intent, which results in a good old beating, draining stamina and dealing brute damage.
              
-             They hold ten charges (examine the baton to see the number of charges left) and are available in security lockers.
+             They hold ten charges (examine the baton to see the number of charges left) and are available in security lockers. The VIP gimmick job spawns with a compact baton known as the stun cane for personal protection. There's no functional difference aside from the smaller battery (five charges) and icon.
 

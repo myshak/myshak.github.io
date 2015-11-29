@@ -654,9 +654,9 @@ recipes:
       penetrates_skin: No
       per_cycle: |
                  Increases all depletion rates by 5.
-                 If more than +20 health = +5 TOX
+                 If above +20 health = +5 TOX
       notes: |
-             Aggressive purgative. It'll do a lot of TOX damage itself but it cannot kill you, as the damage only applies while you are above 20 health. Use for emergencies to handle the really aggressive poisons that would definitely kill you if they remain active for long.
+             Aggressive purgative. It'll do a lot of TOX damage itself but it cannot kill you, as the damage only applies while you are above the health threshold. Use for emergencies to handle the really aggressive poisons that would definitely kill you if they remain active for long.
              
              Blood tests without a reagent scanner = draw blood and analyze it with the CheMaster in the pharmacy. 
       
@@ -726,8 +726,8 @@ recipes:
       per_cycle: |
                  1x stun reduction, minor stamina regeneration buff, causes jitteriness, reduces drowsiness, warms you up slightly. Attempts to cap LOSEBREATH at 3. Heals 1 OXY if OXY damage > 75.
                  
-                 If more than 0 health = 33% chance of -1 BRUTE, -1 BURN. 8% of -1 TOX. 
-                 If less than 0 health = -1 BRUTE, -1 BURN. 25% of -1 TOX
+                 If above 0 health = 33% chance of -1 BRUTE, -1 BURN. 8% of -1 TOX. 
+                 If below 0 health = -1 BRUTE, -1 BURN. 25% of -1 TOX
                  
                  OVERDOSE - 8% chance of +1/+2 TOX, 15% of extra +1/+2 TOX. 5% of stunning briefly and causing dizziness.
       notes: It's pretty much just a weaker analogue of medbay's epinephrine, but it's addictive and has a few more side effects.
@@ -775,12 +775,13 @@ recipes:
                  Dizziness, confused movement, minor total stamina buff, warms you up slightly when cold. 
                  Attempts to cap OXY at 65 and LOSEBREATH at 5. Rolls a chance to fix cardiac failure. Increases depletion rate of sarin by 20.
                  
-                 If more than -60 health = +1 TOX. If less than -25 health = -1 TOX, -3 BRUTE, -3 BURN
+                 If above -25 health = +1 TOX
+                 If below -25 health = -1 TOX, -3 BRUTE, -3 BURN
                  
                  OVERDOSE - 8% chance of +1/+2 TOX
       notes: |
              Fairly similar to epinephrine but will rapidly push deep-crit damage levels towards shallow crit levels. Use this if you find someone who is right at the edge of death. Flushes sarin extremely rapidly. 
-             Atropine alone won't outright kill people but it's a pretty decent debilitating poison if you wanna use it that way.
+             Atropine alone doesn't really kill people but it's a pretty decent debilitating poison if you wanna use it that way.
       
   - name: Salicylic Acid (Painkiller)
     ingredients: 
@@ -962,7 +963,7 @@ recipes:
       penetrates_skin: No
       per_cycle: |
                  Raises ethanol depletion rates by 8.
-                 If less than +25 health = -2 TOX
+                 If below +25 health = -2 TOX
       notes: Sober someone up in a hurry. Nefarious people sometimes spike other poisons with ethanol or booze reagents to sabotage charcoal treatments.
       
   - name: Insulin
@@ -1456,6 +1457,14 @@ recipes:
       depletion_rate: 0.4
       Units to infect (adjusted): 4.9
       notes: 100% chance to cause cardiac abscondment. Generally lethal without an immediate heart transplant.
+
+  - name: Liquid spacetime
+    tags: [disease]
+    info:
+      penetrates_skin: No
+      depletion_rate: 0.4
+      Units to infect (adjusted): 4.9
+      notes: Infects the victim with teleportitis. It repeatedly warps your character to random nearby tiles, so long as the target tile has flooring. The teleportation also causes sparks to fly from the destination, which can be very bad if you land on something ignitable.
 
   - name: Rajaijah (Madness toxin)
     sources:
