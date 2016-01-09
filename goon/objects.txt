@@ -52,7 +52,7 @@ recipes:
   - name: Power Cell
     tags: []
     info:
-      notes: Main power for cyborgs and backup juice for APCs before the lights go out. Several types of these high-capacity batteries can be found on the station, differing in maximum capacity or other properties. If depleted, they may be recharged manually. 
+      notes: Main power for cyborgs and backup juice for APCs before the lights go out. Several types of these high-capacity batteries can be found on the station, differing in maximum capacity or other properties. If depleted, you can hook them up to specialized chargers. 
 
   - name: Light Tube
     tags: [light]
@@ -72,7 +72,7 @@ recipes:
   - name: Rods
     tags: []
     info:
-      notes: Used for many constructions projects. Made from regular metal, and available in e.g. tool storage and the engineering warehouse.
+      notes: Used for many constructions projects. Made from regular metal, and available in e.g. tool storage and engineering's stash.
 
   - name: Beaker
     tags: [container]
@@ -87,7 +87,7 @@ recipes:
   - name: Flashlight
     tags: [light]
     info:
-      notes: Illuminates dark areas. Found in emergency toolboxes and the warehouse, among other places. Small enough to fit in a pocket or on your belt. Multiple light sources on your person will stack, lighting a larger area with greater luminosity.
+      notes: Illuminates dark areas. Found in emergency toolboxes and the warehouse, among other places. Small enough to fit in a pocket or on your belt. Multiple light sources on your person will stack, lighting the area with greater luminosity.
 
   - name: Gas Tank
     tags: [tank]
@@ -156,7 +156,7 @@ recipes:
   - name: Insulated Gloves
     tags: [equip, clothes]
     info:
-      notes: For handling live wires. Highly coveted for their ability to allow door hacking. Found in engineering and electronics, and can be ordered by the quartermaster.
+      notes: For handling live wires. Highly coveted for their ability to allow door hacking. Found in engineering and mechanics, and can be ordered by the quartermaster.
 
   - name: Mousetrap
     tags: []

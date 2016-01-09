@@ -11,7 +11,9 @@
 # - Basic construction
 # - Advanced construction
 # - Misc fixes
+# - Hacks
 # - Deconstructions
+# - Misc interactions
 #
 # Special tags:
 # [make] A craftable item.
@@ -249,7 +251,7 @@ recipes:
 
   - name: Stun gloves
     info:
-      notes: Your intent must be set to Harm in order for the gloves to work. They only hold one charge at a time.
+      notes: Insulated gloves armed with a powerful shock to briefly stun whomever they touch. Your intent must be set to harm in order for this to work. Craftable stun gloves only hold one charge at a time.
     tags: [make, weapon, equip, clothes]
     ingredients:
       - <Insulated Gloves> OR <Power Gloves>
@@ -555,7 +557,9 @@ recipes:
       - !step Optionally, you may use a pen to rename the finished robot.
       - !step Use the proximity sensor to finish the robot. 
     info:
-      notes: Medbots will detect nearby people and inject them with helpful drugs to slowly bring them back to health. They are a supplement to medical doctors, not a replacement. Medbots may also be produced outright at a robotics fabricator or ordered from the cargo bay.
+      notes: |
+             Medbots will detect nearby people and inject them with helpful drugs to slowly bring them back to health. They are a supplement to medical doctors, not a replacement. When emagged, the medbot will enthusiastically inject everyone with massive amounts of poison regardless of injury or not.
+             Medbots may also be produced outright at a robotics fabricator or ordered from the cargo bay.
 
   - name: Floorbot
     unsorted: true
@@ -570,7 +574,7 @@ recipes:
       - !step Use the cyborg arm on the resulting assembly.
     info:
       notes: |
-              Floorbots will detect nearby areas of space and tirelessly use their very finite supply of floor tiles to turn it into walkable floors. Floorbots may also be produced outright at a robotics fabricator (where they will spawn with 10 tiles) or ordered from the cargo bay.
+              Floorbots will detect nearby areas of space and tirelessly use their very finite supply of floor tiles to turn it into walkable floors. When emagged, floorbots will rip up floors equally as tirelessly, quickly turning habitable parts of a station into cold, airless tombs. Floorbots may also be produced outright at a robotics fabricator (where they will spawn with 10 tiles) or ordered from the cargo bay.
              
               If you use more than 10 floor tiles, the finished floorbot will have however many you put in. If you use less than 10, the floorbot will have 10. Therefore, it is most efficient to use 1-2 in creation and load the rest after the floorbot is done.
 
@@ -588,7 +592,7 @@ recipes:
       - !step Optionally, you may use a pen to rename the finished robot.
       - !step Use the proximity sensor to finish the robot. 
     info:
-      notes: Firebots will detect nearby fires, whether on tiles or on people, and put them out. Firebots may also be produced outright at a robotics fabricator or ordered from the cargo bay.
+      notes: Firebots will detect nearby fires, whether on tiles or on people, and put them out. When emagged, firebots will ram anyone nearby, knocking them down with surprising efficiency. Firebots may also be produced outright at a robotics fabricator or ordered from the cargo bay.
 
   - name: Cleanbot
     unsorted: true
@@ -600,7 +604,7 @@ recipes:
       - !step Use the sensor on the bucket.
       - !step Use the cyborg arm on the resulting assembly. 
     info:
-      notes: Cleanbots will clean the floor around them automatically. Cleanbots may also be produced outright at a robotics fabricator or ordered from the cargo bay.
+      notes: Cleanbots will clean the floor around them automatically. When emagged, cleanbots will apply space lube to as many nearby floors as they can. Cleanbots may also be produced outright at a robotics fabricator or ordered from the cargo bay.
 
   - name: Securitron 
     unsorted: true
@@ -622,7 +626,9 @@ recipes:
       - !step Optionally, you may use a pen to rename the finished robot.
       - !step Add the stun baton.
     info:
-      notes: Securitrons network into the station's security computer, identify criminals, and arrest them. Securitrons may also be produced outright at a robotics fabricator or ordered from the cargo bay.
+      notes: |
+             Securitrons network into the station's security computer, identify criminals, and arrest them. Securitrons may also be produced outright at a robotics fabricator or ordered from the cargo bay.
+             When emagged, securitrons arrest everyone they see. In addition, if emagged a second time, securitrons literally flip the fuck out, repeatedly stunning anyone that enters their sights.
 
   - name: Guardbuddy
     unsorted: true
@@ -640,7 +646,7 @@ recipes:
       - !step Insert the mainboard.
       - !step Add the robot arm.
     info:
-      notes: Utilizes the DWAINE terminals to conduct operations. To properly use them, one must manually enter commands via the DWAINE terminals in the research sector.
+      notes: Utilizes the DWAINE terminals to conduct operations. To properly use them, one must manually enter commands via the DWAINE terminals in the research sector. Some modules can malfunction dangerously when exposed to EMP grenades.
 
   - name: Buttbot
     tags: [make, robot]
@@ -649,7 +655,7 @@ recipes:
       - <Cyborg arm (Standard)> (left or right)
       - !step Attach the cyborg arm to the butt.
     info:
-      notes: Buttbots...should be seen instead of explained.
+      notes: Buttbots...should be seen instead of explained. When emagged, they produce an amazing amount of enjoyment to bystanders.
 
   - name: Amusing duck
     tags: [make, robot]
@@ -658,7 +664,10 @@ recipes:
       - <Cyborg arm (Standard)> (left or right)
       - !step Combine the bike horn with the robot arm.
     info:
-      notes: Amusing ducks will slowly move around at random, quacking and emitting a playful jingle. They will occasionally lay eggs (similar, but not identical to Easter eggs), which in turn may contain fun items.
+      notes: |
+             Amusing ducks will slowly move around at random, quacking and emitting a playful jingle. They will occasionally lay eggs (similar, but not identical to Easter eggs), which in turn may contain fun items.
+             
+             When emagged, they lay eggs and quack more frequently. However, they will also play their jingle on dissonant chords, giving them a distinctly 'wrong' and slightly unsettling sound. Amusing ducks can be colossally annoying when a lot of them are stacked into a small area and can easily inspire some to violence to make the quacking stop.
 
   - name: Chefbot
     tags: [make, robot]
@@ -676,7 +685,7 @@ recipes:
       - <Cyborg leg (Standard)> (left or right)
       - !step Attach the cyborg leg to the skull.
     info:
-      notes: Spooky skeleton puns.
+      notes: Spooky. When emagged, they provide a wide variety of skeleton puns.
 
   - name: Mulebot (hack)
     unsorted: true
@@ -695,7 +704,20 @@ recipes:
       - !step Click 'Toggle Power' to switch on the MULE.
       - !step Lock the MULE's interface with your ID card or EMAG.
     info:
-      notes: The wires are randomized for every bot. For more information, see the <a href="http://wiki.ss13.co/Robots#MULEbot">Goonstation wiki</a>.
+      notes: |
+             Once you've opened the maintenance panel, pulse the wires to figure out their function and then bypass the safety by cutting the corresponding cables. They are randomized for every bot.
+             
+             Power cell = Click this with an empty hand to remove the cell for recharging or upgrading.
+             
+             You hear a radio crackle. = Leave those wires alone. Used for navigation and to interface with PDAs.
+             
+             The charge light flickers. =  Leave as is. Both wires need to be intact or the bot will be immobilized.
+             
+             The load platform clunks. =  Pointless. Out of the box, any type of cargo can be loaded onto the MULE now.
+             
+             The drive motor whines briefly. = Disables the speed limiter. Highly recommended, but make sure to only cut one of the two wires!
+             
+             The external warning lights flash briefly. = When cut, the machine will knock and run over anybody in its path. This wire has no impact as far as prone people are concerned, as the MULE never tries to avoid them.
 
 # Misc assemblies
 
@@ -1006,25 +1028,69 @@ recipes:
 
 # Basic construction
 
+  - name: Closet
+    info:
+      notes: Widely used around the station. Can hold almost anything inside them, and may be secured by an ID lock or with the help of a welding tool. If you see one of them shaking like crazy, that means a person is trying to get out of a welded or locked closet. Doing flips has a chance to damage and eventually break them open from the inside.
+    tags: [make]
+    ingredients:
+      - 2x <Metal Sheet>
+      - !step Click on the metal while you're holding it.
+      - !step Choose Closet.
+
+  - name: Bed
+    info:
+      notes: Sleepy? Buckle yourself to a bed and use the 'sleep in' command. To wake up, click the rest button on your HUD.
+    tags: [make]
+    ingredients:
+      - 2x <Metal Sheet>
+      - !step Click on the metal while you're holding it.
+      - !step Choose Bed.
+
+  - name: Stool
+    info:
+      notes: Small stool for decoration purposes.
+    tags: [make]
+    ingredients:
+      - 1x <Metal Sheet>
+      - !step Click on the metal while you're holding it.
+      - !step Choose Stool.
+
+  - name: Chair
+    info:
+      notes: People are effectively immobilized when buckled to the chair. Folding chairs can be folded up and carried around. They can also be climbed and jumped from, perfect for wrestlers!
+    tags: [make]
+    ingredients:
+      - 1x <Metal Sheet>
+      - !step Click on the metal while you're holding it.
+      - !step Choose Chair.
+
   - name: Barricades
     tags: [make]
     info:
-      notes: Barricades can be made in space.
+      notes: Barricades can only be made in space.
     ingredients:
       - Rods
-      - !step Use rods first on empty space, creating a lattice
-      - !step Use more rods on the lattice to create the barricade
-      - !step Reinforce with even more rods
+      - !step Use rods first on empty space, creating a lattice.
+      - !step Use more rods on the lattice to create the barricade.
+      - !step Reinforce with even more rods.
 
   - name: Table
     tags: [make]
     info:
-      notes: These can either be regular or reinforced, a corner piece, face a certain direction or stand-alone. Not the most formidable obstacle. Can be used for impromptu surgery if the patient is unconscious.
+      notes: Tables of the same type (i.e. regular or reinforced) snap into place and connect with each other automatically when build. Not the most formidable obstacle overall, though. Can be used for impromptu surgery if the patient is unconscious.
     ingredients:
-      - 2x <Metal Sheet> OR <Metal Sheet, reinforced>
+      - 2x <Metal Sheet> OR 2x <Metal Sheet, reinforced>
       - !step Click on the metal while you're holding it.
       - !step Choose Table Parts.
       - !step Pick up and click on the parts to build a table.
+
+  - name: Rack
+    tags: [make]
+    ingredients:
+      - 1x <Metal Sheet>
+      - !step Click on the metal while you're holding it.
+      - !step Choose Rack Parts.
+      - !step Pick up and click on the parts to build a rack.
 
   - name: Floor tile
     ingredients:
@@ -1034,17 +1100,14 @@ recipes:
       notes: Make these from regular metal or just crowbar them right out from under people's feet. Damaged floor tiles are automatically discarded upon removal.
 
   - name: Floors
-    info:
-      notes: Regular floors can be made in space.
     tags: [make, floor]
     ingredients:
       - Rods
       - Floor tile
-      - !step Use rods first on empty space, creating a lattice
-      - !step Place a floor tile on top of it
+      - !step Use rods first on empty space, creating a lattice.
+      - !step Place a floor tile on top of it.
       - !step Use another floor tile on the plating to create a regular floor.
-      - !step Fire-resistant floors can be made using one floor tile, and one rods
-      - !step Use rods on plating to create a floor similar to the engine floor
+      - !step Alternatively, reinforced floors can be made using 1 floor tile and 1 rod on the lattice.
 
   - name: Metal Sheet, reinforced
     ingredients:
@@ -1102,6 +1165,16 @@ recipes:
       - !step Use the crowbar on the girder to dislodge it.
       - !step Use the reinforced metal sheets on the girder to add the plating.
 
+  - name: Grille
+    tags: [make]
+    ingredients:
+      - 2x <Rods>
+      - <Screwdriver> (optional)
+      - !step Click on the rods while you're holding them.
+      - !step Optionally, unsecure the grille by using the screwdriver to reposition it.
+    info:
+      notes: They are fastened to the floor by default.
+
   - name: Glass Sheet, reinforced 
     ingredients:
       - Glass Sheet
@@ -1110,43 +1183,67 @@ recipes:
     info:
       notes: Made by adding rods to glass or by using a general manufacturer.
 
-  - name: Window, regular (one direction)
-    info:
-      notes: Windows will be build in the direction your mob is facing. They are fastened to the floor by default.
+  - name: Grille/window combination (auto; COG2)
     tags: [make, window]
     ingredients:
-      - 1x <Glass Sheet>
-      - <Screwdriver> (optional)
-      - !step Click on the glass while you're holding it.
-      - !step Choose Thin Window.
-      - !step Optionally, unsecure the window by using the screwdriver, then then right-click and choose "rotate" to reorient the window.
-
-  - name: Window, regular (full)
+      - Grille
+      - 2x <Glass Sheet> OR 2x <Glass Sheet, reinforced>
+      - !step Click with the glass sheet on the grille.
     info:
-      notes: You may push/pull this window around. By default, they are not fastened to the floor.
+      notes: Auto windows (used on COG2) don't have an one-directional type. The window is fastened to the floor by default.
+
+  - name: Grille/window combination
+    tags: [make, window]
+    ingredients:
+      - Grille
+      - 2x <Glass Sheet> OR 2x <Glass Sheet, reinforced>
+      - !step Position yourself with regard to what you want to do.
+      - !step If you're inside the grille, the window will be build in the direction your mob is facing.
+      - !step If you're adjacent to it, the window will be build facing the tile you're standing on.
+      - !step If you're diagonal to it, a full window will be build.
+      - !step Click with the glass sheet on the grille.
+    info:
+      notes: Doesn't apply to COG2. The window is fastened to the floor by default.
+
+  - name: Window (auto; COG2)
+    info:
+      notes: Auto windows (used on COG2) don't have an one-directional type. They are fastened to the floor by default.
     tags: [make, window]
     ingredients:
       - 2x <Glass Sheet>
       - <Screwdriver> (optional)
+      - <Crowbar> (optional)
       - !step Click on the glass while you're holding it.
       - !step Choose Large Window.
-      - !step Optionally, secure the window by using the screwdriver.
+      - !step Optionally, unsecure the window (see 'Window (disassembly)') to reorient it.
 
-  - name: Window, reinforced (one direction)
+  - name: Window, regular (one direction)
     info:
-      notes: Windows will be build in the direction your mob is facing. They are fastened to the floor by default.
+      notes: Doesn't apply to COG2. Windows will be build in the direction your mob is facing. They are fastened to the floor by default.
     tags: [make, window]
     ingredients:
-      - 1x <Glass Sheet, reinforced>
+      - 1x <Glass Sheet>
       - <Screwdriver> (optional)
       - <Crowbar> (optional)
       - !step Click on the glass while you're holding it.
       - !step Choose Thin Window.
-      - !step Optionally, unsecure the window by using screwdriver-crowbar-screwdriver, then then right-click and choose "rotate" to reorient the window.
+      - !step Optionally, unsecure the window (see 'Window (disassembly)') to reorient it.
 
-  - name: Window, reinforced (full) 
+  - name: Window, regular (full)
     info:
-      notes: You may push/pull this window around. By default, they are not fastened to the floor.
+      notes: Doesn't apply to COG2. They are fastened to the floor by default.
+    tags: [make, window]
+    ingredients:
+      - 2x <Glass Sheet>
+      - <Screwdriver> (optional)
+      - <Crowbar> (optional)
+      - !step Click on the glass while you're holding it.
+      - !step Choose Large Window.
+      - !step Optionally, unsecure the window (see 'Window (disassembly)') to reorient it.
+
+  - name: Window, reinforced (auto; COG2)
+    info:
+      notes: Auto windows (used on COG2) don't have an one-directional type. They are fastened to the floor by default.
     tags: [make, window]
     ingredients:
       - 2x <Glass Sheet, reinforced>
@@ -1154,7 +1251,31 @@ recipes:
       - <Crowbar> (optional)
       - !step Click on the glass while you're holding it.
       - !step Choose Large Window.
-      - !step Optionally, secure the window by using screwdriver-crowbar-screwdriver.
+      - !step Optionally, unsecure the window (see 'Window (disassembly)') to reorient it.
+
+  - name: Window, reinforced (one direction)
+    info:
+      notes: Doesn't apply to COG2. Windows will be build in the direction your mob is facing. They are fastened to the floor by default.
+    tags: [make, window]
+    ingredients:
+      - 1x <Glass Sheet, reinforced>
+      - <Screwdriver> (optional)
+      - <Crowbar> (optional)
+      - !step Click on the glass while you're holding it.
+      - !step Choose Thin Window.
+      - !step Optionally, unsecure the window (see 'Window (disassembly)') to reorient it.
+
+  - name: Window, reinforced (full) 
+    info:
+      notes: Doesn't apply to COG2. They are fastened to the floor by default.
+    tags: [make, window]
+    ingredients:
+      - 2x <Glass Sheet, reinforced>
+      - <Screwdriver> (optional)
+      - <Crowbar> (optional)
+      - !step Click on the glass while you're holding it.
+      - !step Choose Large Window.
+      - !step Optionally, unsecure the window (see 'Window (disassembly)') to reorient it.
 
 # Advanced construction
 
@@ -1234,7 +1355,7 @@ recipes:
 
   - name: Disposal pipes
     info:
-      notes: Replacement pipe segments can be obtained from a pipe dispenser. For more information, see the <a href="http://wiki.ss13.co/Construction#Building_and_fixing_disposal_pipes">Goonstation wiki</a>.
+      notes: Replacement pipe segments can be obtained from a pipe dispenser. For more information, see the accompanying text file.
     tags: [fix]
     ingredients:
       - Pipe segment
@@ -1248,7 +1369,7 @@ recipes:
 
   - name: Entire rooms (ABC-U)
     info:
-      notes: ABC-Us and blueprint markers can be found in the supply warehouse. You don't need to replicate entire rooms. You can pick a section of it or multiple sections to create different rooms. The blueprint marker can create multiple blueprints before running out of energy. This way you can pick all the pieces you want in advance and put them together in a new configuration. Remember to save them with their own names so you don't get them mixed.
+      notes: You don't need to replicate entire rooms. You can pick a section of it or multiple sections to create different rooms. The blueprint marker can create multiple blueprints before running out of energy. This way you can pick all the pieces you want in advance and put them together in a new configuration. Remember to save them with their own names so you don't get them mixed.
     tags: [make, wall, window, door]
     ingredients:
       - ABC-U (Automated Blueprint Construction Unit)
@@ -1263,7 +1384,7 @@ recipes:
 
   - name: Microwave (fix)
     info:
-      notes: If the microwave is just dirty, use a spray bottle of space cleaner. A completely broken unit has to be fixed with some tools.
+      notes: If the microwave is merely dirty, use a spray bottle of space cleaner. A completely broken unit has to be fixed with some tools.
     tags: [fix]
     ingredients:
       - Microwave
@@ -1295,6 +1416,118 @@ recipes:
       - !step Wrench the APC.
       - !step Apply the mulitool.
       - !step Finally, use the screwdriver on it again.
+
+# Hacks
+
+  - name: Airlock (hack)
+    unsorted: true
+    tags: [hack, door]
+    ingredients:
+      - Screwdriver
+      - Multitool
+      - Wirecutters
+      - Crowbar
+      - <Insulated gloves> (recommended)
+      - !step Use the screwdriver on the airlock.
+      - !step Click the airlock (without screwdriver in hand) to open the GUI.
+      - !step Have the multitool in hand to test which wire does what.
+      - !step Have the wirecutters in hand to cut or mend desired wire(s).
+      - !step If the test light is on and the bolts are down, pulse the wires to raise them.
+      - !step Use the screwdriver on the airlock when finished.
+      - !step Crowbar opens powered doors whose test lights are off, and the bolts up.
+      - !step Crowbar also opens unpowered doors with raised bolts.
+    info:
+      notes: |
+             Door wiring is randomized per game, but all doors have the same wires. Main and backup power functions are tied to the local APC, and using a multitool to pulse wires will only work if the door has power.
+             
+             Main power = Disables main power temporarily (pulsed) or permanentely (cut).
+             
+             Backup power = Comes online 10 seconds after main power fails. If both main and backup power are down (by APC failure or cutting both wires), the door can be pried open if the door isn't bolted, welded shut or emagged.
+             
+             Electrify = The door becomes electrified temporarily (pulsed) or permanentely (cut), shocking anybody who tries to open or interact with it.
+             
+             ID scan = Identifiable with multitool ("access denied" animation plays). Scans the ID of people trying to bump-open a restricted door, and will deny them access when the wire is cut. All-access airlocks don't use ID scan.
+             
+             AI control = Disables control temporarily (pulsed) or permanentely (cut). There's a lengthy-but-automatic hacking procedure that allows AIs and cyborgs to regain control provided that at least one of the power wires is still intact.
+             
+             Open/close = If ID scan is disabled or unnecessary, pulsing this wire will trigger the open/close cycle. Cutting the wire disables the motor that drives the mechanism.
+             
+             Bolts = Toggles (pulsed) or drops (cut) the bolts. A bolted airlock will remain closed or open until it is unbolted (a multitool is therefore very handy for hacking), and not even the crowbar is enough to move it. The bolts can fall if the door has no power, but they can't be retracted in that state.
+             
+             Quick & dirty method = Find a random airlock, cut every wire until the bolts drop, make a note of which color does this. Proceed to target airlock, cut every other wire except that one, then use the crowbar.
+
+  - name: Vending machine (hack)
+    unsorted: true
+    tags: [hack]
+    ingredients:
+      - Screwdriver
+      - Multitool
+      - Wirecutters
+      - <Insulated gloves> (recommended)
+      - !step Use the screwdriver on the vendor.
+      - !step Click the vendor (without screwdriver in hand) to open the GUI.
+      - !step Have the multitool in hand to test which wire does what.
+      - !step Have the wirecutters in hand to cut or mend desired wire(s).
+      - !step Use the screwdriver on the vendor when finished.
+    info:
+      notes: |
+             Vending machines have four wires and four lights on them. The function of each wire is randomized each round, but the same for all vending machines.
+             
+             Inventory (green light) = Unlocks hidden items when pulsed (light is on). Not every vendor has unlisted inventory.
+             
+             ID check (purple/yellow light) = Disables access restrictions when cut (light turns yellow), allowing anybody to vend items. Doesn't work on machines that ask for money.
+             
+             Electrify (orange light) = Electrifies the vendor temporarily (pulsed; light is on) or permanentely (cut).
+             
+             Malfunction (red light) =  Causes the vendor to randomly launch items at nearby people when pulsed (light is blinking) or cut.
+
+  - name: Manufacturer (hack)
+    unsorted: true
+    tags: [hack]
+    ingredients:
+      - Screwdriver
+      - Multitool
+      - Wirecutters
+      - <Insulated gloves> (recommended)
+      - !step Use the screwdriver on the manufacturer.
+      - !step Click the manufacturer (without screwdriver in hand) to open the GUI.
+      - !step Have the multitool in hand to test which wire does what.
+      - !step Have the wirecutters in hand to cut or mend desired wire(s).
+      - !step Use the screwdriver on the manufacturer when finished.
+    info:
+      notes: |
+             Manufacturers have four wires and four lights on them. The function of each wire is randomized each round, but the same for all manufacturers.
+             
+             Inventory (white light) = Unlocks higher speed settings (up to 5) and hidden items when pulsed (light is on). Not every manufacturer has unlisted inventory.
+             
+             Power (red light) = Controls the power supply. Shocks the hacker when pulsed, and disables the machine when cut.
+             
+             Electrify (yellow light) = Electrifies the manufacturer temporarily (pulsed; light is on) or permanentely (cut).
+             
+             Malfunction (blue light) = When pulsed or cut (light is blinking), the machine will malfunction, working more slowly and making awful grinding noises.
+
+  - name: APC (hack)
+    unsorted: true
+    tags: [hack]
+    ingredients:
+      - Screwdriver
+      - Multitool
+      - Wirecutters
+      - <Insulated gloves> (recommended)
+      - !step Use the screwdriver on the APC.
+      - !step Click the APC (without screwdriver in hand) to open the GUI.
+      - !step Have the multitool in hand to test which wire does what.
+      - !step Have the wirecutters in hand to cut or mend desired wire(s).
+      - !step Use the screwdriver on the APC when finished.
+    info:
+      notes: |
+             APCs have four wires, although two wires are identical. Unlike other devices, APC wires can be bitten, which acts the same as wirecutters - but remember that if you don't have the real thing, you can't mend them again. Killing the power to an APC also automatically cuts the power to doors and machinery in the area controlled by that APC, meaning you can use this as a faster means for door hacking if you don't plan on using any powered devices for a short period.
+             
+             ID lock = Unlocks the interface temporarily (pulsed) or permanentely (cut), bypassing the need for an ID with engineering access.
+             
+             AI control = Disables control temporarily (pulsed) or permanentely (cut).
+             
+             Power - Disrupts the APC's ability to supply electricity to the associated area temporarily (pulsed) or permanentely (cut). If you pulsed the wire by accident, cut and mend the cable to restore power instantly.
 
 # Deconstructions
 
@@ -1332,16 +1565,18 @@ recipes:
       - Wirecutters
       - Wrench
       - Welder
-      - !step Screwdriver
-      - !step Crowbar
-      - !step Wirecutters
-      - !step Screwdriver
-      - !step Crowbar (removes circuit board)
-      - !step Wrench
-      - !step Welder 
+      - !step Disconnect the monitor with the screwdriver.
+      - !step Remove the monitor with the crowbar.
+      - !step Remove the cables with the wirecutters.
+      - !step Unfasten the circuit board with the screwdriver.
+      - !step Pry out the circuit board with the crowbar.
+      - !step Loosen the frame's bolts with the wrench.
+      - !step Cut apart the frame with the welder.
 
   - name: Computer, terminal/heavy (disassembly)
     unsorted: true
+    info:
+      notes: Not all computers can be dismantled.
     tags: [disassemble, computer]
     ingredients:
       - Screwdriver
@@ -1349,59 +1584,30 @@ recipes:
       - Wirecutters
       - Wrench
       - Welder
-      - !step Screwdriver
-      - !step Crowbar
-      - !step Crowbar (removes hard drive)
-      - !step Wirecutters
-      - !step Crowbar (removes all modules)
-      - !step Screwdriver
-      - !step Crowbar (removes motherboard)
-      - !step Wrench
-      - !step Welder
-
-  - name: APC (hack)
-    info:
-      notes: There are four wires. Two short out the APC when cut, one cuts AI control when cut, and one does nothing when cut, but unlocks the APC when pulsed with a multitool.  There's a chance you'll get shocked when cutting wires, so either have insulated gloves or do it in an isolated area where no-one will find you.  South maintenance is a good choice.
-    tags: [hack]
-    ingredients:
-      - Screwdriver
-      - Wirecutters
-      - Multitool
-      - !step Screwdriver
-      - !step Click on APC and drag the windows away from each other so you can see both at once
-      - !step Get wirecutters out of your toolbox/backpack/pockets and use them on the APC with the windows still open
-
-  - name: Airlock (hack)
-    unsorted: true
-    info:
-      notes: Door wiring is randomized per game, but all doors have the same wires. Using a multitool to pulse wires will only work if the door has power. Cutting wires can rid the door of some features (AI Control for instance) until the said wire is mended.
-    tags: [hack, door]
-    ingredients:
-      - Screwdriver
-      - Multitool
-      - Wirecutters
-      - Crowbar
-      - !step Screwdriver on Airlock
-      - !step Click Airlock (without screwdriver in hand)
-      - !step Have a Multitool in hand to test which wire does what
-      - !step Have a Wirecutter to cut or mend desired wire(s)
-      - !step If test light is on and bolts are down, pulse the wires to raise bolts.
-      - !step Crowbar opens unpowered doors with raised bolts
-      - !step Screwdriver the door to close it up when finished.
-      - !step Crowbar also opens powered doors, whose test lights are off, and the bolts up.
+      - !step Disconnect the monitor with the screwdriver.
+      - !step Remove the monitor with the crowbar.
+      - !step Remove the hard disk drive with the crowbar.
+      - !step Remove the cables with the wirecutters.
+      - !step Remove all peripheral boards with the crowbar.
+      - !step Unfasten the mainboard with the screwdriver.
+      - !step Pry out the mainboard with the crowbar.
+      - !step Loosen the frame's bolts with the wrench.
+      - !step Cut apart the frame with the welder.
 
   - name: Wall, regular (disassembly)
     tags: [disassemble, wall]
     ingredients:
       - Welder
-      - Screwdriver
       - Wrench
-      - !step Use the welder on the wall
-      - !step Screwdriver on 'Wall' to dislodge girders OR
-      - !step Wrench to dismantle girders
+      - <Screwdriver> (optional)
+      - !step Use the welder on the wall.
+      - !step Use the wrench to dismantle the girder.
+      - !step Optionally, use the screwdriver on the girder to dislodge it instead.
 
   - name: Wall, reinforced (disassembly)
     unsorted: true
+    info:
+      notes: Each step requires you to stand still from 4 to 10 seconds.
     tags: [disassemble, wall]
     ingredients:
       - Wirecutter
@@ -1409,21 +1615,140 @@ recipes:
       - Welder
       - Wrench
       - Crowbar
-      - !step Wirecutter
-      - !step Screwdriver
-      - !step Welder
-      - !step Crowbar
-      - !step Wrench
-      - !step Welder
-      - !step Crowbar
-      - !step Screwdriver
-      - !step Wirecutter
-      - !step Wrench
+      - !step Remove the outer rods with the wirecutters.
+      - !step Unsecure the support lines with the screwdriver.
+      - !step Slice the metal cover with the welder.
+      - !step Pry off the metal cover with the crowbar.
+      - !step Loosen the support rods with the wrench.
+      - !step Detach the support rods with the welder.
+      - !step Pry off the outer sheath with the crowbar, revealing the girder.
+      - !step Loosen the girder's support rods with the screwdriver.
+      - !step Cut apart the girder's support rods with the wirecutters.
+      - !step Use the wrench to dismantle the girder.
 
   - name: Hidden door (disassembly)
     tags: [disassemble, door]
     ingredients:
       - Screwdriver
       - Wrench
-      - !step Screwdriver
-      - !step Wrench
+      - !step Use the screwdriver on the wall.
+      - !step Use the wrench to dismantle the girder.
+
+  - name: Grille (disassembly)
+    tags: [disassemble]
+    ingredients:
+      - Wirecutters
+      - <Insulated gloves> (recommended)
+      - <Screwdriver> (optional)
+      - !step Cut the grille apart with the wirecutters.
+      - !step Optionally, use the screwdriver on the grille to dislodge it instead.
+    info:
+      notes: Some grilles are electrified, as such it would be wise to have insulated gloves on before attempting to destroy or dislodge it. Alternatively, hit it repeatedly with a shard of glass to avoid being shocked.
+
+  - name: Window (disassembly)
+    tags: [disassemble, window]
+    ingredients:
+      - Screwdriver
+      - Crowbar
+      - !step Loosen the window with the screwdriver.
+      - !step Use the crowbar to pry the window out of the frame.
+      - !step Unfasten the frame from the floor with the screwdriver.
+      - !step The window can now be moved...
+      - !step ...or rotated (right click verb; one-directional classic window only).
+      - !step You can use the tools in reverse order to re-secure the window.
+    info:
+      notes: This procedure applies to every type of window, except for the fact that one-directional auto windows (used on COG2) don't exist.
+
+  - name: Table (disassembly)
+    tags: [disassemble]
+    ingredients:
+      - Wrench
+      - !step Dismantle the table with the wrench.
+
+  - name: Table, reinforced (disassembly)
+    tags: [disassemble]
+    ingredients:
+      - Welder
+      - Wrench
+      - !step Weaken the table's supports with the welder.
+      - !step Dismantle the table with the wrench.
+
+  - name: Rack (disassembly)
+    tags: [disassemble]
+    ingredients:
+      - Wrench
+      - !step Dismantle the rack with the wrench.
+
+  - name: Closet (disassembly)
+    tags: [disassemble]
+    ingredients:
+      - Wrench
+      - !step Open the closet or locker.
+      - !step Take it apart with the wrench.
+
+  - name: Bed (disassembly)
+    tags: [disassemble]
+    ingredients:
+      - Wrench
+      - <Screwdriver> (optional)
+      - !step Take the bed apart with the wrench.
+      - !step Optionally, roller beds can be unfastened with the screwdriver instead.
+    info:
+      notes: Only roller beds are moveable.
+
+  - name: Stool (disassembly)
+    tags: [disassemble]
+    ingredients:
+      - Wrench
+      - !step Take the stool apart with the wrench.
+
+  - name: Chair (disassembly)
+    info:
+      notes: Some chairs cannot be disassembled or folded up.
+    tags: [disassemble]
+    ingredients:
+      - Wrench
+      - !step Take the chair apart with the wrench.
+      - !step Alternatively, folding chairs can be folded up by clicking them with an empty hand.
+
+# Misc interactions
+
+  - name: Closet (welded)
+    tags: [disassemble]
+    ingredients:
+      - Welder
+      - !step Weld or unweld the closet. It can't be opened when welded shut.
+
+  - name: Airlock (welded)
+    tags: [door]
+    ingredients:
+      - Welder
+      - !step Weld or unweld the airlock. It can't be opened when welded shut.
+
+  - name: Firelock (welded)
+    tags: [door]
+    ingredients:
+      - Welder
+      - !step Weld or unweld the firelock. It can't be opened when welded shut.
+
+  - name: Fire alarm
+    tags: [fix]
+    ingredients:
+      - Wirecutters
+      - !step Re- or disconnect the fire alarm with the wirecutters.
+    info:
+      notes: Disabled fire alarms don't react to heat sources (such as plasma fires).
+
+  - name: Security camera
+    tags: [fix]
+    ingredients:
+      - Wirecutters
+      - !step Re- or disconnect the camera with the wirecutters.
+    info:
+      notes: Disabled cameras cannot be accessed by the AI or through a CCTV monitor.
+
+  - name: Air monitor
+    tags: [fix]
+    ingredients:
+      - Wirecutters
+      - !step Re- or disconnect the air monitor with the wirecutters.

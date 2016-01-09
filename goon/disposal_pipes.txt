@@ -1,0 +1,38 @@
+Like most things in Space Station 13, the plumbing system is surprisingly deep. A skilled space plumber can set you up for a wild ride that'll send you racing through most of the station and spit you out from a mailbox. Now you can be that skilled plumber.
+
+1) The building blocks
+
+There's a few pipe dispensers scattered around the station. The most easily accessible one can be found in disposals. Pipes come in multiple variations, 5 of which the dispensers will provide:
+
+Straight - Straight tube.
+Bent - Tube bent at a 90 degree angle.
+Junction - A three-way junction. The arrow indicates where items exit.
+Mail junction - Not available from the dispenser. A three-way junction that diverts objects with the matching mail tag (not customizable) into the side pipe. Visually distinguished by a red dot on the pipe.
+Bio filter junction - Not available from the dispenser. A three-way junction with a filter that diverts living humans into the side pipe. Visually distinguished by a red dot on the pipe.
+Y-junction - A three-way junction with the exit point in the middle. Mail and bio filter junctions of this type don't exist.
+Trunk - Entry and exit point for pipes. Disposal and mail chutes come pre-connected to these, and have to be placed first to connect to custom-build in-/outlet devices.
+Prison loaf processor - Not available from the dispenser, and also cannot be unwelded. See the recipe manager entry with the same name for details.
+Controlled pipe segments - Specialized equipment available to mechanics.
+
+2) Managing your pipes
+
+Pipes come in four states:
+
+Free - Can be moved, rotated and flipped over by right-clicking on them.
+Wrenched - Wrenched to the floor. Immobile and inoperable. You can walk over them and rotate them.
+Welded - Welded to the floor. Immobile and can't be rotated. Fully operable.
+Broken - Welded to the floor. Inoperable. Must be welded at all ends to remove.
+
+You need three tools. A crowbar to remove the tiles covering the floor. This exposes existing pipes and lets you place new pipes. A wrench to fasten free pipes. A welding tool to make wrenched pipes operable or to loosen welded pipes.
+
+3) Controlling the flow
+
+Take these tips to heart and you'll be a plumbing like a champion in no time.
+
+* T-ray scanners show you pipes hidden under floor tiles.
+* Always wrench the pipe in place before welding it. Poorly secured pipes will break the floor tile covering it and fall out of place.
+* Items will follow the pipeline from chute to exit point as long as every piece is connected, nothing is broken and there's no blockage.
+* Items entering a junction from the wrong end (the side with the exit arrow), will randomly go out one of the two other sides.
+* Fat people are poorly suited for pipes and can easily create a blockage. Blockages can be cleared by unwelding the blocked section.
+* Pipelines ending in a regular pipe will shoot things out in a straight line. Trunks eject items in random directions.
+* Combine with programmable electronics components from mechanics to make some truly wild rides.

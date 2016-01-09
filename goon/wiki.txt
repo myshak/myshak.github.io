@@ -747,7 +747,7 @@ recipes:
       penetrates_skin: No
       overdose_threshold: 20
       per_cycle: |
-                 1x stun reduction, minor stamina regeneration buff, causes jitteriness, reduces drowsiness, warms you up slightly. Increases depletion rate of histamine by 15.
+                 20% chance of 1x stun reduction, minor stamina regeneration buff, causes jitteriness, reduces drowsiness, warms you up slightly. Increases depletion rate of histamine by 15.
                  Attempts to cap LOSEBREATH at 3 and OXY at 35. 5% chance of -1 BRAIN. Rolls a chance to fix cardiac failure.
                  
                  If health is between -10 to -65, heals 1 TOX, 1 BRUTE, 1 BURN.
