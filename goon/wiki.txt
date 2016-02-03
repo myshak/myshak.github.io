@@ -1719,6 +1719,33 @@ recipes:
       per_cycle: Glitter particle effect. 10% chance of +1 BRUTE, 5% of +2 BRUTE. 1% of decaying into 1 unit of histamine
       application_effect: 5+ UNITS = Creates glitter when applied to floor tiles.
 
+  - name: Nitrogen Dioxide
+    ingredients:
+      - Copper Nitrate
+      - !step Heat to 454 K.
+    heat_to: Heat to 454 K.
+    reaction_message: The mixture gives off a biting odor.
+    tags: [tox, damage, plant]
+    info:
+      depletion_rate: 0.4
+      penetrates_skin: Yes
+      per_cycle: +1 TOX
+      Per plant cycle: +3 POISON
+
+  - name: Allyl Chloride
+    ingredients:
+      - <Oil> (1)
+      - <Chlorine> (2)
+      - !step Heat to 774 K.
+    heat_to: Heat to 774 K.
+    reaction_message: The mixture becomes colorless.
+    tags: [burn, damage, plant]
+    info:
+      depletion_rate: 0.4
+      penetrates_skin: No
+      per_cycle: +1.5 BURN
+      Per plant cycle: +4.5 POISON
+
 # Acids
 
   - name: Acetic Acid
@@ -1763,6 +1790,17 @@ recipes:
       - Chlorine
       - Hydrogen 
       - Water
+    tags: [brute, damage, burn, plant]
+    reaction_message: The mixture gives off a sharp acidic tang.
+    info:
+      depletion_rate: 0.4
+      penetrates_skin: No
+      notes: Behaves exactly the same as sulphuric acid.
+
+  - name: Nitric Acid
+    ingredients: 
+      - <Nitrogen Dioxide> (3)
+      - <Water> (1)
     tags: [brute, damage, burn, plant]
     reaction_message: The mixture gives off a sharp acidic tang.
     info:
@@ -1835,7 +1873,7 @@ recipes:
     info:
       depletion_rate: 0.4
       penetrates_skin: No
-      ignition_temp: 474 K
+      ignition_temp: 874 K
       Ignition effect: Small to large fireball, scales with volume (up to 8x8). Yields 0.5 units of ash per 1 unit of oil.
       application_effect: |
                           Creates a streak of slippery oil when applied to floor tiles.
@@ -2683,6 +2721,17 @@ recipes:
       penetrates_skin: No
       application_effect: TOUCH and INGEST - See per life cyle.
       per_cycle: Grants the 'reversed speech' mutation for 3 min (not cumulative), making you say everything backwards.
+
+  - name: Copper Nitrate
+    ingredients:
+      - <Copper> (1)
+      - <Nitrogen> (1)
+      - <Oxygen> (3)
+    reaction_message: The mixture forms into a blue crystalline solid.
+    info:
+      depletion_rate: 0.4
+      penetrates_skin: No
+      notes: Inert precursor reagent.
 
 # Miscellaneous reagents
 

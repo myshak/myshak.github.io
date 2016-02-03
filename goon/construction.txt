@@ -1183,15 +1183,6 @@ recipes:
     info:
       notes: Made by adding rods to glass or by using a general manufacturer.
 
-  - name: Grille/window combination (auto; COG2)
-    tags: [make, window]
-    ingredients:
-      - Grille
-      - 2x <Glass Sheet> OR 2x <Glass Sheet, reinforced>
-      - !step Click with the glass sheet on the grille.
-    info:
-      notes: Auto windows (used on COG2) don't have an one-directional type. The window is fastened to the floor by default.
-
   - name: Grille/window combination
     tags: [make, window]
     ingredients:
@@ -1203,23 +1194,11 @@ recipes:
       - !step If you're diagonal to it, a full window will be build.
       - !step Click with the glass sheet on the grille.
     info:
-      notes: Doesn't apply to COG2. The window is fastened to the floor by default.
-
-  - name: Window (auto; COG2)
-    info:
-      notes: Auto windows (used on COG2) don't have an one-directional type. They are fastened to the floor by default.
-    tags: [make, window]
-    ingredients:
-      - 2x <Glass Sheet>
-      - <Screwdriver> (optional)
-      - <Crowbar> (optional)
-      - !step Click on the glass while you're holding it.
-      - !step Choose Large Window.
-      - !step Optionally, unsecure the window (see 'Window (disassembly)') to reorient it.
+      notes: The window is fastened to the floor by default.
 
   - name: Window, regular (one direction)
     info:
-      notes: Doesn't apply to COG2. Windows will be build in the direction your mob is facing. They are fastened to the floor by default.
+      notes: Windows will be build in the direction your mob is facing. They are fastened to the floor by default.
     tags: [make, window]
     ingredients:
       - 1x <Glass Sheet>
@@ -1231,7 +1210,7 @@ recipes:
 
   - name: Window, regular (full)
     info:
-      notes: Doesn't apply to COG2. They are fastened to the floor by default.
+      notes: They are fastened to the floor by default.
     tags: [make, window]
     ingredients:
       - 2x <Glass Sheet>
@@ -1241,21 +1220,9 @@ recipes:
       - !step Choose Large Window.
       - !step Optionally, unsecure the window (see 'Window (disassembly)') to reorient it.
 
-  - name: Window, reinforced (auto; COG2)
-    info:
-      notes: Auto windows (used on COG2) don't have an one-directional type. They are fastened to the floor by default.
-    tags: [make, window]
-    ingredients:
-      - 2x <Glass Sheet, reinforced>
-      - <Screwdriver> (optional)
-      - <Crowbar> (optional)
-      - !step Click on the glass while you're holding it.
-      - !step Choose Large Window.
-      - !step Optionally, unsecure the window (see 'Window (disassembly)') to reorient it.
-
   - name: Window, reinforced (one direction)
     info:
-      notes: Doesn't apply to COG2. Windows will be build in the direction your mob is facing. They are fastened to the floor by default.
+      notes: Windows will be build in the direction your mob is facing. They are fastened to the floor by default.
     tags: [make, window]
     ingredients:
       - 1x <Glass Sheet, reinforced>
@@ -1267,7 +1234,7 @@ recipes:
 
   - name: Window, reinforced (full) 
     info:
-      notes: Doesn't apply to COG2. They are fastened to the floor by default.
+      notes: They are fastened to the floor by default.
     tags: [make, window]
     ingredients:
       - 2x <Glass Sheet, reinforced>
@@ -1654,10 +1621,10 @@ recipes:
       - !step Use the crowbar to pry the window out of the frame.
       - !step Unfasten the frame from the floor with the screwdriver.
       - !step The window can now be moved...
-      - !step ...or rotated (right click verb; one-directional classic window only).
+      - !step ...or rotated (right click verb; one-directional window only).
       - !step You can use the tools in reverse order to re-secure the window.
     info:
-      notes: This procedure applies to every type of window, except for the fact that one-directional auto windows (used on COG2) don't exist.
+      notes: This procedure applies to every type of window.
 
   - name: Table (disassembly)
     tags: [disassemble]
